@@ -16,6 +16,8 @@
 		045C1F1F241AD7D4004217D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F1D241AD7D4004217D9 /* LaunchScreen.storyboard */; };
 		045C1F2A241AD7D4004217D9 /* myrootsinafricaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F29241AD7D4004217D9 /* myrootsinafricaTests.swift */; };
 		045C1F35241AD7D4004217D9 /* myrootsinafricaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F34241AD7D4004217D9 /* myrootsinafricaUITests.swift */; };
+		045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F44241AE06A004217D9 /* primarybutton.swift */; };
+		045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F46241AE3CC004217D9 /* secondarybutton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		045C1F30241AD7D4004217D9 /* myrootsinafricaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myrootsinafricaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F34241AD7D4004217D9 /* myrootsinafricaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myrootsinafricaUITests.swift; sourceTree = "<group>"; };
 		045C1F36241AD7D4004217D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045C1F44241AE06A004217D9 /* primarybutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primarybutton.swift; sourceTree = "<group>"; };
+		045C1F46241AE3CC004217D9 /* secondarybutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondarybutton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				045C1F43241ADFF3004217D9 /* custombutton */,
 				045C1F0F241AD7D3004217D9 /* AppDelegate.swift */,
 				045C1F11241AD7D3004217D9 /* SceneDelegate.swift */,
 				045C1F13241AD7D3004217D9 /* ViewController.swift */,
@@ -129,6 +134,15 @@
 				045C1F36241AD7D4004217D9 /* Info.plist */,
 			);
 			path = myrootsinafricaUITests;
+			sourceTree = "<group>";
+		};
+		045C1F43241ADFF3004217D9 /* custombutton */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F44241AE06A004217D9 /* primarybutton.swift */,
+				045C1F46241AE3CC004217D9 /* secondarybutton.swift */,
+			);
+			path = custombutton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */,
+				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
 				045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */,
 				045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */,
 				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
