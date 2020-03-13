@@ -16,82 +16,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="70" y="561" width="274" height="60"/>
+                                <rect key="frame" x="50" y="590.5" width="314" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="FHQ-dB-xZx"/>
+                                    <constraint firstAttribute="height" constant="55" id="2sB-IM-O1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Login"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="70" y="477" width="274" height="60"/>
+                                <rect key="frame" x="50" y="515.5" width="314" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="DoD-ab-JM8"/>
-                                    <constraint firstAttribute="height" constant="60" id="PMI-Ik-Zmn"/>
+                                    <constraint firstAttribute="height" constant="55" id="SMQ-bi-nGg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Signup"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ty-0J-KQ8">
-                                <rect key="frame" x="70" y="107" width="274" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="wwg-3A-KBL"/>
-                                </constraints>
-                                <string key="text">World's #1 
-Climate Action App</string>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
+                                <rect key="frame" x="-43" y="245" width="500" height="206"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
+                                <rect key="frame" x="133.5" y="456" width="147" height="41"/>
+                                <string key="text">I can literally say
+I have root in Africa</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.47843137254901957" green="0.78431372549019607" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
-                                <rect key="frame" x="79.5" y="163" width="255" height="210.00000000000003"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="255" id="EsO-Qd-cNy"/>
-                                    <constraint firstAttribute="height" constant="210" id="gR9-g1-lEu"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf2-y7-b4K">
-                                <rect key="frame" x="70" y="333" width="294" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Ovz-fZ-KdH"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">I can literally say 
-I have roots in Africa</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
+                                <rect key="frame" x="134" y="164" width="146.5" height="41"/>
+                                <string key="text">World's #1
+Climate Action App</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wf2-y7-b4K" firstAttribute="top" secondItem="4ty-0J-KQ8" secondAttribute="bottom" constant="181" id="5nc-p4-ahR"/>
-                            <constraint firstItem="wf2-y7-b4K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="DnE-i7-c58"/>
-                            <constraint firstItem="G5r-rw-Meh" firstAttribute="top" secondItem="zr9-di-OTv" secondAttribute="bottom" constant="24" id="EWZ-vI-OeI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4ty-0J-KQ8" secondAttribute="trailing" constant="50" id="Flg-4K-PFc"/>
-                            <constraint firstItem="4ty-0J-KQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="Grs-Ll-64t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wf2-y7-b4K" secondAttribute="trailing" constant="50" id="Iac-vC-oQ7"/>
-                            <constraint firstItem="G5r-rw-Meh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="ON2-GR-f2K"/>
-                            <constraint firstItem="zr9-di-OTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="OxX-j3-g7P"/>
-                            <constraint firstItem="5E6-wj-y0o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-180" id="WSP-6g-eCq"/>
-                            <constraint firstItem="5E6-wj-y0o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dUf-jH-Q7k"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zr9-di-OTv" secondAttribute="trailing" constant="50" id="hmc-St-lTn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G5r-rw-Meh" secondAttribute="trailing" constant="50" id="pLc-TQ-enR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G5r-rw-Meh" secondAttribute="bottom" constant="241" id="wOt-rF-blK"/>
-                            <constraint firstItem="4ty-0J-KQ8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="wpY-73-uxh"/>
+                            <constraint firstItem="5E6-wj-y0o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Nx-qb-5zV"/>
+                            <constraint firstItem="tLc-fs-n59" firstAttribute="top" secondItem="5E6-wj-y0o" secondAttribute="bottom" constant="5" id="2GJ-wX-kHy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G5r-rw-Meh" secondAttribute="trailing" constant="50" id="4Dq-5Z-uji"/>
+                            <constraint firstItem="5E6-wj-y0o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="E7l-ZY-9xc"/>
+                            <constraint firstItem="5E6-wj-y0o" firstAttribute="top" secondItem="ktQ-ei-9cd" secondAttribute="bottom" constant="40" id="Ew0-xR-LME"/>
+                            <constraint firstItem="zr9-di-OTv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="95" id="FEG-Jb-KM6"/>
+                            <constraint firstItem="G5r-rw-Meh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kg1-hh-JNe"/>
+                            <constraint firstItem="tLc-fs-n59" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTp-Ec-YEa"/>
+                            <constraint firstItem="G5r-rw-Meh" firstAttribute="top" secondItem="zr9-di-OTv" secondAttribute="bottom" constant="20" id="jhK-IM-h2Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zr9-di-OTv" secondAttribute="trailing" constant="50" id="mkJ-d1-GRW"/>
+                            <constraint firstItem="ktQ-ei-9cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUT-x6-SzE"/>
+                            <constraint firstItem="G5r-rw-Meh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pvl-52-THz"/>
+                            <constraint firstItem="zr9-di-OTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJg-ZM-FVi"/>
+                            <constraint firstItem="zr9-di-OTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yti-CN-fDZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="78"/>
+            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
