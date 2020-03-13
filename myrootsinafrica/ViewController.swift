@@ -11,11 +11,24 @@ import UIKit
 class ViewController: UIViewController {
 
     let backgroundImageView = UIImageView()
+    let scrollview = DScrollView()
+    let scrollViewContainer = DScrollViewContainer(axis: .vertical, spacing: 10)
+    let scrollViewElement = DScrollViewElement(height: 900, backgroundColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        .withBackground(image: UIImage(named: "home_background")!, contentMode: .scaleAspectFit)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setBackground()
+//        setBackground()
+        
+        view.addScrollView(scrollview,
+                           withSafeArea: .none,
+                           hasStatusBarCover: false,
+                           statusBarBackgroundColor: .green,
+                           container: scrollViewContainer,
+                           elements: [scrollViewElement])
+        view.sendSubviewToBack(scrollview)
     }
 
     
