@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="590.5" width="314" height="55"/>
+                                <rect key="frame" x="50" y="476" width="275" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="2sB-IM-O1f"/>
                                 </constraints>
@@ -24,7 +24,7 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="515.5" width="314" height="55"/>
+                                <rect key="frame" x="50" y="401" width="275" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="SMQ-bi-nGg"/>
                                 </constraints>
@@ -32,10 +32,10 @@
                                 <state key="normal" title="Signup"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
-                                <rect key="frame" x="-43" y="245" width="500" height="206"/>
+                                <rect key="frame" x="62.5" y="182" width="250" height="103.00000000000003"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
-                                <rect key="frame" x="133.5" y="456" width="147" height="41"/>
+                                <rect key="frame" x="114" y="290" width="147" height="41"/>
                                 <string key="text">I can literally say
 I have root in Africa</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,7 +43,7 @@ I have root in Africa</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
-                                <rect key="frame" x="134" y="164" width="146.5" height="41"/>
+                                <rect key="frame" x="114.5" y="101" width="146.5" height="41"/>
                                 <string key="text">World's #1
 Climate Action App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
