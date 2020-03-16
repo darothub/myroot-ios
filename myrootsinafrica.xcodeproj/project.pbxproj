@@ -24,6 +24,10 @@
 		045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F4C241B70FA004217D9 /* DScrollViewElement.swift */; };
 		045C1F5A241B9EB7004217D9 /* BalooChettan2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F58241B9EB7004217D9 /* BalooChettan2-Medium.ttf */; };
 		045C1F5B241B9EB7004217D9 /* BalooChettan2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */; };
+		045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F5C241BA205004217D9 /* ExtToast.swift */; };
+		045C1F96241F53F1004217D9 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F95241F53F1004217D9 /* SignupController.swift */; };
+		045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */; };
+		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		045C1F4C241B70FA004217D9 /* DScrollViewElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DScrollViewElement.swift; sourceTree = "<group>"; };
 		045C1F58241B9EB7004217D9 /* BalooChettan2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooChettan2-Medium.ttf"; sourceTree = "<group>"; };
 		045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooChettan2-Regular.ttf"; sourceTree = "<group>"; };
+		045C1F5C241BA205004217D9 /* ExtToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtToast.swift; sourceTree = "<group>"; };
+		045C1F95241F53F1004217D9 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFunc.swift; sourceTree = "<group>"; };
+		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				045C1F97241F5999004217D9 /* extensionandhelpers */,
+				045C1F94241F53CB004217D9 /* auth */,
 				045C1F57241B9E39004217D9 /* csmfonts */,
 				045C1F48241B704D004217D9 /* cmscrollview */,
 				045C1F43241ADFF3004217D9 /* custombutton */,
@@ -128,6 +138,7 @@
 				045C1F1D241AD7D4004217D9 /* LaunchScreen.storyboard */,
 				045C1F20241AD7D4004217D9 /* Info.plist */,
 				045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */,
+				045C1F5C241BA205004217D9 /* ExtToast.swift */,
 			);
 			path = myrootsinafrica;
 			sourceTree = "<group>";
@@ -177,6 +188,23 @@
 				045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */,
 			);
 			path = csmfonts;
+			sourceTree = "<group>";
+		};
+		045C1F94241F53CB004217D9 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F95241F53F1004217D9 /* SignupController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		045C1F97241F5999004217D9 /* extensionandhelpers */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */,
+				0484D44D241F875C00FDFD7C /* CountryAndCode.swift */,
+			);
+			path = extensionandhelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,15 +341,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */,
+				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
+				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
 				045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */,
 				045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */,
 				045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */,
+				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
 				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
 				045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */,
+				0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

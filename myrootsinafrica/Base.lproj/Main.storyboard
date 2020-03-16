@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9hG-sV-YfX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="590.5" width="314" height="55"/>
+                                <rect key="frame" x="50" y="573.66666666666663" width="275" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="2sB-IM-O1f"/>
                                 </constraints>
@@ -24,7 +24,7 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="515.5" width="314" height="55"/>
+                                <rect key="frame" x="50" y="498.66666666666674" width="275" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="SMQ-bi-nGg"/>
                                 </constraints>
@@ -32,21 +32,27 @@
                                 <state key="normal" title="Signup"/>
                                 <connections>
                                     <action selector="showToast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKh-X4-yfU"/>
+                                    <segue destination="tif-0R-JF1" kind="show" id="PhM-5F-Ofn"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
-                                <rect key="frame" x="-43" y="245" width="500" height="206"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
-                                <rect key="frame" x="133.5" y="456" width="147" height="41"/>
-                                <string key="text">I can literally say
-I have root in Africa</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="man-al-GlR">
+                                <rect key="frame" x="62.666666666666657" y="261.66666666666669" width="249.99999999999997" height="148.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="103.00000000000003"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
+                                        <rect key="frame" x="0.0" y="108.00000000000001" width="250" height="40.666666666666671"/>
+                                        <string key="text">I   c a n   l i t e r a l l y   s a y
+I   h a v e   r o o t   i n   A f r i c a</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
-                                <rect key="frame" x="134" y="164" width="146.5" height="41"/>
+                                <rect key="frame" x="114.33333333333333" y="181" width="146.33333333333337" height="40.666666666666657"/>
                                 <string key="text">World's #1
 Climate Action App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -56,27 +62,90 @@ Climate Action App</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5E6-wj-y0o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Nx-qb-5zV"/>
-                            <constraint firstItem="tLc-fs-n59" firstAttribute="top" secondItem="5E6-wj-y0o" secondAttribute="bottom" constant="5" id="2GJ-wX-kHy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G5r-rw-Meh" secondAttribute="trailing" constant="50" id="4Dq-5Z-uji"/>
-                            <constraint firstItem="5E6-wj-y0o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="E7l-ZY-9xc"/>
-                            <constraint firstItem="5E6-wj-y0o" firstAttribute="top" secondItem="ktQ-ei-9cd" secondAttribute="bottom" constant="40" id="Ew0-xR-LME"/>
-                            <constraint firstItem="zr9-di-OTv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="95" id="FEG-Jb-KM6"/>
+                            <constraint firstItem="man-al-GlR" firstAttribute="top" secondItem="ktQ-ei-9cd" secondAttribute="bottom" constant="40" id="B78-Rd-ttL"/>
+                            <constraint firstItem="zr9-di-OTv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="FEG-Jb-KM6"/>
                             <constraint firstItem="G5r-rw-Meh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kg1-hh-JNe"/>
-                            <constraint firstItem="tLc-fs-n59" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTp-Ec-YEa"/>
+                            <constraint firstItem="ktQ-ei-9cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gik-2G-tfM"/>
                             <constraint firstItem="G5r-rw-Meh" firstAttribute="top" secondItem="zr9-di-OTv" secondAttribute="bottom" constant="20" id="jhK-IM-h2Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zr9-di-OTv" secondAttribute="trailing" constant="50" id="mkJ-d1-GRW"/>
-                            <constraint firstItem="ktQ-ei-9cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUT-x6-SzE"/>
                             <constraint firstItem="G5r-rw-Meh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pvl-52-THz"/>
+                            <constraint firstItem="man-al-GlR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="r0j-7d-06o"/>
                             <constraint firstItem="zr9-di-OTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJg-ZM-FVi"/>
+                            <constraint firstItem="man-al-GlR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpf-o0-5Su"/>
                             <constraint firstItem="zr9-di-OTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yti-CN-fDZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1wC-aD-EtA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="77.678571428571431"/>
+            <point key="canvasLocation" x="380" y="-22.167487684729064"/>
+        </scene>
+        <!--Signup Controller-->
+        <scene sceneID="E0M-G3-njR">
+            <objects>
+                <viewController id="tif-0R-JF1" customClass="SignupController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XdZ-Al-2kC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bz-zK-exa" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                <rect key="frame" x="50" y="620" width="275" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="CmG-gV-Vnv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="showToast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcL-XF-ILH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have account? login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJr-pL-fLt">
+                                <rect key="frame" x="110.33333333333333" y="683" width="154.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nab-9G-sI8" firstAttribute="bottom" secondItem="DJr-pL-fLt" secondAttribute="bottom" constant="74" id="BHi-xa-TxB"/>
+                            <constraint firstItem="5Bz-zK-exa" firstAttribute="leading" secondItem="XdZ-Al-2kC" secondAttribute="leading" constant="50" id="Hcg-N9-cQX"/>
+                            <constraint firstItem="5Bz-zK-exa" firstAttribute="centerX" secondItem="XdZ-Al-2kC" secondAttribute="centerX" id="KmR-Wc-wPZ"/>
+                            <constraint firstItem="DJr-pL-fLt" firstAttribute="top" secondItem="5Bz-zK-exa" secondAttribute="bottom" constant="8" id="cWU-2T-Kzh"/>
+                            <constraint firstItem="Nab-9G-sI8" firstAttribute="trailing" secondItem="5Bz-zK-exa" secondAttribute="trailing" constant="50" id="gxH-Is-Ph0"/>
+                            <constraint firstItem="DJr-pL-fLt" firstAttribute="centerX" secondItem="XdZ-Al-2kC" secondAttribute="centerX" id="zN4-ds-KUm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nab-9G-sI8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SJV-Nv-9XW"/>
+                    <connections>
+                        <outlet property="haveaccounttext" destination="DJr-pL-fLt" id="Niv-tt-7ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxV-Z3-jI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223.2" y="-22.167487684729064"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1b6-In-1Zw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9hG-sV-YfX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0VC-A8-ToJ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AVf-H4-bXS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsO-6w-aOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-562.39999999999998" y="-22.167487684729064"/>
         </scene>
     </scenes>
     <resources>
