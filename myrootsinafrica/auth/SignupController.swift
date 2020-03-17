@@ -42,6 +42,12 @@ class SignupController: UIViewController {
         setTextFieldBottomBorder()
         dialCodeTF.isUserInteractionEnabled = false
         
+        guard let passwordImage = UIImage(named: "eyeiconopen") else{
+            fatalError("Password image not found")
+        }
+        addRightImageToTextField(with: passwordTF, using: passwordImage)
+        
+        
     
       
         
@@ -144,6 +150,25 @@ class SignupController: UIViewController {
         return returnList
     }
     
+    func addRightImageToTextField(with textField:UITextField, using image:UIImage){
+        let rightImageView = UIImageView()
+        
+        rightImageView.heightAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
+        rightImageView.widthAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
+        
+        rightImageView.image = image
+        textField.rightView = rightImageView
+        textField.rightViewMode = .always
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
+        rightImageView.isUserInteractionEnabled = true
+        rightImageView.addGestureRecognizer(singleTap)
+        
+    }
+    
+    @objc func tapDetected(){
+        print("Clicked Image")
+    }
     
  
     
