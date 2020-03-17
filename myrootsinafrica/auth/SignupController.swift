@@ -22,20 +22,29 @@ class SignupController: UIViewController {
 
     @IBOutlet weak var countryCodeTextField: UITextField!
     
+    @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var dialCodeTF: UITextField!
+    @IBOutlet weak var phoneNumberTF: UITextField!
     @IBOutlet weak var countryOptionSelector: UIButton!
+    
+    @IBOutlet weak var firstNameTF: UITextField!
+    @IBOutlet weak var lastNameTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
     override func viewDidLoad() {
         print("Yaay signup")
         tableView.delegate = self as? UITableViewDelegate
         tableView.dataSource = self as? UITableViewDataSource
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
-    
-    
         
-        let languageList = Locale.isoLanguageCodes.compactMap { Locale.current.localizedString(forLanguageCode: $0) }
-        let countryList = Locale.isoRegionCodes.compactMap { Locale.current.localizedString(forRegionCode: $0) }
+        setTextFieldBottomBorder()
+        dialCodeTF.isUserInteractionEnabled = false
         
-        print(languageList, countryList)
+    
+      
+        
     }
     
     func addTransparentView(frames:CGRect){
@@ -45,17 +54,11 @@ class SignupController: UIViewController {
         transparentView.frame = window?.frame ?? self.view.frame
         self.view.addSubview(transparentView)
         
-        
-        
-        
         tableView.frame = viewFrameSize(frames: frames, height:0)
         
         
         self.view.addSubview(tableView)
         tableView.layer.cornerRadius = 5
-        
-            
-        
         
         transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
         tableView.reloadData()
@@ -91,21 +94,20 @@ class SignupController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        haveaccounttext.underlineText()
+//        haveaccounttext.underlineText()
+        
         countryAndCodes()
         
     }
     
     @IBAction func selectCountry(_ sender: Any) {
-        var countryAndCodeDict = countryAndCodes()
+        let countryAndCodeDict = countryAndCodes()
         var countryList = [String]()
         for key in countryAndCodeDict.keys{
             countryList.append(key)
         }
         dataSource = countryList.sorted()
         selectedButton = countryOptionSelector
-
-
         addTransparentView(frames: countryOptionSelector.frame)
         
     
@@ -134,7 +136,7 @@ class SignupController: UIViewController {
             for country in countries {
 //                print(country.name)
                 returnList[country.name] = country.dialCode
-                print(returnList)
+//                print(returnList)
             }
         }catch{
             "Failed to decode country and code \(error.localizedDescription)"
@@ -164,6 +166,15 @@ extension SignupController : UITableViewDelegate, UITableViewDataSource {
         selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
         countryCodeTextField.text = countryAndCodes()[selectedButton.currentTitle ?? "000"]
         removeTransparentView()
+    }
+    
+    func setTextFieldBottomBorder(){
+        dialCodeTF.setBottomBorder()
+        phoneNumberTF.setBottomBorder()
+        passwordTF.setBottomBorder()
+        emailTF.setBottomBorder()
+        lastNameTF.setBottomBorder()
+        firstNameTF.setBottomBorder()
     }
     
 }
