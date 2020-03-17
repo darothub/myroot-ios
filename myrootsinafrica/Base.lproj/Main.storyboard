@@ -191,6 +191,7 @@ Climate Action App</string>
                     </view>
                     <navigationItem key="navigationItem" id="SJV-Nv-9XW"/>
                     <connections>
+                        <outlet property="countryCodeTextField" destination="wXa-Nz-YAf" id="q5S-xH-B71"/>
                         <outlet property="countryOptionSelector" destination="rQz-pv-r4e" id="x6V-qg-jBo"/>
                         <outlet property="haveaccounttext" destination="DJr-pL-fLt" id="Niv-tt-7ya"/>
                     </connections>

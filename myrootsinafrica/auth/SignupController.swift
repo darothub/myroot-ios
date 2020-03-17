@@ -17,13 +17,11 @@ class SignupController: UIViewController {
     
     let transparentView = UIView()
     let tableView = UITableView()
-    let scrollView = DScrollView()
     var selectedButton = UIButton()
     var dataSource = [String]()
+
+    @IBOutlet weak var countryCodeTextField: UITextField!
     
-    let scrollViewContainer = DScrollViewContainer(axis: .vertical, spacing: 10)
-    let scrollViewElement = DScrollViewElement(height: 0, backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))
- 
     
     @IBOutlet weak var countryOptionSelector: UIButton!
     override func viewDidLoad() {
@@ -56,8 +54,6 @@ class SignupController: UIViewController {
         self.view.addSubview(tableView)
         tableView.layer.cornerRadius = 5
         
-//        scrollView.frame = viewFrameSize(frames: frames, height:0)
-//        self.view.addSubview(scrollView)
             
         
         
@@ -101,23 +97,24 @@ class SignupController: UIViewController {
     }
     
     @IBAction func selectCountry(_ sender: Any) {
-        dataSource = countryAndCodes()
+        var countryAndCodeDict = countryAndCodes()
+        var countryList = [String]()
+        for key in countryAndCodeDict.keys{
+            countryList.append(key)
+        }
+        dataSource = countryList.sorted()
         selectedButton = countryOptionSelector
 
 
         addTransparentView(frames: countryOptionSelector.frame)
-//        view.sendSubviewToBack(transparentView)
-        setUpScrollView()
-        tableView.addSubview(scrollViewElement)
         
-        
-
+    
     }
     
     
     
-    func countryAndCodes() -> [String]{
-        guard let cacListData = CountryAndCode.countryAndCodeString().data(using: .utf8) else { return ["error"] }
+    func countryAndCodes() -> [String:String]{
+        guard let cacListData = CountryAndCode.countryAndCodeString().data(using: .utf8) else { return ["error": "Value for country not found"] }
         struct countryData:Codable{
             let name:String
             let dialCode:String
@@ -131,13 +128,13 @@ class SignupController: UIViewController {
         }
         
         let countryAndCodeDecoder = JSONDecoder()
-        var returnList = [String]()
+        var returnList = [String:String]()
         do{
             let countries = try countryAndCodeDecoder.decode([countryData].self, from: cacListData)
             for country in countries {
-                print(country.name)
-                returnList.append(country.name)
-                print(country.dialCode)
+//                print(country.name)
+                returnList[country.name] = country.dialCode
+                print(returnList)
             }
         }catch{
             "Failed to decode country and code \(error.localizedDescription)"
@@ -145,21 +142,6 @@ class SignupController: UIViewController {
         return returnList
     }
     
-    func setUpScrollView(){
-        tableView.addScrollView(scrollView, container: scrollViewContainer, elements: [scrollViewElement])
-        
-        
-        
-//                view.addScrollView(scrollView,
-//                                        withSafeArea: .top,
-//                                   hasStatusBarCover: false,
-//                                   statusBarBackgroundColor: .green,
-//                                   container: scrollViewContainer,
-//                                   elements: [scrollViewElement])
-//        scrollViewElement.addSubview(tableView)
-        
-//                view.sendSubviewToBack(scrollView)
-    }
     
  
     
@@ -180,6 +162,7 @@ extension SignupController : UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+        countryCodeTextField.text = countryAndCodes()[selectedButton.currentTitle ?? "000"]
         removeTransparentView()
     }
     
