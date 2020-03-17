@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9hG-sV-YfX">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="501" width="275" height="55"/>
+                                <rect key="frame" x="50" y="615.5" width="314" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="2sB-IM-O1f"/>
                                 </constraints>
@@ -24,7 +24,7 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="426" width="275" height="55"/>
+                                <rect key="frame" x="50" y="540.5" width="314" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="SMQ-bi-nGg"/>
                                 </constraints>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="man-al-GlR">
-                                <rect key="frame" x="62.5" y="189" width="250" height="149"/>
+                                <rect key="frame" x="82" y="303.5" width="250" height="149"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="103.00000000000003"/>
@@ -52,7 +52,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
-                                <rect key="frame" x="114.5" y="108" width="146.5" height="41"/>
+                                <rect key="frame" x="134" y="222.5" width="146.5" height="41"/>
                                 <string key="text">World's #1
 Climate Action App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -94,14 +94,14 @@ Climate Action App</string>
             <objects>
                 <viewController id="tif-0R-JF1" customClass="SignupController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XdZ-Al-2kC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dwq-3o-h1L">
-                                <rect key="frame" x="36" y="557" width="302" height="80"/>
+                                <rect key="frame" x="40" y="752" width="334" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bz-zK-exa" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="282" height="55"/>
+                                        <rect key="frame" x="10" y="0.0" width="314" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="5BD-gx-wvN"/>
                                         </constraints>
@@ -112,7 +112,7 @@ Climate Action App</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have account? login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJr-pL-fLt">
-                                        <rect key="frame" x="82" y="59" width="138.5" height="21"/>
+                                        <rect key="frame" x="98" y="59" width="138.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -125,66 +125,66 @@ Climate Action App</string>
                                     <constraint firstAttribute="height" constant="80" id="SOr-SX-nIJ"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-uD-ZTh">
-                                <rect key="frame" x="20" y="151.5" width="210" height="364"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-uD-ZTh">
+                                <rect key="frame" x="20" y="195.5" width="210" height="368.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKM-vO-SBO">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="8X7-mF-Xvw">
-                                        <rect key="frame" x="0.0" y="33" width="210" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C3S-Bk-TPn">
-                                        <rect key="frame" x="0.0" y="67" width="210" height="18"/>
+                                        <rect key="frame" x="0.0" y="67" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="iOb-dO-LvG">
-                                        <rect key="frame" x="0.0" y="100" width="210" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lKa-uG-bNP">
-                                        <rect key="frame" x="0.0" y="133.5" width="210" height="18"/>
+                                        <rect key="frame" x="0.0" y="134" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="EGn-gC-jeV">
-                                        <rect key="frame" x="0.0" y="167" width="210" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WUb-Tw-y3M">
-                                        <rect key="frame" x="0.0" y="200.5" width="210" height="18"/>
+                                        <rect key="frame" x="0.0" y="201" width="210" height="33.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="leading" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52Y-c8-ppU">
-                                        <rect key="frame" x="0.0" y="232.5" width="210" height="17"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="210" height="33.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQz-pv-r4e">
-                                        <rect key="frame" x="0.0" y="264.5" width="210" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="268" width="210" height="33.5"/>
                                         <state key="normal" title="Select country">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -193,16 +193,16 @@ Climate Action App</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaH-Ys-XZa">
-                                        <rect key="frame" x="0.0" y="314" width="210" height="18"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="210" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="GpV-a3-Ndx">
-                                        <rect key="frame" x="0.0" y="347" width="210" height="17"/>
+                                        <rect key="frame" x="0.0" y="335" width="210" height="33.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXa-Nz-YAf">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="33.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="XI7-wI-a1S"/>
@@ -211,7 +211,7 @@ Climate Action App</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylN-0s-9PB">
-                                                <rect key="frame" x="66" y="0.0" width="144" height="17"/>
+                                                <rect key="frame" x="66" y="0.0" width="144" height="33.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -220,17 +220,17 @@ Climate Action App</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-F1-PQZ">
-                                <rect key="frame" x="106" y="61.5" width="162" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-F1-PQZ">
+                                <rect key="frame" x="106" y="105.5" width="202" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UU1-Y2-0gf">
-                                        <rect key="frame" x="39.5" y="0.0" width="83.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="36"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="To verify your identity Please fill the form below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1g-rY-PPY">
-                                        <rect key="frame" x="0.0" y="30" width="162" height="50"/>
+                                        <rect key="frame" x="0.0" y="44" width="202" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -281,7 +281,7 @@ Climate Action App</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9hG-sV-YfX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0VC-A8-ToJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -297,4 +297,5 @@ Climate Action App</string>
     <resources>
         <image name="my_roots_logo" width="250" height="103"/>
     </resources>
+    <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

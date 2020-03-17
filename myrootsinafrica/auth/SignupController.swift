@@ -19,6 +19,7 @@ class SignupController: UIViewController {
     let tableView = UITableView()
     var selectedButton = UIButton()
     var dataSource = [String]()
+    
 
     @IBOutlet weak var countryCodeTextField: UITextField!
     
@@ -32,6 +33,8 @@ class SignupController: UIViewController {
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    
+    
     
     override func viewDidLoad() {
         print("Yaay signup")
@@ -47,12 +50,36 @@ class SignupController: UIViewController {
         }
         addRightImageToTextField(with: passwordTF, using: passwordImage)
         
-        
+        setupProgressBar()
     
       
         
     }
     
+    func setupProgressBar(){
+        let progressBarView = UIProgressView()
+        
+    
+        progressBarView.translatesAutoresizingMaskIntoConstraints = false
+        progressBarView.progressViewStyle = UIProgressView.Style.bar
+        
+        progressBarView.progressTintColor = #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1)
+        progressBarView.trackTintColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        
+        progressBarView.setProgress(0.5, animated: true)
+        
+        progressBarView.heightAnchor.constraint(equalToConstant: CGFloat(4
+        )).isActive = true
+        progressBarView.widthAnchor.constraint(equalToConstant: CGFloat(290
+        )).isActive = true
+    
+        
+        navigationItem.titleView = progressBarView
+        
+        
+//        C2DC00
+//        7AC840
+    }
     func addTransparentView(frames:CGRect){
         let window = UIApplication.shared.windows.first { $0.isKeyWindow }
         
@@ -100,7 +127,7 @@ class SignupController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        haveaccounttext.underlineText()
+        haveaccounttext.underlineText()
         
         countryAndCodes()
         
