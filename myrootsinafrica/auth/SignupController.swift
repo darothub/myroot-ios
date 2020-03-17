@@ -167,7 +167,20 @@ class SignupController: UIViewController {
     }
     
     @objc func tapDetected(){
-        print("Clicked Image")
+        print("Yup")
+        passwordTF.isSecureTextEntry = !passwordTF.isSecureTextEntry
+        if passwordTF.isSecureTextEntry {
+            guard let passwordImage = UIImage(named: "eyeiconclose") else{
+                fatalError("Password image not found")
+            }
+            addRightImageToTextField(with: passwordTF, using: passwordImage)
+        }else{
+            guard let passwordImage = UIImage(named: "eyeiconopen") else{
+                fatalError("Password image not found")
+            }
+            addRightImageToTextField(with: passwordTF, using: passwordImage)
+        }
+        
     }
     
  
