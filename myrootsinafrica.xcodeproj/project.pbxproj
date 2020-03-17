@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,9 @@
 		045C1F96241F53F1004217D9 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F95241F53F1004217D9 /* SignupController.swift */; };
 		045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */; };
 		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
+		B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */; };
+		C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */; };
+		C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0C241AD7D3004217D9 /* myrootsinafrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myrootsinafrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0F241AD7D3004217D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045C1F11241AD7D3004217D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 		045C1F95241F53F1004217D9 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFunc.swift; sourceTree = "<group>"; };
 		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
+		07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
+		3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica_myrootsinafricaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C092B885A4CA373925E400 /* Pods-myrootsinafricaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafricaTests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafricaTests/Pods-myrootsinafricaTests.release.xcconfig"; sourceTree = "<group>"; };
+		66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafricaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.release.xcconfig"; sourceTree = "<group>"; };
+		F28B2A1B1CF99A521DD7867D /* Pods-myrootsinafricaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafricaTests.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafricaTests/Pods-myrootsinafricaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +124,8 @@
 				045C1F28241AD7D4004217D9 /* myrootsinafricaTests */,
 				045C1F33241AD7D4004217D9 /* myrootsinafricaUITests */,
 				045C1F0D241AD7D3004217D9 /* Products */,
+				AAFD31ADEDD661D1CA7BCBCF /* Pods */,
+				3255732CB1FA99953E804958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +224,29 @@
 			path = extensionandhelpers;
 			sourceTree = "<group>";
 		};
+		3255732CB1FA99953E804958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */,
+				3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */,
+				66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAFD31ADEDD661D1CA7BCBCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */,
+				89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */,
+				689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */,
+				07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */,
+				F28B2A1B1CF99A521DD7867D /* Pods-myrootsinafricaTests.debug.xcconfig */,
+				37C092B885A4CA373925E400 /* Pods-myrootsinafricaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C1F39241AD7D4004217D9 /* Build configuration list for PBXNativeTarget "myrootsinafrica" */;
 			buildPhases = (
+				1974426D30F120C6985AB6F0 /* [CP] Check Pods Manifest.lock */,
 				045C1F08241AD7D3004217D9 /* Sources */,
 				045C1F09241AD7D3004217D9 /* Frameworks */,
 				045C1F0A241AD7D3004217D9 /* Resources */,
+				FFD71C12A7F822A3397F8806 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +273,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C1F3C241AD7D4004217D9 /* Build configuration list for PBXNativeTarget "myrootsinafricaTests" */;
 			buildPhases = (
+				9F63A487D99A133D649F7EF1 /* [CP] Check Pods Manifest.lock */,
 				045C1F21241AD7D4004217D9 /* Sources */,
 				045C1F22241AD7D4004217D9 /* Frameworks */,
 				045C1F23241AD7D4004217D9 /* Resources */,
@@ -249,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C1F3F241AD7D4004217D9 /* Build configuration list for PBXNativeTarget "myrootsinafricaUITests" */;
 			buildPhases = (
+				63B938417A25BE74D7A7B49F /* [CP] Check Pods Manifest.lock */,
 				045C1F2C241AD7D4004217D9 /* Sources */,
 				045C1F2D241AD7D4004217D9 /* Frameworks */,
 				045C1F2E241AD7D4004217D9 /* Resources */,
+				8AFDD3C2C0D74B8309197B23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,6 +379,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1974426D30F120C6985AB6F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myrootsinafrica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63B938417A25BE74D7A7B49F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myrootsinafrica-myrootsinafricaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AFDD3C2C0D74B8309197B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F63A487D99A133D649F7EF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myrootsinafricaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD71C12A7F822A3397F8806 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		045C1F08241AD7D3004217D9 /* Sources */ = {
@@ -524,9 +672,12 @@
 		};
 		045C1F3A241AD7D4004217D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = myrootsinafrica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,9 +692,12 @@
 		};
 		045C1F3B241AD7D4004217D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = myrootsinafrica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,6 +712,7 @@
 		};
 		045C1F3D241AD7D4004217D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28B2A1B1CF99A521DD7867D /* Pods-myrootsinafricaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +734,7 @@
 		};
 		045C1F3E241AD7D4004217D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C092B885A4CA373925E400 /* Pods-myrootsinafricaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -600,6 +756,7 @@
 		};
 		045C1F40241AD7D4004217D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -619,6 +776,7 @@
 		};
 		045C1F41241AD7D4004217D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

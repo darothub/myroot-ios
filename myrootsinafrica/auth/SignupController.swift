@@ -88,6 +88,7 @@ class SignupController: UIViewController {
         self.view.addSubview(transparentView)
         
         tableView.frame = viewFrameSize(frames: frames, height:0)
+        tableView.isScrollEnabled = true
         
         
         self.view.addSubview(tableView)

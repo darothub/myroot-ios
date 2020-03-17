@@ -1,0 +1,6 @@
+framework module Pods_myrootsinafrica_myrootsinafricaUITests {
+  umbrella header "Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
