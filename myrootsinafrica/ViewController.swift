@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var worldText: UILabel!
+    @IBOutlet weak var myRootHeaderLabel: UIImageView!
+    @IBOutlet weak var signUpbtn: SecondaryButton!
+    
+    @IBOutlet weak var loginButton: PrimaryButton!
+    
     let backgroundImageView = UIImageView()
     let scrollview = DScrollView()
     let scrollViewContainer = DScrollViewContainer(axis: .vertical, spacing: 10)
     let scrollViewElement = DScrollViewElement(height: 900, backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))
-        .withBackground(image: UIImage(named: "home_background")!, contentMode: .scaleAspectFit)
+        .withBackground(image: UIImage(named: "home_background")!, contentMode: .scaleAspectFill)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +59,7 @@ class ViewController: UIViewController {
                            statusBarBackgroundColor: .green,
                            container: scrollViewContainer,
                            elements: [scrollViewElement])
+//        scrollViewElement.addSubview(loginButton)
         view.sendSubviewToBack(scrollview)
     }
 }
