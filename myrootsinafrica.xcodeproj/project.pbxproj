@@ -31,6 +31,7 @@
 		045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */; };
 		047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB0B22421976B001C5344 /* UserVerificationController.swift */; };
 		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
+		049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58624229E2E00C81412 /* setViewShadowExtension.swift */; };
 		B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */; };
 		C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */; };
 		C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */; };
@@ -85,6 +86,7 @@
 		045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFunc.swift; sourceTree = "<group>"; };
 		047BB0B22421976B001C5344 /* UserVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVerificationController.swift; sourceTree = "<group>"; };
 		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
+		049CF58624229E2E00C81412 /* setViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewShadowExtension.swift; sourceTree = "<group>"; };
 		07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
 		3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica_myrootsinafricaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +231,7 @@
 				045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */,
 				0484D44D241F875C00FDFD7C /* CountryAndCode.swift */,
 				040B75332422511E00A4147A /* ControllerBackgroundImage.swift */,
+				049CF58624229E2E00C81412 /* setViewShadowExtension.swift */,
 			);
 			path = extensionandhelpers;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */,
 				047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */,
 				045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */,
+				049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */,
 				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
 				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,

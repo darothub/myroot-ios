@@ -29,8 +29,10 @@ class UserVerification : UIViewController {
         self.setBackgroundImage("verificationBackground", contentMode: .scaleToFill)
         
         otpTextFieldContainer.layer.cornerRadius = 10
+        otpTextFieldContainer.setViewShadow(using: 5, color: UIColor.black.cgColor)
         
         resendCodeLabel.underlineText()
+        self.setupProgressBar(progress: 1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
