@@ -32,6 +32,7 @@
 		047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB0B22421976B001C5344 /* UserVerificationController.swift */; };
 		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
 		049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58624229E2E00C81412 /* setViewShadowExtension.swift */; };
+		049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF5892422AD3600C81412 /* VerificationResultViewController.swift */; };
 		B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */; };
 		C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */; };
 		C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */; };
@@ -87,6 +88,7 @@
 		047BB0B22421976B001C5344 /* UserVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVerificationController.swift; sourceTree = "<group>"; };
 		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
 		049CF58624229E2E00C81412 /* setViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewShadowExtension.swift; sourceTree = "<group>"; };
+		049CF5892422AD3600C81412 /* VerificationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResultViewController.swift; sourceTree = "<group>"; };
 		07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
 		3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica_myrootsinafricaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +153,8 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				049CF5882422ACB200C81412 /* controllers */,
 				045C1F97241F5999004217D9 /* extensionandhelpers */,
-				045C1F94241F53CB004217D9 /* auth */,
 				045C1F57241B9E39004217D9 /* csmfonts */,
 				045C1F48241B704D004217D9 /* cmscrollview */,
 				045C1F43241ADFF3004217D9 /* custombutton */,
@@ -234,6 +236,15 @@
 				049CF58624229E2E00C81412 /* setViewShadowExtension.swift */,
 			);
 			path = extensionandhelpers;
+			sourceTree = "<group>";
+		};
+		049CF5882422ACB200C81412 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F94241F53CB004217D9 /* auth */,
+				049CF5892422AD3600C81412 /* VerificationResultViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		3255732CB1FA99953E804958 /* Frameworks */ = {
@@ -505,6 +516,7 @@
 				040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */,
 				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
+				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
 				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
