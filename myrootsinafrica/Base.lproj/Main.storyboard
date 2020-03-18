@@ -104,7 +104,7 @@ Climate Action App</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-F1-PQZ">
-                                                <rect key="frame" x="20" y="12" width="335" height="75"/>
+                                                <rect key="frame" x="20" y="16.5" width="335" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UU1-Y2-0gf">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="33.5"/>
@@ -124,96 +124,87 @@ Climate Action App</string>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-uD-ZTh">
-                                                <rect key="frame" x="20" y="129.5" width="210" height="364"/>
+                                                <rect key="frame" x="20" y="111.5" width="210" height="400"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKM-vO-SBO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="33.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="8X7-mF-Xvw">
-                                                        <rect key="frame" x="0.0" y="28" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="33.5" width="210" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C3S-Bk-TPn">
-                                                        <rect key="frame" x="0.0" y="56" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="66.5" width="210" height="33.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="iOb-dO-LvG">
-                                                        <rect key="frame" x="0.0" y="84" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="100" width="210" height="33.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lKa-uG-bNP">
-                                                        <rect key="frame" x="0.0" y="112" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="133.5" width="210" height="33"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="EGn-gC-jeV">
-                                                        <rect key="frame" x="0.0" y="140" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="166.5" width="210" height="33.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WUb-Tw-y3M">
-                                                        <rect key="frame" x="0.0" y="168" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="200" width="210" height="33.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="leading" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52Y-c8-ppU">
-                                                        <rect key="frame" x="0.0" y="196" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="233.5" width="210" height="33"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jii-BH-B6v">
-                                                        <rect key="frame" x="0.0" y="224" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="266.5" width="210" height="33.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ZH-Db-8yf" customClass="DropDown" customModule="iOSDropDown">
-                                                        <rect key="frame" x="0.0" y="252" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="300" width="210" height="33.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQz-pv-r4e">
-                                                        <rect key="frame" x="0.0" y="280" width="210" height="28"/>
-                                                        <state key="normal" title="Select country">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="selectCountry:" destination="tif-0R-JF1" eventType="touchUpInside" id="pjH-3j-LkB"/>
-                                                        </connections>
-                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaH-Ys-XZa">
-                                                        <rect key="frame" x="0.0" y="308" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="333.5" width="210" height="33"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="GpV-a3-Ndx">
-                                                        <rect key="frame" x="0.0" y="336" width="210" height="28"/>
+                                                        <rect key="frame" x="0.0" y="366.5" width="210" height="33.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXa-Nz-YAf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="33.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="XI7-wI-a1S"/>
@@ -222,7 +213,7 @@ Climate Action App</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylN-0s-9PB">
-                                                                <rect key="frame" x="66" y="0.0" width="144" height="28"/>
+                                                                <rect key="frame" x="66" y="0.0" width="144" height="33.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -230,9 +221,12 @@ Climate Action App</string>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="lYN-76-NFg"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dwq-3o-h1L">
-                                                <rect key="frame" x="20" y="513.5" width="335" height="80"/>
+                                                <rect key="frame" x="20" y="531.5" width="335" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bz-zK-exa" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
                                                         <rect key="frame" x="30" y="0.0" width="275" height="55"/>
@@ -270,7 +264,7 @@ Climate Action App</string>
                                             <constraint firstItem="eb3-F1-PQZ" firstAttribute="centerX" secondItem="lD1-fW-Ddp" secondAttribute="centerX" id="5PD-at-ugS"/>
                                             <constraint firstAttribute="trailing" secondItem="eb3-F1-PQZ" secondAttribute="trailing" constant="20" id="BwH-gQ-3j9"/>
                                             <constraint firstAttribute="trailing" secondItem="a0z-uD-ZTh" secondAttribute="trailing" constant="20" id="E5o-3g-ea4"/>
-                                            <constraint firstItem="a0z-uD-ZTh" firstAttribute="top" secondItem="eb3-F1-PQZ" secondAttribute="bottom" constant="42.5" id="Xf2-DC-1B7"/>
+                                            <constraint firstItem="a0z-uD-ZTh" firstAttribute="top" secondItem="eb3-F1-PQZ" secondAttribute="bottom" constant="20" id="Xf2-DC-1B7"/>
                                             <constraint firstItem="dwq-3o-h1L" firstAttribute="leading" secondItem="lD1-fW-Ddp" secondAttribute="leading" constant="20" id="YdO-ul-1qe"/>
                                             <constraint firstItem="dwq-3o-h1L" firstAttribute="centerX" secondItem="lD1-fW-Ddp" secondAttribute="centerX" id="a0O-vq-vVy"/>
                                             <constraint firstItem="eb3-F1-PQZ" firstAttribute="leading" secondItem="lD1-fW-Ddp" secondAttribute="leading" constant="20" id="aTL-rU-DmV"/>
@@ -306,7 +300,6 @@ Climate Action App</string>
                     <connections>
                         <outlet property="countryCodeTextField" destination="wXa-Nz-YAf" id="q5S-xH-B71"/>
                         <outlet property="countryDropDown" destination="5ZH-Db-8yf" id="2BX-dx-9hW"/>
-                        <outlet property="countryOptionSelector" destination="rQz-pv-r4e" id="x6V-qg-jBo"/>
                         <outlet property="dialCodeTF" destination="wXa-Nz-YAf" id="Tay-ZP-SBy"/>
                         <outlet property="emailTF" destination="EGn-gC-jeV" id="cfy-bg-qIa"/>
                         <outlet property="firstNameTF" destination="8X7-mF-Xvw" id="MiQ-CN-ZAU"/>

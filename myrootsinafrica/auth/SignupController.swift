@@ -29,7 +29,7 @@ class SignupController: UIViewController {
     
     @IBOutlet weak var dialCodeTF: UITextField!
     @IBOutlet weak var phoneNumberTF: UITextField!
-    @IBOutlet weak var countryOptionSelector: UIButton!
+  
     
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
@@ -68,7 +68,9 @@ class SignupController: UIViewController {
                 countryList.append(key)
             }
         countryDropDown.optionArray = countryList.sorted()
-       
+       countryDropDown.didSelect{(selectedText , index ,id) in
+       self.dialCodeTF.text = countryAndCodeDict[selectedText]
+       }
         
     }
     
@@ -106,52 +108,52 @@ class SignupController: UIViewController {
         signupScrollView.withBackground(image: image)
 //        view.sendSubviewToBack(signupScrollView)
     }
-    func addTransparentView(frames:CGRect){
-        let window = UIApplication.shared.windows.first { $0.isKeyWindow }
-        
-      
-        transparentView.frame = window?.frame ?? self.view.frame
-        self.view.addSubview(transparentView)
-        
-        tableView.frame = viewFrameSize(frames: frames, height:0)
-        tableView.isScrollEnabled = true
-        
-        
-        self.view.addSubview(tableView)
-        tableView.layer.cornerRadius = 5
-        
-        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-        tableView.reloadData()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeTransparentView))
-        
-        transparentView.addGestureRecognizer(tapGesture)
-        
-        
-        transparentView.alpha = 0
-        
-        uiViewAnimateAction(using: 0.5, frames:frames, height: Float(dataSource.count * 50))
-        
-        
-        
-    }
+//    func addTransparentView(frames:CGRect){
+//        let window = UIApplication.shared.windows.first { $0.isKeyWindow }
+//
+//
+//        transparentView.frame = window?.frame ?? self.view.frame
+//        self.view.addSubview(transparentView)
+//
+//        tableView.frame = viewFrameSize(frames: frames, height:0)
+//        tableView.isScrollEnabled = true
+//
+//
+//        self.view.addSubview(tableView)
+//        tableView.layer.cornerRadius = 5
+//
+//        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+//        tableView.reloadData()
+//
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(removeTransparentView))
+//
+//        transparentView.addGestureRecognizer(tapGesture)
+//
+//
+//        transparentView.alpha = 0
+//
+//        uiViewAnimateAction(using: 0.5, frames:frames, height: Float(dataSource.count * 50))
+//
+//
+//
+//    }
     
-    func uiViewAnimateAction(using alpha:Float, frames:CGRect, height:Float){
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.transparentView.alpha = CGFloat(alpha)
-            self.tableView.frame = self.viewFrameSize(frames: frames, height:height)
-        }, completion: nil)
-    }
-    
-    func viewFrameSize(frames:CGRect, height:Float)-> CGRect{
-        return CGRect(x: frames.origin.x+20, y: frames.origin.y + frames.height + 160, width: frames.width, height: CGFloat(height))
-    }
-    
-    
-    @objc func removeTransparentView(){
-        let frames = selectedButton.frame
-        uiViewAnimateAction(using: 0, frames: frames, height: 0)
-    }
+//    func uiViewAnimateAction(using alpha:Float, frames:CGRect, height:Float){
+//        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+//            self.transparentView.alpha = CGFloat(alpha)
+//            self.tableView.frame = self.viewFrameSize(frames: frames, height:height)
+//        }, completion: nil)
+//    }
+//
+//    func viewFrameSize(frames:CGRect, height:Float)-> CGRect{
+//        return CGRect(x: frames.origin.x+20, y: frames.origin.y + frames.height + 160, width: frames.width, height: CGFloat(height))
+//    }
+//
+//
+//    @objc func removeTransparentView(){
+//        let frames = selectedButton.frame
+//        uiViewAnimateAction(using: 0, frames: frames, height: 0)
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         haveaccounttext.underlineText()
@@ -160,18 +162,18 @@ class SignupController: UIViewController {
         
     }
     
-    @IBAction func selectCountry(_ sender: Any) {
-        let countryAndCodeDict = countryAndCodes()
-        var countryList = [String]()
-        for key in countryAndCodeDict.keys{
-            countryList.append(key)
-        }
-        dataSource = countryList.sorted()
-        selectedButton = countryOptionSelector
-        addTransparentView(frames: countryOptionSelector.frame)
-        
-    
-    }
+//    @IBAction func selectCountry(_ sender: Any) {
+//        let countryAndCodeDict = countryAndCodes()
+//        var countryList = [String]()
+//        for key in countryAndCodeDict.keys{
+//            countryList.append(key)
+//        }
+//        dataSource = countryList.sorted()
+//        selectedButton = countryOptionSelector
+//        addTransparentView(frames: countryOptionSelector.frame)
+//
+//
+//    }
     
     
     
@@ -237,29 +239,6 @@ class SignupController: UIViewController {
         
     }
     
- 
-    
-}
-
-extension SignupController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = dataSource[indexPath.row]
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
-        countryCodeTextField.text = countryAndCodes()[selectedButton.currentTitle ?? "000"]
-        removeTransparentView()
-    }
-    
     func setTextFieldBottomBorder(){
         dialCodeTF.setBottomBorder()
         phoneNumberTF.setBottomBorder()
@@ -270,4 +249,29 @@ extension SignupController : UITableViewDelegate, UITableViewDataSource {
         countryDropDown.setBottomBorder()
     }
     
+ 
+    
 }
+
+//extension SignupController : UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return dataSource.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        cell.textLabel?.text = dataSource[indexPath.row]
+//        return cell
+//    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 50
+//    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
+//        countryCodeTextField.text = countryAndCodes()[selectedButton.currentTitle ?? "000"]
+//        removeTransparentView()
+//    }
+//
+//
+//
+//}
