@@ -34,6 +34,7 @@ class SignupController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var signupScrollView: UIScrollView!
     
     
     override func viewDidLoad() {
@@ -52,9 +53,12 @@ class SignupController: UIViewController {
         
         setupProgressBar()
     
+  
       
         
     }
+    
+
     
     func setupProgressBar(){
         let progressBarView = UIProgressView()
