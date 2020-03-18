@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
 		045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F0F241AD7D3004217D9 /* AppDelegate.swift */; };
 		045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F11241AD7D3004217D9 /* SceneDelegate.swift */; };
 		045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F13241AD7D3004217D9 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
 		045C1F0C241AD7D3004217D9 /* myrootsinafrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myrootsinafrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0F241AD7D3004217D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045C1F11241AD7D3004217D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */,
 				0484D44D241F875C00FDFD7C /* CountryAndCode.swift */,
+				040B75332422511E00A4147A /* ControllerBackgroundImage.swift */,
 			);
 			path = extensionandhelpers;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */,
+				040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */,
 				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,

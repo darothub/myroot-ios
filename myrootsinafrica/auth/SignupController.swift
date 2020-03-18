@@ -37,8 +37,10 @@ class SignupController: UIViewController {
     @IBOutlet weak var signupScrollView: UIScrollView!
     
     
+    @IBOutlet weak var parentView: UIView!
     override func viewDidLoad() {
         print("Yaay signup")
+//        setScrollViewBackground()
         tableView.delegate = self as? UITableViewDelegate
         tableView.dataSource = self as? UITableViewDataSource
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
@@ -52,9 +54,15 @@ class SignupController: UIViewController {
         addRightImageToTextField(with: passwordTF, using: passwordImage)
         
         setupProgressBar()
-    
-  
-      
+        guard let image = UIImage(named: "signupBackground") else{
+            fatalError("Cannot find background image")
+        }
+        let backgroundImage = UIImageView(frame: self.view.bounds)
+        backgroundImage.image = image
+//        self.setBackgroundImage("signupBackground", contentMode: .scaleToFill)
+        self.view.insertSubview(backgroundImage, at: 0)
+//        self.view.sendSubviewToBack(signupScrollView)
+       
         
     }
     
@@ -83,6 +91,14 @@ class SignupController: UIViewController {
         
 //        C2DC00
 //        7AC840
+    }
+    
+    func setScrollViewBackground(){
+        guard let image = UIImage(named: "signupBackground") else {
+            fatalError("Could not load background")
+        }
+        signupScrollView.withBackground(image: image)
+//        view.sendSubviewToBack(signupScrollView)
     }
     func addTransparentView(frames:CGRect){
         let window = UIApplication.shared.windows.first { $0.isKeyWindow }
