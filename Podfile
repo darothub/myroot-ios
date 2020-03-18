@@ -7,6 +7,7 @@ target 'myrootsinafrica' do
 
   # Pods for myrootsinafrica
   pod 'IQKeyboardManagerSwift'
+  pod 'iOSDropDown'
 
   target 'myrootsinafricaTests' do
     inherit! :search_paths

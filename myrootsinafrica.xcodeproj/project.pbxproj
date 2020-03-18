@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
+		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F0F241AD7D3004217D9 /* AppDelegate.swift */; };
 		045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F11241AD7D3004217D9 /* SceneDelegate.swift */; };
 		045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F13241AD7D3004217D9 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
+		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0C241AD7D3004217D9 /* myrootsinafrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myrootsinafrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0F241AD7D3004217D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045C1F11241AD7D3004217D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */,
 				C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +236,7 @@
 		3255732CB1FA99953E804958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				040B75352422606200A4147A /* iOSDropDown.framework */,
 				02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */,
 				3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */,
 				66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */,

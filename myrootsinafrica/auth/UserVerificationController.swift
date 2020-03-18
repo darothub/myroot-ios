@@ -15,6 +15,7 @@ class UserVerification : UIViewController {
     @IBOutlet weak var tfTwo: UITextField!
     @IBOutlet weak var tfThree: UITextField!
     @IBOutlet weak var tfFour: UITextField!
+    
     override func viewDidLoad() {
         tfOne.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         tfTwo.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)

@@ -1,16 +1,20 @@
 PODS:
+  - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.5)
 
 DEPENDENCIES:
+  - iOSDropDown
   - IQKeyboardManagerSwift
 
 SPEC REPOS:
   trunk:
+    - iOSDropDown
     - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
 
-PODFILE CHECKSUM: da0e6f98d93388f11d868d0a0fd7f69a68fe3ed0
+PODFILE CHECKSUM: 4fa3fdb8c2ddec0d6885523c7c87c506a9a2449e
 
 COCOAPODS: 1.9.1

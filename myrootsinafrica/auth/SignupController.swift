@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import iOSDropDown
+
 class CellClass:UITableViewCell{
     
 }
@@ -36,6 +38,7 @@ class SignupController: UIViewController {
     
     @IBOutlet weak var signupScrollView: UIScrollView!
     
+    @IBOutlet weak var countryDropDown: DropDown!
     
     @IBOutlet weak var parentView: UIView!
     override func viewDidLoad() {
@@ -54,14 +57,17 @@ class SignupController: UIViewController {
         addRightImageToTextField(with: passwordTF, using: passwordImage)
         
         setupProgressBar()
-        guard let image = UIImage(named: "signupBackground") else{
-            fatalError("Cannot find background image")
-        }
-        let backgroundImage = UIImageView(frame: self.view.bounds)
-        backgroundImage.image = image
-//        self.setBackgroundImage("signupBackground", contentMode: .scaleToFill)
-        self.view.insertSubview(backgroundImage, at: 0)
-//        self.view.sendSubviewToBack(signupScrollView)
+//        guard let image = UIImage(named: "signupBackground") else{
+//            fatalError("Cannot find background image")
+//        }
+        self.setBackgroundImage("signupBackground", contentMode: .scaleToFill)
+
+        let countryAndCodeDict = countryAndCodes()
+            var countryList = [String]()
+            for key in countryAndCodeDict.keys{
+                countryList.append(key)
+            }
+        countryDropDown.optionArray = countryList.sorted()
        
         
     }
@@ -261,6 +267,7 @@ extension SignupController : UITableViewDelegate, UITableViewDataSource {
         emailTF.setBottomBorder()
         lastNameTF.setBottomBorder()
         firstNameTF.setBottomBorder()
+        countryDropDown.setBottomBorder()
     }
     
 }
