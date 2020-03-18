@@ -16,6 +16,8 @@ class UserVerification : UIViewController {
     @IBOutlet weak var tfThree: UITextField!
     @IBOutlet weak var tfFour: UITextField!
     
+    @IBOutlet weak var resendCodeLabel: UILabel!
+    @IBOutlet weak var otpTextFieldContainer: UIView!
     override func viewDidLoad() {
         tfOne.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         tfTwo.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
@@ -24,6 +26,11 @@ class UserVerification : UIViewController {
         tfFour.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         
         
+        self.setBackgroundImage("verificationBackground", contentMode: .scaleToFill)
+        
+        otpTextFieldContainer.layer.cornerRadius = 10
+        
+        resendCodeLabel.underlineText()
     }
     
     override func viewWillAppear(_ animated: Bool) {
