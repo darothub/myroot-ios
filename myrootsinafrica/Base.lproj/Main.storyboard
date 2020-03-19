@@ -127,7 +127,7 @@ Climate Action App</string>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-uD-ZTh">
-                                                <rect key="frame" x="20" y="111.5" width="210" height="400"/>
+                                                <rect key="frame" x="145" y="111.5" width="210" height="400"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cKM-vO-SBO">
                                                         <rect key="frame" x="0.0" y="0.0" width="210" height="33.5"/>
@@ -275,7 +275,6 @@ Climate Action App</string>
                                             <constraint firstItem="a0z-uD-ZTh" firstAttribute="centerX" secondItem="lD1-fW-Ddp" secondAttribute="centerX" id="hQu-OD-BtM"/>
                                             <constraint firstAttribute="trailing" secondItem="dwq-3o-h1L" secondAttribute="trailing" constant="20" id="oHR-fL-vj5"/>
                                             <constraint firstItem="dwq-3o-h1L" firstAttribute="top" secondItem="a0z-uD-ZTh" secondAttribute="bottom" constant="20" id="pkZ-II-EqO"/>
-                                            <constraint firstItem="a0z-uD-ZTh" firstAttribute="leading" secondItem="lD1-fW-Ddp" secondAttribute="leading" constant="20" id="qDM-uE-S5E"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -410,10 +409,10 @@ Climate Action App</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account signup?" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="AWp-Fw-uSL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account signup?" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWp-Fw-uSL">
                                 <rect key="frame" x="92" y="515" width="192" height="18"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -467,7 +466,6 @@ Climate Action App</string>
                     </view>
                     <navigationItem key="navigationItem" id="h5L-SP-jSO"/>
                     <connections>
-                        <outlet property="dontHaveAnAccountLabel" destination="AWp-Fw-uSL" id="Ntx-Cx-C7N"/>
                         <outlet property="emailTF" destination="WZ4-IT-4Wg" id="rwH-YW-WaQ"/>
                         <outlet property="forgotPasswordLabel" destination="sbV-67-fVm" id="UUc-NT-ba1"/>
                         <outlet property="passwordTF" destination="mca-5O-ERv" id="JkC-jP-h0w"/>
