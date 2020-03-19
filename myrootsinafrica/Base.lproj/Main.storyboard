@@ -22,6 +22,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="pew-sv-mcU" kind="show" id="4qM-uo-mca"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
                                 <rect key="frame" x="50" y="426" width="275" height="55"/>
@@ -36,13 +39,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="man-al-GlR">
-                                <rect key="frame" x="-62.5" y="137.5" width="500" height="252"/>
+                                <rect key="frame" x="62.5" y="189" width="250" height="149"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="206"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="103.00000000000003"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
-                                        <rect key="frame" x="0.0" y="211" width="500" height="41"/>
+                                        <rect key="frame" x="0.0" y="108" width="250" height="41"/>
                                         <string key="text">I   c a n   l i t e r a l l y   s a y
 I   h a v e   r o o t   i n   A f r i c a</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -52,7 +55,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
-                                <rect key="frame" x="114.5" y="56.5" width="146.5" height="41"/>
+                                <rect key="frame" x="114.5" y="108" width="146.5" height="41"/>
                                 <string key="text">World's #1
 Climate Action App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -87,7 +90,7 @@ Climate Action App</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="-22.167487684729064"/>
+            <point key="canvasLocation" x="-1023" y="46"/>
         </scene>
         <!--Signup Controller-->
         <scene sceneID="E0M-G3-njR">
@@ -314,7 +317,7 @@ Climate Action App</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxV-Z3-jI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.5999999999999" y="-22.938530734632685"/>
+            <point key="canvasLocation" x="338" y="-167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1b6-In-1Zw">
@@ -332,7 +335,7 @@ Climate Action App</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PsO-6w-aOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562.39999999999998" y="-22.167487684729064"/>
+            <point key="canvasLocation" x="-1812" y="47"/>
         </scene>
         <!--Verification Result View Controller-->
         <scene sceneID="Aab-hK-2iu">
@@ -383,7 +386,96 @@ Climate Action App</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3o-Vj-ohO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="751.57421289355329"/>
+            <point key="canvasLocation" x="2054" y="-169"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="BXX-6Z-i3d">
+            <objects>
+                <viewController id="pew-sv-mcU" customClass="LoginViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cII-kT-W5N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-Eq-Z5g">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-n2-IYv">
+                                <rect key="frame" x="153" y="149" width="69" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78r-eA-BPX" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                <rect key="frame" x="28" y="452" width="313" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account signup?" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="AWp-Fw-uSL">
+                                <rect key="frame" x="92" y="515" width="192" height="18"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQd-Kk-YK3">
+                                <rect key="frame" x="33" y="253" width="44" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="WZ4-IT-4Wg">
+                                <rect key="frame" x="33" y="279" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a4m-GQ-i95">
+                                <rect key="frame" x="33" y="315" width="88" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mca-5O-ERv">
+                                <rect key="frame" x="33" y="346" width="303" height="42"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbV-67-fVm">
+                                <rect key="frame" x="213" y="396" width="123" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cbs-n2-IYv" firstAttribute="leading" secondItem="qMY-l9-fd7" secondAttribute="leading" constant="153" id="0Uk-7P-0RE"/>
+                            <constraint firstItem="cbs-n2-IYv" firstAttribute="centerX" secondItem="cII-kT-W5N" secondAttribute="centerX" id="5XU-TF-Hyf"/>
+                            <constraint firstItem="WVh-Eq-Z5g" firstAttribute="bottom" secondItem="qMY-l9-fd7" secondAttribute="bottom" id="FBU-C5-zlo"/>
+                            <constraint firstItem="WVh-Eq-Z5g" firstAttribute="top" secondItem="qMY-l9-fd7" secondAttribute="top" id="FyB-pP-HJF"/>
+                            <constraint firstItem="cbs-n2-IYv" firstAttribute="top" secondItem="qMY-l9-fd7" secondAttribute="top" constant="105" id="bZp-64-1U1"/>
+                            <constraint firstItem="WVh-Eq-Z5g" firstAttribute="leading" secondItem="qMY-l9-fd7" secondAttribute="leading" id="fx8-x1-duY"/>
+                            <constraint firstItem="cbs-n2-IYv" firstAttribute="centerX" secondItem="WVh-Eq-Z5g" secondAttribute="centerX" id="yij-k8-d0D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qMY-l9-fd7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h5L-SP-jSO"/>
+                    <connections>
+                        <outlet property="dontHaveAnAccountLabel" destination="AWp-Fw-uSL" id="Ntx-Cx-C7N"/>
+                        <outlet property="emailTF" destination="WZ4-IT-4Wg" id="rwH-YW-WaQ"/>
+                        <outlet property="forgotPasswordLabel" destination="sbV-67-fVm" id="UUc-NT-ba1"/>
+                        <outlet property="passwordTF" destination="mca-5O-ERv" id="JkC-jP-h0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYw-Xh-xry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.23188405797106" y="607.36607142857144"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -483,16 +575,16 @@ Climate Action App</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verificationEmailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="95r-Vp-dUa">
-                                <rect key="frame" x="112.5" y="72" width="150" height="98"/>
+                                <rect key="frame" x="150" y="72" width="75" height="49.000000000000014"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWz-9b-s2k">
-                                <rect key="frame" x="136" y="190" width="103" height="25.5"/>
+                                <rect key="frame" x="136" y="141" width="103" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the four digit code sent  to your email address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Am-Bb-bfZ">
-                                <rect key="frame" x="85.5" y="235.5" width="204" height="36"/>
+                                <rect key="frame" x="85.5" y="186.5" width="204" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -543,10 +635,11 @@ Climate Action App</string>
                 </textField>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khV-b3-cb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.5999999999999" y="751.57421289355329"/>
+            <point key="canvasLocation" x="1126" y="-168"/>
         </scene>
     </scenes>
     <resources>
+        <image name="loginBackground" width="187.5" height="406"/>
         <image name="my_roots_logo" width="250" height="103"/>
         <image name="verificationEmailIcon" width="75" height="49"/>
         <image name="verifitiondecor" width="47" height="46.5"/>

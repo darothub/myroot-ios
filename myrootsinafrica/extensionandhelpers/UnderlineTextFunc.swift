@@ -25,4 +25,45 @@ extension UITextField{
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
+    
+    func addRightImageToTextField(using image:UIImage){
+        let rightImageView = UIImageView()
+        
+        rightImageView.heightAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
+        rightImageView.widthAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
+        
+        rightImageView.image = image
+        self.rightView = rightImageView
+        self.rightViewMode = .always
+        self.initiateTapGesture(imageView: rightImageView)
+    }
+    
+    func initiateTapGesture(imageView : UIImageView){
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(self.tapDetected))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(singleTap)
+     }
+    
+    @objc func tapDetected(){
+        print("Yup")
+        self.isSecureTextEntry = !self.isSecureTextEntry
+        if self.isSecureTextEntry {
+            guard let passwordImage = UIImage(named: "eyeiconclose") else{
+                fatalError("Password image not found")
+            }
+            self.addRightImageToTextField(using: passwordImage)
+        }else{
+            guard let passwordImage = UIImage(named: "eyeiconopen") else{
+                fatalError("Password image not found")
+            }
+            self.addRightImageToTextField(using: passwordImage)
+        }
+        
+    }
 }
+
+
+
+
+
+
