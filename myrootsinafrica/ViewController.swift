@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: PrimaryButton!
     
+    @IBOutlet weak var SubParentView: UIView!
     let backgroundImageView = UIImageView()
     let scrollview = DScrollView()
     let scrollViewContainer = DScrollViewContainer(axis: .vertical, spacing: 10)
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        setupScrollView()
+//        setupScrollView()
         
 //        for family in UIFont.familyNames.sorted() {
 //            let names = UIFont.fontNames(forFamilyName: family)
@@ -40,17 +41,17 @@ class ViewController: UIViewController {
         self.showToastMessage(message: "Hello", font: font!)
     }
     
-    
-    func setBackground(){
-                view.addSubview(backgroundImageView)
-                backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-                backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-                backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-                backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-                backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-                backgroundImageView.image = UIImage(named: "home_background")
-                view.sendSubviewToBack(backgroundImageView)
-    }
+//
+//    func setBackground(){
+//                view.addSubview(backgroundImageView)
+//                backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+//                backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//                backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//                backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//                backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//                backgroundImageView.image = UIImage(named: "home_background")
+//                view.sendSubviewToBack(backgroundImageView)
+//    }
     
     func setupScrollView(){
         view.addScrollView(scrollview,
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
                            statusBarBackgroundColor: .green,
                            container: scrollViewContainer,
                            elements: [scrollViewElement])
-//        scrollViewElement.addSubview(loginButton)
+        scrollViewElement.addSubview(SubParentView)
         view.sendSubviewToBack(scrollview)
     }
 }

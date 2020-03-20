@@ -16,37 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="501" width="275" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="2sB-IM-O1f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="pew-sv-mcU" kind="show" id="4qM-uo-mca"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="50" y="426" width="275" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="SMQ-bi-nGg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Signup"/>
-                                <connections>
-                                    <action selector="showToast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKh-X4-yfU"/>
-                                    <segue destination="tif-0R-JF1" kind="show" id="PhM-5F-Ofn"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="man-al-GlR">
-                                <rect key="frame" x="62.5" y="189" width="250" height="149"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AF8-lb-WaP">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="103.00000000000003"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="z2f-bq-ySb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
-                                        <rect key="frame" x="0.0" y="108" width="250" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
+                                        <rect key="frame" x="62" y="91" width="250" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">World's #1
+Climate Action App</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
+                                        <rect key="frame" x="48" y="140" width="250" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="322" width="275" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Signup"/>
+                                        <connections>
+                                            <action selector="showToast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKh-X4-yfU"/>
+                                            <segue destination="tif-0R-JF1" kind="show" id="PhM-5F-Ofn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="385" width="275" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <segue destination="pew-sv-mcU" kind="show" id="4qM-uo-mca"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
+                                        <rect key="frame" x="69" y="237" width="236" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <string key="text">I   c a n   l i t e r a l l y   s a y
 I   h a v e   r o o t   i n   A f r i c a</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -54,30 +64,24 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
-                                <rect key="frame" x="114.5" y="108" width="146.5" height="41"/>
-                                <string key="text">World's #1
-Climate Action App</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="bottom" secondItem="Vjo-n6-q80" secondAttribute="bottom" id="0aX-QZ-PFU"/>
+                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="height" secondItem="AF8-lb-WaP" secondAttribute="height" multiplier="0.987159" constant="8" id="1kR-ha-k73"/>
+                                    <constraint firstAttribute="trailing" secondItem="z2f-bq-ySb" secondAttribute="trailing" id="AZU-56-D2t"/>
+                                    <constraint firstAttribute="bottom" secondItem="z2f-bq-ySb" secondAttribute="bottom" id="gCu-Ku-ZLX"/>
+                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="centerX" secondItem="AF8-lb-WaP" secondAttribute="centerX" id="lD2-hk-TcR"/>
+                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="width" secondItem="AF8-lb-WaP" secondAttribute="width" id="zS4-wz-oRq"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RIR-81-xQo"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Vjo-n6-q80"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G5r-rw-Meh" secondAttribute="trailing" constant="50" id="4Dq-5Z-uji"/>
-                            <constraint firstItem="man-al-GlR" firstAttribute="top" secondItem="ktQ-ei-9cd" secondAttribute="bottom" constant="40" id="B78-Rd-ttL"/>
-                            <constraint firstItem="zr9-di-OTv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="FEG-Jb-KM6"/>
-                            <constraint firstItem="G5r-rw-Meh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kg1-hh-JNe"/>
-                            <constraint firstItem="ktQ-ei-9cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gik-2G-tfM"/>
-                            <constraint firstItem="G5r-rw-Meh" firstAttribute="top" secondItem="zr9-di-OTv" secondAttribute="bottom" constant="20" id="jhK-IM-h2Q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zr9-di-OTv" secondAttribute="trailing" constant="50" id="mkJ-d1-GRW"/>
-                            <constraint firstItem="G5r-rw-Meh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pvl-52-THz"/>
-                            <constraint firstItem="man-al-GlR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="r0j-7d-06o"/>
-                            <constraint firstItem="zr9-di-OTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJg-ZM-FVi"/>
-                            <constraint firstItem="man-al-GlR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpf-o0-5Su"/>
-                            <constraint firstItem="zr9-di-OTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yti-CN-fDZ"/>
+                            <constraint firstItem="AF8-lb-WaP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JWf-zX-kJk"/>
+                            <constraint firstItem="AF8-lb-WaP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c5H-5S-7Dm"/>
+                            <constraint firstItem="AF8-lb-WaP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.934033" id="lOZ-mN-lBW"/>
+                            <constraint firstItem="AF8-lb-WaP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n4g-lA-hVT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -91,7 +95,7 @@ Climate Action App</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1023" y="46"/>
+            <point key="canvasLocation" x="-1023.2" y="45.42728635682159"/>
         </scene>
         <!--Signup Controller-->
         <scene sceneID="E0M-G3-njR">
@@ -397,10 +401,10 @@ Climate Action App</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-Eq-Z5g">
-                                <rect key="frame" x="0.0" y="44" width="336" height="394"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-n2-IYv">
-                                <rect key="frame" x="136" y="149" width="69" height="32"/>
+                                <rect key="frame" x="153" y="149" width="69" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -503,7 +507,7 @@ Climate Action App</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileicon" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-i6-CMN">
-                                                        <rect key="frame" x="12" y="14" width="26" height="24"/>
+                                                        <rect key="frame" x="11" y="14" width="26" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                 </subviews>
@@ -518,7 +522,7 @@ Climate Action App</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="54 countries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE1-QU-gS5">
-                                                        <rect key="frame" x="75" y="12" width="89" height="17"/>
+                                                        <rect key="frame" x="74" y="12" width="90" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" name="primaryGreen"/>
@@ -553,7 +557,7 @@ Climate Action App</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green Great Wall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-qs-FXe">
-                                                        <rect key="frame" x="76" y="8" width="116" height="17"/>
+                                                        <rect key="frame" x="75" y="8" width="117" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" name="primaryGreen"/>
@@ -591,11 +595,11 @@ Climate Action App</string>
                                                 <rect key="frame" x="20" y="20" width="224" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <segue destination="7Ig-xx-ckb" kind="show" id="zJz-NJ-duh"/>
+                                                    <segue destination="Ojv-mM-VUR" kind="show" id="YNS-PA-rad"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RESERVE A NEW TREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="KzM-we-Ybx">
-                                                <rect key="frame" x="78" y="48" width="144" height="14"/>
+                                                <rect key="frame" x="77" y="48" width="144" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -649,20 +653,20 @@ Climate Action App</string>
             <point key="canvasLocation" x="1117.5999999999999" y="608.54572713643188"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="8mM-0f-1v6">
+        <scene sceneID="swJ-pX-yHW">
             <objects>
-                <viewController id="7Ig-xx-ckb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hCW-S3-FzQ">
+                <viewController id="Ojv-mM-VUR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hp1-7R-WeD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="JPS-Av-mnd"/>
+                        <viewLayoutGuide key="safeArea" id="4Tm-iz-UFH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ag4-pw-gLh"/>
+                    <navigationItem key="navigationItem" id="aqx-lj-AJG"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIh-8C-rg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77P-IB-5Fo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="609"/>
+            <point key="canvasLocation" x="1902" y="607"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -829,6 +833,7 @@ Climate Action App</string>
         <image name="bottomboardLeaf" width="40" height="54"/>
         <image name="dashboardBackground" width="188" height="406"/>
         <image name="handpointingRight-1" width="50" height="50"/>
+        <image name="home_background" width="375" height="815"/>
         <image name="loginBackground" width="187.5" height="406"/>
         <image name="my_roots_logo" width="250" height="103"/>
         <image name="profileicon" width="12" height="12"/>
