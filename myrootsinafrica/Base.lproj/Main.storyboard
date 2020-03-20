@@ -408,6 +408,9 @@ Climate Action App</string>
                                 <rect key="frame" x="28" y="452" width="313" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="SDD-Wl-8Sp" kind="show" id="uJ3-7e-aFS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account signup?" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWp-Fw-uSL">
                                 <rect key="frame" x="92" y="515" width="192" height="18"/>
@@ -466,6 +469,7 @@ Climate Action App</string>
                     </view>
                     <navigationItem key="navigationItem" id="h5L-SP-jSO"/>
                     <connections>
+                        <outlet property="dontHaveAnAccountLabel" destination="AWp-Fw-uSL" id="ykc-89-sEr"/>
                         <outlet property="emailTF" destination="WZ4-IT-4Wg" id="rwH-YW-WaQ"/>
                         <outlet property="forgotPasswordLabel" destination="sbV-67-fVm" id="UUc-NT-ba1"/>
                         <outlet property="passwordTF" destination="mca-5O-ERv" id="JkC-jP-h0w"/>
@@ -474,6 +478,50 @@ Climate Action App</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYw-Xh-xry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336.23188405797106" y="607.36607142857144"/>
+        </scene>
+        <!--Dash Board View Controller-->
+        <scene sceneID="oql-Ui-Ogd">
+            <objects>
+                <viewController id="SDD-Wl-8Sp" customClass="DashBoardViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7z-JX-PDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yam-ll-FI6">
+                                <rect key="frame" x="-12" y="44" width="405" height="623"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboardBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-XO-g6n">
+                                        <rect key="frame" x="8" y="0.0" width="378" height="615"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="trailing" secondItem="yam-ll-FI6" secondAttribute="trailingMargin" constant="-11" id="10D-BR-w8R"/>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="width" secondItem="yam-ll-FI6" secondAttribute="width" multiplier="0.957333" constant="-9.7200000000000273" id="Adb-Kc-Zcd"/>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="leading" secondItem="yam-ll-FI6" secondAttribute="leadingMargin" id="PpP-3H-Sle"/>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="bottom" secondItem="yam-ll-FI6" secondAttribute="bottomMargin" id="Ppb-eD-U1k"/>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="top" secondItem="yam-ll-FI6" secondAttribute="top" id="e4X-9o-5Zm"/>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="centerX" secondItem="yam-ll-FI6" secondAttribute="centerX" constant="-5.5" id="wb7-el-m2Y"/>
+                                    <constraint firstItem="aCv-XO-g6n" firstAttribute="height" secondItem="yam-ll-FI6" secondAttribute="height" multiplier="0.987159" id="wnH-Zr-W4l"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yam-ll-FI6" firstAttribute="centerX" secondItem="B7z-JX-PDZ" secondAttribute="centerX" constant="3" id="OoH-GA-LER"/>
+                            <constraint firstItem="yam-ll-FI6" firstAttribute="bottom" secondItem="FFQ-z2-6w9" secondAttribute="bottom" id="bQq-S5-zzh"/>
+                            <constraint firstItem="yam-ll-FI6" firstAttribute="top" secondItem="FFQ-z2-6w9" secondAttribute="top" id="rde-tD-Rjo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FFQ-z2-6w9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hEx-E1-f6f"/>
+                    <connections>
+                        <outlet property="parentScrollView" destination="yam-ll-FI6" id="3Es-Nm-RHY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgA-E5-Voc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.8" y="609.44527736131943"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -637,6 +685,7 @@ Climate Action App</string>
         </scene>
     </scenes>
     <resources>
+        <image name="dashboardBackground" width="188" height="406"/>
         <image name="loginBackground" width="187.5" height="406"/>
         <image name="my_roots_logo" width="250" height="103"/>
         <image name="verificationEmailIcon" width="75" height="49"/>
