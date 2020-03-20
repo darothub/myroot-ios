@@ -26,7 +26,7 @@ class ReasonViewController : ViewController{
         jobCardView.setBottomBorderUIView(using: color)
         giftCardView.setBottomBorderUIView(using: color)
         
-
+        self.setupProgressBar(progress: 0.4)
         
 //        
 //        let checkbox = M13Checkbox(frame: CGRect(x: 1.4, y: 1.4, width: 0.0, height: 0.0))
