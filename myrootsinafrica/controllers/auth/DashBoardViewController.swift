@@ -12,12 +12,21 @@ import UIKit
 class DashBoardViewController : UIViewController{
     let backgroundImageView = UIImageView()
     @IBOutlet weak var parentScrollView: UIScrollView!
+    @IBOutlet weak var circleView: UIView!
+    
+    @IBOutlet weak var topBoardView: UIView!
+    @IBOutlet weak var bottomBoardView: UIView!
     override func viewDidLoad() {
+        
         print("We are here dashy")
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
         
         backgroundImageView.image = UIImage(named: "dashboardBackground")
+        
+        circleView.layer.cornerRadius = circleView.frame.width/2
+        topBoardView.layer.cornerRadius = 25
+        bottomBoardView.layer.cornerRadius = 25
         
 //        view.insertSubview(backgroundImageView, at: 0)
 //        parentScrollView.addSubview(backgroundImageView)
