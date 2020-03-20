@@ -1,3 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework
+${BUILT_PRODUCTS_DIR}/SimpleCheckbox/SimpleCheckbox.framework
+${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework

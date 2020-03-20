@@ -1,20 +1,32 @@
 PODS:
   - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.5)
+  - M13Checkbox (3.4.0)
+  - SimpleCheckbox (2.1.0)
+  - UICheckbox.Swift (1.0.0)
 
 DEPENDENCIES:
   - iOSDropDown
   - IQKeyboardManagerSwift
+  - M13Checkbox
+  - SimpleCheckbox
+  - UICheckbox.Swift
 
 SPEC REPOS:
   trunk:
     - iOSDropDown
     - IQKeyboardManagerSwift
+    - M13Checkbox
+    - SimpleCheckbox
+    - UICheckbox.Swift
 
 SPEC CHECKSUMS:
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
+  UICheckbox.Swift: 85715689206fac5bae38b308f19c2a3e00442c3b
 
-PODFILE CHECKSUM: 4fa3fdb8c2ddec0d6885523c7c87c506a9a2449e
+PODFILE CHECKSUM: e47c71bdb58c344b902092dc31f651bed88230aa
 
 COCOAPODS: 1.9.1

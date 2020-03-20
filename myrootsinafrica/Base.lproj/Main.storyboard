@@ -507,7 +507,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profileicon" translatesAutoresizingMaskIntoConstraints="NO" id="KXC-i6-CMN">
-                                                        <rect key="frame" x="11" y="14" width="26" height="24"/>
+                                                        <rect key="frame" x="10" y="14" width="26" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                 </subviews>
@@ -522,7 +522,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="54 countries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE1-QU-gS5">
-                                                        <rect key="frame" x="74" y="12" width="90" height="17"/>
+                                                        <rect key="frame" x="73" y="12" width="91" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" name="primaryGreen"/>
@@ -599,7 +599,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RESERVE A NEW TREE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.55000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="KzM-we-Ybx">
-                                                <rect key="frame" x="77" y="48" width="144" height="14"/>
+                                                <rect key="frame" x="76" y="48" width="145" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -652,21 +652,180 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             </objects>
             <point key="canvasLocation" x="1117.5999999999999" y="608.54572713643188"/>
         </scene>
-        <!--View Controller-->
+        <!--Reason View Controller-->
         <scene sceneID="swJ-pX-yHW">
             <objects>
-                <viewController id="Ojv-mM-VUR" sceneMemberID="viewController">
+                <viewController id="Ojv-mM-VUR" customClass="ReasonViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hp1-7R-WeD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8W-X9-wZJ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reasonSceneBackground" translatesAutoresizingMaskIntoConstraints="NO" id="HMQ-ME-GCt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the reason for planting your roots" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="zZY-uo-WOv">
+                                        <rect key="frame" x="39" y="63" width="296" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why plant a tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIT-WT-siB">
+                                        <rect key="frame" x="94" y="23" width="186" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-Jq-mSW">
+                                        <rect key="frame" x="39" y="178" width="296" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageclimate" translatesAutoresizingMaskIntoConstraints="NO" id="IUq-9m-Ddo">
+                                                <rect key="frame" x="8" y="16" width="55" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Climate action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV2-I0-z6E">
+                                                <rect key="frame" x="71" y="16" width="102" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Supporting vulnerable regions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-R6-fEX">
+                                                <rect key="frame" x="71" y="35" width="159" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxH-sW-Bo0" customClass="UICheckbox" customModule="UICheckbox_Swift">
+                                                <rect key="frame" x="263" y="16" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3r-Ep-eDf">
+                                        <rect key="frame" x="39" y="292" width="296" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="createjob_image" translatesAutoresizingMaskIntoConstraints="NO" id="ykQ-kA-svL">
+                                                <rect key="frame" x="8" y="16" width="55" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To create a job" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG1-SV-Nur">
+                                                <rect key="frame" x="71" y="16" width="105" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decent work and economic growth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-iX-Hfh">
+                                                <rect key="frame" x="71" y="35" width="183" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owO-SG-5re" customClass="UICheckbox" customModule="UICheckbox_Swift">
+                                                <rect key="frame" x="263" y="16" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFl-xa-H0c">
+                                        <rect key="frame" x="39" y="403" width="296" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftnew" translatesAutoresizingMaskIntoConstraints="NO" id="6CF-mS-oor">
+                                                <rect key="frame" x="8" y="16" width="55" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZK-vr-2T7">
+                                                <rect key="frame" x="71" y="16" width="25" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gift to self or loved ones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Em7-5n-XuN">
+                                                <rect key="frame" x="71" y="35" width="129" height="14"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-xg-Ved" customClass="UICheckbox" customModule="UICheckbox_Swift">
+                                                <rect key="frame" x="263" y="16" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HMQ-ME-GCt" secondAttribute="trailing" id="Fi8-Rd-rDw"/>
+                                    <constraint firstItem="HMQ-ME-GCt" firstAttribute="centerX" secondItem="J8W-X9-wZJ" secondAttribute="centerX" id="L3b-vl-f9a"/>
+                                    <constraint firstAttribute="bottom" secondItem="HMQ-ME-GCt" secondAttribute="bottom" id="Ubj-8a-5hb"/>
+                                    <constraint firstItem="HMQ-ME-GCt" firstAttribute="top" secondItem="Mac-xD-bP7" secondAttribute="top" id="boS-kj-mtR"/>
+                                    <constraint firstItem="HMQ-ME-GCt" firstAttribute="width" secondItem="J8W-X9-wZJ" secondAttribute="width" id="xQi-jH-GvB"/>
+                                    <constraint firstItem="HMQ-ME-GCt" firstAttribute="height" secondItem="J8W-X9-wZJ" secondAttribute="height" id="xYn-cC-ADu"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="HuY-Gb-DJl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Mac-xD-bP7"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="J8W-X9-wZJ" firstAttribute="top" secondItem="4Tm-iz-UFH" secondAttribute="top" id="FQd-BC-moc"/>
+                            <constraint firstItem="J8W-X9-wZJ" firstAttribute="height" secondItem="hp1-7R-WeD" secondAttribute="height" multiplier="0.934033" id="G3y-26-7xs"/>
+                            <constraint firstItem="J8W-X9-wZJ" firstAttribute="width" secondItem="hp1-7R-WeD" secondAttribute="width" id="krw-cr-WBu"/>
+                            <constraint firstItem="J8W-X9-wZJ" firstAttribute="centerX" secondItem="hp1-7R-WeD" secondAttribute="centerX" id="p1R-vb-vIw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Tm-iz-UFH"/>
                     </view>
                     <navigationItem key="navigationItem" id="aqx-lj-AJG"/>
+                    <connections>
+                        <outlet property="climateCardView" destination="BiE-Jq-mSW" id="lTa-6B-z3f"/>
+                        <outlet property="giftCardView" destination="bFl-xa-H0c" id="NQl-ZD-fu6"/>
+                        <outlet property="jobCardView" destination="l3r-Ep-eDf" id="Y5r-dl-Dmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77P-IB-5Fo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="607"/>
+            <point key="canvasLocation" x="1901.5999999999999" y="606.74662668665667"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -831,12 +990,16 @@ I   h a v e   r o o t   i n   A f r i c a</string>
     </scenes>
     <resources>
         <image name="bottomboardLeaf" width="40" height="54"/>
+        <image name="createjob_image" width="51" height="51"/>
         <image name="dashboardBackground" width="188" height="406"/>
+        <image name="giftnew" width="89" height="76"/>
         <image name="handpointingRight-1" width="50" height="50"/>
         <image name="home_background" width="375" height="815"/>
+        <image name="imageclimate" width="51" height="51"/>
         <image name="loginBackground" width="187.5" height="406"/>
         <image name="my_roots_logo" width="250" height="103"/>
         <image name="profileicon" width="12" height="12"/>
+        <image name="reasonSceneBackground" width="187.5" height="406"/>
         <image name="topboardLeaf" width="39" height="35.5"/>
         <image name="verificationEmailIcon" width="75" height="49"/>
         <image name="verifitiondecor" width="47" height="46.5"/>

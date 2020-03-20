@@ -714,7 +714,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -734,7 +734,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -798,7 +798,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = myrootsinafricaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -818,7 +818,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = myrootsinafricaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

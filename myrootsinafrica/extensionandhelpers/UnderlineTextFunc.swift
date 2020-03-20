@@ -18,6 +18,15 @@ extension UILabel{
     }
 }
 
+extension UIView{
+    func setBottomBorderUIView(using color:CGColor){
+        self.layer.shadowColor = color
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.8)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+}
+
 extension UITextField{
     func setBottomBorder(){
         self.layer.shadowColor = UIColor.gray.cgColor

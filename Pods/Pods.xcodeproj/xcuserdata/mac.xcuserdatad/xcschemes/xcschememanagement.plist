@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>M13Checkbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-myrootsinafrica-myrootsinafricaUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,21 @@
 			<false/>
 		</dict>
 		<key>Pods-myrootsinafricaTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SimpleCheckbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICheckbox.Swift-UICheckbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICheckbox.Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

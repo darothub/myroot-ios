@@ -198,10 +198,16 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SimpleCheckbox/SimpleCheckbox.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SimpleCheckbox/SimpleCheckbox.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
