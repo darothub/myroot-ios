@@ -30,7 +30,7 @@ class DashBoardViewController : UIViewController{
         
 //        view.insertSubview(backgroundImageView, at: 0)
 //        parentScrollView.addSubview(backgroundImageView)
-////        parentScrollView.sendSubviewToBack(backgroundImageView)
+////        parentScrollView.sendSubviewToBack(backgroundImgeView)
 //        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
 //        backgroundImageView.topAnchor.constraint(equalTo: parentScrollView.topAnchor).isActive = true
 //        backgroundImageView.heightAnchor.constraint(equalTo: parentScrollView.heightAnchor).isActive = true
