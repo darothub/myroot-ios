@@ -30,6 +30,10 @@
 		045C1F96241F53F1004217D9 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F95241F53F1004217D9 /* SignupController.swift */; };
 		045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */; };
 		047AC7932425624700968A29 /* WhereToPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC7922425624700968A29 /* WhereToPlantViewController.swift */; };
+		047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79424274B1700968A29 /* HowToPlantViewController.swift */; };
+		047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */; };
+		047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */; };
+		047AC79B242775F800968A29 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79A242775F800968A29 /* WhiteButton.swift */; };
 		047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB0B22421976B001C5344 /* UserVerificationController.swift */; };
 		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
 		049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58624229E2E00C81412 /* setViewShadowExtension.swift */; };
@@ -90,6 +94,10 @@
 		045C1F95241F53F1004217D9 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFunc.swift; sourceTree = "<group>"; };
 		047AC7922425624700968A29 /* WhereToPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToPlantViewController.swift; sourceTree = "<group>"; };
+		047AC79424274B1700968A29 /* HowToPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlantViewController.swift; sourceTree = "<group>"; };
+		047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatTypeOfTreeViewController.swift; sourceTree = "<group>"; };
+		047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfOccasionViewController.swift; sourceTree = "<group>"; };
+		047AC79A242775F800968A29 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		047BB0B22421976B001C5344 /* UserVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVerificationController.swift; sourceTree = "<group>"; };
 		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
 		049CF58624229E2E00C81412 /* setViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewShadowExtension.swift; sourceTree = "<group>"; };
@@ -202,6 +210,7 @@
 			children = (
 				045C1F44241AE06A004217D9 /* primarybutton.swift */,
 				045C1F46241AE3CC004217D9 /* secondarybutton.swift */,
+				047AC79A242775F800968A29 /* WhiteButton.swift */,
 			);
 			path = custombutton;
 			sourceTree = "<group>";
@@ -255,6 +264,9 @@
 				049CF5892422AD3600C81412 /* VerificationResultViewController.swift */,
 				047AC7922425624700968A29 /* WhereToPlantViewController.swift */,
 				049CF58F2424F43800C81412 /* ReasonViewController.swift */,
+				047AC79424274B1700968A29 /* HowToPlantViewController.swift */,
+				047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */,
+				047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -529,11 +541,13 @@
 				040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */,
 				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
+				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
 				049CF58C242373C200C81412 /* LoginViewController.swift in Sources */,
 				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
 				049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
 				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
+				047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
 				045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */,
 				045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */,
@@ -543,6 +557,8 @@
 				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
 				049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
+				047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */,
+				047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */,
 				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
 				045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */,
 				0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */,

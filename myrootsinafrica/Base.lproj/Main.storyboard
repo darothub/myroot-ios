@@ -623,7 +623,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where to plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-E0-ti2">
                                                 <rect key="frame" x="94" y="41" width="186" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="23"/>
                                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -732,14 +732,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the reason for planting your roots" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="zZY-uo-WOv">
                                         <rect key="frame" x="39" y="63" width="296" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why plant a tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIT-WT-siB">
                                         <rect key="frame" x="94" y="23" width="186" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -880,6 +880,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <rect key="frame" x="83" y="514" width="206" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="4LG-bd-npd" kind="show" id="uJe-OB-yOi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -902,20 +905,338 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             </objects>
             <point key="canvasLocation" x="2672.8000000000002" y="606.74662668665667"/>
         </scene>
-        <!--View Controller-->
+        <!--Type Of Occasion View Controller-->
+        <scene sceneID="Yma-NY-tva">
+            <objects>
+                <viewController id="4LG-bd-npd" customClass="TypeOfOccasionViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PyJ-8X-czP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-Qa-XEU">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="s34-A2-dKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of occasion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-dm-n1a">
+                                        <rect key="frame" x="90" y="22" width="195" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the type of occasion  for planting your roots" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.89999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="quq-3Z-gDR">
+                                        <rect key="frame" x="39" y="62" width="296" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fF-vv-E85">
+                                        <rect key="frame" x="39" y="144" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftnew" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-MS-rh0">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-Et-yX7">
+                                        <rect key="frame" x="74" y="270" width="63" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irX-dp-rO7">
+                                        <rect key="frame" x="210" y="144" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="champagnenew" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-W3-8Di">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anniversary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gss-se-5yI">
+                                        <rect key="frame" x="227" y="270" width="90" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wX-Tn-k1g">
+                                        <rect key="frame" x="39" y="334" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrellanew" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-1G-tDO">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holiday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-8m-5Sl">
+                                        <rect key="frame" x="74" y="460" width="57" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuW-xY-Unz">
+                                        <rect key="frame" x="210" y="334" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-Gv-mLs">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-Xz-eQD">
+                                        <rect key="frame" x="251" y="460" width="43" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-It-bqw" customClass="WhiteButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                        <rect key="frame" x="84" y="500" width="206" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <segue destination="lm7-5c-Vp8" kind="show" id="Tgc-Fv-lMf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s34-A2-dKX" secondAttribute="trailing" id="4Ot-Cy-jFa"/>
+                                    <constraint firstAttribute="bottom" secondItem="s34-A2-dKX" secondAttribute="bottom" id="GJv-9e-n2K"/>
+                                    <constraint firstItem="s34-A2-dKX" firstAttribute="top" secondItem="kjn-nr-Ei6" secondAttribute="top" id="atG-Ho-Kfh"/>
+                                    <constraint firstItem="s34-A2-dKX" firstAttribute="height" secondItem="NJ0-Qa-XEU" secondAttribute="height" id="gKm-Ib-5cJ"/>
+                                    <constraint firstItem="s34-A2-dKX" firstAttribute="width" secondItem="NJ0-Qa-XEU" secondAttribute="width" id="hSB-8Y-MBJ"/>
+                                    <constraint firstItem="s34-A2-dKX" firstAttribute="centerX" secondItem="NJ0-Qa-XEU" secondAttribute="centerX" id="moZ-fl-Seh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="kjn-nr-Ei6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qTW-rr-MG5"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NJ0-Qa-XEU" firstAttribute="width" secondItem="PyJ-8X-czP" secondAttribute="width" id="4Fx-lR-XXw"/>
+                            <constraint firstItem="NJ0-Qa-XEU" firstAttribute="height" secondItem="PyJ-8X-czP" secondAttribute="height" multiplier="0.934033" id="OBC-96-6IG"/>
+                            <constraint firstItem="NJ0-Qa-XEU" firstAttribute="centerX" secondItem="PyJ-8X-czP" secondAttribute="centerX" id="Tgo-Ry-dgW"/>
+                            <constraint firstItem="NJ0-Qa-XEU" firstAttribute="top" secondItem="q6Z-Iy-PZh" secondAttribute="top" id="Vze-Ld-z67"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q6Z-Iy-PZh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R9K-ol-Z0U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkS-8K-Lnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3373.5999999999999" y="606.74662668665667"/>
+        </scene>
+        <!--How To Plant View Controller-->
         <scene sceneID="6p9-iF-cSh">
             <objects>
-                <viewController id="lm7-5c-Vp8" sceneMemberID="viewController">
+                <viewController id="lm7-5c-Vp8" customClass="HowToPlantViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1Z-go-IDg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-Hb-WFG" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                <rect key="frame" x="80" y="334" width="206" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="4s3-uS-ILC" kind="show" id="WHF-BH-Js9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-tR-osw">
+                                <rect key="frame" x="54" y="168" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="remote" translatesAutoresizingMaskIntoConstraints="NO" id="HkO-2d-ujW">
+                                        <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-va-dO8">
+                                <rect key="frame" x="187" y="168" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inperson" translatesAutoresizingMaskIntoConstraints="NO" id="ZZt-6B-F3D">
+                                        <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to plant tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-FL-fDt">
+                                <rect key="frame" x="90" y="58" width="195" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose how to plant your  roots" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.89999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="zHG-p7-bt7">
+                                <rect key="frame" x="39" y="98" width="296" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-mE-nv3">
+                                <rect key="frame" x="86" y="301" width="60" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkm-lO-CBO">
+                                <rect key="frame" x="214" y="301" width="71" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TKw-tb-okX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1ot-jV-5d0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcb-2R-krh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3447" y="609"/>
+            <point key="canvasLocation" x="4071" y="607"/>
+        </scene>
+        <!--What Type Of Tree View Controller-->
+        <scene sceneID="HRU-sD-iC4">
+            <objects>
+                <viewController id="4s3-uS-ILC" customClass="WhatTypeOfTreeViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2l-JV-dmz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uL5-lU-8vA">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-Ri-9nT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-XM-tq0">
+                                        <rect key="frame" x="51" y="116" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorationTree" translatesAutoresizingMaskIntoConstraints="NO" id="pzo-gF-I5d">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8f-ma-mSz" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                        <rect key="frame" x="84" y="453" width="206" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="ePI-SA-2je">
+                                        <rect key="frame" x="94" y="18" width="186" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the type of roots" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.89999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="QvX-Hz-mtp">
+                                        <rect key="frame" x="105" y="58" width="165" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-aQ-AR2">
+                                        <rect key="frame" x="227" y="116" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fruitTree" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-uL-UrZ">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fruit tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U46-Xk-pgd">
+                                        <rect key="frame" x="253" y="249" width="69" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decorative tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrZ-hr-LAL">
+                                        <rect key="frame" x="53" y="248" width="116" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-ym-5ME">
+                                        <rect key="frame" x="125" y="277" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="environmentalTree" translatesAutoresizingMaskIntoConstraints="NO" id="hnq-hx-t9G">
+                                                <rect key="frame" x="25" y="25" width="75" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Environmental tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMU-Lu-vVU">
+                                        <rect key="frame" x="116" y="410" width="143" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vm9-Ri-9nT" secondAttribute="trailing" id="3fh-UN-Uax"/>
+                                    <constraint firstAttribute="bottom" secondItem="vm9-Ri-9nT" secondAttribute="bottom" id="BWu-Cm-qZ5"/>
+                                    <constraint firstItem="vm9-Ri-9nT" firstAttribute="top" secondItem="25h-Pn-VMK" secondAttribute="top" id="Oos-Th-EAU"/>
+                                    <constraint firstItem="vm9-Ri-9nT" firstAttribute="width" secondItem="uL5-lU-8vA" secondAttribute="width" id="Wc4-cG-kxz"/>
+                                    <constraint firstItem="vm9-Ri-9nT" firstAttribute="centerX" secondItem="uL5-lU-8vA" secondAttribute="centerX" id="We0-vQ-Qbn"/>
+                                    <constraint firstItem="vm9-Ri-9nT" firstAttribute="height" secondItem="uL5-lU-8vA" secondAttribute="height" id="tHW-BN-W1h"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="25h-Pn-VMK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xvs-me-WCo"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uL5-lU-8vA" firstAttribute="centerX" secondItem="w2l-JV-dmz" secondAttribute="centerX" id="DqL-YB-cby"/>
+                            <constraint firstItem="uL5-lU-8vA" firstAttribute="top" secondItem="nOk-tA-75U" secondAttribute="top" id="iIu-ra-2gh"/>
+                            <constraint firstItem="uL5-lU-8vA" firstAttribute="height" secondItem="w2l-JV-dmz" secondAttribute="height" multiplier="0.934033" id="mYX-16-zie"/>
+                            <constraint firstItem="uL5-lU-8vA" firstAttribute="width" secondItem="w2l-JV-dmz" secondAttribute="width" id="yxm-gI-1g6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nOk-tA-75U"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WhY-Qf-39o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjv-oW-vOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4832.8000000000002" y="606.74662668665667"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -1032,18 +1353,27 @@ I   h a v e   r o o t   i n   A f r i c a</string>
     <resources>
         <image name="africaMapImage" width="58.5" height="56.5"/>
         <image name="bottomboardLeaf" width="40" height="54"/>
+        <image name="champagnenew" width="28.5" height="47"/>
         <image name="createjob_image" width="25.5" height="25.5"/>
         <image name="dashboardBackground" width="188" height="406"/>
+        <image name="decorationTree" width="22.5" height="39.5"/>
+        <image name="environmentalTree" width="38.5" height="41"/>
+        <image name="fruitTree" width="44.5" height="42"/>
+        <image name="generalBackground" width="187.5" height="406"/>
         <image name="giftnew" width="44.5" height="38"/>
         <image name="greetgreennewest" width="58.5" height="56"/>
         <image name="handpointingRight-1" width="50" height="50"/>
         <image name="home_background" width="375" height="815"/>
         <image name="imageclimate" width="25.5" height="25.5"/>
+        <image name="inperson" width="61.5" height="53"/>
         <image name="loginBackground" width="187.5" height="406"/>
         <image name="my_roots_logo" width="250" height="103"/>
+        <image name="other" width="37" height="33.5"/>
         <image name="profileicon" width="12" height="12"/>
         <image name="reasonSceneBackground" width="187.5" height="406"/>
+        <image name="remote" width="62" height="62"/>
         <image name="topboardLeaf" width="39" height="35.5"/>
+        <image name="umbrellanew" width="49" height="43"/>
         <image name="verificationEmailIcon" width="75" height="49"/>
         <image name="verifitiondecor" width="47" height="46.5"/>
         <namedColor name="primaryGreen">
