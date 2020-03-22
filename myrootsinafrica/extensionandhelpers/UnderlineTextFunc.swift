@@ -25,6 +25,23 @@ extension UIView{
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
+    
+    func showSelectorCard() -> Bool{
+        self.backgroundColor = .white
+        self.setViewShadow(using: 4, color: UIColor.black.cgColor)
+        self.layer.cornerRadius = 5
+        
+        return true
+    }
+    
+    func unSelectCard() -> Bool{
+        self.backgroundColor = .clear
+        self.setViewShadow(using: 0, color: UIColor.black.cgColor)
+        self.layer.cornerRadius = 0
+        
+        return true
+    }
+    
 }
 
 extension UITextField{

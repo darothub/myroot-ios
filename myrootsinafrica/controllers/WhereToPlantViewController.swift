@@ -39,43 +39,20 @@ class WhereToPlantViewController:ViewController{
         
     }
     
-    @objc func tapDetected()-> Bool{
+    @objc func tapDetected(){
         
-        if showSelectorCard(view: selectorCardForCountry) {
+        if selectorCardForCountry.showSelectorCard() {
             fiftyFourCountriesDropDown.isEnabled = true
-            unSelectCard(view: selectorCardForGGW)
-            return true
-        }else{
-           return false
+            selectorCardForGGW.unSelectCard()
         }
-
         
 
     }
     
-    @objc func tapDetectedForGGWCard()-> Bool{
-        if showSelectorCard(view: selectorCardForGGW) {
+    @objc func tapDetectedForGGWCard(){
+        if selectorCardForGGW.showSelectorCard() {
             fiftyFourCountriesDropDown.isEnabled = false
-            unSelectCard(view: selectorCardForCountry)
-            return true
-        }else{
-            return false
-        }
+            selectorCardForCountry.unSelectCard()        }
     }
     
-    func showSelectorCard(view:UIView) -> Bool{
-        view.backgroundColor = .white
-        view.setViewShadow(using: 4, color: UIColor.black.cgColor)
-        view.layer.cornerRadius = 5
-        
-        return true
-    }
-    
-    func unSelectCard(view:UIView) -> Bool{
-        view.backgroundColor = .clear
-        view.setViewShadow(using: 0, color: UIColor.black.cgColor)
-        view.layer.cornerRadius = 0
-        
-        return true
-    }
 }
