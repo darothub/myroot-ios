@@ -654,14 +654,19 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                                 <rect key="frame" x="15" y="13" width="112" height="108"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCn-6I-3Aq">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCn-6I-3Aq" customClass="DropDown" customModule="iOSDropDown">
                                                                 <rect key="frame" x="12" y="112" width="119" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedRowColor">
+                                                                        <color key="value" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnF-RR-98e">
                                                         <rect key="frame" x="174" y="20" width="142" height="158"/>
@@ -679,7 +684,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" name="primaryGreen"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -710,6 +715,12 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <viewLayoutGuide key="safeArea" id="MQ8-fF-7Ek"/>
                     </view>
                     <navigationItem key="navigationItem" id="YYv-rW-ZZ8"/>
+                    <connections>
+                        <outlet property="countryIcon" destination="Xuq-Er-nMu" id="wek-uH-BBL"/>
+                        <outlet property="fiftyFourCountriesDropDown" destination="ZCn-6I-3Aq" id="HRp-D9-fN1"/>
+                        <outlet property="selectorCardForCountry" destination="Gwm-Fc-REv" id="Nyd-11-4Zt"/>
+                        <outlet property="selectorCardForGGW" destination="tnF-RR-98e" id="fjq-uQ-Lvm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eE-UX-jq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
