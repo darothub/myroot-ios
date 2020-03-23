@@ -8,10 +8,12 @@
 
 import UIKit
 
-class CardSelectionHelper{
-    
- 
-    
+class CardSelectionHelper:NSObject{
+    static func tapInitiation(view:UIView, action: Selector){
+        let singleTap = UITapGestureRecognizer(target: self, action: action)
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(singleTap)
+    }
 
 }
 

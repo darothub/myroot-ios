@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 extension UILabel{
     func underlineText(){
@@ -40,6 +41,19 @@ extension UIView{
         self.layer.cornerRadius = 0
         
         return true
+    }
+    
+    func initiateTapGesture(action:Selector?){
+        let singleTap = UITapGestureRecognizer(target: self, action: action)
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(singleTap)
+     }
+    
+    @objc func tapDetectedForProfile(){
+        print("profile setting")
+        let dashboard = DashBoardViewController(nibName: "DashBoardViewController", bundle: nil)
+        dashboard.present(dashboard, animated: false, completion: nil)
+        
     }
     
 }

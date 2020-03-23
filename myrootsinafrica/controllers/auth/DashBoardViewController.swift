@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 
 class DashBoardViewController : UIViewController{
@@ -38,5 +39,25 @@ class DashBoardViewController : UIViewController{
 //        backgroundImageView.bottomAnchor.constraint(equalTo: parentScrollView.bottomAnchor).isActive = true
 //        backgroundImageView.contentMode = .scaleToFill
 //        view.sendSubviewToBack(parentScrollView)
+//        circleView.initiateTapGesture(action: #selector(circleView.tapDetectedForProfile))
+//        initiateTapGestures(view: circleView, action: #selector(view.tapDetectedForProfile))
+        
+        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
     }
+    
+
+    func initiateTapGestures(view:UIView, action:Selector?){
+        let singleTap = UITapGestureRecognizer(target: view, action: action)
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(singleTap)
+     }
+    @objc func tapDetectedForProfile(_ sender : UITapGestureRecognizer){
+        print("profile setting")
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "story") as! ViewController
+//        let profile = ProfileViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+    }
+    
+
 }

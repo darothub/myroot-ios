@@ -35,6 +35,7 @@
 		047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */; };
 		047AC79B242775F800968A29 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79A242775F800968A29 /* WhiteButton.swift */; };
 		047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79E2427C36700968A29 /* CardSelectionHelper.swift */; };
+		047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC7A02428A54000968A29 /* ProfileViewController.swift */; };
 		047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB0B22421976B001C5344 /* UserVerificationController.swift */; };
 		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
 		049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58624229E2E00C81412 /* setViewShadowExtension.swift */; };
@@ -100,6 +101,7 @@
 		047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfOccasionViewController.swift; sourceTree = "<group>"; };
 		047AC79A242775F800968A29 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		047AC79E2427C36700968A29 /* CardSelectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionHelper.swift; sourceTree = "<group>"; };
+		047AC7A02428A54000968A29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		047BB0B22421976B001C5344 /* UserVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVerificationController.swift; sourceTree = "<group>"; };
 		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
 		049CF58624229E2E00C81412 /* setViewShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setViewShadowExtension.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				047AC79424274B1700968A29 /* HowToPlantViewController.swift */,
 				047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */,
 				047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */,
+				047AC7A02428A54000968A29 /* ProfileViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */,
 				045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */,
 				049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */,
+				047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */,
 				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
 				049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
@@ -740,9 +744,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = myrootsinafrica/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -760,9 +767,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = myrootsinafrica/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,7 +790,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -802,7 +814,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -823,7 +837,10 @@
 			baseConfigurationReference = 689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -843,7 +860,10 @@
 			baseConfigurationReference = 07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -22,7 +22,7 @@ class SignupController: UIViewController {
     var selectedButton = UIButton()
     var dataSource = [String]()
     
-
+    var testText = ""
     @IBOutlet weak var countryCodeTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -30,7 +30,7 @@ class SignupController: UIViewController {
     @IBOutlet weak var dialCodeTF: UITextField!
     @IBOutlet weak var phoneNumberTF: UITextField!
   
-    
+     
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -41,9 +41,13 @@ class SignupController: UIViewController {
     @IBOutlet weak var countryDropDown: DropDown!
     
     @IBOutlet weak var parentView: UIView!
+    
+   
     override func viewDidLoad() {
         print("Yaay signup")
 //        setScrollViewBackground()
+        
+        firstNameTF.placeholder = testText
         tableView.delegate = self as? UITableViewDelegate
         tableView.dataSource = self as? UITableViewDataSource
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")

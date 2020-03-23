@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var worldText: UILabel!
     @IBOutlet weak var myRootHeaderLabel: UIImageView!
@@ -62,6 +64,13 @@ class ViewController: UIViewController {
                            elements: [scrollViewElement])
         scrollViewElement.addSubview(SubParentView)
         view.sendSubviewToBack(scrollview)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SignupController{
+           
+            vc.testText = "Arthur Dent"
+        }
     }
 }
 
