@@ -11,6 +11,7 @@ target 'myrootsinafrica' do
   pod 'UICheckbox.Swift'
   pod 'M13Checkbox'
   pod 'SimpleCheckbox'
+  pod "ParticlesLoadingView"
 
 
   target 'myrootsinafricaTests' do

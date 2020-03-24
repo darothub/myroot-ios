@@ -8,10 +8,8 @@
 
 import UIKit
 import iOSDropDown
+import ParticlesLoadingView
 
-class CellClass:UITableViewCell{
-    
-}
 
 class SignupController: ViewController {
     
@@ -48,10 +46,8 @@ class SignupController: ViewController {
         print("Yaay signup")
 //        setScrollViewBackground()
         
+
         firstNameTF.placeholder = testText
-        tableView.delegate = self as? UITableViewDelegate
-        tableView.dataSource = self as? UITableViewDataSource
-        tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
         
         setTextFieldBottomBorder()
         dialCodeTF.isUserInteractionEnabled = false

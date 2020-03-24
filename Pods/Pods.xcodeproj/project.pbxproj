@@ -7,79 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0348E72A279882575367B52CE6A0C2B1 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A301BF4F81BAFE1F1614C24587C3C59 /* M13CheckboxFlatController.swift */; };
-		0564E54A6F03094F6F39F7D2325CE0D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7DACB743F2A39BC0D9C0E317842D5 /* CoreGraphics.framework */; };
-		05C8CA9C8F308E4A385F5E374679A5F8 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C83DDB7A2EF43AD8DAFDB25B2C887 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m */; };
-		0A79A3E98DB6FAC7CC378A63BEDFC36C /* Pods-myrootsinafrica-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EF4F4D1A88CC0934C98F3002C29E068 /* Pods-myrootsinafrica-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB37C54BC9203F0395C1AB2B5910EDEB /* IQKeyboardManagerConstantsInternal.swift */; };
-		2229A6998218AC6DFF497473500021C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		254315B3201BB02B083E2B189DD456E3 /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C45795C95B6B09000DFFA9AAFA79C5B /* M13Checkbox-dummy.m */; };
-		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CBBCAC47E2B7BB80250256CA95987 /* IQNSArray+Sort.swift */; };
+		0348E72A279882575367B52CE6A0C2B1 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590875472FC86ECA5435D6A5ADF130C /* M13CheckboxFlatController.swift */; };
+		0564E54A6F03094F6F39F7D2325CE0D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3B0AD0BBC3793F8A22C63925E42CB8 /* CoreGraphics.framework */; };
+		102F4487BC4ADC3C2B56A0470E0A9468 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D491BE1939422B8C66BBDEA7E06AC3 /* IQKeyboardManagerConstantsInternal.swift */; };
+		139A403F42C7EAFF23FBD81EF8591D75 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DC7B7BCB77BCB78CA4EB97225A3AF2B /* spark.png */; };
+		1BE437242E2B144710AB77DAC8A58C93 /* ParticlesLoadingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D6B268DFE47B53277CD14E5AE5F150 /* ParticlesLoadingView-dummy.m */; };
+		2229A6998218AC6DFF497473500021C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		254315B3201BB02B083E2B189DD456E3 /* M13Checkbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 392B24F2E9DECDA0BE9EE1AF5BC11178 /* M13Checkbox-dummy.m */; };
+		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C71B314B41B9EE51050577921E66DE /* IQNSArray+Sort.swift */; };
 		25D757C8977323C5347292EEB0981A36 /* UICheckbox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 409EB0D18610374410BB451788A68009 /* UICheckbox.bundle */; };
-		2744447A1042C62F82958FCD67C7196D /* SimpleCheckbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4360DFB3811CDE6F463551F940BFCB6 /* SimpleCheckbox-dummy.m */; };
-		28590ADA89BFE59C574757077770270A /* Pods-myrootsinafrica-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34899D451091F2FBEF0B39A70BC08067 /* Pods-myrootsinafrica-dummy.m */; };
-		2964A4832ED09F9CB441D25FB2F7B76C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
+		2744447A1042C62F82958FCD67C7196D /* SimpleCheckbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C280928E0AE44196D0C995FCA61755D3 /* SimpleCheckbox-dummy.m */; };
+		2964A4832ED09F9CB441D25FB2F7B76C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
 		379921B4C25AF8457DB52FFC316A9AAF /* Pods-myrootsinafricaTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC388796C1767129710835907AA6FFEF /* Pods-myrootsinafricaTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E3EB29E1A912DA51B5A537C152AA490 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F49A69004F68C2A96A4CCEE6784044 /* M13CheckboxGestureRecognizer.swift */; };
-		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF16D559A4322B89E8627E7D96FAB99F /* IQKeyboardManager.swift */; };
-		46DD08FB7D6071E99E75ECDBA47E90C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DE6DFF52489DACAF66A82BFD0FE2CA /* UIKit.framework */; };
-		46ED19C37FE28AFFC0BD760EA90945DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E13F8454FF42F50A66707C942987DE /* IQKeyboardReturnKeyHandler.swift */; };
+		38A07A061D6F5CAACEE8CDBFF8229C1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		3E3EB29E1A912DA51B5A537C152AA490 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ECCC154CF8D842A35DF06BD828612 /* M13CheckboxGestureRecognizer.swift */; };
+		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FEA2608118445BE774219D21FC26A4 /* IQKeyboardManager.swift */; };
+		46DD08FB7D6071E99E75ECDBA47E90C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7377FD5796CA3000EF8A44C901D1E0 /* UIKit.framework */; };
+		46ED19C37FE28AFFC0BD760EA90945DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAF3B02B2316A3671B8E80E84F307E /* IQKeyboardReturnKeyHandler.swift */; };
 		481299DD48630DC08519E047748F54DD /* Pods-myrootsinafricaTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 684199AA7A446EFA7E8B8D6962A5FAE7 /* Pods-myrootsinafricaTests-dummy.m */; };
-		4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9199880B5328DE92E5BAC015CF36E7F /* IQUITextFieldView+Additions.swift */; };
-		4CEC8AD4EE7027C775B3F4009D46AB60 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9465D275A90CF99D1B56FB7A28CFB088 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0671063CA9AAEE3D6A72342C138304 /* IQInvocation.swift */; };
-		5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDBE24CBF52AE7C8E993E5ACDAB0F0 /* IQPreviousNextView.swift */; };
-		54295CEF5B5271B336B17776A282D3C6 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1E12E0405C85AC7995887B9C1E6E7 /* M13CheckboxStrokeController.swift */; };
-		56BC1A6298E10CCE7703ADBC5AD48FAC /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6B20D3C50940C006CAF69A6747404A /* M13CheckboxExpandController.swift */; };
-		5D68BCEA2A755046D8BD273530420244 /* SimpleCheckbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31C5CBB080200A0DE922392536DE2AAF /* SimpleCheckbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 325BD1109862E3149166E41287FD6DCB /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66BA6C43FBC70D8EF3D352E50E80BFD9 /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		690A3616858F1EF14011B02B88924458 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DE6DFF52489DACAF66A82BFD0FE2CA /* UIKit.framework */; };
-		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394862888AF6E94E2BF137123FFB5F20 /* iOSDropDown.swift */; };
-		6DB7C19718157DB6284112E3A64B41B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		7243906B0EE5CD0EBFB9B988FAA534A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CBA5F720EB338DF8CEFCDA69D66C96 /* IQUIViewController+Additions.swift */; };
-		7AF77E6823887DFE89A3E24E9E57A34E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7DACB743F2A39BC0D9C0E317842D5 /* CoreGraphics.framework */; };
-		7FACE7842B4A060A76329F86BEB1FF62 /* ic_check_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF92FA4C2952C2CC64ABDD42CD2B1BB2 /* ic_check_3x.png */; };
-		7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB6AF6E4FF965312370DD882627A9A8 /* IQTextView.swift */; };
-		80847A9F4BCB5890CEB36DA10BF3A578 /* UICheckbox.Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 847664696F379E9895E2774D4CD9257E /* UICheckbox.Swift-dummy.m */; };
-		89BBD25B30FF62571B2016941A794ADF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18753019BCBD9D12D539EBCB5B0EDC81 /* IQUIView+Hierarchy.swift */; };
-		8F92DE493E66A26C230C75F95BEB6C77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B86528815F4C81E70D4F6522BB7687 /* QuartzCore.framework */; };
-		91DE47E4BCDE92CC97123C314723B3A8 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468CAF670F95773343EC6BAD3659BB09 /* M13CheckboxDisclosurePathGenerator.swift */; };
-		97A18E7CA66BA87E83A038BF75B2DCB2 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD3100DB6BCA316EC24753794A5D2E /* M13CheckboxAnimationGenerator.swift */; };
-		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5323579F4B7FDFC2F889908EF959F5A /* IQToolbar.swift */; };
-		99FBBAF5AEB8A1895DAB1752E3AB115C /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B5E4A7386D08EE703A4B392A6D9727 /* M13CheckboxRadioPathGenerator.swift */; };
-		9D45AD6B7F0738B1829BED0A855C6708 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48711773A420B33AA85D1D5B489A93C3 /* Checkbox.swift */; };
-		A14D173D1A208AE9ADB6419B6BFBF426 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B7546F9C7A60F4BA84CF470C7DE0D /* M13Checkbox.swift */; };
-		A7448C3B3357059EE87853CFF2BE09C4 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020DDD1DCC8FAA673D0B5AC292854AF0 /* M13CheckboxAddRemovePathGenerator.swift */; };
-		AC1BBF2E935479EB48343BAE132A9B77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		AE32CE1F494D51291E92F6B0C29D7034 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2366DF635055BAE8ED03E6F18FA19A /* M13CheckboxSpiralController.swift */; };
-		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D328EB62CA2C316315CC6F42ADDA1B /* IQUIView+IQKeyboardToolbar.swift */; };
-		B0471D9061D1AE1F54C08242A5773ECF /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F7913DF191A0D48EBDAE9A907C2DFB /* M13CheckboxFillController.swift */; };
-		B10B2E4D657CFFFD424EE83AC7228700 /* UICheckbox.Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02C588201C1E76E1FDF687D19A70D6E1 /* UICheckbox.Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B323D65D6BE2950D9615F791E7A90A7F /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C7CFAAA92B7EA668F5F7CF555C4B69 /* M13CheckboxDotController.swift */; };
-		B5DABE483FCD0839100C0E2FD6E8E55A /* UICheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B0B261FCD28FC5F7627F20F66A5C4 /* UICheckbox.swift */; };
-		B642D0A666A7B76CE25C412820331536 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326E5D1396FEF758156C330A3582601D /* M13Checkbox+IB.swift */; };
-		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5482953E8893F4C22542BFE6D7C7C2A /* IQKeyboardManagerSwift-dummy.m */; };
-		C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CAED7A633B803D936A3163B1983F6D /* IQKeyboardManagerConstants.swift */; };
-		C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9937D2DDA29F670A572C2325AE5E4F /* IQUIScrollView+Additions.swift */; };
-		C2BA008A914F681607429815D2EDEA95 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF70FE1BF3B55A4EAC532410451094 /* M13CheckboxPathGenerator.swift */; };
-		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A93BA085349DD98B53E6BA82279DBD88 /* iOSDropDown-dummy.m */; };
-		C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA48BDF475009C82C9F7CF7144AA72 /* IQTitleBarButtonItem.swift */; };
-		CA89E0222ABBC43F957E4F3BF7F46142 /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCEFB389786685E12E806AB6E72DFD97 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D035EDC528DBF5BA980CDF5299828034 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEDEEEBB938E81BD4F49A73306D23A5 /* M13CheckboxBounceController.swift */; };
-		D5584524FE609C7CD27E83BCB74CE685 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0B39B1672C22EAD9A7C39066BE8437 /* M13CheckboxController.swift */; };
-		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C31674F2A2D2C841B83DC1D926178D /* IQBarButtonItem.swift */; };
-		E08B31BE69E7F9FD79F888D6878470CE /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03844E0D390CBA6469CD3DD1EF4F6430 /* DefaultValues.swift */; };
-		E2F241AE194191F06998ECFD8517ACB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DE6DFF52489DACAF66A82BFD0FE2CA /* UIKit.framework */; };
-		E9D6E5290AA728E26BB83686BABD683A /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD3F4C601C5EEF38CF88FCEEA49A9D /* M13CheckboxCheckPathGenerator.swift */; };
-		FB1A59DAD92E574036C966A2CD221FAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */; };
-		FF6BF71F784703DB5F302C257245A51B /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96332DCC04B886F7DD14B854C65653FC /* M13CheckboxFadeController.swift */; };
+		4C069FA7FAA45154DA92CF5DF3BCDCA9 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E479203A9527E3AA2697093747A756B2 /* IQUITextFieldView+Additions.swift */; };
+		4F0CF2AD58CF0D08BC090E7AF0DD63D7 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D57B5B96855473345F70E026CC9D26 /* IQInvocation.swift */; };
+		5044FEAEF09468B6964F9F37A1F1F45C /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4905D2F97EEF7A1AD8C840E6114F6F1 /* IQPreviousNextView.swift */; };
+		54295CEF5B5271B336B17776A282D3C6 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1A0265CC5D2B0C7693434F5014F4E /* M13CheckboxStrokeController.swift */; };
+		54BB31707997A72064BE07A2712E7E01 /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = D0CFCFACAEC1256F1AF793C5D45679D5 /* Spark.sks */; };
+		565D3DC15E27D6AD71246EB05AB326C7 /* ParticleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BF363845419D182C7E8CDF199F253 /* ParticleEffect.swift */; };
+		56BC1A6298E10CCE7703ADBC5AD48FAC /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7B26294E52EBB61F395B3BD20A80A4 /* M13CheckboxExpandController.swift */; };
+		5D68BCEA2A755046D8BD273530420244 /* SimpleCheckbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 642D09555A243E59347733E846024108 /* SimpleCheckbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62A85277D0462C43B80A05E8822794BB /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 72866D348F309B7C1FD778DF171C814C /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB2F3EF3AC8C9D968023072AEC2E5A5 /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		690A3616858F1EF14011B02B88924458 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7377FD5796CA3000EF8A44C901D1E0 /* UIKit.framework */; };
+		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4F7ACFAC9D8246C0B09DCA7CDE3400 /* iOSDropDown.swift */; };
+		6C0220A20E03950879D3EA279BB6EA89 /* EmitterCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61898CD01DE6BB6E8C81AAF50A18F4 /* EmitterCreator.swift */; };
+		6CD7A09906316FB7C5A8D87D1C9CC617 /* ParticlesLoadingView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C11E4771B7718AB9C186F0D8BE90349 /* ParticlesLoadingView.bundle */; };
+		7243906B0EE5CD0EBFB9B988FAA534A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		74341DA37F4B926FDF4CB2599CAC547A /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D9E50FC6B38C32F977DE8E0A467A1 /* IQUIViewController+Additions.swift */; };
+		7604E98E0F96C85B59DE259BC8E2F9A7 /* Laser.sks in Resources */ = {isa = PBXBuildFile; fileRef = 730A1E8BE0CF92F78DFDD8410D699C4F /* Laser.sks */; };
+		7AF77E6823887DFE89A3E24E9E57A34E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3B0AD0BBC3793F8A22C63925E42CB8 /* CoreGraphics.framework */; };
+		7F76454120B979EF06CDAE2A41CF673E /* Pods-myrootsinafrica-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34899D451091F2FBEF0B39A70BC08067 /* Pods-myrootsinafrica-dummy.m */; };
+		7FACE7842B4A060A76329F86BEB1FF62 /* ic_check_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA3515FC854D85F99240CFC79B6E204 /* ic_check_3x.png */; };
+		7FB3576FD619DD256294BAD7E5F83CBE /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D81339978B3DA90F020CC8D425E8A5 /* IQTextView.swift */; };
+		80847A9F4BCB5890CEB36DA10BF3A578 /* UICheckbox.Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C465378A2D22AB80BB57F08A2900408B /* UICheckbox.Swift-dummy.m */; };
+		89BBD25B30FF62571B2016941A794ADF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855EBD094F94FECDBB85D3C1D51BADF2 /* IQUIView+Hierarchy.swift */; };
+		8F92DE493E66A26C230C75F95BEB6C77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A623BD2730126A6A6E9D7291AF107D /* QuartzCore.framework */; };
+		91DE47E4BCDE92CC97123C314723B3A8 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3D3BEEE23F564086F3231A9CB8F76 /* M13CheckboxDisclosurePathGenerator.swift */; };
+		95B9A069C4DDC959F5CDEB3A6C5A0E9F /* Bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = 48D108DFBE8CDF27318F6381F56E143F /* Bokeh.sks */; };
+		97A18E7CA66BA87E83A038BF75B2DCB2 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1BF07DA89304357740468D8870EA2E /* M13CheckboxAnimationGenerator.swift */; };
+		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E5B820A679828D87D589A197DC73D5 /* IQToolbar.swift */; };
+		99FBBAF5AEB8A1895DAB1752E3AB115C /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD76D77315C8874F12FAE72F0875672C /* M13CheckboxRadioPathGenerator.swift */; };
+		9A8619D8AD6E0F25BD33CF8586E27D59 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F707EC59C23C36C69AF23A01EAB9EDAD /* SpriteKit.framework */; };
+		9C14508384983681E6961A6B48C6A9EF /* UIView+ParticlesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB973C213E8B6B8917A4C6DF99D110 /* UIView+ParticlesAnimation.swift */; };
+		9D45AD6B7F0738B1829BED0A855C6708 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604CBD5CF4727C51510109CE53C60772 /* Checkbox.swift */; };
+		A14D173D1A208AE9ADB6419B6BFBF426 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F663163122C27FF0D106CECB2E32B7 /* M13Checkbox.swift */; };
+		A7448C3B3357059EE87853CFF2BE09C4 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8129C7EB0F1E588889F80CF62187AF /* M13CheckboxAddRemovePathGenerator.swift */; };
+		AE32CE1F494D51291E92F6B0C29D7034 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8C0CE7131C764843EF32FB26191946 /* M13CheckboxSpiralController.swift */; };
+		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2245AA06E6621D8B1EBB6341A99DC3 /* IQUIView+IQKeyboardToolbar.swift */; };
+		B0471D9061D1AE1F54C08242A5773ECF /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A08059BCDEA37D3BF27472AA6DC78A7 /* M13CheckboxFillController.swift */; };
+		B10B2E4D657CFFFD424EE83AC7228700 /* UICheckbox.Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 863EA087CC24802B6EBB6DEB59231379 /* UICheckbox.Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B323D65D6BE2950D9615F791E7A90A7F /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA60D4921F8AB8B36EA89628017AF82 /* M13CheckboxDotController.swift */; };
+		B5DABE483FCD0839100C0E2FD6E8E55A /* UICheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CB64E1A80F2F65DA1BE4E32F4AC3C /* UICheckbox.swift */; };
+		B642D0A666A7B76CE25C412820331536 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D778CE1A0E51197C1A5F9000054A1B /* M13Checkbox+IB.swift */; };
+		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C546464ED09E1AEFE19BA92656D6BD /* IQKeyboardManagerSwift-dummy.m */; };
+		C04C5F1F1D6B337F87E157B55A747E41 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CF15E49550A3A79E87EE81F869497 /* IQKeyboardManagerConstants.swift */; };
+		C0EB3776478AB80676E488BC9C9CDA3C /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CC2C82A7510031CDD084B96D01467 /* IQUIScrollView+Additions.swift */; };
+		C25C3FB3A9BFAD3FA2CAAF3EB3266C81 /* ParticlesLoadingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35029AD8B52A53DAAAA690F9663C5EED /* ParticlesLoadingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2BA008A914F681607429815D2EDEA95 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C901899EF9A0A1EBF48194BEFC8BCBD /* M13CheckboxPathGenerator.swift */; };
+		C2C006F011AFB5ADC895F13E58FBB559 /* Pods-myrootsinafrica-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EF4F4D1A88CC0934C98F3002C29E068 /* Pods-myrootsinafrica-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AEE3CACA4774BE345C848E576A0561 /* iOSDropDown-dummy.m */; };
+		C35DCE97EB77150C41E735DB57BD6616 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5FEEE9BE4D248AE5DA7C8807F82757 /* IQTitleBarButtonItem.swift */; };
+		C60B75C14D4F0548DF57AAF7E43DA631 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		C6A4FD1506F537180ACFF5AEA7FC1159 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 677C83DDB7A2EF43AD8DAFDB25B2C887 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m */; };
+		C7C48F305C197D613E4B95C86F7A1FEE /* ParticlesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D99D8E71C77854376EEB971C72E88 /* ParticlesScene.swift */; };
+		CA89E0222ABBC43F957E4F3BF7F46142 /* M13Checkbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FE8C007218BFCD567BA14E278F3CB8 /* M13Checkbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D035EDC528DBF5BA980CDF5299828034 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3F35D63DAFCA9DD91444D0DA79DE7 /* M13CheckboxBounceController.swift */; };
+		D5584524FE609C7CD27E83BCB74CE685 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888AAC18014B6ADBEDBFAF6DB611281 /* M13CheckboxController.swift */; };
+		D6DE990F177787891B46AE436651270F /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3D749BBB25E9443CFA9FC48A1794CC29 /* Fire.sks */; };
+		DA16BDEFA14C7A38490F61B3B4AB9B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51A47C3BBE3F330435595A8F567EA58 /* IQBarButtonItem.swift */; };
+		E08B31BE69E7F9FD79F888D6878470CE /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0740D8A4E133460873297945D84C6 /* DefaultValues.swift */; };
+		E2F241AE194191F06998ECFD8517ACB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7377FD5796CA3000EF8A44C901D1E0 /* UIKit.framework */; };
+		E9D6E5290AA728E26BB83686BABD683A /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DE665C17F1E343593527421C61BBFD /* M13CheckboxCheckPathGenerator.swift */; };
+		EDF0ADCA9D2E3D4F000D2382A2AAB90E /* ParticlesLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD276CD0953CD4A7D809CA207DE472 /* ParticlesLoadingView.swift */; };
+		F3711AB1D6B919AF8251DEC392E0E910 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9465D275A90CF99D1B56FB7A28CFB088 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB1A59DAD92E574036C966A2CD221FAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */; };
+		FF6BF71F784703DB5F302C257245A51B /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F18D4CDBC390002A8DE66BB15EF553B /* M13CheckboxFadeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19DAA82A44236779AAD740BF7BA2813B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCC08E10069898C869F84B75B36CC375;
+			remoteInfo = "ParticlesLoadingView-ParticlesLoadingView";
+		};
+		3E7E6024847A645CBAEA61EE37672FD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
+			remoteInfo = M13Checkbox;
+		};
+		42105D2A6691BD9B3A60BFD158FA642B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F26A321F30138437FC03D69FB018CC0A;
+			remoteInfo = SimpleCheckbox;
+		};
+		46A6AB2596DC3BAC4E0D7652C9249ADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
+			remoteInfo = IQKeyboardManagerSwift;
+		};
+		58F7348AFB6F9658444849FC154492DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 472C2B6708BC6940A0BFF9A4A56547D5;
+			remoteInfo = UICheckbox.Swift;
+		};
+		59A278FFE8C55F693877A3FC08125198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75EA83BCA6F23890BB98E4A7C2AB5314;
+			remoteInfo = ParticlesLoadingView;
+		};
 		63D43FD7FCA48DFF16828A28A20E4B8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -87,54 +144,40 @@
 			remoteGlobalIDString = D4358334A9EEE83C8C6106F4BD03820D;
 			remoteInfo = "Pods-myrootsinafrica";
 		};
-		6492CE4F88DE2A3813E9F7C82C7E981C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
-			remoteInfo = IQKeyboardManagerSwift;
-		};
-		65007C9D32BCDA23C9C68D0DF9E89A90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
-			remoteInfo = iOSDropDown;
-		};
-		71966C905A6933B91341BBBB42912A63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
-			remoteInfo = IQKeyboardManagerSwift;
-		};
-		77FBD71AAF5BFB79AD73B1E67F34820F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 472C2B6708BC6940A0BFF9A4A56547D5;
-			remoteInfo = UICheckbox.Swift;
-		};
-		7DED3B385DD25FFF9B5AE088CFC5133B /* PBXContainerItemProxy */ = {
+		65338804EF45F0488694E9DE5ACB1C2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F26A321F30138437FC03D69FB018CC0A;
 			remoteInfo = SimpleCheckbox;
 		};
-		935963ECA0C8AB7AF93A72B5C1D129BE /* PBXContainerItemProxy */ = {
+		76E1F8FC8E903EA48BA0C14728AECAC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75EA83BCA6F23890BB98E4A7C2AB5314;
+			remoteInfo = ParticlesLoadingView;
+		};
+		8C5EBEE941C88AFB0ED8FFDCC95C9687 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 472C2B6708BC6940A0BFF9A4A56547D5;
+			remoteInfo = UICheckbox.Swift;
+		};
+		903FB8CBFFEAEDF3BEF01D26B2EC822E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
 			remoteInfo = M13Checkbox;
 		};
-		9E1686853A751EB8CE0C10E2302467C1 /* PBXContainerItemProxy */ = {
+		91F49171F3CD7D036525D040EA90944F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 472C2B6708BC6940A0BFF9A4A56547D5;
-			remoteInfo = UICheckbox.Swift;
+			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
+			remoteInfo = IQKeyboardManagerSwift;
 		};
 		CA4E11564F5EA26695EA93FA395DAF74 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -143,145 +186,159 @@
 			remoteGlobalIDString = 56BEB826D68D9E057C957D3B36535081;
 			remoteInfo = "UICheckbox.Swift-UICheckbox";
 		};
-		D1C6B0F2D8F553C5DA2BA58B40634C2A /* PBXContainerItemProxy */ = {
+		D3E8E9E9A05DD1F0A2CB0F7D76D3836A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
 			remoteInfo = iOSDropDown;
 		};
-		EB81B848603468883F4D3146546A9E77 /* PBXContainerItemProxy */ = {
+		E840C4AFDA9E043DA51AA173DC9DA7B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F26A321F30138437FC03D69FB018CC0A;
-			remoteInfo = SimpleCheckbox;
-		};
-		EFB6586433A011328F1D150627CADCD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7111E54EAE43E89F451A75076C3525ED;
-			remoteInfo = M13Checkbox;
+			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
+			remoteInfo = iOSDropDown;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020DDD1DCC8FAA673D0B5AC292854AF0 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
-		02C588201C1E76E1FDF687D19A70D6E1 /* UICheckbox.Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICheckbox.Swift-umbrella.h"; sourceTree = "<group>"; };
-		03844E0D390CBA6469CD3DD1EF4F6430 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
+		00FEA2608118445BE774219D21FC26A4 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
+		0196766227FFBC81095557031555E00B /* ParticlesLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ParticlesLoadingView.framework; path = ParticlesLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B1F0521E0564D1DA6810589DF9ECD5 /* Pods-myrootsinafrica.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-myrootsinafrica.modulemap"; sourceTree = "<group>"; };
 		0694E512211BF95BEAB2513407942C34 /* Pods-myrootsinafrica-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-myrootsinafrica-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0768EFEBAF186467C7E8AC88A43BB435 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
-		0C5CBBCAC47E2B7BB80250256CA95987 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
-		0F0B39B1672C22EAD9A7C39066BE8437 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
+		071A62B8365AC1996C4BAE5F01A1FBAB /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
+		071A68248216C0C26B45CA575053BFF4 /* ParticlesLoadingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ParticlesLoadingView-Info.plist"; sourceTree = "<group>"; };
+		08A695C721612B5BB2A50AD4DD46EA27 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
+		0F18D4CDBC390002A8DE66BB15EF553B /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
 		0F23A9875BECC409711A65363BCCA7E3 /* Pods-myrootsinafrica-myrootsinafricaUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-myrootsinafrica-myrootsinafricaUITests-frameworks.sh"; sourceTree = "<group>"; };
-		10A762DE0A21C2B389F818BE68083FA9 /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
 		11900AEA51C1F3A5954954E2AE0EE7DC /* Pods-myrootsinafrica-myrootsinafricaUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-myrootsinafrica-myrootsinafricaUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		126482F602E7C38D587DCDC476678816 /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
-		1267034BDB64A8C71676493C03ADBBD2 /* SimpleCheckbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleCheckbox.debug.xcconfig; sourceTree = "<group>"; };
-		12C7CFAAA92B7EA668F5F7CF555C4B69 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
-		136B7546F9C7A60F4BA84CF470C7DE0D /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
-		15B91DF375F1D4B62CE4DA3A2A81C49B /* UICheckbox.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICheckbox.Swift.release.xcconfig; sourceTree = "<group>"; };
-		18753019BCBD9D12D539EBCB5B0EDC81 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		18C31674F2A2D2C841B83DC1D926178D /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
+		15D1A0265CC5D2B0C7693434F5014F4E /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		18A3F35D63DAFCA9DD91444D0DA79DE7 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		18D57B5B96855473345F70E026CC9D26 /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
 		1A77E25EAB2F0610FF407D9D0ED0970D /* Pods-myrootsinafrica-myrootsinafricaUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-myrootsinafrica-myrootsinafricaUITests.modulemap"; sourceTree = "<group>"; };
-		1CC2F3D649133F9631C43D996174C697 /* SimpleCheckbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCheckbox-prefix.pch"; sourceTree = "<group>"; };
+		1D5DBF1AA758E65BC43516EF636302C6 /* M13Checkbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.release.xcconfig; sourceTree = "<group>"; };
+		1DEC0AE83546F5B93390F0998FFB691A /* UICheckbox.Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UICheckbox.Swift.modulemap; sourceTree = "<group>"; };
 		1F51230970FAA9973D59EF16E652E113 /* Pods-myrootsinafricaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myrootsinafricaTests.release.xcconfig"; sourceTree = "<group>"; };
-		20A7DACB743F2A39BC0D9C0E317842D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		21CAED7A633B803D936A3163B1983F6D /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
 		2355A8AC238AF1AA31EBE7406111200B /* Pods-myrootsinafrica-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-myrootsinafrica-frameworks.sh"; sourceTree = "<group>"; };
-		260989D1F0827C980D91B7D48D838B29 /* iOSDropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.debug.xcconfig; sourceTree = "<group>"; };
+		24EA62930A674608E527E22620D65717 /* ParticlesLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ParticlesLoadingView.modulemap; sourceTree = "<group>"; };
+		29B0740D8A4E133460873297945D84C6 /* DefaultValues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultValues.swift; path = Sources/DefaultValues.swift; sourceTree = "<group>"; };
 		29E2CA35B59F8CC8506FF4D7D42F849B /* Pods-myrootsinafrica-myrootsinafricaUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myrootsinafrica-myrootsinafricaUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2AEA48BDF475009C82C9F7CF7144AA72 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		2DA1E12E0405C85AC7995887B9C1E6E7 /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxStrokeController.swift; path = Sources/Managers/M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
-		31C5CBB080200A0DE922392536DE2AAF /* SimpleCheckbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCheckbox-umbrella.h"; sourceTree = "<group>"; };
-		325BD1109862E3149166E41287FD6DCB /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
-		326E5D1396FEF758156C330A3582601D /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
-		326F377F59E935744F2BA2E5C784554F /* UICheckbox.Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UICheckbox.Swift-Info.plist"; sourceTree = "<group>"; };
-		32B2CE394D341FB07A95C17F28E69C65 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
-		32E13F8454FF42F50A66707C942987DE /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
-		33B5E4A7386D08EE703A4B392A6D9727 /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		2A08059BCDEA37D3BF27472AA6DC78A7 /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		2C2245AA06E6621D8B1EBB6341A99DC3 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		2CF99920AD36B3997112C32FA995B175 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		2D82B0848BBE334131AC92BB0BFDD4EB /* UICheckbox.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICheckbox.Swift.release.xcconfig; sourceTree = "<group>"; };
+		318D99D8E71C77854376EEB971C72E88 /* ParticlesScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParticlesScene.swift; path = Pod/Classes/ParticlesScene.swift; sourceTree = "<group>"; };
+		31D778CE1A0E51197C1A5F9000054A1B /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "M13Checkbox+IB.swift"; path = "Sources/M13Checkbox+IB.swift"; sourceTree = "<group>"; };
 		34899D451091F2FBEF0B39A70BC08067 /* Pods-myrootsinafrica-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-myrootsinafrica-dummy.m"; sourceTree = "<group>"; };
+		35029AD8B52A53DAAAA690F9663C5EED /* ParticlesLoadingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ParticlesLoadingView-umbrella.h"; sourceTree = "<group>"; };
 		36E78547C11EC5AE88011E588F7B67AE /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_myrootsinafrica_myrootsinafricaUITests.framework; path = "Pods-myrootsinafrica-myrootsinafricaUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		394862888AF6E94E2BF137123FFB5F20 /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
+		3888AAC18014B6ADBEDBFAF6DB611281 /* M13CheckboxController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxController.swift; path = Sources/M13CheckboxController.swift; sourceTree = "<group>"; };
+		392B24F2E9DECDA0BE9EE1AF5BC11178 /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
 		39F1A0AE8A01B577D4B8EAB8EEC1D1A8 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleCheckbox.framework; path = SimpleCheckbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4F7ACFAC9D8246C0B09DCA7CDE3400 /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
+		3BD54CAAC4C40C827D17A7E8E073C17F /* ParticlesLoadingView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ParticlesLoadingView.debug.xcconfig; sourceTree = "<group>"; };
 		3D099056A26A0F89323B64D5D9D4EFE9 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_myrootsinafrica.framework; path = "Pods-myrootsinafrica.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40996337532AA45A6ED3E5F918C6494E /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
+		3D749BBB25E9443CFA9FC48A1794CC29 /* Fire.sks */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.sks; name = Fire.sks; path = Pod/Assets/Fire.sks; sourceTree = "<group>"; };
+		3FFE385BE288D432A41A2969A13CE8D7 /* IQKeyboardManagerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.release.xcconfig; sourceTree = "<group>"; };
 		409EB0D18610374410BB451788A68009 /* UICheckbox.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = UICheckbox.bundle; path = "UICheckbox.Swift-UICheckbox.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43CBA5F720EB338DF8CEFCDA69D66C96 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
-		468CAF670F95773343EC6BAD3659BB09 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
-		48711773A420B33AA85D1D5B489A93C3 /* Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checkbox.swift; path = checkbox/Checkbox.swift; sourceTree = "<group>"; };
-		49688AC6DD4499108D370DF67CC92793 /* M13Checkbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.release.xcconfig; sourceTree = "<group>"; };
-		4AAD3100DB6BCA316EC24753794A5D2E /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
-		4F8D851D244FFD8D15F750E99E5FE7E8 /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
+		46A623BD2730126A6A6E9D7291AF107D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		46FE8C007218BFCD567BA14E278F3CB8 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
+		48D108DFBE8CDF27318F6381F56E143F /* Bokeh.sks */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.sks; name = Bokeh.sks; path = Pod/Assets/Bokeh.sks; sourceTree = "<group>"; };
+		50C71B314B41B9EE51050577921E66DE /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		56219EA11A1999D4C1352BA6CDAB178F /* Pods-myrootsinafrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myrootsinafrica.release.xcconfig"; sourceTree = "<group>"; };
-		56DE6DFF52489DACAF66A82BFD0FE2CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		576CB64E1A80F2F65DA1BE4E32F4AC3C /* UICheckbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICheckbox.swift; path = UICheckbox/Classes/UICheckbox.swift; sourceTree = "<group>"; };
+		5938512C892A88AB77FF93EA247BFC6D /* SimpleCheckbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleCheckbox.release.xcconfig; sourceTree = "<group>"; };
+		5A7377FD5796CA3000EF8A44C901D1E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5C9F60B44396CCB80E7F8CBAB491E9A9 /* Pods-myrootsinafricaTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myrootsinafricaTests-Info.plist"; sourceTree = "<group>"; };
 		5CE79C5BF20743404E59BEFD080A364D /* M13Checkbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = M13Checkbox.framework; path = M13Checkbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D0EA4EEA16CF4CE016954B5F9458AE1 /* IQKeyboardManagerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.release.xcconfig; sourceTree = "<group>"; };
-		60814A95441C4DCCD3E930DF7C2F28B4 /* UICheckbox.Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICheckbox.Swift-prefix.pch"; sourceTree = "<group>"; };
-		648CE4176217EDA4ADFB8AB47FDEAD76 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
-		66BA6C43FBC70D8EF3D352E50E80BFD9 /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
+		5D551FCE8008A0E8A23C719CC1CA096C /* ParticlesLoadingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ParticlesLoadingView-prefix.pch"; sourceTree = "<group>"; };
+		5DC7B7BCB77BCB78CA4EB97225A3AF2B /* spark.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = spark.png; path = Pod/Assets/spark.png; sourceTree = "<group>"; };
+		5EA3515FC854D85F99240CFC79B6E204 /* ic_check_3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_check_3x.png; path = UICheckbox/Assets/ic_check_3x.png; sourceTree = "<group>"; };
+		5F3B0AD0BBC3793F8A22C63925E42CB8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		604CBD5CF4727C51510109CE53C60772 /* Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checkbox.swift; path = checkbox/Checkbox.swift; sourceTree = "<group>"; };
+		60D81339978B3DA90F020CC8D425E8A5 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
+		60DD276CD0953CD4A7D809CA207DE472 /* ParticlesLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParticlesLoadingView.swift; path = Pod/Classes/ParticlesLoadingView.swift; sourceTree = "<group>"; };
+		63B12B74FF54B82B37C18FABE9F19295 /* SimpleCheckbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleCheckbox.debug.xcconfig; sourceTree = "<group>"; };
+		642D09555A243E59347733E846024108 /* SimpleCheckbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCheckbox-umbrella.h"; sourceTree = "<group>"; };
+		6542F0AFEDC136A8E4F5E3D0DB64844A /* UICheckbox.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICheckbox.Swift.debug.xcconfig; sourceTree = "<group>"; };
 		677C83DDB7A2EF43AD8DAFDB25B2C887 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m"; sourceTree = "<group>"; };
 		684199AA7A446EFA7E8B8D6962A5FAE7 /* Pods-myrootsinafricaTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-myrootsinafricaTests-dummy.m"; sourceTree = "<group>"; };
-		6C45795C95B6B09000DFFA9AAFA79C5B /* M13Checkbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13Checkbox-dummy.m"; sourceTree = "<group>"; };
-		6DA917D220C511393DD7910F0C37E3D9 /* SimpleCheckbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleCheckbox-Info.plist"; sourceTree = "<group>"; };
-		74774A9EA27D5C71E7F606E498C1DEC7 /* SimpleCheckbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleCheckbox.modulemap; sourceTree = "<group>"; };
-		762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		847664696F379E9895E2774D4CD9257E /* UICheckbox.Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICheckbox.Swift-dummy.m"; sourceTree = "<group>"; };
-		8A301BF4F81BAFE1F1614C24587C3C59 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
-		8D9937D2DDA29F670A572C2325AE5E4F /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
-		913B0B261FCD28FC5F7627F20F66A5C4 /* UICheckbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICheckbox.swift; path = UICheckbox/Classes/UICheckbox.swift; sourceTree = "<group>"; };
-		9288AC55FD60E49CF1672C0F22559479 /* M13Checkbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = M13Checkbox.modulemap; sourceTree = "<group>"; };
+		69D491BE1939422B8C66BBDEA7E06AC3 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		6C11E4771B7718AB9C186F0D8BE90349 /* ParticlesLoadingView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ParticlesLoadingView.bundle; path = "ParticlesLoadingView-ParticlesLoadingView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F037008A62C6B58256444F08AF90E98 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
+		71833A2A65F14BB019B104712213BBA2 /* iOSDropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.release.xcconfig; sourceTree = "<group>"; };
+		72866D348F309B7C1FD778DF171C814C /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
+		730A1E8BE0CF92F78DFDD8410D699C4F /* Laser.sks */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.sks; name = Laser.sks; path = Pod/Assets/Laser.sks; sourceTree = "<group>"; };
+		764E9E1BCE611DAB7D45D5FF70AF4694 /* SimpleCheckbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SimpleCheckbox-Info.plist"; sourceTree = "<group>"; };
+		7B6C66195F29DF5AEED4B6F3B1286212 /* SimpleCheckbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleCheckbox-prefix.pch"; sourceTree = "<group>"; };
+		855EBD094F94FECDBB85D3C1D51BADF2 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		863EA087CC24802B6EBB6DEB59231379 /* UICheckbox.Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICheckbox.Swift-umbrella.h"; sourceTree = "<group>"; };
+		8C7B26294E52EBB61F395B3BD20A80A4 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		93F663163122C27FF0D106CECB2E32B7 /* M13Checkbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13Checkbox.swift; path = Sources/M13Checkbox.swift; sourceTree = "<group>"; };
+		93FAAA65F24E4E74D607D7F2308BAFD9 /* M13Checkbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-prefix.pch"; sourceTree = "<group>"; };
 		9465D275A90CF99D1B56FB7A28CFB088 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h"; sourceTree = "<group>"; };
 		94909338F6BC3DB66D888DDB543635FD /* Pods-myrootsinafrica-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myrootsinafrica-Info.plist"; sourceTree = "<group>"; };
 		94D1F04F04F88DFE9799EBB92DF3E859 /* Pods-myrootsinafricaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myrootsinafricaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9553D7AA75FB9A686C7A3BDBFDCBD4D6 /* Pods-myrootsinafricaTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-myrootsinafricaTests.modulemap"; sourceTree = "<group>"; };
-		96332DCC04B886F7DD14B854C65653FC /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFadeController.swift; path = Sources/Managers/M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		9590875472FC86ECA5435D6A5ADF130C /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFlatController.swift; path = Sources/Managers/M13CheckboxFlatController.swift; sourceTree = "<group>"; };
 		971B5512A8D14EDF36A98BF2A539CC83 /* Pods_myrootsinafricaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_myrootsinafricaTests.framework; path = "Pods-myrootsinafricaTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8E085E4597DCD9D9524163A6B272B4 /* ResourceBundle-UICheckbox-UICheckbox.Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UICheckbox-UICheckbox.Swift-Info.plist"; sourceTree = "<group>"; };
+		99B5011D4E3C9A6839C9EC03085966FD /* M13Checkbox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "M13Checkbox-Info.plist"; sourceTree = "<group>"; };
+		9C901899EF9A0A1EBF48194BEFC8BCBD /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
 		9CD61011146A57B7BFBEC82971828294 /* UICheckbox_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UICheckbox_Swift.framework; path = UICheckbox.Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CFDBE24CBF52AE7C8E993E5ACDAB0F0 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
-		9D93170895D0D1D2465B91C4B3C408C1 /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EF4F4D1A88CC0934C98F3002C29E068 /* Pods-myrootsinafrica-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-myrootsinafrica-umbrella.h"; sourceTree = "<group>"; };
-		9FAF70FE1BF3B55A4EAC532410451094 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxPathGenerator.swift; path = Sources/Paths/M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
-		A8BD3F4C601C5EEF38CF88FCEEA49A9D /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		9F5FEEE9BE4D248AE5DA7C8807F82757 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		A1D6B268DFE47B53277CD14E5AE5F150 /* ParticlesLoadingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ParticlesLoadingView-dummy.m"; sourceTree = "<group>"; };
+		A4905D2F97EEF7A1AD8C840E6114F6F1 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
+		A4AEE3CACA4774BE345C848E576A0561 /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
 		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A93BA085349DD98B53E6BA82279DBD88 /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
-		AA0671063CA9AAEE3D6A72342C138304 /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
-		AD2366DF635055BAE8ED03E6F18FA19A /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		A8EB973C213E8B6B8917A4C6DF99D110 /* UIView+ParticlesAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+ParticlesAnimation.swift"; path = "Pod/Classes/UIView+ParticlesAnimation.swift"; sourceTree = "<group>"; };
+		A9E6C0360AC5360D1475FF293BEDACA7 /* iOSDropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.debug.xcconfig; sourceTree = "<group>"; };
 		AD7D7F2BC74B057E16D244B9D9BB1FFC /* Pods-myrootsinafrica-myrootsinafricaUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myrootsinafrica-myrootsinafricaUITests-Info.plist"; sourceTree = "<group>"; };
-		ADEDEEEBB938E81BD4F49A73306D23A5 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxBounceController.swift; path = Sources/Managers/M13CheckboxBounceController.swift; sourceTree = "<group>"; };
-		B4360DFB3811CDE6F463551F940BFCB6 /* SimpleCheckbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleCheckbox-dummy.m"; sourceTree = "<group>"; };
-		B5323579F4B7FDFC2F889908EF959F5A /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
-		B5482953E8893F4C22542BFE6D7C7C2A /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
-		B9199880B5328DE92E5BAC015CF36E7F /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
-		B91DB4185DA3ED1CD793B8EF6030D314 /* iOSDropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.release.xcconfig; sourceTree = "<group>"; };
-		B9B86528815F4C81E70D4F6522BB7687 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		BC6B20D3C50940C006CAF69A6747404A /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxExpandController.swift; path = Sources/Managers/M13CheckboxExpandController.swift; sourceTree = "<group>"; };
-		BEDBD93722031D1E8A780BC74AE6AAAB /* UICheckbox.Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UICheckbox.Swift.modulemap; sourceTree = "<group>"; };
-		BF16D559A4322B89E8627E7D96FAB99F /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
-		BF92FA4C2952C2CC64ABDD42CD2B1BB2 /* ic_check_3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ic_check_3x.png; path = UICheckbox/Assets/ic_check_3x.png; sourceTree = "<group>"; };
-		C0154817D1EAC1B768BCA98A1B52541C /* M13Checkbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.debug.xcconfig; sourceTree = "<group>"; };
-		C5D74EBA86802559FC4F2DD2728546C0 /* UICheckbox.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICheckbox.Swift.debug.xcconfig; sourceTree = "<group>"; };
+		B4E5B820A679828D87D589A197DC73D5 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
+		B638E7AAF2A786359781CD907658C44F /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
+		BB1BF07DA89304357740468D8870EA2E /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAnimationGenerator.swift; path = Sources/M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		BB2BF363845419D182C7E8CDF199F253 /* ParticleEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParticleEffect.swift; path = Pod/Classes/ParticleEffect.swift; sourceTree = "<group>"; };
+		C280928E0AE44196D0C995FCA61755D3 /* SimpleCheckbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleCheckbox-dummy.m"; sourceTree = "<group>"; };
+		C44CCB1E33A52EE1B0552585860EAFA1 /* SimpleCheckbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleCheckbox.modulemap; sourceTree = "<group>"; };
+		C465378A2D22AB80BB57F08A2900408B /* UICheckbox.Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICheckbox.Swift-dummy.m"; sourceTree = "<group>"; };
+		C51A47C3BBE3F330435595A8F567EA58 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
+		C75ECCC154CF8D842A35DF06BD828612 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
 		C86468A523810C27E32EEF5314AB1598 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CCB6AF6E4FF965312370DD882627A9A8 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
-		D4F7913DF191A0D48EBDAE9A907C2DFB /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxFillController.swift; path = Sources/Managers/M13CheckboxFillController.swift; sourceTree = "<group>"; };
-		D7F83B9CEFC71850DCD481BCEC53D0BF /* SimpleCheckbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleCheckbox.release.xcconfig; sourceTree = "<group>"; };
+		CD308C92EAE6FC8F6D6C704557E334CF /* UICheckbox.Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICheckbox.Swift-prefix.pch"; sourceTree = "<group>"; };
+		CDB3D3BEEE23F564086F3231A9CB8F76 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDisclosurePathGenerator.swift; path = Sources/Paths/M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		CFB2F3EF3AC8C9D968023072AEC2E5A5 /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
+		CFFAF3B02B2316A3671B8E80E84F307E /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		D0CFCFACAEC1256F1AF793C5D45679D5 /* Spark.sks */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.sks; name = Spark.sks; path = Pod/Assets/Spark.sks; sourceTree = "<group>"; };
+		D2C546464ED09E1AEFE19BA92656D6BD /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
+		D303F68B9951FF1E91697193DF71F702 /* ParticlesLoadingView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ParticlesLoadingView.release.xcconfig; sourceTree = "<group>"; };
 		D9FD1E102BFE94CD0EF5C468A5F21C88 /* Pods-myrootsinafrica-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myrootsinafrica-acknowledgements.plist"; sourceTree = "<group>"; };
 		DA3435AB42414A316C85FD1BA7E1B1C2 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
-		DB37C54BC9203F0395C1AB2B5910EDEB /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		DCEFB389786685E12E806AB6E72DFD97 /* M13Checkbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13Checkbox-umbrella.h"; sourceTree = "<group>"; };
-		DD10931CE69557A9187A43354D15F355 /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
+		DC2CF15E49550A3A79E87EE81F869497 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		DD76D77315C8874F12FAE72F0875672C /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxRadioPathGenerator.swift; path = Sources/Paths/M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		E0908D3E927B6C70A46892569AE8B504 /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
+		E18D9E50FC6B38C32F977DE8E0A467A1 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		E2A826E2C1E549223ECAF245950A1684 /* M13Checkbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13Checkbox.debug.xcconfig; sourceTree = "<group>"; };
 		E37968931708C876FAAF26AD61E94EF2 /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E479203A9527E3AA2697093747A756B2 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		EA61898CD01DE6BB6E8C81AAF50A18F4 /* EmitterCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmitterCreator.swift; path = Pod/Classes/EmitterCreator.swift; sourceTree = "<group>"; };
+		EA8C0CE7131C764843EF32FB26191946 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxSpiralController.swift; path = Sources/Managers/M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
 		EBFA750193368BF12AB0ACA8566A6986 /* Pods-myrootsinafricaTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-myrootsinafricaTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EC388796C1767129710835907AA6FFEF /* Pods-myrootsinafricaTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-myrootsinafricaTests-umbrella.h"; sourceTree = "<group>"; };
-		F1F49A69004F68C2A96A4CCEE6784044 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxGestureRecognizer.swift; path = Sources/M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
-		F2D328EB62CA2C316315CC6F42ADDA1B /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		EC94AF0EA9092E319E5281E853B23F1A /* UICheckbox.Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UICheckbox.Swift-Info.plist"; sourceTree = "<group>"; };
+		EE476615360114C1151C0278ED611558 /* ResourceBundle-ParticlesLoadingView-ParticlesLoadingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ParticlesLoadingView-ParticlesLoadingView-Info.plist"; sourceTree = "<group>"; };
+		F1DE665C17F1E343593527421C61BBFD /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxCheckPathGenerator.swift; path = Sources/Paths/M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		F3A3761D11E61F5A8B5FE03E5240764C /* IQKeyboardManagerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IQKeyboardManagerSwift-Info.plist"; sourceTree = "<group>"; };
+		F707EC59C23C36C69AF23A01EAB9EDAD /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		F99F2A4C1F9068D64E8CFB93D7A9FA41 /* ResourceBundle-UICheckbox-UICheckbox.Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UICheckbox-UICheckbox.Swift-Info.plist"; sourceTree = "<group>"; };
+		FAA60D4921F8AB8B36EA89628017AF82 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxDotController.swift; path = Sources/Managers/M13CheckboxDotController.swift; sourceTree = "<group>"; };
 		FBA8EBC6B5B7E0C4B02AF531A23A6F63 /* Pods-myrootsinafricaTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myrootsinafricaTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSDropDown.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD5CC2C82A7510031CDD084B96D01467 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		FD5F4B29629415B84173DC31CD8400C8 /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
+		FD8129C7EB0F1E588889F80CF62187AF /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = M13CheckboxAddRemovePathGenerator.swift; path = Sources/Paths/M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,11 +380,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD31FCBAC6BB3F8C4A1E096EA239E4A1 /* Frameworks */ = {
+		8BEA281F9A91CAF5822EDAA57C164633 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB7C19718157DB6284112E3A64B41B8 /* Foundation.framework in Frameworks */,
+				C60B75C14D4F0548DF57AAF7E43DA631 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E9FA6103DF8FEC48D042F058D5DDD2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA16BDEFA14C7A38490F61B3B4AB9B43 /* Foundation.framework in Frameworks */,
+				9A8619D8AD6E0F25BD33CF8586E27D59 /* SpriteKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4ED3A85305754A904A73C50BB5763B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8ECC52B36736F106BBD04D1D85DAEB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A07A061D6F5CAACEE8CDBFF8229C1B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,14 +417,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89BBD25B30FF62571B2016941A794ADF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D205514840003668D5F315BC18452286 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC1BBF2E935479EB48343BAE132A9B77 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,44 +438,115 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04FA448D672CB2B3F5F4CCD5AACAE739 /* SimpleCheckbox */ = {
+		0AC7E4AD4451DEE9A455F269C3E48680 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				48711773A420B33AA85D1D5B489A93C3 /* Checkbox.swift */,
-				F2A9AF2D81C929DEC4C40AD11E9442AC /* Support Files */,
-			);
-			name = SimpleCheckbox;
-			path = SimpleCheckbox;
-			sourceTree = "<group>";
-		};
-		0EC3A0F4E79774979AFD61033C6057DB /* UICheckbox.Swift */ = {
-			isa = PBXGroup;
-			children = (
-				913B0B261FCD28FC5F7627F20F66A5C4 /* UICheckbox.swift */,
-				217C3E417EE6444A4E6D007F330ACAD3 /* Resources */,
-				83D6C5DBAD245ED87C7B051FE530E651 /* Support Files */,
-			);
-			name = UICheckbox.Swift;
-			path = UICheckbox.Swift;
-			sourceTree = "<group>";
-		};
-		216D11D6253026459814863746CC99A1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				20A7DACB743F2A39BC0D9C0E317842D5 /* CoreGraphics.framework */,
-				762C973A19DDE5A5AD81F317CEA5461F /* Foundation.framework */,
-				B9B86528815F4C81E70D4F6522BB7687 /* QuartzCore.framework */,
-				56DE6DFF52489DACAF66A82BFD0FE2CA /* UIKit.framework */,
+				5F3B0AD0BBC3793F8A22C63925E42CB8 /* CoreGraphics.framework */,
+				5130A63C4106059B8B4B1B89072074D4 /* Foundation.framework */,
+				46A623BD2730126A6A6E9D7291AF107D /* QuartzCore.framework */,
+				F707EC59C23C36C69AF23A01EAB9EDAD /* SpriteKit.framework */,
+				5A7377FD5796CA3000EF8A44C901D1E0 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		217C3E417EE6444A4E6D007F330ACAD3 /* Resources */ = {
+		0FB16897019803C64140C2AAF378989B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF92FA4C2952C2CC64ABDD42CD2B1BB2 /* ic_check_3x.png */,
+				48D108DFBE8CDF27318F6381F56E143F /* Bokeh.sks */,
+				3D749BBB25E9443CFA9FC48A1794CC29 /* Fire.sks */,
+				730A1E8BE0CF92F78DFDD8410D699C4F /* Laser.sks */,
+				5DC7B7BCB77BCB78CA4EB97225A3AF2B /* spark.png */,
+				D0CFCFACAEC1256F1AF793C5D45679D5 /* Spark.sks */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		1A525941E569B857A2F9925892D47922 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66BBD1752BACD760D9D934ACE208CFEF /* iOSDropDown */,
+				A119A9F704B4546527611E05CCDC924A /* IQKeyboardManagerSwift */,
+				32C44D4356F7D7E7765E09EFCBB1C4A9 /* M13Checkbox */,
+				AC578F424FB9569839906CAF199050CB /* ParticlesLoadingView */,
+				4CEC9CB390249C0334C44023D8EF7A10 /* SimpleCheckbox */,
+				DF47923C66859085CB1D73D5611B9BC5 /* UICheckbox.Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		32C44D4356F7D7E7765E09EFCBB1C4A9 /* M13Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				29B0740D8A4E133460873297945D84C6 /* DefaultValues.swift */,
+				93F663163122C27FF0D106CECB2E32B7 /* M13Checkbox.swift */,
+				31D778CE1A0E51197C1A5F9000054A1B /* M13Checkbox+IB.swift */,
+				FD8129C7EB0F1E588889F80CF62187AF /* M13CheckboxAddRemovePathGenerator.swift */,
+				BB1BF07DA89304357740468D8870EA2E /* M13CheckboxAnimationGenerator.swift */,
+				18A3F35D63DAFCA9DD91444D0DA79DE7 /* M13CheckboxBounceController.swift */,
+				F1DE665C17F1E343593527421C61BBFD /* M13CheckboxCheckPathGenerator.swift */,
+				3888AAC18014B6ADBEDBFAF6DB611281 /* M13CheckboxController.swift */,
+				CDB3D3BEEE23F564086F3231A9CB8F76 /* M13CheckboxDisclosurePathGenerator.swift */,
+				FAA60D4921F8AB8B36EA89628017AF82 /* M13CheckboxDotController.swift */,
+				8C7B26294E52EBB61F395B3BD20A80A4 /* M13CheckboxExpandController.swift */,
+				0F18D4CDBC390002A8DE66BB15EF553B /* M13CheckboxFadeController.swift */,
+				2A08059BCDEA37D3BF27472AA6DC78A7 /* M13CheckboxFillController.swift */,
+				9590875472FC86ECA5435D6A5ADF130C /* M13CheckboxFlatController.swift */,
+				C75ECCC154CF8D842A35DF06BD828612 /* M13CheckboxGestureRecognizer.swift */,
+				9C901899EF9A0A1EBF48194BEFC8BCBD /* M13CheckboxPathGenerator.swift */,
+				DD76D77315C8874F12FAE72F0875672C /* M13CheckboxRadioPathGenerator.swift */,
+				EA8C0CE7131C764843EF32FB26191946 /* M13CheckboxSpiralController.swift */,
+				15D1A0265CC5D2B0C7693434F5014F4E /* M13CheckboxStrokeController.swift */,
+				D6DC5E0AEDFDB4DD51F4AF0C6342F381 /* Support Files */,
+			);
+			name = M13Checkbox;
+			path = M13Checkbox;
+			sourceTree = "<group>";
+		};
+		36A6095995ED6B66123CC6E6F92BBFC8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD5F4B29629415B84173DC31CD8400C8 /* iOSDropDown.modulemap */,
+				A4AEE3CACA4774BE345C848E576A0561 /* iOSDropDown-dummy.m */,
+				6F037008A62C6B58256444F08AF90E98 /* iOSDropDown-Info.plist */,
+				B638E7AAF2A786359781CD907658C44F /* iOSDropDown-prefix.pch */,
+				CFB2F3EF3AC8C9D968023072AEC2E5A5 /* iOSDropDown-umbrella.h */,
+				A9E6C0360AC5360D1475FF293BEDACA7 /* iOSDropDown.debug.xcconfig */,
+				71833A2A65F14BB019B104712213BBA2 /* iOSDropDown.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDropDown";
+			sourceTree = "<group>";
+		};
+		3B5483CAB779509B651C2316D3F9F850 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F99F2A4C1F9068D64E8CFB93D7A9FA41 /* ResourceBundle-UICheckbox-UICheckbox.Swift-Info.plist */,
+				1DEC0AE83546F5B93390F0998FFB691A /* UICheckbox.Swift.modulemap */,
+				C465378A2D22AB80BB57F08A2900408B /* UICheckbox.Swift-dummy.m */,
+				EC94AF0EA9092E319E5281E853B23F1A /* UICheckbox.Swift-Info.plist */,
+				CD308C92EAE6FC8F6D6C704557E334CF /* UICheckbox.Swift-prefix.pch */,
+				863EA087CC24802B6EBB6DEB59231379 /* UICheckbox.Swift-umbrella.h */,
+				6542F0AFEDC136A8E4F5E3D0DB64844A /* UICheckbox.Swift.debug.xcconfig */,
+				2D82B0848BBE334131AC92BB0BFDD4EB /* UICheckbox.Swift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UICheckbox.Swift";
+			sourceTree = "<group>";
+		};
+		3D8E5AFB0B1E2B09492C0A226751A063 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C44CCB1E33A52EE1B0552585860EAFA1 /* SimpleCheckbox.modulemap */,
+				C280928E0AE44196D0C995FCA61755D3 /* SimpleCheckbox-dummy.m */,
+				764E9E1BCE611DAB7D45D5FF70AF4694 /* SimpleCheckbox-Info.plist */,
+				7B6C66195F29DF5AEED4B6F3B1286212 /* SimpleCheckbox-prefix.pch */,
+				642D09555A243E59347733E846024108 /* SimpleCheckbox-umbrella.h */,
+				63B12B74FF54B82B37C18FABE9F19295 /* SimpleCheckbox.debug.xcconfig */,
+				5938512C892A88AB77FF93EA247BFC6D /* SimpleCheckbox.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimpleCheckbox";
 			sourceTree = "<group>";
 		};
 		40058D35FD84568A82FCF879499FD36E /* Pods-myrootsinafricaTests */ = {
@@ -421,75 +565,58 @@
 			path = "Target Support Files/Pods-myrootsinafricaTests";
 			sourceTree = "<group>";
 		};
-		5DB24D63758AC3882BCEC6B66535A36D /* Pods */ = {
+		4CEC9CB390249C0334C44023D8EF7A10 /* SimpleCheckbox */ = {
 			isa = PBXGroup;
 			children = (
-				911620F433159ED0D10EED4E7F3B5545 /* iOSDropDown */,
-				ECF50EE91E5EFA9AA32FE02DDAC829EC /* IQKeyboardManagerSwift */,
-				68E53C6B0F1733BE6A05C955900189BE /* M13Checkbox */,
-				04FA448D672CB2B3F5F4CCD5AACAE739 /* SimpleCheckbox */,
-				0EC3A0F4E79774979AFD61033C6057DB /* UICheckbox.Swift */,
+				604CBD5CF4727C51510109CE53C60772 /* Checkbox.swift */,
+				3D8E5AFB0B1E2B09492C0A226751A063 /* Support Files */,
 			);
-			name = Pods;
+			name = SimpleCheckbox;
+			path = SimpleCheckbox;
 			sourceTree = "<group>";
 		};
-		60E0149D39FC09BB3196CF628577C070 /* Support Files */ = {
+		66BBD1752BACD760D9D934ACE208CFEF /* iOSDropDown */ = {
 			isa = PBXGroup;
 			children = (
-				40996337532AA45A6ED3E5F918C6494E /* IQKeyboardManagerSwift.modulemap */,
-				B5482953E8893F4C22542BFE6D7C7C2A /* IQKeyboardManagerSwift-dummy.m */,
-				126482F602E7C38D587DCDC476678816 /* IQKeyboardManagerSwift-Info.plist */,
-				32B2CE394D341FB07A95C17F28E69C65 /* IQKeyboardManagerSwift-prefix.pch */,
-				325BD1109862E3149166E41287FD6DCB /* IQKeyboardManagerSwift-umbrella.h */,
-				9D93170895D0D1D2465B91C4B3C408C1 /* IQKeyboardManagerSwift.debug.xcconfig */,
-				5D0EA4EEA16CF4CE016954B5F9458AE1 /* IQKeyboardManagerSwift.release.xcconfig */,
+				3B4F7ACFAC9D8246C0B09DCA7CDE3400 /* iOSDropDown.swift */,
+				36A6095995ED6B66123CC6E6F92BBFC8 /* Support Files */,
+			);
+			name = iOSDropDown;
+			path = iOSDropDown;
+			sourceTree = "<group>";
+		};
+		7197E7469209C032C472B636A571F87E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */,
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				5CE79C5BF20743404E59BEFD080A364D /* M13Checkbox.framework */,
+				6C11E4771B7718AB9C186F0D8BE90349 /* ParticlesLoadingView.bundle */,
+				0196766227FFBC81095557031555E00B /* ParticlesLoadingView.framework */,
+				3D099056A26A0F89323B64D5D9D4EFE9 /* Pods_myrootsinafrica.framework */,
+				36E78547C11EC5AE88011E588F7B67AE /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */,
+				971B5512A8D14EDF36A98BF2A539CC83 /* Pods_myrootsinafricaTests.framework */,
+				39F1A0AE8A01B577D4B8EAB8EEC1D1A8 /* SimpleCheckbox.framework */,
+				409EB0D18610374410BB451788A68009 /* UICheckbox.bundle */,
+				9CD61011146A57B7BFBEC82971828294 /* UICheckbox_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77CBE2D12BB27D17E6F76D80B1D56AE5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				24EA62930A674608E527E22620D65717 /* ParticlesLoadingView.modulemap */,
+				A1D6B268DFE47B53277CD14E5AE5F150 /* ParticlesLoadingView-dummy.m */,
+				071A68248216C0C26B45CA575053BFF4 /* ParticlesLoadingView-Info.plist */,
+				5D551FCE8008A0E8A23C719CC1CA096C /* ParticlesLoadingView-prefix.pch */,
+				35029AD8B52A53DAAAA690F9663C5EED /* ParticlesLoadingView-umbrella.h */,
+				3BD54CAAC4C40C827D17A7E8E073C17F /* ParticlesLoadingView.debug.xcconfig */,
+				D303F68B9951FF1E91697193DF71F702 /* ParticlesLoadingView.release.xcconfig */,
+				EE476615360114C1151C0278ED611558 /* ResourceBundle-ParticlesLoadingView-ParticlesLoadingView-Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/IQKeyboardManagerSwift";
-			sourceTree = "<group>";
-		};
-		68E53C6B0F1733BE6A05C955900189BE /* M13Checkbox */ = {
-			isa = PBXGroup;
-			children = (
-				03844E0D390CBA6469CD3DD1EF4F6430 /* DefaultValues.swift */,
-				136B7546F9C7A60F4BA84CF470C7DE0D /* M13Checkbox.swift */,
-				326E5D1396FEF758156C330A3582601D /* M13Checkbox+IB.swift */,
-				020DDD1DCC8FAA673D0B5AC292854AF0 /* M13CheckboxAddRemovePathGenerator.swift */,
-				4AAD3100DB6BCA316EC24753794A5D2E /* M13CheckboxAnimationGenerator.swift */,
-				ADEDEEEBB938E81BD4F49A73306D23A5 /* M13CheckboxBounceController.swift */,
-				A8BD3F4C601C5EEF38CF88FCEEA49A9D /* M13CheckboxCheckPathGenerator.swift */,
-				0F0B39B1672C22EAD9A7C39066BE8437 /* M13CheckboxController.swift */,
-				468CAF670F95773343EC6BAD3659BB09 /* M13CheckboxDisclosurePathGenerator.swift */,
-				12C7CFAAA92B7EA668F5F7CF555C4B69 /* M13CheckboxDotController.swift */,
-				BC6B20D3C50940C006CAF69A6747404A /* M13CheckboxExpandController.swift */,
-				96332DCC04B886F7DD14B854C65653FC /* M13CheckboxFadeController.swift */,
-				D4F7913DF191A0D48EBDAE9A907C2DFB /* M13CheckboxFillController.swift */,
-				8A301BF4F81BAFE1F1614C24587C3C59 /* M13CheckboxFlatController.swift */,
-				F1F49A69004F68C2A96A4CCEE6784044 /* M13CheckboxGestureRecognizer.swift */,
-				9FAF70FE1BF3B55A4EAC532410451094 /* M13CheckboxPathGenerator.swift */,
-				33B5E4A7386D08EE703A4B392A6D9727 /* M13CheckboxRadioPathGenerator.swift */,
-				AD2366DF635055BAE8ED03E6F18FA19A /* M13CheckboxSpiralController.swift */,
-				2DA1E12E0405C85AC7995887B9C1E6E7 /* M13CheckboxStrokeController.swift */,
-				E535A632BBE168A607D3E2063AF063E1 /* Support Files */,
-			);
-			name = M13Checkbox;
-			path = M13Checkbox;
-			sourceTree = "<group>";
-		};
-		83D6C5DBAD245ED87C7B051FE530E651 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9A8E085E4597DCD9D9524163A6B272B4 /* ResourceBundle-UICheckbox-UICheckbox.Swift-Info.plist */,
-				BEDBD93722031D1E8A780BC74AE6AAAB /* UICheckbox.Swift.modulemap */,
-				847664696F379E9895E2774D4CD9257E /* UICheckbox.Swift-dummy.m */,
-				326F377F59E935744F2BA2E5C784554F /* UICheckbox.Swift-Info.plist */,
-				60814A95441C4DCCD3E930DF7C2F28B4 /* UICheckbox.Swift-prefix.pch */,
-				02C588201C1E76E1FDF687D19A70D6E1 /* UICheckbox.Swift-umbrella.h */,
-				C5D74EBA86802559FC4F2DD2728546C0 /* UICheckbox.Swift.debug.xcconfig */,
-				15B91DF375F1D4B62CE4DA3A2A81C49B /* UICheckbox.Swift.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UICheckbox.Swift";
+			path = "../Target Support Files/ParticlesLoadingView";
 			sourceTree = "<group>";
 		};
 		8A772ED2A961CC2FF75B434F4AB85833 /* Pods-myrootsinafrica */ = {
@@ -509,49 +636,97 @@
 			path = "Target Support Files/Pods-myrootsinafrica";
 			sourceTree = "<group>";
 		};
-		911620F433159ED0D10EED4E7F3B5545 /* iOSDropDown */ = {
+		A119A9F704B4546527611E05CCDC924A /* IQKeyboardManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				394862888AF6E94E2BF137123FFB5F20 /* iOSDropDown.swift */,
-				E68D1241B5F7635A732342191DEAD721 /* Support Files */,
+				C51A47C3BBE3F330435595A8F567EA58 /* IQBarButtonItem.swift */,
+				18D57B5B96855473345F70E026CC9D26 /* IQInvocation.swift */,
+				00FEA2608118445BE774219D21FC26A4 /* IQKeyboardManager.swift */,
+				DC2CF15E49550A3A79E87EE81F869497 /* IQKeyboardManagerConstants.swift */,
+				69D491BE1939422B8C66BBDEA7E06AC3 /* IQKeyboardManagerConstantsInternal.swift */,
+				CFFAF3B02B2316A3671B8E80E84F307E /* IQKeyboardReturnKeyHandler.swift */,
+				50C71B314B41B9EE51050577921E66DE /* IQNSArray+Sort.swift */,
+				A4905D2F97EEF7A1AD8C840E6114F6F1 /* IQPreviousNextView.swift */,
+				60D81339978B3DA90F020CC8D425E8A5 /* IQTextView.swift */,
+				9F5FEEE9BE4D248AE5DA7C8807F82757 /* IQTitleBarButtonItem.swift */,
+				B4E5B820A679828D87D589A197DC73D5 /* IQToolbar.swift */,
+				FD5CC2C82A7510031CDD084B96D01467 /* IQUIScrollView+Additions.swift */,
+				E479203A9527E3AA2697093747A756B2 /* IQUITextFieldView+Additions.swift */,
+				855EBD094F94FECDBB85D3C1D51BADF2 /* IQUIView+Hierarchy.swift */,
+				2C2245AA06E6621D8B1EBB6341A99DC3 /* IQUIView+IQKeyboardToolbar.swift */,
+				E18D9E50FC6B38C32F977DE8E0A467A1 /* IQUIViewController+Additions.swift */,
+				F56DE68FA880ECF7735435197622D748 /* Support Files */,
 			);
-			name = iOSDropDown;
-			path = iOSDropDown;
+			name = IQKeyboardManagerSwift;
+			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+		AC578F424FB9569839906CAF199050CB /* ParticlesLoadingView */ = {
 			isa = PBXGroup;
 			children = (
-				216D11D6253026459814863746CC99A1 /* iOS */,
+				EA61898CD01DE6BB6E8C81AAF50A18F4 /* EmitterCreator.swift */,
+				BB2BF363845419D182C7E8CDF199F253 /* ParticleEffect.swift */,
+				60DD276CD0953CD4A7D809CA207DE472 /* ParticlesLoadingView.swift */,
+				318D99D8E71C77854376EEB971C72E88 /* ParticlesScene.swift */,
+				A8EB973C213E8B6B8917A4C6DF99D110 /* UIView+ParticlesAnimation.swift */,
+				0FB16897019803C64140C2AAF378989B /* Resources */,
+				77CBE2D12BB27D17E6F76D80B1D56AE5 /* Support Files */,
+			);
+			name = ParticlesLoadingView;
+			path = ParticlesLoadingView;
+			sourceTree = "<group>";
+		};
+		ACFAC915E635BB8C3569AC5CAC6687B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3515FC854D85F99240CFC79B6E204 /* ic_check_3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B94D7768568A9992200DB461E8CF687F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AC7E4AD4451DEE9A455F269C3E48680 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CBA630CAE6C3C9FA984509CC2D9672EF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */,
-				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
-				5CE79C5BF20743404E59BEFD080A364D /* M13Checkbox.framework */,
-				3D099056A26A0F89323B64D5D9D4EFE9 /* Pods_myrootsinafrica.framework */,
-				36E78547C11EC5AE88011E588F7B67AE /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */,
-				971B5512A8D14EDF36A98BF2A539CC83 /* Pods_myrootsinafricaTests.framework */,
-				39F1A0AE8A01B577D4B8EAB8EEC1D1A8 /* SimpleCheckbox.framework */,
-				409EB0D18610374410BB451788A68009 /* UICheckbox.bundle */,
-				9CD61011146A57B7BFBEC82971828294 /* UICheckbox_Swift.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				5DB24D63758AC3882BCEC6B66535A36D /* Pods */,
-				CBA630CAE6C3C9FA984509CC2D9672EF /* Products */,
+				B94D7768568A9992200DB461E8CF687F /* Frameworks */,
+				1A525941E569B857A2F9925892D47922 /* Pods */,
+				7197E7469209C032C472B636A571F87E /* Products */,
 				E55E5822FE5401BA9B1E917A940643D1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D6DC5E0AEDFDB4DD51F4AF0C6342F381 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CF99920AD36B3997112C32FA995B175 /* M13Checkbox.modulemap */,
+				392B24F2E9DECDA0BE9EE1AF5BC11178 /* M13Checkbox-dummy.m */,
+				99B5011D4E3C9A6839C9EC03085966FD /* M13Checkbox-Info.plist */,
+				93FAAA65F24E4E74D607D7F2308BAFD9 /* M13Checkbox-prefix.pch */,
+				46FE8C007218BFCD567BA14E278F3CB8 /* M13Checkbox-umbrella.h */,
+				E2A826E2C1E549223ECAF245950A1684 /* M13Checkbox.debug.xcconfig */,
+				1D5DBF1AA758E65BC43516EF636302C6 /* M13Checkbox.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/M13Checkbox";
+			sourceTree = "<group>";
+		};
+		DF47923C66859085CB1D73D5611B9BC5 /* UICheckbox.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				576CB64E1A80F2F65DA1BE4E32F4AC3C /* UICheckbox.swift */,
+				ACFAC915E635BB8C3569AC5CAC6687B1 /* Resources */,
+				3B5483CAB779509B651C2316D3F9F850 /* Support Files */,
+			);
+			name = UICheckbox.Swift;
+			path = UICheckbox.Swift;
 			sourceTree = "<group>";
 		};
 		E2EDA44A4EF5362857702E6FF6AA296B /* Pods-myrootsinafrica-myrootsinafricaUITests */ = {
@@ -571,21 +746,6 @@
 			path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests";
 			sourceTree = "<group>";
 		};
-		E535A632BBE168A607D3E2063AF063E1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9288AC55FD60E49CF1672C0F22559479 /* M13Checkbox.modulemap */,
-				6C45795C95B6B09000DFFA9AAFA79C5B /* M13Checkbox-dummy.m */,
-				10A762DE0A21C2B389F818BE68083FA9 /* M13Checkbox-Info.plist */,
-				0768EFEBAF186467C7E8AC88A43BB435 /* M13Checkbox-prefix.pch */,
-				DCEFB389786685E12E806AB6E72DFD97 /* M13Checkbox-umbrella.h */,
-				C0154817D1EAC1B768BCA98A1B52541C /* M13Checkbox.debug.xcconfig */,
-				49688AC6DD4499108D370DF67CC92793 /* M13Checkbox.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/M13Checkbox";
-			sourceTree = "<group>";
-		};
 		E55E5822FE5401BA9B1E917A940643D1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,69 +756,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E68D1241B5F7635A732342191DEAD721 /* Support Files */ = {
+		F56DE68FA880ECF7735435197622D748 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD10931CE69557A9187A43354D15F355 /* iOSDropDown.modulemap */,
-				A93BA085349DD98B53E6BA82279DBD88 /* iOSDropDown-dummy.m */,
-				648CE4176217EDA4ADFB8AB47FDEAD76 /* iOSDropDown-Info.plist */,
-				4F8D851D244FFD8D15F750E99E5FE7E8 /* iOSDropDown-prefix.pch */,
-				66BA6C43FBC70D8EF3D352E50E80BFD9 /* iOSDropDown-umbrella.h */,
-				260989D1F0827C980D91B7D48D838B29 /* iOSDropDown.debug.xcconfig */,
-				B91DB4185DA3ED1CD793B8EF6030D314 /* iOSDropDown.release.xcconfig */,
+				071A62B8365AC1996C4BAE5F01A1FBAB /* IQKeyboardManagerSwift.modulemap */,
+				D2C546464ED09E1AEFE19BA92656D6BD /* IQKeyboardManagerSwift-dummy.m */,
+				F3A3761D11E61F5A8B5FE03E5240764C /* IQKeyboardManagerSwift-Info.plist */,
+				08A695C721612B5BB2A50AD4DD46EA27 /* IQKeyboardManagerSwift-prefix.pch */,
+				72866D348F309B7C1FD778DF171C814C /* IQKeyboardManagerSwift-umbrella.h */,
+				E0908D3E927B6C70A46892569AE8B504 /* IQKeyboardManagerSwift.debug.xcconfig */,
+				3FFE385BE288D432A41A2969A13CE8D7 /* IQKeyboardManagerSwift.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/iOSDropDown";
-			sourceTree = "<group>";
-		};
-		ECF50EE91E5EFA9AA32FE02DDAC829EC /* IQKeyboardManagerSwift */ = {
-			isa = PBXGroup;
-			children = (
-				18C31674F2A2D2C841B83DC1D926178D /* IQBarButtonItem.swift */,
-				AA0671063CA9AAEE3D6A72342C138304 /* IQInvocation.swift */,
-				BF16D559A4322B89E8627E7D96FAB99F /* IQKeyboardManager.swift */,
-				21CAED7A633B803D936A3163B1983F6D /* IQKeyboardManagerConstants.swift */,
-				DB37C54BC9203F0395C1AB2B5910EDEB /* IQKeyboardManagerConstantsInternal.swift */,
-				32E13F8454FF42F50A66707C942987DE /* IQKeyboardReturnKeyHandler.swift */,
-				0C5CBBCAC47E2B7BB80250256CA95987 /* IQNSArray+Sort.swift */,
-				9CFDBE24CBF52AE7C8E993E5ACDAB0F0 /* IQPreviousNextView.swift */,
-				CCB6AF6E4FF965312370DD882627A9A8 /* IQTextView.swift */,
-				2AEA48BDF475009C82C9F7CF7144AA72 /* IQTitleBarButtonItem.swift */,
-				B5323579F4B7FDFC2F889908EF959F5A /* IQToolbar.swift */,
-				8D9937D2DDA29F670A572C2325AE5E4F /* IQUIScrollView+Additions.swift */,
-				B9199880B5328DE92E5BAC015CF36E7F /* IQUITextFieldView+Additions.swift */,
-				18753019BCBD9D12D539EBCB5B0EDC81 /* IQUIView+Hierarchy.swift */,
-				F2D328EB62CA2C316315CC6F42ADDA1B /* IQUIView+IQKeyboardToolbar.swift */,
-				43CBA5F720EB338DF8CEFCDA69D66C96 /* IQUIViewController+Additions.swift */,
-				60E0149D39FC09BB3196CF628577C070 /* Support Files */,
-			);
-			name = IQKeyboardManagerSwift;
-			path = IQKeyboardManagerSwift;
-			sourceTree = "<group>";
-		};
-		F2A9AF2D81C929DEC4C40AD11E9442AC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				74774A9EA27D5C71E7F606E498C1DEC7 /* SimpleCheckbox.modulemap */,
-				B4360DFB3811CDE6F463551F940BFCB6 /* SimpleCheckbox-dummy.m */,
-				6DA917D220C511393DD7910F0C37E3D9 /* SimpleCheckbox-Info.plist */,
-				1CC2F3D649133F9631C43D996174C697 /* SimpleCheckbox-prefix.pch */,
-				31C5CBB080200A0DE922392536DE2AAF /* SimpleCheckbox-umbrella.h */,
-				1267034BDB64A8C71676493C03ADBBD2 /* SimpleCheckbox.debug.xcconfig */,
-				D7F83B9CEFC71850DCD481BCEC53D0BF /* SimpleCheckbox.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SimpleCheckbox";
+			path = "../Target Support Files/IQKeyboardManagerSwift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0FD268C27FE3800321C84C9569CBEF47 /* Headers */ = {
+		13D4086F4EF125759421B4D0D1F62EC3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEC8AD4EE7027C775B3F4009D46AB60 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h in Headers */,
+				C2C006F011AFB5ADC895F13E58FBB559 /* Pods-myrootsinafrica-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,14 +795,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A766A91095B09A903670A81B087AEFE3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A79A3E98DB6FAC7CC378A63BEDFC36C /* Pods-myrootsinafrica-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +819,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D68BCEA2A755046D8BD273530420244 /* SimpleCheckbox-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDDDF8CAC3D2D4406CA21F65AD80827C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3711AB1D6B919AF8251DEC392E0E910 /* Pods-myrootsinafrica-myrootsinafricaUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA7C3C5C1A02D56ED043DC82BF9D77E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25C3FB3A9BFAD3FA2CAAF3EB3266C81 /* ParticlesLoadingView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,23 +921,43 @@
 			productReference = 5CE79C5BF20743404E59BEFD080A364D /* M13Checkbox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7734A6CA3EE50883AA7C5581B6DF5C6E /* Pods-myrootsinafrica-myrootsinafricaUITests */ = {
+		75EA83BCA6F23890BB98E4A7C2AB5314 /* ParticlesLoadingView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28D38744E24EF40E9D0E8372075830F7 /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica-myrootsinafricaUITests" */;
+			buildConfigurationList = F038138BDA503C5A23EB6588924877C4 /* Build configuration list for PBXNativeTarget "ParticlesLoadingView" */;
 			buildPhases = (
-				0FD268C27FE3800321C84C9569CBEF47 /* Headers */,
-				2FD49C3B616822D65AF05D871EE16177 /* Sources */,
-				AD31FCBAC6BB3F8C4A1E096EA239E4A1 /* Frameworks */,
-				325589DD8C0785D3A6623761F17A4B38 /* Resources */,
+				EFA7C3C5C1A02D56ED043DC82BF9D77E /* Headers */,
+				262C84BAE40FB0234E556FC129EECEE6 /* Sources */,
+				9E9FA6103DF8FEC48D042F058D5DDD2D /* Frameworks */,
+				BEF39FFA8F1E2263A779D3797430BF1B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6666D22FE44FFE56A2024FECBAA221C /* PBXTargetDependency */,
-				2171D894B342216ADD5F0BCD71BC0019 /* PBXTargetDependency */,
-				5FA8D50D267FF3AC1E460AEC23264E42 /* PBXTargetDependency */,
-				549844AEF1F1D274BB61B0956B579F0D /* PBXTargetDependency */,
-				9062ED6FE4FC180929136AE70A1D1FEB /* PBXTargetDependency */,
+				78B282C5FAA0CF5ED111B7F71326701E /* PBXTargetDependency */,
+			);
+			name = ParticlesLoadingView;
+			productName = ParticlesLoadingView;
+			productReference = 0196766227FFBC81095557031555E00B /* ParticlesLoadingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7734A6CA3EE50883AA7C5581B6DF5C6E /* Pods-myrootsinafrica-myrootsinafricaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1115FAC509855A365649E30404D783 /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica-myrootsinafricaUITests" */;
+			buildPhases = (
+				EDDDF8CAC3D2D4406CA21F65AD80827C /* Headers */,
+				F6BA2BF910BC9728AA8D46A62E975206 /* Sources */,
+				8BEA281F9A91CAF5822EDAA57C164633 /* Frameworks */,
+				45F89CF7C9A30BE899C5E179FA171216 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8ED850FD262D7000A74AAAE7DFDBBBAA /* PBXTargetDependency */,
+				829BF2608B7E6FADA77A474CBB72D624 /* PBXTargetDependency */,
+				FC2FAC32E109114EFC0F5AABB7D1B82D /* PBXTargetDependency */,
+				4764810F05BC4454372AC23404042651 /* PBXTargetDependency */,
+				21CE3127CE58DC62DA44FE0752142A54 /* PBXTargetDependency */,
+				18E6DCC5422B0C2A08FAABD914CFC9B9 /* PBXTargetDependency */,
 			);
 			name = "Pods-myrootsinafrica-myrootsinafricaUITests";
 			productName = "Pods-myrootsinafrica-myrootsinafricaUITests";
@@ -836,26 +984,44 @@
 		};
 		D4358334A9EEE83C8C6106F4BD03820D /* Pods-myrootsinafrica */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2ABD81FDB0ECC3FD6F9F9030BAD1E6C /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica" */;
+			buildConfigurationList = E11B20AFFCBCF8CDBE1656BD6DDD25D3 /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica" */;
 			buildPhases = (
-				A766A91095B09A903670A81B087AEFE3 /* Headers */,
-				27F1A9B0E364B448459F6489190C29FC /* Sources */,
-				D205514840003668D5F315BC18452286 /* Frameworks */,
-				47D2B0808F82A313C21F28BC6911D5CB /* Resources */,
+				13D4086F4EF125759421B4D0D1F62EC3 /* Headers */,
+				16680D0AA1B714D57507C6B182487FF1 /* Sources */,
+				C8ECC52B36736F106BBD04D1D85DAEB4 /* Frameworks */,
+				D8AAC859E972963C2BB0163C3852FC73 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C56F90DBE2064EDFA7B6D299F502A97 /* PBXTargetDependency */,
-				981DDBA74E0BDB9AB8113AA735FB0A42 /* PBXTargetDependency */,
-				0B0A7D7AA1610BCDE0A701ACCE8BA74A /* PBXTargetDependency */,
-				06CF5472AE2EFDFEF4FEDCEBD09E8D6A /* PBXTargetDependency */,
-				695A42C50A6AB71EE90A71406FD40233 /* PBXTargetDependency */,
+				FCA01DAC3ABB1C62288D77CCE6197EB7 /* PBXTargetDependency */,
+				F8D5FDACCA2EE673A9E84EE9D5172FCD /* PBXTargetDependency */,
+				481FEA9C1A8BFDD9FD3BB516C5C89296 /* PBXTargetDependency */,
+				3A902CC9B7C53EA974AA3442BAFDCBB6 /* PBXTargetDependency */,
+				523D44C516C180FF0B8E6CE0C0E7B168 /* PBXTargetDependency */,
+				06B201A66FFC3DAF0B2FBA425C4B9F4A /* PBXTargetDependency */,
 			);
 			name = "Pods-myrootsinafrica";
 			productName = "Pods-myrootsinafrica";
 			productReference = 3D099056A26A0F89323B64D5D9D4EFE9 /* Pods_myrootsinafrica.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		DCC08E10069898C869F84B75B36CC375 /* ParticlesLoadingView-ParticlesLoadingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C599A844C0C2F37BF1C61BCC0A88AF7F /* Build configuration list for PBXNativeTarget "ParticlesLoadingView-ParticlesLoadingView" */;
+			buildPhases = (
+				5F5B7BF292995C14D29A81DCF8A4D3CD /* Sources */,
+				C4ED3A85305754A904A73C50BB5763B9 /* Frameworks */,
+				141C5E127BBC732301AEB53B99920F55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ParticlesLoadingView-ParticlesLoadingView";
+			productName = "ParticlesLoadingView-ParticlesLoadingView";
+			productReference = 6C11E4771B7718AB9C186F0D8BE90349 /* ParticlesLoadingView.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		DDAAB99DB075B7088AACC296CAE4304E /* Pods-myrootsinafricaTests */ = {
 			isa = PBXNativeTarget;
@@ -912,13 +1078,15 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CBA630CAE6C3C9FA984509CC2D9672EF /* Products */;
+			productRefGroup = 7197E7469209C032C472B636A571F87E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */,
 				B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */,
 				7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */,
+				75EA83BCA6F23890BB98E4A7C2AB5314 /* ParticlesLoadingView */,
+				DCC08E10069898C869F84B75B36CC375 /* ParticlesLoadingView-ParticlesLoadingView */,
 				D4358334A9EEE83C8C6106F4BD03820D /* Pods-myrootsinafrica */,
 				7734A6CA3EE50883AA7C5581B6DF5C6E /* Pods-myrootsinafrica-myrootsinafricaUITests */,
 				DDAAB99DB075B7088AACC296CAE4304E /* Pods-myrootsinafricaTests */,
@@ -938,14 +1106,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		325589DD8C0785D3A6623761F17A4B38 /* Resources */ = {
+		141C5E127BBC732301AEB53B99920F55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B9A069C4DDC959F5CDEB3A6C5A0E9F /* Bokeh.sks in Resources */,
+				D6DE990F177787891B46AE436651270F /* Fire.sks in Resources */,
+				7604E98E0F96C85B59DE259BC8E2F9A7 /* Laser.sks in Resources */,
+				139A403F42C7EAFF23FBD81EF8591D75 /* spark.png in Resources */,
+				54BB31707997A72064BE07A2712E7E01 /* Spark.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47D2B0808F82A313C21F28BC6911D5CB /* Resources */ = {
+		45F89CF7C9A30BE899C5E179FA171216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -988,6 +1161,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEF39FFA8F1E2263A779D3797430BF1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD7A09906316FB7C5A8D87D1C9CC617 /* ParticlesLoadingView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8AAC859E972963C2BB0163C3852FC73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA5DA81F8292820D65F403E941074FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -998,19 +1186,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27F1A9B0E364B448459F6489190C29FC /* Sources */ = {
+		16680D0AA1B714D57507C6B182487FF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28590ADA89BFE59C574757077770270A /* Pods-myrootsinafrica-dummy.m in Sources */,
+				7F76454120B979EF06CDAE2A41CF673E /* Pods-myrootsinafrica-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FD49C3B616822D65AF05D871EE16177 /* Sources */ = {
+		262C84BAE40FB0234E556FC129EECEE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C8CA9C8F308E4A385F5E374679A5F8 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m in Sources */,
+				6C0220A20E03950879D3EA279BB6EA89 /* EmitterCreator.swift in Sources */,
+				565D3DC15E27D6AD71246EB05AB326C7 /* ParticleEffect.swift in Sources */,
+				1BE437242E2B144710AB77DAC8A58C93 /* ParticlesLoadingView-dummy.m in Sources */,
+				EDF0ADCA9D2E3D4F000D2382A2AAB90E /* ParticlesLoadingView.swift in Sources */,
+				C7C48F305C197D613E4B95C86F7A1FEE /* ParticlesScene.swift in Sources */,
+				9C14508384983681E6961A6B48C6A9EF /* UIView+ParticlesAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1047,6 +1240,13 @@
 			files = (
 				C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */,
 				6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F5B7BF292995C14D29A81DCF8A4D3CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,62 +1307,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6BA2BF910BC9728AA8D46A62E975206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A4FD1506F537180ACFF5AEA7FC1159 /* Pods-myrootsinafrica-myrootsinafricaUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		06CF5472AE2EFDFEF4FEDCEBD09E8D6A /* PBXTargetDependency */ = {
+		06B201A66FFC3DAF0B2FBA425C4B9F4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDropDown;
+			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
+			targetProxy = E840C4AFDA9E043DA51AA173DC9DA7B8 /* PBXContainerItemProxy */;
+		};
+		18E6DCC5422B0C2A08FAABD914CFC9B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDropDown;
+			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
+			targetProxy = D3E8E9E9A05DD1F0A2CB0F7D76D3836A /* PBXContainerItemProxy */;
+		};
+		21CE3127CE58DC62DA44FE0752142A54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UICheckbox.Swift;
 			target = 472C2B6708BC6940A0BFF9A4A56547D5 /* UICheckbox.Swift */;
-			targetProxy = 9E1686853A751EB8CE0C10E2302467C1 /* PBXContainerItemProxy */;
+			targetProxy = 58F7348AFB6F9658444849FC154492DF /* PBXContainerItemProxy */;
 		};
-		0B0A7D7AA1610BCDE0A701ACCE8BA74A /* PBXTargetDependency */ = {
+		3A902CC9B7C53EA974AA3442BAFDCBB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SimpleCheckbox;
 			target = F26A321F30138437FC03D69FB018CC0A /* SimpleCheckbox */;
-			targetProxy = 7DED3B385DD25FFF9B5AE088CFC5133B /* PBXContainerItemProxy */;
+			targetProxy = 65338804EF45F0488694E9DE5ACB1C2A /* PBXContainerItemProxy */;
 		};
-		2171D894B342216ADD5F0BCD71BC0019 /* PBXTargetDependency */ = {
+		4764810F05BC4454372AC23404042651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleCheckbox;
+			target = F26A321F30138437FC03D69FB018CC0A /* SimpleCheckbox */;
+			targetProxy = 42105D2A6691BD9B3A60BFD158FA642B /* PBXContainerItemProxy */;
+		};
+		481FEA9C1A8BFDD9FD3BB516C5C89296 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ParticlesLoadingView;
+			target = 75EA83BCA6F23890BB98E4A7C2AB5314 /* ParticlesLoadingView */;
+			targetProxy = 76E1F8FC8E903EA48BA0C14728AECAC4 /* PBXContainerItemProxy */;
+		};
+		523D44C516C180FF0B8E6CE0C0E7B168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICheckbox.Swift;
+			target = 472C2B6708BC6940A0BFF9A4A56547D5 /* UICheckbox.Swift */;
+			targetProxy = 8C5EBEE941C88AFB0ED8FFDCC95C9687 /* PBXContainerItemProxy */;
+		};
+		78B282C5FAA0CF5ED111B7F71326701E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ParticlesLoadingView-ParticlesLoadingView";
+			target = DCC08E10069898C869F84B75B36CC375 /* ParticlesLoadingView-ParticlesLoadingView */;
+			targetProxy = 19DAA82A44236779AAD740BF7BA2813B /* PBXContainerItemProxy */;
+		};
+		829BF2608B7E6FADA77A474CBB72D624 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = M13Checkbox;
 			target = 7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */;
-			targetProxy = EFB6586433A011328F1D150627CADCD2 /* PBXContainerItemProxy */;
+			targetProxy = 903FB8CBFFEAEDF3BEF01D26B2EC822E /* PBXContainerItemProxy */;
 		};
-		2C56F90DBE2064EDFA7B6D299F502A97 /* PBXTargetDependency */ = {
+		8ED850FD262D7000A74AAAE7DFDBBBAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManagerSwift;
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
-			targetProxy = 71966C905A6933B91341BBBB42912A63 /* PBXContainerItemProxy */;
-		};
-		549844AEF1F1D274BB61B0956B579F0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UICheckbox.Swift;
-			target = 472C2B6708BC6940A0BFF9A4A56547D5 /* UICheckbox.Swift */;
-			targetProxy = 77FBD71AAF5BFB79AD73B1E67F34820F /* PBXContainerItemProxy */;
-		};
-		5FA8D50D267FF3AC1E460AEC23264E42 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SimpleCheckbox;
-			target = F26A321F30138437FC03D69FB018CC0A /* SimpleCheckbox */;
-			targetProxy = EB81B848603468883F4D3146546A9E77 /* PBXContainerItemProxy */;
-		};
-		695A42C50A6AB71EE90A71406FD40233 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = iOSDropDown;
-			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
-			targetProxy = D1C6B0F2D8F553C5DA2BA58B40634C2A /* PBXContainerItemProxy */;
-		};
-		9062ED6FE4FC180929136AE70A1D1FEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = iOSDropDown;
-			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
-			targetProxy = 65007C9D32BCDA23C9C68D0DF9E89A90 /* PBXContainerItemProxy */;
-		};
-		981DDBA74E0BDB9AB8113AA735FB0A42 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = M13Checkbox;
-			target = 7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */;
-			targetProxy = 935963ECA0C8AB7AF93A72B5C1D129BE /* PBXContainerItemProxy */;
+			targetProxy = 91F49171F3CD7D036525D040EA90944F /* PBXContainerItemProxy */;
 		};
 		9860BCCD466977B09C6D5630C2E042A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1176,18 +1390,30 @@
 			target = D4358334A9EEE83C8C6106F4BD03820D /* Pods-myrootsinafrica */;
 			targetProxy = 63D43FD7FCA48DFF16828A28A20E4B8B /* PBXContainerItemProxy */;
 		};
-		C6666D22FE44FFE56A2024FECBAA221C /* PBXTargetDependency */ = {
+		F8D5FDACCA2EE673A9E84EE9D5172FCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = M13Checkbox;
+			target = 7111E54EAE43E89F451A75076C3525ED /* M13Checkbox */;
+			targetProxy = 3E7E6024847A645CBAEA61EE37672FD5 /* PBXContainerItemProxy */;
+		};
+		FC2FAC32E109114EFC0F5AABB7D1B82D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ParticlesLoadingView;
+			target = 75EA83BCA6F23890BB98E4A7C2AB5314 /* ParticlesLoadingView */;
+			targetProxy = 59A278FFE8C55F693877A3FC08125198 /* PBXContainerItemProxy */;
+		};
+		FCA01DAC3ABB1C62288D77CCE6197EB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManagerSwift;
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
-			targetProxy = 6492CE4F88DE2A3813E9F7C82C7E981C /* PBXContainerItemProxy */;
+			targetProxy = 46A6AB2596DC3BAC4E0D7652C9249ADA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0E48F95F467933FE40BF77299A4E3228 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0154817D1EAC1B768BCA98A1B52541C /* M13Checkbox.debug.xcconfig */;
+			baseConfigurationReference = E2A826E2C1E549223ECAF245950A1684 /* M13Checkbox.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1286,7 +1512,7 @@
 		};
 		1C8CE366EFCD4910013158E38D2646EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1267034BDB64A8C71676493C03ADBBD2 /* SimpleCheckbox.debug.xcconfig */;
+			baseConfigurationReference = 63B12B74FF54B82B37C18FABE9F19295 /* SimpleCheckbox.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1320,9 +1546,86 @@
 			};
 			name = Debug;
 		};
+		2A7E84E9B6EC5D04B40FCE84061EDE40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37968931708C876FAAF26AD61E94EF2 /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35A61BA5B8C7BC46F379B48FD5E92C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C86468A523810C27E32EEF5314AB1598 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		486B2E2576DF48B0108483B46B366AB6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7F83B9CEFC71850DCD481BCEC53D0BF /* SimpleCheckbox.release.xcconfig */;
+			baseConfigurationReference = 5938512C892A88AB77FF93EA247BFC6D /* SimpleCheckbox.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1357,47 +1660,9 @@
 			};
 			name = Release;
 		};
-		4C1E1DA55F4803C5CF45061544854087 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA3435AB42414A316C85FD1BA7E1B1C2 /* Pods-myrootsinafrica.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		679693003BB24E0DAF72AD434DAF5BB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5D74EBA86802559FC4F2DD2728546C0 /* UICheckbox.Swift.debug.xcconfig */;
+			baseConfigurationReference = 6542F0AFEDC136A8E4F5E3D0DB64844A /* UICheckbox.Swift.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/UICheckbox.Swift";
@@ -1451,9 +1716,9 @@
 			};
 			name = Release;
 		};
-		7C211CE94A5FCB8DBF1AED5EAB049F31 /* Debug */ = {
+		7860F17BAB1C08DAAF868411EC95D0D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E37968931708C876FAAF26AD61E94EF2 /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */;
+			baseConfigurationReference = DA3435AB42414A316C85FD1BA7E1B1C2 /* Pods-myrootsinafrica.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1466,7 +1731,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1475,7 +1740,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1491,7 +1756,7 @@
 		};
 		90AAF843F67A560DB523F885D8E0647D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D93170895D0D1D2465B91C4B3C408C1 /* IQKeyboardManagerSwift.debug.xcconfig */;
+			baseConfigurationReference = E0908D3E927B6C70A46892569AE8B504 /* IQKeyboardManagerSwift.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1526,7 +1791,7 @@
 		};
 		92111D7F4357A63D476FF4384C052E33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B91DB4185DA3ED1CD793B8EF6030D314 /* iOSDropDown.release.xcconfig */;
+			baseConfigurationReference = 71833A2A65F14BB019B104712213BBA2 /* iOSDropDown.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1562,7 +1827,7 @@
 		};
 		9777F8A98343527160CF9950B9A6980B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 260989D1F0827C980D91B7D48D838B29 /* iOSDropDown.debug.xcconfig */;
+			baseConfigurationReference = A9E6C0360AC5360D1475FF293BEDACA7 /* iOSDropDown.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1597,7 +1862,7 @@
 		};
 		9EACABEA53EB35663641B129F2718052 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D0EA4EEA16CF4CE016954B5F9458AE1 /* IQKeyboardManagerSwift.release.xcconfig */;
+			baseConfigurationReference = 3FFE385BE288D432A41A2969A13CE8D7 /* IQKeyboardManagerSwift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1631,12 +1896,27 @@
 			};
 			name = Release;
 		};
-		A351D3EABF04649964B703BA392F2B73 /* Release */ = {
+		9F3662FF76009A793389DB9E44F3BB1D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56219EA11A1999D4C1352BA6CDAB178F /* Pods-myrootsinafrica.release.xcconfig */;
+			baseConfigurationReference = D303F68B9951FF1E91697193DF71F702 /* ParticlesLoadingView.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ParticlesLoadingView";
+				IBSC_MODULE = ParticlesLoadingView;
+				INFOPLIST_FILE = "Target Support Files/ParticlesLoadingView/ResourceBundle-ParticlesLoadingView-ParticlesLoadingView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = ParticlesLoadingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		A0C7E83BBC7A52B698933FCBCB78B235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD54CAAC4C40C827D17A7E8E073C17F /* ParticlesLoadingView.debug.xcconfig */;
+			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1646,23 +1926,57 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ParticlesLoadingView/ParticlesLoadingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ParticlesLoadingView/ParticlesLoadingView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ParticlesLoadingView/ParticlesLoadingView.modulemap";
+				PRODUCT_MODULE_NAME = ParticlesLoadingView;
+				PRODUCT_NAME = ParticlesLoadingView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AD580125D3D2D0888CD68B1E556BD521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D303F68B9951FF1E91697193DF71F702 /* ParticlesLoadingView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ParticlesLoadingView/ParticlesLoadingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ParticlesLoadingView/ParticlesLoadingView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ParticlesLoadingView/ParticlesLoadingView.modulemap";
+				PRODUCT_MODULE_NAME = ParticlesLoadingView;
+				PRODUCT_NAME = ParticlesLoadingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1730,9 +2044,65 @@
 			};
 			name = Release;
 		};
+		BC32641A9A9AFC0726523E9AD227BEF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56219EA11A1999D4C1352BA6CDAB178F /* Pods-myrootsinafrica.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BF44DE2740AD1E08E28A06D9B7F5E305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD54CAAC4C40C827D17A7E8E073C17F /* ParticlesLoadingView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ParticlesLoadingView";
+				IBSC_MODULE = ParticlesLoadingView;
+				INFOPLIST_FILE = "Target Support Files/ParticlesLoadingView/ResourceBundle-ParticlesLoadingView-ParticlesLoadingView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = ParticlesLoadingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		C3949CB909F6E1932DD36D37C091CBFE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15B91DF375F1D4B62CE4DA3A2A81C49B /* UICheckbox.Swift.release.xcconfig */;
+			baseConfigurationReference = 2D82B0848BBE334131AC92BB0BFDD4EB /* UICheckbox.Swift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1768,7 +2138,7 @@
 		};
 		CB52B8550DF5E086958C2CEB32AFE0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49688AC6DD4499108D370DF67CC92793 /* M13Checkbox.release.xcconfig */;
+			baseConfigurationReference = 1D5DBF1AA758E65BC43516EF636302C6 /* M13Checkbox.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1842,7 +2212,7 @@
 		};
 		DDAF55E5CDA884EA7ACA9144F14369C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5D74EBA86802559FC4F2DD2728546C0 /* UICheckbox.Swift.debug.xcconfig */;
+			baseConfigurationReference = 6542F0AFEDC136A8E4F5E3D0DB64844A /* UICheckbox.Swift.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1875,48 +2245,9 @@
 			};
 			name = Debug;
 		};
-		E986B26FB591BDBB58F376AD2214C3FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C86468A523810C27E32EEF5314AB1598 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		F60FD1B1036B46A2B8FEF7570A067B64 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15B91DF375F1D4B62CE4DA3A2A81C49B /* UICheckbox.Swift.release.xcconfig */;
+			baseConfigurationReference = 2D82B0848BBE334131AC92BB0BFDD4EB /* UICheckbox.Swift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/UICheckbox.Swift";
@@ -1939,15 +2270,6 @@
 			buildConfigurations = (
 				0E48F95F467933FE40BF77299A4E3228 /* Debug */,
 				CB52B8550DF5E086958C2CEB32AFE0A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		28D38744E24EF40E9D0E8372075830F7 /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica-myrootsinafricaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7C211CE94A5FCB8DBF1AED5EAB049F31 /* Debug */,
-				E986B26FB591BDBB58F376AD2214C3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1997,11 +2319,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2ABD81FDB0ECC3FD6F9F9030BAD1E6C /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica" */ = {
+		BC1115FAC509855A365649E30404D783 /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica-myrootsinafricaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C1E1DA55F4803C5CF45061544854087 /* Debug */,
-				A351D3EABF04649964B703BA392F2B73 /* Release */,
+				2A7E84E9B6EC5D04B40FCE84061EDE40 /* Debug */,
+				35A61BA5B8C7BC46F379B48FD5E92C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C599A844C0C2F37BF1C61BCC0A88AF7F /* Build configuration list for PBXNativeTarget "ParticlesLoadingView-ParticlesLoadingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF44DE2740AD1E08E28A06D9B7F5E305 /* Debug */,
+				9F3662FF76009A793389DB9E44F3BB1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2015,11 +2346,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		E11B20AFFCBCF8CDBE1656BD6DDD25D3 /* Build configuration list for PBXNativeTarget "Pods-myrootsinafrica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7860F17BAB1C08DAAF868411EC95D0D2 /* Debug */,
+				BC32641A9A9AFC0726523E9AD227BEF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E9BE847D817A08831EDC43202413CD5C /* Build configuration list for PBXNativeTarget "UICheckbox.Swift-UICheckbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				679693003BB24E0DAF72AD434DAF5BB3 /* Debug */,
 				F60FD1B1036B46A2B8FEF7570A067B64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F038138BDA503C5A23EB6588924877C4 /* Build configuration list for PBXNativeTarget "ParticlesLoadingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C7E83BBC7A52B698933FCBCB78B235 /* Debug */,
+				AD580125D3D2D0888CD68B1E556BD521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
