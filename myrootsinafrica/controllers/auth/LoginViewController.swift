@@ -24,15 +24,26 @@ class LoginViewController: UIViewController{
                        fatalError("Password image not found")
                    }
         
-      
         passwordTF.addRightImageToTextField(using:passwordEyeOpen)
         forgotPasswordLabel.underlineText()
         dontHaveAnAccountLabel.underlineText()
+        
+        forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForForgotPassword(_ :))))
 
     }
     
     func setTextFieldsBottomBorder(){
         emailTF.setBottomBorder()
         passwordTF.setBottomBorder()
+        
+    }
+           
+
+    @objc func tapDetectedForForgotPassword(_ sender : UITapGestureRecognizer){
+        print("login to forgot")
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "forgotstory") as! ViewController
+        //        let profile = ProfileViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
 }

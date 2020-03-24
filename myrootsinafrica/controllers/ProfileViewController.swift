@@ -17,7 +17,7 @@ class ProfileViewController : ViewController{
     override func viewDidLoad() {
         print("Profile")
         
-//        self.setBackgroundImage("generalBackground", contentMode: .scaleToFill)
+        self.setBackgroundImage("generalBackground", contentMode: .scaleToFill)
         setTextFieldBottomBorder()
     }
     

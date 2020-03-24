@@ -29,19 +29,6 @@ class DashBoardViewController : UIViewController{
         topBoardView.layer.cornerRadius = 25
         bottomBoardView.layer.cornerRadius = 25
         
-//        view.insertSubview(backgroundImageView, at: 0)
-//        parentScrollView.addSubview(backgroundImageView)
-////        parentScrollView.sendSubviewToBack(backgroundImgeView)
-//        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-//        backgroundImageView.topAnchor.constraint(equalTo: parentScrollView.topAnchor).isActive = true
-//        backgroundImageView.heightAnchor.constraint(equalTo: parentScrollView.heightAnchor).isActive = true
-//        backgroundImageView.widthAnchor.constraint(equalTo: parentScrollView.widthAnchor).isActive = true
-//        backgroundImageView.bottomAnchor.constraint(equalTo: parentScrollView.bottomAnchor).isActive = true
-//        backgroundImageView.contentMode = .scaleToFill
-//        view.sendSubviewToBack(parentScrollView)
-//        circleView.initiateTapGesture(action: #selector(circleView.tapDetectedForProfile))
-//        initiateTapGestures(view: circleView, action: #selector(view.tapDetectedForProfile))
-        
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
     }
     
@@ -53,7 +40,7 @@ class DashBoardViewController : UIViewController{
      }
     @objc func tapDetectedForProfile(_ sender : UITapGestureRecognizer){
         print("profile setting")
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "story") as! ViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "profilestory") as! ViewController
 //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
         
