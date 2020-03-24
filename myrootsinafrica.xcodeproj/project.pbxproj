@@ -10,6 +10,7 @@
 		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
 		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */; };
+		041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */; };
 		045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F0F241AD7D3004217D9 /* AppDelegate.swift */; };
 		045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F11241AD7D3004217D9 /* SceneDelegate.swift */; };
 		045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F13241AD7D3004217D9 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
 		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		045C1F0C241AD7D3004217D9 /* myrootsinafrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myrootsinafrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0F241AD7D3004217D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045C1F11241AD7D3004217D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */,
 				047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */,
 				047AC7A02428A54000968A29 /* ProfileViewController.swift */,
+				041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
 				049CF58C242373C200C81412 /* LoginViewController.swift in Sources */,
 				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
+				041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */,
 				049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
 				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,

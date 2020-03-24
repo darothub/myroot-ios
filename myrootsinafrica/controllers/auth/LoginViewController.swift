@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController{
+class LoginViewController: ViewController{
     
     @IBOutlet weak var emailTF: UITextField!
     
@@ -29,6 +29,8 @@ class LoginViewController: UIViewController{
         dontHaveAnAccountLabel.underlineText()
         
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForForgotPassword(_ :))))
+        
+        dontHaveAnAccountLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForSignup(_ :))))
 
     }
     
@@ -36,6 +38,12 @@ class LoginViewController: UIViewController{
         emailTF.setBottomBorder()
         passwordTF.setBottomBorder()
         
+    }
+    
+    @objc func tapToDetectedForSignup(_ sender : UITapGestureRecognizer){
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "registerstory") as! ViewController
+               self.navigationController?.pushViewController(nextVC, animated: true)
+               
     }
            
 

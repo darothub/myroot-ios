@@ -49,5 +49,9 @@ extension UIViewController {
 //        C2DC00
 //        7AC840
     }
+    
+//    open override func awakeFromNib() {
+//         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+//     }  
 
 }

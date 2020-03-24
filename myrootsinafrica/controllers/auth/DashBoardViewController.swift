@@ -29,6 +29,7 @@ class DashBoardViewController : UIViewController{
         topBoardView.layer.cornerRadius = 25
         bottomBoardView.layer.cornerRadius = 25
         
+        self.navigationItem.setHidesBackButton(true, animated: true)
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
     }
     
