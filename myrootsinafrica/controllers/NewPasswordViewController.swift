@@ -20,7 +20,6 @@ class NewPasswordViewController:ViewController{
         self.setBackgroundImage("generalBackground", contentMode: .scaleToFill)
         
         setTextFieldBottomBorder()
-        
         guard let passwordEyeOpen = UIImage(named: "eyeiconopen") else{
                        fatalError("Password image not found")
                    }
