@@ -9,6 +9,8 @@
 import UIKit
 import iOSDropDown
 import ParticlesLoadingView
+import Alamofire
+import SwiftyJSON
 
 
 class SignupController: ViewController {
@@ -58,9 +60,7 @@ class SignupController: ViewController {
         addRightImageToTextField(with: passwordTF, using: passwordImage)
         
         self.setupProgressBar(progress: 0.5)
-//        guard let image = UIImage(named: "signupBackground") else{
-//            fatalError("Cannot find background image")
-//        }
+
         self.setBackgroundImage("signupBackground", contentMode: .scaleToFill)
 
         let countryAndCodeDict = countryAndCodes()
@@ -74,6 +74,9 @@ class SignupController: ViewController {
        }
         
         loginLinkLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForLogin(_:))))
+        
+        
+        
         
     }
     
@@ -178,7 +181,31 @@ class SignupController: ViewController {
     
     
     
- 
+    @IBAction func registerUser(_ sender: Any) {
+        
+        let url = "https://fathomless-badlands-69782.herokuapp.com/api/user"
+        let fullName = firstNameTF.text! + " " + lastNameTF.text!
+        let email = emailTF.text
+        let password = passwordTF.text
+        let phone = phoneNumberTF.text
+        let country = countryDropDown.text
+//        countryDropDown.didSelect{(selectedText , index ,id) in
+//            country = selectedText
+//
+//        }
+        let user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
+        
+        AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of:AuthResponse.self){response in
+            
+            response.map { (AuthResponse) in
+                print("messaage \(String(describing: AuthResponse.message))")
+            }
+            
+            print("user: \(user)")
+            print("response \(String(describing: response))")
+        }
+    }
+    
     
 }
 

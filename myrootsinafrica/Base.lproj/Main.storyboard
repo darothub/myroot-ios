@@ -222,6 +222,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Submit"/>
                                                 <connections>
+                                                    <action selector="registerUser:" destination="tif-0R-JF1" eventType="touchUpInside" id="js9-VT-aEs"/>
                                                     <action selector="showToast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcL-XF-ILH"/>
                                                     <segue destination="AFM-l0-b5U" kind="show" id="5Xr-q2-6Rk"/>
                                                 </connections>
@@ -446,6 +447,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <outlet property="emailTF" destination="WZ4-IT-4Wg" id="rwH-YW-WaQ"/>
                         <outlet property="forgotPasswordLabel" destination="sbV-67-fVm" id="UUc-NT-ba1"/>
                         <outlet property="passwordTF" destination="mca-5O-ERv" id="JkC-jP-h0w"/>
+                        <outlet property="progressRing" destination="xyu-el-phF" id="ygr-bu-qx2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYw-Xh-xry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,10 @@
 		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */; };
 		041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */; };
+		041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2759242B6B20009FCC82 /* responsemodel.swift */; };
+		041D275C242B6C6F009FCC82 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D275B242B6C6F009FCC82 /* UserModel.swift */; };
+		041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */; };
+		041D2764242B7007009FCC82 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2763242B7007009FCC82 /* AuthRepository.swift */; };
 		045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F0F241AD7D3004217D9 /* AppDelegate.swift */; };
 		045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F11241AD7D3004217D9 /* SceneDelegate.swift */; };
 		045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F13241AD7D3004217D9 /* ViewController.swift */; };
@@ -73,6 +77,10 @@
 		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		041D2759242B6B20009FCC82 /* responsemodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responsemodel.swift; sourceTree = "<group>"; };
+		041D275B242B6C6F009FCC82 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		041D2763242B7007009FCC82 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		045C1F0C241AD7D3004217D9 /* myrootsinafrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myrootsinafrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0F241AD7D3004217D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045C1F11241AD7D3004217D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +160,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041D2758242B6AF9009FCC82 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				041D2759242B6B20009FCC82 /* responsemodel.swift */,
+				041D275B242B6C6F009FCC82 /* UserModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		041D275D242B6E78009FCC82 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				041D2762242B6FEF009FCC82 /* repository */,
+				041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		041D2762242B6FEF009FCC82 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				041D2763242B7007009FCC82 /* AuthRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		045C1F03241AD7D3004217D9 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +211,8 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				041D275D242B6E78009FCC82 /* network */,
+				041D2758242B6AF9009FCC82 /* model */,
 				049CF5882422ACB200C81412 /* controllers */,
 				045C1F97241F5999004217D9 /* extensionandhelpers */,
 				045C1F57241B9E39004217D9 /* csmfonts */,
@@ -556,15 +592,18 @@
 				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
 				049CF58C242373C200C81412 /* LoginViewController.swift in Sources */,
 				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
+				041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */,
 				041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */,
 				049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
 				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
+				041D2764242B7007009FCC82 /* AuthRepository.swift in Sources */,
 				047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
 				045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */,
 				045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */,
 				047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */,
+				041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */,
 				045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */,
 				049CF58724229E2E00C81412 /* setViewShadowExtension.swift in Sources */,
 				047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */,
@@ -573,6 +612,7 @@
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
 				047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */,
 				047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */,
+				041D275C242B6C6F009FCC82 /* UserModel.swift in Sources */,
 				047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */,
 				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
 				045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */,

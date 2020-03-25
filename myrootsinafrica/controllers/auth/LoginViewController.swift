@@ -12,12 +12,15 @@ class LoginViewController: ViewController{
     
     @IBOutlet weak var emailTF: UITextField!
     
+    @IBOutlet weak var progressRing: UIActivityIndicatorView!
     @IBOutlet weak var forgotPasswordLabel: UILabel!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var dontHaveAnAccountLabel: UILabel!
     
     override func viewDidLoad() {
         print("yay! login")
+        
+//        progressRing.isHidden = false
         
         setTextFieldsBottomBorder()
         guard let passwordEyeOpen = UIImage(named: "eyeiconopen") else{

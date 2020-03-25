@@ -12,6 +12,10 @@ target 'myrootsinafrica' do
   pod 'M13Checkbox'
   pod 'SimpleCheckbox'
   pod "ParticlesLoadingView"
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 
   target 'myrootsinafricaTests' do

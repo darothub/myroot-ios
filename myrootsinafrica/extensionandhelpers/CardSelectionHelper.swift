@@ -8,13 +8,37 @@
 
 import UIKit
 
-class CardSelectionHelper:NSObject{
-    static func tapInitiation(view:UIView, action: Selector){
-        let singleTap = UITapGestureRecognizer(target: self, action: action)
-        view.isUserInteractionEnabled = true
-        view.addGestureRecognizer(singleTap)
+class CardSelectionHelper{
+    var delegate:TestProtocolDelegate?
+    func tapInitiation(){
+        delegate?.testing()
+//        let singleTap = UITapGestureRecognizer(target: self, action: action)
+//        view.isUserInteractionEnabled = true
+//        view.addGestureRecognizer(singleTap)
     }
 
 }
 
+class AnotherClass{
+    var newInst = CardSelectionHelper()
+    init(){
+        newInst.delegate = self as! TestProtocolDelegate
+    }
+    func wtsup(){
+        newInst.tapInitiation()
+    }
+}
+
+protocol TestProtocolDelegate {
+    func testing()
+}
+
+
+extension AnotherClass : TestProtocolDelegate{
+    func testing() {
+        print("Testing")
+    }
+    
+    
+}
 
