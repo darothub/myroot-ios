@@ -9,9 +9,10 @@
 import UIKit
 struct AuthResponse:Decodable{
     let status:Int?
+    let error:String?
     let message: String?
     let payload: Payload?
-    let token:String
+    let token:String?
 }
 
 struct Payload:Decodable{

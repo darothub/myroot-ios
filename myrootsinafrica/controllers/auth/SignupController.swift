@@ -11,6 +11,8 @@ import iOSDropDown
 import ParticlesLoadingView
 import Alamofire
 import SwiftyJSON
+import RxSwift
+
 
 
 class SignupController: ViewController {
@@ -21,6 +23,9 @@ class SignupController: ViewController {
     let tableView = UITableView()
     var selectedButton = UIButton()
     var dataSource = [String]()
+    var token:String = String()
+    
+    let authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var testText = ""
     @IBOutlet weak var countryCodeTextField: UITextField!
@@ -44,41 +49,61 @@ class SignupController: ViewController {
     
     @IBOutlet weak var loginLinkLabel: UILabel!
     
+    var tokens = ""
+    
+    var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         print("Yaay signup")
-//        setScrollViewBackground()
         
-
-        firstNameTF.placeholder = testText
+        print("token:\(tokens)")
         
-        setTextFieldBottomBorder()
+        //set progress bar
+        self.setupProgressBar(progress: 0.5)
+        
+        //underline link
+        haveaccounttext.underlineText()
+        
+        //setting placeholder from segue text
+//        firstNameTF.placeholder = testText
+        
+        //setTextfields bottomBorder
+        setTextFieldBottomBorder(textFields: firstNameTF, lastNameTF, emailTF, passwordTF,
+                                 dialCodeTF, phoneNumberTF, countryDropDown)
+        //Disable dialcode textfield
         dialCodeTF.isUserInteractionEnabled = false
         
-        guard let passwordImage = UIImage(named: "eyeiconopen") else{
+        //password textfield right image
+        guard let passwordImage = UIImage(named: "eyeiconclose") else{
             fatalError("Password image not found")
         }
-        addRightImageToTextField(with: passwordTF, using: passwordImage)
+       
+        //password textfield rightImage
+        passwordTF.addRightImageToTextField(using: passwordImage)
         
-        self.setupProgressBar(progress: 0.5)
 
-        self.setBackgroundImage("signupBackground", contentMode: .scaleToFill)
-
-        let countryAndCodeDict = countryAndCodes()
-            var countryList = [String]()
-            for key in countryAndCodeDict.keys{
-                countryList.append(key)
-            }
+        //set country drop down list
+        let countryAndCodeDict = CountryAndCode.countryAndCodes()
+        var countryList = [String]()
+        for key in countryAndCodeDict.keys{
+            countryList.append(key)
+        }
         countryDropDown.optionArray = countryList.sorted()
-       countryDropDown.didSelect{(selectedText , index ,id) in
-       self.dialCodeTF.text = countryAndCodeDict[selectedText]
-       }
+        countryDropDown.didSelect{(selectedText , index ,id) in
+            self.dialCodeTF.text = countryAndCodeDict[selectedText]
+        }
         
+        //add tapgesture listener on loginlink
         loginLinkLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForLogin(_:))))
         
+        //set view background image
+        view.layer.contents = #imageLiteral(resourceName: "signupBackground").cgImage
         
         
         
     }
+    
+
     
     @objc func tapToDetectedForLogin(_ sender : UITapGestureRecognizer){
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
@@ -88,122 +113,106 @@ class SignupController: ViewController {
     }
     
     
-    func setScrollViewBackground(){
-        guard let image = UIImage(named: "signupBackground") else {
-            fatalError("Could not load background")
-        }
-        signupScrollView.withBackground(image: image)
-//        view.sendSubviewToBack(signupScrollView)
-    }
+
 
 
     
     override func viewWillAppear(_ animated: Bool) {
-        haveaccounttext.underlineText()
         
-        countryAndCodes()
+        
+        CountryAndCode.countryAndCodes()
         
     }
     
     
-    
-    func countryAndCodes() -> [String:String]{
-        guard let cacListData = CountryAndCode.countryAndCodeString().data(using: .utf8) else { return ["error": "Value for country not found"] }
-        struct countryData:Codable{
-            let name:String
-            let dialCode:String
-            let code:String
-            
-            private enum CodingKeys:String, CodingKey{
-                case name
-                case dialCode = "dial_code"
-                case code
-            }
+    //MARK: Set textfields BottomBorder
+    func setTextFieldBottomBorder(textFields:UITextField...){
+        
+        for field in textFields {
+            field.setBottomBorder()
         }
-        
-        let countryAndCodeDecoder = JSONDecoder()
-        var returnList = [String:String]()
-        do{
-            let countries = try countryAndCodeDecoder.decode([countryData].self, from: cacListData)
-            for country in countries {
-//                print(country.name)
-                returnList[country.name] = country.dialCode
-//                print(returnList)
-            }
-        }catch{
-            "Failed to decode country and code \(error.localizedDescription)"
-        }
-        return returnList
-    }
-    
-    func addRightImageToTextField(with textField:UITextField, using image:UIImage){
-        let rightImageView = UIImageView()
-        
-        rightImageView.heightAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
-        rightImageView.widthAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
-        
-        rightImageView.image = image
-        textField.rightView = rightImageView
-        textField.rightViewMode = .always
-        
-        let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
-        rightImageView.isUserInteractionEnabled = true
-        rightImageView.addGestureRecognizer(singleTap)
-        
-    }
-    
-    @objc func tapDetected(){
-        print("Yup")
-        passwordTF.isSecureTextEntry = !passwordTF.isSecureTextEntry
-        if passwordTF.isSecureTextEntry {
-            guard let passwordImage = UIImage(named: "eyeiconclose") else{
-                fatalError("Password image not found")
-            }
-            addRightImageToTextField(with: passwordTF, using: passwordImage)
-        }else{
-            guard let passwordImage = UIImage(named: "eyeiconopen") else{
-                fatalError("Password image not found")
-            }
-            addRightImageToTextField(with: passwordTF, using: passwordImage)
-        }
-        
-    }
-    
-    func setTextFieldBottomBorder(){
-        dialCodeTF.setBottomBorder()
-        phoneNumberTF.setBottomBorder()
-        passwordTF.setBottomBorder()
-        emailTF.setBottomBorder()
-        lastNameTF.setBottomBorder()
-        firstNameTF.setBottomBorder()
-        countryDropDown.setBottomBorder()
     }
     
     
     
+    //MARK: Register user
     @IBAction func registerUser(_ sender: Any) {
         
-        let url = "https://fathomless-badlands-69782.herokuapp.com/api/user"
+        let fieldValidation = HelperClass.validateField(textFields: firstNameTF, lastNameTF, emailTF,
+                                                        passwordTF, phoneNumberTF, countryDropDown)
+        
+        if fieldValidation.count > 0{
+            for field in fieldValidation{
+                guard let placeHolder = field.key.placeholder else{
+                    fatalError("Invalid fields")
+                }
+                showSimpleAlert(title: "Validation", message: "\(placeHolder) is empty", action: false)
+            }
+            return
+        }
+      
+        
         let fullName = firstNameTF.text! + " " + lastNameTF.text!
         let email = emailTF.text
         let password = passwordTF.text
         let phone = phoneNumberTF.text
         let country = countryDropDown.text
-//        countryDropDown.didSelect{(selectedText , index ,id) in
-//            country = selectedText
-//
-//        }
+
         let user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
-        
-        AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of:AuthResponse.self){response in
+    
+        authViewModel.registerUser(user: user).subscribe(onNext: { (AuthResponse) in
+            print("messaage \(String(describing: AuthResponse.message))")
             
-            response.map { (AuthResponse) in
-                print("messaage \(String(describing: AuthResponse.message))")
+            self.tokens = AuthResponse.token ?? "default value"
+            if AuthResponse.status == 200 {
+                print("selftok \( self.tokens )")
+                 self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, action: true)
+//                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
+            }
+            else{
+                self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, action: false)
             }
             
-            print("user: \(user)")
-            print("response \(String(describing: response))")
+        }, onError: { (Error) in
+            print("Error: \(String(describing: Error.asAFError))")
+            print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
+        }, onCompleted: {
+            print("completed")
+        }, onDisposed: {
+            print("disposed")
+        }).disposed(by: disposeBag)
+        
+        
+        print("tokendown \(token)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? UserVerification, let tokenSent = sender as? String{
+//
+            vc.tokens = tokenSent
+            print("tokeninprepare \(tokenSent)")
         }
+
+    }
+    
+    func showSimpleAlert(title:String, message:String, action:Bool) {
+        let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
+
+//        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+//            //Cancel Action
+//        }))
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+                                        //Sign out action
+                                        if action == true{
+                                            self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
+                                        }
+                                        
+//                                        print("ok")
+                                        
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     

@@ -56,6 +56,14 @@ extension UIView{
         
     }
     
+    func setViewShadow(using shadowRadius:Float, color:CGColor){
+        self.layer.shadowColor = color
+         self.layer.shadowOpacity = 1
+         self.layer.shadowOffset = .zero
+         self.layer.shadowRadius = CGFloat(shadowRadius)
+    }
+
+    
 }
 
 extension UITextField{

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserVerification : UIViewController {
+class UserVerification : ViewController {
     
     
     @IBOutlet weak var tfOne: UITextField!
@@ -18,7 +18,12 @@ class UserVerification : UIViewController {
     
     @IBOutlet weak var resendCodeLabel: UILabel!
     @IBOutlet weak var otpTextFieldContainer: UIView!
+    
+    var tokens = ""
+    
     override func viewDidLoad() {
+        
+        print("verifytoken \(tokens)")
         tfOne.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         tfTwo.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         

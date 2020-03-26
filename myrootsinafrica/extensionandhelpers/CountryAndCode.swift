@@ -18,4 +18,33 @@ struct CountryAndCode {
         
         return cacList
     }
+    
+    static func countryAndCodes() -> [String:String]{
+        guard let cacListData = CountryAndCode.countryAndCodeString().data(using: .utf8) else { return ["error": "Value for country not found"] }
+        struct countryData:Codable{
+            let name:String
+            let dialCode:String
+            let code:String
+            
+            private enum CodingKeys:String, CodingKey{
+                case name
+                case dialCode = "dial_code"
+                case code
+            }
+        }
+        
+        let countryAndCodeDecoder = JSONDecoder()
+        var returnList = [String:String]()
+        do{
+            let countries = try countryAndCodeDecoder.decode([countryData].self, from: cacListData)
+            for country in countries {
+                //                print(country.name)
+                returnList[country.name] = country.dialCode
+                //                print(returnList)
+            }
+        }catch{
+            "Failed to decode country and code \(error.localizedDescription)"
+        }
+        return returnList
+    }
 }

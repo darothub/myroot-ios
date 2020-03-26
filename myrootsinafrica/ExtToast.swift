@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController {
 
-func showToastMessage(message : String, font: UIFont) {
+func showToastMessage(message : String, font: UIFont?) {
 
     let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75,
                                            y: self.view.frame.size.height-100,
