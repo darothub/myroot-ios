@@ -13,6 +13,8 @@ struct AuthResponse:Decodable{
     let message: String?
     let payload: Payload?
     let token:String?
+    
+    
 }
 
 struct Payload:Decodable{

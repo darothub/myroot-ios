@@ -41,6 +41,7 @@ class SignupController: ViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var progressSpinner: UIActivityIndicatorView!
     @IBOutlet weak var signupScrollView: UIScrollView!
     
     @IBOutlet weak var countryDropDown: DropDown!
@@ -49,6 +50,9 @@ class SignupController: ViewController {
     
     @IBOutlet weak var loginLinkLabel: UILabel!
     
+    @IBOutlet weak var passwordStandardLabel: UILabel!
+    
+    @IBOutlet weak var submitButton: SecondaryButton!
     var tokens = ""
     
     var disposeBag = DisposeBag()
@@ -98,11 +102,21 @@ class SignupController: ViewController {
         
         //set view background image
         view.layer.contents = #imageLiteral(resourceName: "signupBackground").cgImage
+        passwordTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         
         
     }
-    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        guard let text = passwordTF.text else{
+            fatalError("No text FOUND")
+        }
+        if !text.isValidPassword {
+            passwordStandardLabel.isHidden = false
+        }else{
+            passwordStandardLabel.isHidden = true
+        }
+    }
 
     
     @objc func tapToDetectedForLogin(_ sender : UITapGestureRecognizer){
@@ -140,6 +154,7 @@ class SignupController: ViewController {
         
         let fieldValidation = HelperClass.validateField(textFields: firstNameTF, lastNameTF, emailTF,
                                                         passwordTF, phoneNumberTF, countryDropDown)
+     
         
         if fieldValidation.count > 0{
             for field in fieldValidation{
@@ -153,18 +168,36 @@ class SignupController: ViewController {
       
         
         let fullName = firstNameTF.text! + " " + lastNameTF.text!
-        let email = emailTF.text
-        let password = passwordTF.text
+        guard let email = emailTF.text else{
+            fatalError("Invalid email field")
+        }
+        guard let password = passwordTF.text else{
+            fatalError("Invalid password field")
+        }
         let phone = phoneNumberTF.text
         let country = countryDropDown.text
+        
+        
+        if !email.isValidEmail {
+            showSimpleAlert(title: "Validation", message: "Invalid email address", action: false)
+            return
+        }
+        else if !password.isValidPassword {
+            showSimpleAlert(title: "Validation", message: "Invalid password", action: false)
+            return
+        }
 
         let user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
     
+        progressSpinner.isHidden = false
+        submitButton.isHidden = true
         authViewModel.registerUser(user: user).subscribe(onNext: { (AuthResponse) in
             print("messaage \(String(describing: AuthResponse.message))")
-            
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
             self.tokens = AuthResponse.token ?? "default value"
             if AuthResponse.status == 200 {
+              
                 print("selftok \( self.tokens )")
                  self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, action: true)
 //                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
@@ -174,6 +207,8 @@ class SignupController: ViewController {
             }
             
         }, onError: { (Error) in
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
             print("Error: \(String(describing: Error.asAFError))")
             print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
         }, onCompleted: {
