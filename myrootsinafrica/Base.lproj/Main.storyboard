@@ -1607,11 +1607,11 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN5-f7-Chw" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="51" y="472" width="275" height="55"/>
+                                <rect key="frame" x="50" y="454" width="275" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="Dhj-tE-WO6" kind="show" id="pJz-po-7xe"/>
+                                    <action selector="verifyUser:" destination="AFM-l0-b5U" eventType="touchUpInside" id="KJX-6U-205"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="verificationEmailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="95r-Vp-dUa">
@@ -1632,8 +1632,8 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="jD4-Gt-6Bl">
-                                <rect key="frame" x="225" y="489" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jD4-Gt-6Bl">
+                                <rect key="frame" x="162" y="456" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -1644,11 +1644,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     <navigationItem key="navigationItem" id="sFr-kY-hLZ"/>
                     <connections>
                         <outlet property="otpTextFieldContainer" destination="3Ip-dS-jbc" id="MVr-PX-unz"/>
+                        <outlet property="progressSpinner" destination="jD4-Gt-6Bl" id="tcM-DY-ewL"/>
                         <outlet property="resendCodeLabel" destination="DLH-Wc-t05" id="K7C-kJ-Azw"/>
+                        <outlet property="submitButton" destination="aN5-f7-Chw" id="lVD-kC-LyG"/>
                         <outlet property="tfFour" destination="eAn-IJ-pUf" id="aIg-77-yFy"/>
                         <outlet property="tfOne" destination="gMQ-Bj-7vf" id="PLT-E5-gf2"/>
                         <outlet property="tfThree" destination="4dk-v6-YaJ" id="9Z4-Bm-VRT"/>
                         <outlet property="tfTwo" destination="tq6-2u-GLf" id="c6J-BL-tej"/>
+                        <segue destination="Dhj-tE-WO6" kind="show" identifier="gotoVerificationResult" id="2Sk-sL-6wL"/>
                     </connections>
                 </viewController>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDW-EE-2do">

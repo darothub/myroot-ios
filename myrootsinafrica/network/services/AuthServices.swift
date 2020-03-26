@@ -41,12 +41,9 @@ class AuthService : NetworkProtocol{
         let headers:HTTPHeaders = [
             "Authorization" : "Bearer \(token)"
         ]
-        
         return Observable.create{observer -> Disposable in
             let task = AF.request(URLString.verificationURL, method: .put, parameters: code, encoder: JSONParameterEncoder.default, headers: headers)
             
-    
-             
              task.validate(statusCode: 200..<500)
              .responseDecodable(of: AuthResponse.self){ res in
                  

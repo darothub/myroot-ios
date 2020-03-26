@@ -199,7 +199,7 @@ class SignupController: ViewController {
             if AuthResponse.status == 200 {
               
                 print("selftok \( self.tokens )")
-                 self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, action: true)
+                self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, identifier: "gotoVerification", action: true, tokens: self.tokens)
 //                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
             }
             else{
@@ -230,25 +230,25 @@ class SignupController: ViewController {
 
     }
     
-    func showSimpleAlert(title:String, message:String, action:Bool) {
-        let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
-
-//        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
-//            //Cancel Action
+//    func showSimpleAlert(title:String, message:String, action:Bool) {
+//        let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
+//
+////        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+////            //Cancel Action
+////        }))
+//        alert.addAction(UIAlertAction(title: "Ok",
+//                                      style: UIAlertAction.Style.default,
+//                                      handler: {(_: UIAlertAction!) in
+//                                        //Sign out action
+//                                        if action == true{
+//                                            self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
+//                                        }
+//
+////                                        print("ok")
+//
 //        }))
-        alert.addAction(UIAlertAction(title: "Ok",
-                                      style: UIAlertAction.Style.default,
-                                      handler: {(_: UIAlertAction!) in
-                                        //Sign out action
-                                        if action == true{
-                                            self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
-                                        }
-                                        
-//                                        print("ok")
-                                        
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
+//        self.present(alert, animated: true, completion: nil)
+//    }
     
     
 }

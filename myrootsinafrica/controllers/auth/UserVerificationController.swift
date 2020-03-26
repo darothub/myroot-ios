@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import SwiftyJSON
+import Alamofire
 
 class UserVerification : ViewController {
     
@@ -19,6 +23,11 @@ class UserVerification : ViewController {
     @IBOutlet weak var resendCodeLabel: UILabel!
     @IBOutlet weak var otpTextFieldContainer: UIView!
     
+    @IBOutlet weak var submitButton: SecondaryButton!
+    @IBOutlet weak var progressSpinner: UIActivityIndicatorView!
+    
+    let authViewModel = AuthViewModel(authProtocol: AuthService())
+    let disposeBag = DisposeBag()
     var tokens = ""
     
     override func viewDidLoad() {
@@ -82,4 +91,39 @@ class UserVerification : ViewController {
     }
     
     
+    @IBAction func verifyUser(_ sender: Any) {
+        let fieldValidation = HelperClass.validateField(textFields: tfOne, tfTwo, tfThree,
+        tfFour)
+        let title = "Verification"
+        if fieldValidation.count > 0{
+            self.showSimpleAlert(title: title, message: "There is an empty input box", action: false)
+            return
+        }
+        let code = "\(String(describing: tfOne))\(String(describing: tfTwo))\(String(describing: tfThree))\(String(describing: tfFour))"
+        print("code \(code)")
+        progressSpinner.isHidden = false
+        submitButton.isHidden = true
+        authViewModel.verifyUser(code: code, token: self.tokens).subscribe(onNext: { (AuthResponse) in
+            print("messaage \(String(describing: AuthResponse.message))")
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
+            
+            guard let verified = AuthResponse.payload?.isVerified else {
+                fatalError("Cannot verify user")
+            }
+            
+            if verified {
+                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "gotoVerificationResult", action: true, tokens: nil)
+            }
+        }, onError: { (Error) in
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
+            print("Error: \(String(describing: Error.asAFError))")
+            print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
+        }, onCompleted: {
+            print("completed")
+        }) {
+            print("disposed")
+        }.disposed(by: disposeBag)
+    }
 }

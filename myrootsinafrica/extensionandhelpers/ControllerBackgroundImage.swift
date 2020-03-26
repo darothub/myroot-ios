@@ -52,6 +52,29 @@ extension UIViewController {
     
 //    open override func awakeFromNib() {
 //         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//     }  
+//     }
+    
+    func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, tokens:String?=nil) {
+        let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
+        
+        //        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+        //            //Cancel Action
+        //        }))
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+                                        //Sign out action
+                                        if action == true{
+                                            guard let identifiedString = identifier else{
+                                                fatalError("no identifier for this action")
+                                            }
+                                            self.performSegue(withIdentifier: identifiedString, sender: tokens)
+                                        }
+                                        
+                                        //                                        print("ok")
+                                        
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

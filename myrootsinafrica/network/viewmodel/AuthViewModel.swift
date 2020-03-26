@@ -18,5 +18,9 @@ class AuthViewModel{
         return authProtocol.registerUser(user:user)
     }
     
+    func verifyUser(code:String, token:String) -> Observable<AuthResponse>{
+        return authProtocol.verifyUser(code:code, token:token)
+    }
+    
     
 }
