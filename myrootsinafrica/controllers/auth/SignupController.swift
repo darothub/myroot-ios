@@ -147,7 +147,8 @@ class SignupController: ViewController {
         }
     }
     
-    @IBAction func pressEnterToRegister(_ sender: Any) {
+   
+    @IBAction func pressEnterToSubmit(_ sender: Any) {
         registerUser()
     }
     

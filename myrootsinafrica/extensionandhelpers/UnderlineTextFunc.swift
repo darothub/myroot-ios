@@ -108,6 +108,17 @@ extension UITextField{
         }
         
     }
+    func setMaxLength(){
+        self.addTarget(self, action: #selector(editingChanged(sender:)), for: .editingChanged)
+    }
+    
+    @objc private func editingChanged(sender: UITextField) {
+        
+        if let text = sender.text, text.count >= 1 {
+            sender.text = String(text.dropLast(text.count - 1))
+            return
+        }
+    }
 }
 
 extension NSRegularExpression {

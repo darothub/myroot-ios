@@ -216,12 +216,12 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
-                                                    <action selector="pressEnterToRegister:" destination="tif-0R-JF1" eventType="editingDidEnd" id="ks1-G9-F0B"/>
+                                                    <action selector="pressEnterToSubmit:" destination="tif-0R-JF1" eventType="primaryActionTriggered" id="WAe-8R-xAl"/>
                                                 </connections>
                                             </textField>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ensure your password is more than 7 characters and has at least a  number and/or a special character" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KUo-ff-6QS">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ensure your password is more than 7 characters and has at least a  number and/or a special character" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KUo-ff-6QS">
                                                 <rect key="frame" x="17" y="331" width="340" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -427,7 +427,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
-                                    <action selector="pressReturnToLogin:" destination="pew-sv-mcU" eventType="editingDidEnd" id="D4e-ML-HhU"/>
+                                    <action selector="pressEnterToSubmit:" destination="pew-sv-mcU" eventType="primaryActionTriggered" id="ddr-tW-B3e"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbV-67-fVm">
@@ -1593,7 +1593,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
-                                            <action selector="pressReturnToVerify:" destination="AFM-l0-b5U" eventType="editingDidEnd" id="3ps-u3-B2A"/>
+                                            <action selector="pressEnterToSubmit:" destination="AFM-l0-b5U" eventType="primaryActionTriggered" id="CWo-Fe-k8D"/>
                                             <outlet property="delegate" destination="AFM-l0-b5U" id="Q7Q-OH-dmk"/>
                                         </connections>
                                     </textField>

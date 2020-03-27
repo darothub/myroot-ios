@@ -39,6 +39,7 @@ class UserVerification : ViewController {
         tfThree.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         tfFour.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         
+        setTextFieldMaxLength(textFields: tfOne, tfTwo, tfThree, tfFour)
         
         self.setBackgroundImage("verificationBackground", contentMode: .scaleToFill)
         
@@ -47,6 +48,8 @@ class UserVerification : ViewController {
         
         resendCodeLabel.underlineText()
         self.setupProgressBar(progress: 1)
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,9 +93,16 @@ class UserVerification : ViewController {
         }
     }
     
-    @IBAction func pressReturnToVerify(_ sender: Any) {
-        verifyUser()
+    func setTextFieldMaxLength(textFields:UITextField...){
+        for field in textFields{
+            field.setMaxLength()
+        }
     }
+    
+    @IBAction func pressEnterToSubmit(_ sender: Any) {
+         verifyUser()
+    }
+   
     
     @IBAction func verifyUser(_ sender: Any) {
         verifyUser()

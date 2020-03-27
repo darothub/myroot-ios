@@ -72,9 +72,10 @@ class LoginViewController: ViewController{
     @IBAction func loginButtonAction(_ sender: Any) {
         userLogin()
     }
-    @IBAction func pressReturnToLogin(_ sender: Any) {
+    @IBAction func pressEnterToSubmit(_ sender: Any) {
         userLogin()
     }
+    
     func userLogin(){
         
         var title = "Sign-in"
