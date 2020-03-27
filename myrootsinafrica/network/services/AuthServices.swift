@@ -13,6 +13,35 @@ import Alamofire
 import SwiftyJSON
 
 class AuthService : NetworkProtocol{
+    func userLogin(email: String, password: String) -> Observable<AuthResponse> {
+ 
+        
+        let parameters: [String: String] = [
+            "email": email,
+            "password":password
+        ]
+        return Observable.create{observer -> Disposable in
+            let task = AF.request(URLString.loginURL, method: .post, parameters: parameters,
+                                  encoder: JSONParameterEncoder.default)
+            task.validate(statusCode: 200..<500)
+             .responseDecodable(of: AuthResponse.self){ res in
+                 
+                 switch res.result {
+                   
+                     case let .failure(error): observer.onError(error); print(error)
+                         
+                     case let .success(authResponse):
+                         observer.onNext(authResponse)
+                 }
+                 
+             }
+             
+             return Disposables.create {
+                 
+             }
+         }
+    }
+    
     
     func registerUser(user: User) -> Observable<AuthResponse> {
         return Observable.create{observer -> Disposable in
@@ -65,6 +94,7 @@ class AuthService : NetworkProtocol{
              }
          }
     }
+    
     
 
 
