@@ -195,7 +195,7 @@ class SignupController: ViewController {
             return
         }
         
-        let user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
+        var user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
         
         progressSpinner.isHidden = false
         submitButton.isHidden = true
@@ -203,11 +203,11 @@ class SignupController: ViewController {
             print("messaage \(String(describing: AuthResponse.message))")
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
-            self.tokens = AuthResponse.token ?? "default value"
+            user.token = AuthResponse.token ?? "default value"
             if AuthResponse.status == 200 {
                 
                 print("selftok \( self.tokens )")
-                self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, identifier: "gotoVerification", action: true, tokens: self.tokens)
+                self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, identifier: "gotoVerification", action: true, user: user)
                 //                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
             }
             else{
@@ -230,10 +230,10 @@ class SignupController: ViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? UserVerification, let tokenSent = sender as? String{
+        if let vc = segue.destination as? UserVerification, let user = sender as? User{
 //
-            vc.tokens = tokenSent
-            print("tokeninprepare \(tokenSent)")
+            vc.user = user
+            print("userinprepare \(user)")
         }
 
     }

@@ -19,4 +19,5 @@ protocol NetworkProtocol {
     func registerUser(user:User) -> Observable<AuthResponse>
     func verifyUser(code:String, token:String) -> Observable<AuthResponse>
     func userLogin(email:String, password:String) -> Observable<AuthResponse>
+//    func resendVerificationCode(user:User) -> Observable<AuthResponse>
 }

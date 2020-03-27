@@ -35,11 +35,12 @@ class LoginViewController: ViewController{
 //        progressRing.isHidden = false
         
         setTextFieldsBottomBorder()
-        guard let passwordEyeOpen = UIImage(named: "eyeiconopen") else{
+        guard let passwordImage = UIImage(named: "eyeiconclose") else{
                        fatalError("Password image not found")
                    }
         
-        passwordTF.addRightImageToTextField(using:passwordEyeOpen)
+        //password textfield rightImage
+        passwordTF.addRightImageToTextField(using: passwordImage)
         forgotPasswordLabel.underlineText()
         dontHaveAnAccountLabel.underlineText()
         
@@ -115,10 +116,12 @@ class LoginViewController: ViewController{
              self.progressSpinner.isHidden = true
              self.submitButton.isHidden = false
              self.tokens = AuthResponse.token ?? "default value"
+            
              if AuthResponse.status == 200 {
+                let user = User(name: AuthResponse.payload?.fullName, email: AuthResponse.payload?.email, password: AuthResponse.payload?.password, country: AuthResponse.payload?.country, phone: AuthResponse.payload?.phone, token: AuthResponse.token)
                  
                  print("selftok \( self.tokens )")
-                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, tokens: self.tokens)
+                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
              }
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
@@ -140,10 +143,10 @@ class LoginViewController: ViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? DashBoardViewController, let tokenSent = sender as? String{
+        if let vc = segue.destination as? DashBoardViewController, let user = sender as? User{
             //
-            vc.tokens = tokenSent
-            print("tokeninprepare \(tokenSent)")
+            vc.user = user
+            print("tokeninprepare \(user)")
         }
         
     }

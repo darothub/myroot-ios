@@ -13,6 +13,8 @@ import Alamofire
 import SwiftyJSON
 
 class AuthService : NetworkProtocol{
+    
+    
     func userLogin(email: String, password: String) -> Observable<AuthResponse> {
  
         

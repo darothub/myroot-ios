@@ -18,10 +18,11 @@ class DashBoardViewController : UIViewController{
     @IBOutlet weak var topBoardView: UIView!
     @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
+    var user:User?
     override func viewDidLoad() {
         
         print("We are here dashy")
-        print("userToken \(tokens)")
+        print("userLoggedIn \(user)")
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
         

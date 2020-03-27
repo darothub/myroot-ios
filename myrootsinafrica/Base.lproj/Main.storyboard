@@ -349,6 +349,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <rect key="frame" x="26" y="281" width="222" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Got it!"/>
+                                        <connections>
+                                            <action selector="exitAction:" destination="Dhj-tE-WO6" eventType="touchUpInside" id="VJl-s9-ez2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -359,6 +362,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     </view>
                     <navigationItem key="navigationItem" id="FTY-Ta-JkC"/>
                     <connections>
+                        <outlet property="successAdviceLabel" destination="fKn-Q0-x0c" id="UIg-93-o90"/>
                         <outlet property="viewSubContainer" destination="Fij-ee-7YL" id="cPv-15-rBv"/>
                         <segue destination="pew-sv-mcU" kind="show" identifier="toLoginStory" id="zXD-H8-L5y"/>
                     </connections>
@@ -425,7 +429,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="pressEnterToSubmit:" destination="pew-sv-mcU" eventType="primaryActionTriggered" id="ddr-tW-B3e"/>
                                 </connections>
@@ -1597,7 +1601,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                             <outlet property="delegate" destination="AFM-l0-b5U" id="Q7Q-OH-dmk"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resend code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLH-Wc-t05">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resend code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLH-Wc-t05">
                                         <rect key="frame" x="86" y="97" width="90" height="18"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>

@@ -12,7 +12,7 @@ struct AuthResponse:Decodable{
     let error:String?
     let message: String?
     let payload: Payload?=nil
-    let token:String?
+    var token:String?
     
 }
 

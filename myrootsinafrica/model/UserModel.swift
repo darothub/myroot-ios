@@ -14,5 +14,5 @@ struct User:Encodable {
     let password:String?
     var country:String?
     let phone:String?
-    let token:String?
+    var token:String?
 }

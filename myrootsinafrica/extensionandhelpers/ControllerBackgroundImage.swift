@@ -51,7 +51,7 @@ extension ViewController {
     }
     
     
-    func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, tokens:String?=nil) {
+    func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, user:User?=nil) {
         let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
         
         //        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
@@ -62,12 +62,12 @@ extension ViewController {
                                       handler: {(_: UIAlertAction!) in
                                         //Sign out action
                                         let identifiedString = identifier ?? ""
-                                        if action == true && !(tokens == nil){
+                                        if action == true && !(user == nil){
                                            
                                             print("okIdentify \(identifiedString)")
-                                            self.performSegue(withIdentifier: identifiedString, sender: tokens)
+                                            self.performSegue(withIdentifier: identifiedString, sender: user)
                                         }
-                                        else if action == true && (tokens == nil){
+                                        else if action == true && (user == nil){
                                         
                                             print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: self)

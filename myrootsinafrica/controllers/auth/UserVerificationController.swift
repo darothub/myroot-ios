@@ -29,10 +29,11 @@ class UserVerification : ViewController {
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     let disposeBag = DisposeBag()
     var tokens = ""
+    var user:User?
     
     override func viewDidLoad() {
         
-        print("verifytoken \(tokens)")
+        print("verifyUser \(user?.name)")
         tfOne.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         tfTwo.addTarget(self, action: #selector(self.textDidChanged(textField:)), for: UIControl.Event.editingChanged)
         
@@ -47,6 +48,9 @@ class UserVerification : ViewController {
         otpTextFieldContainer.setViewShadow(using: 5, color: UIColor.black.cgColor)
         
         resendCodeLabel.underlineText()
+        
+        resendCodeLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToResendCode(_ :))))
+        
         self.setupProgressBar(progress: 1)
         
        
@@ -57,6 +61,10 @@ class UserVerification : ViewController {
         tfOne.becomeFirstResponder()
         
         
+    }
+    
+    @objc func tapToResendCode(_ sender : UITapGestureRecognizer){
+        resendCode()
     }
     
     @objc func textDidChanged(textField : UITextField){
@@ -117,10 +125,13 @@ class UserVerification : ViewController {
             return
         }
         let code = tfOne.text! + tfTwo.text! + tfThree.text! + tfFour.text!
+        guard let token = user?.token else{
+            fatalError("Error getting tokenString")
+        }
         print("code \(code)")
         progressSpinner.isHidden = false
         submitButton.isHidden = true
-        authViewModel.verifyUser(code: code, token: self.tokens).subscribe(onNext: { (AuthResponse) in
+        authViewModel.verifyUser(code: code, token: token).subscribe(onNext: { (AuthResponse) in
             print("messaage \(String(describing: AuthResponse.message))")
             
             self.progressSpinner.isHidden = true
@@ -130,19 +141,17 @@ class UserVerification : ViewController {
             if AuthResponse.status == 200{
                 print("Its verified confirmed")
                 //                  self.performSegue(withIdentifier: "toSuccessPage", sender: self)
-                self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toSuccessPage", action: true, tokens: nil)
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toSuccessPage", action: true, user: self.user)
             }
                 
             else if payload == nil{
                 print("Its verifiedtttt")
-                self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false, tokens: nil)
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false, user: nil)
                 //                self.performSegue(withIdentifier: "toSuccessPage", sender: self)
                 
             }
             else if payload != nil{
-                //                guard let verified = payload?.isVerified else {
-                //                    fatalError("No payload for invalid request")
-                //                }
+    
                 print("Its verified")
                 
             }
@@ -157,5 +166,49 @@ class UserVerification : ViewController {
         }) {
             print("disposed")
         }.disposed(by: disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? VerificationResultViewController, let user = sender as? User{
+            //
+            vc.user = user
+            print("userSegue \(user)")
+        }
+        
+    }
+    
+    func resendCode(){
+        
+        var currentUser = User(name: user?.name, email: user?.email, password: user?.password,
+                           country: user?.country, phone: user?.phone)
+     
+        let title = "Verification"
+        progressSpinner.isHidden = false
+        submitButton.isHidden = true
+        authViewModel.registerUser(user: currentUser).subscribe(onNext: { (AuthResponse) in
+            print("messaage \(String(describing: AuthResponse.message))")
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
+            currentUser.token = AuthResponse.token ?? "default value"
+            if AuthResponse.status == 200 {
+                
+                print("selftok \( self.tokens )")
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
+                //                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
+            }
+            else{
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
+            }
+            
+        }, onError: { (Error) in
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
+            print("Error: \(String(describing: Error.asAFError))")
+            print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
+        }, onCompleted: {
+            print("completed")
+        }, onDisposed: {
+            print("disposed")
+        }).disposed(by: disposeBag)
     }
 }
