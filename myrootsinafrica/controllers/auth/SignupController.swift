@@ -147,14 +147,21 @@ class SignupController: ViewController {
         }
     }
     
+    @IBAction func pressEnterToRegister(_ sender: Any) {
+        registerUser()
+    }
     
     
     //MARK: Register user
     @IBAction func registerUser(_ sender: Any) {
-        
+        registerUser()
+   
+    }
+    
+    func registerUser(){
         let fieldValidation = HelperClass.validateField(textFields: firstNameTF, lastNameTF, emailTF,
                                                         passwordTF, phoneNumberTF, countryDropDown)
-     
+        
         
         if fieldValidation.count > 0{
             for field in fieldValidation{
@@ -165,7 +172,7 @@ class SignupController: ViewController {
             }
             return
         }
-      
+        
         
         let fullName = firstNameTF.text! + " " + lastNameTF.text!
         guard let email = emailTF.text else{
@@ -186,9 +193,9 @@ class SignupController: ViewController {
             showSimpleAlert(title: "Validation", message: "Invalid password", action: false)
             return
         }
-
+        
         let user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
-    
+        
         progressSpinner.isHidden = false
         submitButton.isHidden = true
         authViewModel.registerUser(user: user).subscribe(onNext: { (AuthResponse) in
@@ -197,10 +204,10 @@ class SignupController: ViewController {
             self.submitButton.isHidden = false
             self.tokens = AuthResponse.token ?? "default value"
             if AuthResponse.status == 200 {
-              
+                
                 print("selftok \( self.tokens )")
                 self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, identifier: "gotoVerification", action: true, tokens: self.tokens)
-//                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
+                //                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
             }
             else{
                 self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, action: false)
@@ -230,25 +237,6 @@ class SignupController: ViewController {
 
     }
     
-//    func showSimpleAlert(title:String, message:String, action:Bool) {
-//        let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
-//
-////        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
-////            //Cancel Action
-////        }))
-//        alert.addAction(UIAlertAction(title: "Ok",
-//                                      style: UIAlertAction.Style.default,
-//                                      handler: {(_: UIAlertAction!) in
-//                                        //Sign out action
-//                                        if action == true{
-//                                            self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
-//                                        }
-//
-////                                        print("ok")
-//
-//        }))
-//        self.present(alert, animated: true, completion: nil)
-//    }
     
     
 }

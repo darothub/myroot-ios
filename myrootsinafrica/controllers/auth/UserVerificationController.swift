@@ -90,35 +90,57 @@ class UserVerification : ViewController {
         }
     }
     
+    @IBAction func pressReturnToVerify(_ sender: Any) {
+        verifyUser()
+    }
     
     @IBAction func verifyUser(_ sender: Any) {
+        verifyUser()
+    }
+    
+    func verifyUser(){
         let fieldValidation = HelperClass.validateField(textFields: tfOne, tfTwo, tfThree,
-        tfFour)
+                                                        tfFour)
         let title = "Verification"
         if fieldValidation.count > 0{
             self.showSimpleAlert(title: title, message: "There is an empty input box", action: false)
             return
         }
-        let code = "\(String(describing: tfOne))\(String(describing: tfTwo))\(String(describing: tfThree))\(String(describing: tfFour))"
+        let code = tfOne.text! + tfTwo.text! + tfThree.text! + tfFour.text!
         print("code \(code)")
         progressSpinner.isHidden = false
         submitButton.isHidden = true
         authViewModel.verifyUser(code: code, token: self.tokens).subscribe(onNext: { (AuthResponse) in
             print("messaage \(String(describing: AuthResponse.message))")
+            
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
+            let payload = AuthResponse.payload
             
-            guard let verified = AuthResponse.payload?.isVerified else {
-                fatalError("Cannot verify user")
+            if AuthResponse.status == 200{
+                print("Its verified confirmed")
+                //                  self.performSegue(withIdentifier: "toSuccessPage", sender: self)
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toSuccessPage", action: true, tokens: nil)
+            }
+                
+            else if payload == nil{
+                print("Its verifiedtttt")
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false, tokens: nil)
+                //                self.performSegue(withIdentifier: "toSuccessPage", sender: self)
+                
+            }
+            else if payload != nil{
+                //                guard let verified = payload?.isVerified else {
+                //                    fatalError("No payload for invalid request")
+                //                }
+                print("Its verified")
+                
             }
             
-            if verified {
-                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "gotoVerificationResult", action: true, tokens: nil)
-            }
         }, onError: { (Error) in
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
-            print("Error: \(String(describing: Error.asAFError))")
+            print("Error: \(String(describing: Error.localizedDescription))")
             print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
         }, onCompleted: {
             print("completed")

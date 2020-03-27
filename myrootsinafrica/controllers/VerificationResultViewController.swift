@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerificationResultViewController: UIViewController {
+class VerificationResultViewController: ViewController {
     
     @IBOutlet weak var viewSubContainer: UIView!
     override func viewDidLoad() {

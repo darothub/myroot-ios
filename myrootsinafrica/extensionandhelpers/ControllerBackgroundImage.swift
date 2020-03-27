@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+extension ViewController {
 
     /// This function sets an image as the background of the view controller
     ///
@@ -50,9 +50,6 @@ extension UIViewController {
 //        7AC840
     }
     
-//    open override func awakeFromNib() {
-//         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//     }
     
     func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, tokens:String?=nil) {
         let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
@@ -64,14 +61,19 @@ extension UIViewController {
                                       style: UIAlertAction.Style.default,
                                       handler: {(_: UIAlertAction!) in
                                         //Sign out action
-                                        if action == true{
-                                            guard let identifiedString = identifier else{
-                                                fatalError("no identifier for this action")
-                                            }
+                                        let identifiedString = identifier ?? ""
+                                        if action == true && !(tokens == nil){
+                                           
+                                            print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: tokens)
                                         }
+                                        else if action == true && (tokens == nil){
                                         
-                                        //                                        print("ok")
+                                            print("okIdentify \(identifiedString)")
+                                            self.performSegue(withIdentifier: identifiedString, sender: self)
+                                        }
+                                        
+                                                                              
                                         
         }))
         self.present(alert, animated: true, completion: nil)
