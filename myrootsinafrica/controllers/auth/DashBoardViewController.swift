@@ -79,6 +79,9 @@ class DashBoardViewController : UIViewController{
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
         //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
+//        self.navigationItem.setRightBarButtonItems(nil, animated: false)
+//        navigationController?.removeViewController(DashBoardViewController.self)
+        
     }
     
     func timeMonitor(name:String){
@@ -100,8 +103,12 @@ class DashBoardViewController : UIViewController{
             default:
                 greetingLabel.text = "Howdy, \(name)!"
         }
-        
 
-        print(comps.hour)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if let navVCsCount = navigationController?.viewControllers.count {
+            navigationController?.viewControllers.removeSubrange(1..<navVCsCount - 1)
+        }
     }
 }

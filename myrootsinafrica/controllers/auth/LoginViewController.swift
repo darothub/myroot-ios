@@ -47,7 +47,14 @@ class LoginViewController: ViewController{
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForForgotPassword(_ :))))
         
         dontHaveAnAccountLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForSignup(_ :))))
+        
+       
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("hooray")
+         
     }
     
     func setTextFieldsBottomBorder(){
@@ -152,4 +159,6 @@ class LoginViewController: ViewController{
         }
         
     }
+    
+
 }
