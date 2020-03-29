@@ -16,6 +16,11 @@ class TypeOfOccasionViewController : ViewController{
     @IBOutlet weak var otherCard: UIView!
     
     var tree:Tree?
+    var selectedOccasion = ""
+    let birthday = "Birthday"
+    let anniversary = "Anniversary"
+    let holiday = "Holiday"
+    let other = "Other"
     override func viewDidLoad() {
         print("Type of occasion")
         print("tree\(tree)")
@@ -35,6 +40,7 @@ class TypeOfOccasionViewController : ViewController{
             anniversaryCard.unSelectCard()
             holidayCard.unSelectCard()
             otherCard.unSelectCard()
+            selectedOccasion = birthday
             
         }
      }
@@ -44,6 +50,7 @@ class TypeOfOccasionViewController : ViewController{
             holidayCard.unSelectCard()
             otherCard.unSelectCard()
             birthdayCard.unSelectCard()
+            selectedOccasion = anniversary
         }
          
     }
@@ -53,6 +60,7 @@ class TypeOfOccasionViewController : ViewController{
             otherCard.unSelectCard()
             birthdayCard.unSelectCard()
             anniversaryCard.unSelectCard()
+            selectedOccasion = holiday
         }
      
     }
@@ -62,6 +70,7 @@ class TypeOfOccasionViewController : ViewController{
             birthdayCard.unSelectCard()
             anniversaryCard.unSelectCard()
             holidayCard.unSelectCard()
+            selectedOccasion = other
         }
     }
     
@@ -70,4 +79,23 @@ class TypeOfOccasionViewController : ViewController{
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(singleTap)
     }
+    @IBAction func tapToMoveToNext(_ sender: Any) {
+        print(selectedOccasion)
+         if selectedOccasion == "" {
+             self.showToastMessage(message: "Kindly pick an occasion", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+         }
+         else{
+            tree?.occasion = selectedOccasion
+             self.performSegue(withIdentifier: "toHowToPlantScene", sender: tree)
+         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if let vc = segue.destination as? HowToPlantViewController, let tree = sender as? Tree{
+             //
+             vc.tree = tree
+             print("treeinprepare \(tree)")
+         }
+         
+     }
 }

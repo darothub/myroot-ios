@@ -362,9 +362,11 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     </view>
                     <navigationItem key="navigationItem" id="FTY-Ta-JkC"/>
                     <connections>
+                        <outlet property="requestSuccessfulAdvice" destination="fKn-Q0-x0c" id="dMJ-1p-ufC"/>
                         <outlet property="successAdviceLabel" destination="fKn-Q0-x0c" id="UIg-93-o90"/>
                         <outlet property="viewSubContainer" destination="Fij-ee-7YL" id="cPv-15-rBv"/>
                         <segue destination="pew-sv-mcU" kind="show" identifier="toLoginStory" id="zXD-H8-L5y"/>
+                        <segue destination="SDD-Wl-8Sp" kind="show" identifier="toDashboardScene" id="s3z-4D-2Du"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3o-Vj-ohO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1312,6 +1314,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="tapToMoveToNext:" destination="4LG-bd-npd" eventType="touchUpInside" id="dMb-WF-obp"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holiday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-8m-5Sl">
                                         <rect key="frame" x="73" y="445" width="57" height="20"/>
@@ -1351,7 +1356,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <outlet property="birthdayCard" destination="6fF-vv-E85" id="PUX-xN-wk4"/>
                         <outlet property="holidayCard" destination="6wX-Tn-k1g" id="24z-rY-y06"/>
                         <outlet property="otherCard" destination="HuW-xY-Unz" id="7sk-uU-iSv"/>
-                        <segue destination="lm7-5c-Vp8" kind="show" identifier="toHowToPlant" id="X3C-w3-X3h"/>
+                        <segue destination="lm7-5c-Vp8" kind="show" identifier="toHowToPlantScene" id="X3C-w3-X3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkS-8K-Lnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1384,6 +1389,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <rect key="frame" x="84" y="354" width="206" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="tapToMoveToNext:" destination="lm7-5c-Vp8" eventType="touchUpInside" id="XGz-xZ-oGG"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-tR-osw">
                                 <rect key="frame" x="58" y="193" width="125" height="125"/>
@@ -1431,7 +1439,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     <connections>
                         <outlet property="inpersonSelectorCard" destination="YCu-va-dO8" id="YyR-Rf-bfT"/>
                         <outlet property="remoteSelectorCard" destination="ONU-tR-osw" id="uMS-XE-bjJ"/>
-                        <segue destination="4s3-uS-ILC" kind="show" identifier="toWhatTypeOfTree" id="6kG-Zg-N5c"/>
+                        <segue destination="4s3-uS-ILC" kind="show" identifier="toWhatTypeOfTreeScene" id="6kG-Zg-N5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcb-2R-krh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1470,6 +1478,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitButton:" destination="4s3-uS-ILC" eventType="touchUpInside" id="tdx-Fr-vwO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="ePI-SA-2je">
                                         <rect key="frame" x="94" y="18" width="186" height="32"/>
@@ -1528,8 +1539,8 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RSp-7b-BZd">
-                                        <rect key="frame" x="239" y="455" width="20" height="20"/>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9sK-jy-ePS">
+                                        <rect key="frame" x="177" y="454" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
@@ -1561,7 +1572,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <outlet property="decorativeSelectorCard" destination="Qqx-XM-tq0" id="jYG-nd-gYS"/>
                         <outlet property="environmentalSelectorCard" destination="H4x-ym-5ME" id="bfi-Mx-q3v"/>
                         <outlet property="fruitSelectorCard" destination="vOm-aQ-AR2" id="cqF-LZ-bk4"/>
-                        <segue destination="Dhj-tE-WO6" kind="show" id="3v8-8o-Nwx"/>
+                        <outlet property="progressSpinner" destination="9sK-jy-ePS" id="T8E-uX-TeF"/>
+                        <outlet property="submitButton" destination="Q8f-ma-mSz" id="qkv-dJ-qM3"/>
+                        <segue destination="Dhj-tE-WO6" kind="show" identifier="toSuccessScene" id="3v8-8o-Nwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjv-oW-vOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1722,7 +1735,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X3C-w3-X3h"/>
+        <segue reference="tvp-Zb-aHs"/>
         <segue reference="zXD-H8-L5y"/>
         <segue reference="3v8-8o-Nwx"/>
     </inferredMetricsTieBreakers>

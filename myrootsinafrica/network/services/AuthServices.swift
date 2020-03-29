@@ -13,6 +13,32 @@ import Alamofire
 import SwiftyJSON
 
 class AuthService : NetworkProtocol{
+    func reserveTree(tree: Tree, token:String) -> Observable<AuthResponse> {
+        let headers:HTTPHeaders = [
+                   "Authorization" : "Bearer \(token)"
+               ]
+        print("headers \(headers)")
+        return Observable.create{observer -> Disposable in
+            let task = AF.request(URLString.treeReservationURL, method: .post, parameters: tree, encoder: JSONParameterEncoder.default, headers: headers)
+            
+            task.validate(statusCode: 200..<600)
+            .responseDecodable(of: AuthResponse.self){ res in
+                
+                switch res.result {
+                    case let .failure(error): observer.onError(error)
+                        
+                    case let .success(authResponse):
+                        observer.onNext(authResponse)
+                }
+                
+            }
+            
+            return Disposables.create {
+                
+            }
+        }
+    }
+    
     
     
     func userLogin(email: String, password: String) -> Observable<AuthResponse> {

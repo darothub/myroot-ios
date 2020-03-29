@@ -12,8 +12,13 @@ class HowToPlantViewController : ViewController{
     
     @IBOutlet weak var inpersonSelectorCard: UIView!
     @IBOutlet weak var remoteSelectorCard: UIView!
+    var tree:Tree?
+    var location = ""
+    let inperson = "inperson"
+    let remote = "remote"
     override func viewDidLoad() {
         print("How to plant")
+        print("tree\(String(describing: tree))")
         
         self.setBackgroundImage("generalBackground", contentMode: .scaleToFill)
         self.setupProgressBar(progress: 0.8)
@@ -26,14 +31,14 @@ class HowToPlantViewController : ViewController{
         
         if inpersonSelectorCard.showSelectorCard() {
             remoteSelectorCard.unSelectCard()
-            
+            location = inperson
         }
     }
     
     @objc func tapDetectedForRemoteCard(){
         if remoteSelectorCard.showSelectorCard() {
             inpersonSelectorCard.unSelectCard()
-            
+            location = remote
         }
         
     }
@@ -43,4 +48,22 @@ class HowToPlantViewController : ViewController{
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(singleTap)
     }
+    @IBAction func tapToMoveToNext(_ sender: Any) {
+        print("before \(String(describing: tree))")
+        tree?.location = location
+        if location == ""{
+             self.showToastMessage(message: "Kindly pick an option", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+            return
+        }
+        self.performSegue(withIdentifier: "toWhatTypeOfTreeScene", sender: tree)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if let vc = segue.destination as? WhatTypeOfTreeViewController, let tree = sender as? Tree{
+             //
+             vc.tree = tree
+             print("treeinprepare \(tree)")
+         }
+         
+     }
 }

@@ -33,6 +33,7 @@ class WhereToPlantViewController:ViewController{
         
         fiftyFourCountriesDropDown.optionArray = fiftyFourCountries
         
+        
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(self.tapDetected))
         selectorCardForCountry.isUserInteractionEnabled = true
         selectorCardForCountry.addGestureRecognizer(singleTap)
@@ -68,8 +69,11 @@ class WhereToPlantViewController:ViewController{
         if selectedLocation == "" {
             self.showToastMessage(message: "Kindly pick a location", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
         }
+        else  if fiftyFourCountriesDropDown.text!.isEmpty && selectedLocation == "54C" {
+            self.showToastMessage(message: "Kindly pick a country", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+        }
         else{
-            let tree = Tree(name: user?.name, email: user?.email, picture: nil, treeType: nil, locationType: nil, reason: nil, occasion: nil, date: nil, country: nil, location: selectedLocation, longitude: nil, latitude: nil, message: "")
+            let tree = Tree(name: user?.name, email: user?.email, picture: "", treeType: "", locationType: selectedLocation, reason: nil, occasion: "", date: "", country: user?.country, location:"" , longitude: "", latitude: "", token:user?.token)
             self.performSegue(withIdentifier: "toReasonScene", sender: tree)
         }
         

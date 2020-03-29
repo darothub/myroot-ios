@@ -41,9 +41,9 @@ class ReasonViewController : ViewController{
     }
     @IBAction func tapToMoveToNext(_ sender: Any) {
         let reason = getSelectedReasonSelection()
-          print("reason\(reason)")
-        tree?.reason = reason
-        self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+          print("reason \(reason)")
+        
+       
     }
     
     func getSelectedReasonSelection() -> Reason{
@@ -52,14 +52,20 @@ class ReasonViewController : ViewController{
         let gift = giftCheckBox.isSelected
         let climate = climateCheckBox.isSelected
         let job = jobCheckBox.isSelected
+        var reason = Reason(isOccasion: false, isGift: false)
         if !(gift || climate || job){
+            
             self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+        
         }
         else if giftCheckBox.isSelected {
             isGift = true
+            reason.isGift = isGift
+            tree?.reason = reason
+            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
         }
         
-        return Reason(isOccasion: isOccasion, isGift: isGift)
+        return reason
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? TypeOfOccasionViewController, let tree = sender as? Tree{

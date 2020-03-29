@@ -20,11 +20,10 @@ struct Tree:Encodable {
     var date: String?
     var country: String?
     var location: String?
-    var longitude: String?
-    var latitude: String?
-    var message=""
-    var error = false
-    var new = false
+    var longitude: String?=""
+    var latitude: String?=""
+    var token:String?
+    var new:Bool? = false
 }
 
 struct Reason:Encodable {

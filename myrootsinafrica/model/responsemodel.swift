@@ -24,6 +24,12 @@ struct Payload:Decodable{
     let password:String?
     let country:String?
     let phone:String?
+    let userId:String?
+    let type:String?
+    let description:String?
+    let longitude:String?
+    let latitude:String?
+    let picture:String?
 }
 
 

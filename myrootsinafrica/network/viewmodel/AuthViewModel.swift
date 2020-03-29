@@ -25,6 +25,8 @@ class AuthViewModel{
     func userLogin(email:String, password:String) -> Observable<AuthResponse>{
          return authProtocol.userLogin(email:email, password:password)
      }
-    
+    func reserveTree(tree:Tree, token:String)->Observable<AuthResponse> {
+        return authProtocol.reserveTree(tree: tree, token: token)
+    }
     
 }

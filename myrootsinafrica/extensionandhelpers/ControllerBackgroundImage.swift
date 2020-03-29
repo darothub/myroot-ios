@@ -42,7 +42,7 @@ extension ViewController {
     }
     
     
-    func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, user:User?=nil) {
+    func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, user:User?=nil, tree:Tree?=nil) {
         let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
         
         //        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
@@ -58,11 +58,18 @@ extension ViewController {
                                             print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: user)
                                         }
+                                        else if action == true && !(tree == nil){
+                                            
+                                            print("okIdentify \(identifiedString)")
+                                            self.performSegue(withIdentifier: identifiedString, sender: tree)
+                                                                                
+                                        }
                                         else if action == true && (user == nil){
                                         
                                             print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: self)
                                         }
+                                    
                                         
                                                                               
                                         
