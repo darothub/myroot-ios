@@ -320,15 +320,15 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="Dhj-tE-WO6" customClass="VerificationResultViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yec-Wk-eKh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-ee-7YL">
-                                <rect key="frame" x="50" y="110" width="275" height="344"/>
+                                <rect key="frame" x="50" y="110" width="275" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verification  successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-vk-R9l">
-                                        <rect key="frame" x="48" y="96" width="194" height="75"/>
+                                        <rect key="frame" x="48" y="93" width="194" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -339,14 +339,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your account has been  verified  please login with your  details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKn-Q0-x0c">
-                                        <rect key="frame" x="48" y="179" width="194" height="92"/>
+                                        <rect key="frame" x="48" y="173" width="194" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGV-na-o2A" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="26" y="281" width="222" height="55"/>
+                                        <rect key="frame" x="26" y="269" width="222" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Got it!"/>
                                         <connections>
@@ -376,20 +376,20 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController storyboardIdentifier="loginstory" title=" " id="pew-sv-mcU" customClass="LoginViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cII-kT-W5N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WVh-Eq-Z5g">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbs-n2-IYv">
-                                <rect key="frame" x="153" y="149" width="69" height="32"/>
+                                <rect key="frame" x="153" y="105" width="69" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78r-eA-BPX" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="28" y="452" width="313" height="55"/>
+                                <rect key="frame" x="28" y="437" width="313" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -397,35 +397,35 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account signup?" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWp-Fw-uSL">
-                                <rect key="frame" x="92" y="515" width="192" height="18"/>
+                                <rect key="frame" x="92" y="499" width="192" height="18"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQd-Kk-YK3">
-                                <rect key="frame" x="33" y="253" width="44" height="22"/>
+                                <rect key="frame" x="33" y="245" width="44" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="WZ4-IT-4Wg">
-                                <rect key="frame" x="33" y="279" width="303" height="40"/>
+                                <rect key="frame" x="33" y="270" width="303" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a4m-GQ-i95">
-                                <rect key="frame" x="33" y="315" width="88" height="34"/>
+                                <rect key="frame" x="33" y="305" width="88" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mca-5O-ERv">
-                                <rect key="frame" x="33" y="346" width="303" height="42"/>
+                                <rect key="frame" x="33" y="335" width="303" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -435,14 +435,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 </connections>
                             </textField>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbV-67-fVm">
-                                <rect key="frame" x="213" y="396" width="123" height="18"/>
+                                <rect key="frame" x="213" y="384" width="123" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xyu-el-phF">
-                                <rect key="frame" x="174" y="452" width="20" height="20"/>
+                                <rect key="frame" x="174" y="438" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -480,14 +480,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController storyboardIdentifier="dashboardstory" id="SDD-Wl-8Sp" customClass="DashBoardViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7z-JX-PDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yam-ll-FI6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboardBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-XO-g6n">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good morning, Peacedude Darot  " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="eRJ-AP-zjb">
                                         <rect key="frame" x="41" y="330" width="270" height="35"/>
@@ -506,9 +506,6 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5b4-5c-4AQ" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
                                         <rect key="frame" x="41" y="474" width="264" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="wWG-ZR-gPb" kind="show" id="aHs-DQ-CIn"/>
-                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ERI-bh-vTu">
                                         <rect key="frame" x="75" y="485" width="197" height="32"/>
@@ -632,13 +629,15 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <viewLayoutGuide key="safeArea" id="FFQ-z2-6w9"/>
                     </view>
                     <navigationItem key="navigationItem" title=" " id="hEx-E1-f6f">
-                        <barButtonItem key="backBarButtonItem" title="&quot; &quot;" id="ZKX-Nz-0k9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="uKd-hQ-YyH"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomBoardView" destination="wmb-At-o3f" id="5Ip-7E-bUQ"/>
                         <outlet property="circleView" destination="Avd-JJ-Raq" id="VEO-AF-tVu"/>
                         <outlet property="parentScrollView" destination="yam-ll-FI6" id="3Es-Nm-RHY"/>
+                        <outlet property="reserveTreeTap" destination="ERI-bh-vTu" id="oQe-AZ-Kwi"/>
                         <outlet property="topBoardView" destination="k9j-jo-QT4" id="nXt-dt-vwG"/>
+                        <segue destination="wWG-ZR-gPb" kind="show" identifier="toWhereToPlantScene" id="X8O-EW-TUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgA-E5-Voc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -900,14 +899,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="wWG-ZR-gPb" customClass="WhereToPlantViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JgL-Td-S7b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCG-jz-8Km">
-                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NN-bQ-bTJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where to plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-E0-ti2">
                                                 <rect key="frame" x="94" y="41" width="186" height="32"/>
@@ -924,12 +923,15 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-az-uXO" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                                <rect key="frame" x="84" y="435" width="206" height="55"/>
+                                                <rect key="frame" x="84" y="421" width="206" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="nextAction:" destination="wWG-ZR-gPb" eventType="touchUpInside" id="WAQ-LR-QMd"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-zt-Vzj">
-                                                <rect key="frame" x="19" y="182" width="336" height="198"/>
+                                                <rect key="frame" x="19" y="174" width="336" height="198"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gwm-Fc-REv">
@@ -1000,7 +1002,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MQ8-fF-7Ek"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YYv-rW-ZZ8"/>
+                    <navigationItem key="navigationItem" id="YYv-rW-ZZ8">
+                        <barButtonItem key="backBarButtonItem" title="  " id="2cu-SP-NbA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="countryIcon" destination="Xuq-Er-nMu" id="wek-uH-BBL"/>
                         <outlet property="fiftyFourCountriesDropDown" destination="ZCn-6I-3Aq" id="HRp-D9-fN1"/>
@@ -1018,14 +1022,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="Ojv-mM-VUR" customClass="ReasonViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hp1-7R-WeD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8W-X9-wZJ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reasonSceneBackground" translatesAutoresizingMaskIntoConstraints="NO" id="HMQ-ME-GCt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the reason for planting your roots" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="zZY-uo-WOv">
                                         <rect key="frame" x="39" y="63" width="296" height="49"/>
@@ -1042,11 +1046,11 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-zx-T7D">
-                                        <rect key="frame" x="19" y="119" width="336" height="338"/>
+                                        <rect key="frame" x="19" y="115" width="336" height="328"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-Jq-mSW">
-                                                <rect key="frame" x="20" y="20" width="296" height="86"/>
+                                                <rect key="frame" x="20" y="19" width="296" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageclimate" translatesAutoresizingMaskIntoConstraints="NO" id="IUq-9m-Ddo">
@@ -1084,7 +1088,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFl-xa-H0c">
-                                                <rect key="frame" x="20" y="232" width="296" height="86"/>
+                                                <rect key="frame" x="20" y="222" width="296" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftnew" translatesAutoresizingMaskIntoConstraints="NO" id="6CF-mS-oor">
@@ -1122,7 +1126,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3r-Ep-eDf">
-                                                <rect key="frame" x="20" y="126" width="296" height="86"/>
+                                                <rect key="frame" x="20" y="121" width="296" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="createjob_image" translatesAutoresizingMaskIntoConstraints="NO" id="ykQ-kA-svL">
@@ -1175,9 +1179,12 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Mac-xD-bP7"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-4L-BM0" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="83" y="514" width="206" height="55"/>
+                                <rect key="frame" x="83" y="497" width="206" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="tapToMoveToNext:" destination="Ojv-mM-VUR" eventType="touchUpInside" id="anV-vp-QQZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1189,11 +1196,16 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Tm-iz-UFH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aqx-lj-AJG"/>
+                    <navigationItem key="navigationItem" id="aqx-lj-AJG">
+                        <barButtonItem key="backBarButtonItem" title="  " id="6s3-bh-V2l"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="climateCardView" destination="BiE-Jq-mSW" id="lTa-6B-z3f"/>
+                        <outlet property="climateCheckBox" destination="TxH-sW-Bo0" id="hdt-UF-cnJ"/>
                         <outlet property="giftCardView" destination="bFl-xa-H0c" id="NQl-ZD-fu6"/>
+                        <outlet property="giftCheckBox" destination="Pon-xg-Ved" id="oU3-eL-LT5"/>
                         <outlet property="jobCardView" destination="l3r-Ep-eDf" id="Y5r-dl-Dmb"/>
+                        <outlet property="jobCheckBox" destination="owO-SG-5re" id="7Fq-pT-8ti"/>
                         <segue destination="4LG-bd-npd" kind="show" identifier="toTypeOfOccasion" id="hps-xw-q57"/>
                     </connections>
                 </viewController>
@@ -1206,14 +1218,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="4LG-bd-npd" customClass="TypeOfOccasionViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PyJ-8X-czP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-Qa-XEU">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="s34-A2-dKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of occasion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-dm-n1a">
                                         <rect key="frame" x="90" y="22" width="195" height="32"/>
@@ -1230,7 +1242,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fF-vv-E85">
-                                        <rect key="frame" x="39" y="144" width="125" height="125"/>
+                                        <rect key="frame" x="39" y="138" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftnew" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-MS-rh0">
@@ -1242,14 +1254,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-Et-yX7">
-                                        <rect key="frame" x="74" y="270" width="63" height="20"/>
+                                        <rect key="frame" x="74" y="261" width="63" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irX-dp-rO7">
-                                        <rect key="frame" x="210" y="144" width="125" height="125"/>
+                                        <rect key="frame" x="210" y="138" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="champagnenew" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-W3-8Di">
@@ -1260,14 +1272,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anniversary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gss-se-5yI">
-                                        <rect key="frame" x="227" y="270" width="90" height="20"/>
+                                        <rect key="frame" x="227" y="261" width="90" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wX-Tn-k1g">
-                                        <rect key="frame" x="39" y="334" width="125" height="125"/>
+                                        <rect key="frame" x="39" y="321" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrellanew" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-1G-tDO">
@@ -1278,7 +1290,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuW-xY-Unz">
-                                        <rect key="frame" x="210" y="334" width="125" height="125"/>
+                                        <rect key="frame" x="210" y="321" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-Gv-mLs">
@@ -1289,20 +1301,20 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-Xz-eQD">
-                                        <rect key="frame" x="251" y="460" width="43" height="20"/>
+                                        <rect key="frame" x="251" y="445" width="43" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-It-bqw" customClass="WhiteButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="500" width="206" height="55"/>
+                                        <rect key="frame" x="84" y="483" width="206" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Next"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holiday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-8m-5Sl">
-                                        <rect key="frame" x="73" y="460" width="57" height="20"/>
+                                        <rect key="frame" x="73" y="445" width="57" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1331,7 +1343,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q6Z-Iy-PZh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="R9K-ol-Z0U"/>
+                    <navigationItem key="navigationItem" id="R9K-ol-Z0U">
+                        <barButtonItem key="backBarButtonItem" title="  " id="6g6-7d-PVb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="anniversaryCard" destination="irX-dp-rO7" id="Nxc-Ho-HXn"/>
                         <outlet property="birthdayCard" destination="6fF-vv-E85" id="PUX-xN-wk4"/>
@@ -1349,7 +1363,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="lm7-5c-Vp8" customClass="HowToPlantViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1Z-go-IDg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to plant tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-FL-fDt">
@@ -1367,12 +1381,12 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-Hb-WFG" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="84" y="366" width="206" height="55"/>
+                                <rect key="frame" x="84" y="354" width="206" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-tR-osw">
-                                <rect key="frame" x="58" y="200" width="125" height="125"/>
+                                <rect key="frame" x="58" y="193" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="remote" translatesAutoresizingMaskIntoConstraints="NO" id="HkO-2d-ujW">
@@ -1383,7 +1397,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-va-dO8">
-                                <rect key="frame" x="191" y="200" width="125" height="125"/>
+                                <rect key="frame" x="191" y="193" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inperson" translatesAutoresizingMaskIntoConstraints="NO" id="ZZt-6B-F3D">
@@ -1394,14 +1408,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-mE-nv3">
-                                <rect key="frame" x="90" y="333" width="60" height="20"/>
+                                <rect key="frame" x="90" y="323" width="60" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkm-lO-CBO">
-                                <rect key="frame" x="218" y="333" width="71" height="20"/>
+                                <rect key="frame" x="218" y="323" width="71" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1411,7 +1425,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TKw-tb-okX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1ot-jV-5d0"/>
+                    <navigationItem key="navigationItem" id="1ot-jV-5d0">
+                        <barButtonItem key="backBarButtonItem" title="  " id="tO9-GP-dtV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="inpersonSelectorCard" destination="YCu-va-dO8" id="YyR-Rf-bfT"/>
                         <outlet property="remoteSelectorCard" destination="ONU-tR-osw" id="uMS-XE-bjJ"/>
@@ -1427,17 +1443,17 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="4s3-uS-ILC" customClass="WhatTypeOfTreeViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w2l-JV-dmz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uL5-lU-8vA">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-Ri-9nT">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-XM-tq0">
-                                        <rect key="frame" x="51" y="116" width="125" height="125"/>
+                                        <rect key="frame" x="51" y="111" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorationTree" translatesAutoresizingMaskIntoConstraints="NO" id="pzo-gF-I5d">
@@ -1448,7 +1464,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8f-ma-mSz" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="453" width="206" height="55"/>
+                                        <rect key="frame" x="84" y="438" width="206" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Submit">
@@ -1470,7 +1486,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-aQ-AR2">
-                                        <rect key="frame" x="227" y="116" width="125" height="125"/>
+                                        <rect key="frame" x="227" y="111" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fruitTree" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-uL-UrZ">
@@ -1481,21 +1497,21 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fruit tree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U46-Xk-pgd">
-                                        <rect key="frame" x="253" y="249" width="69" height="20"/>
+                                        <rect key="frame" x="253" y="241" width="69" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decorative tree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrZ-hr-LAL">
-                                        <rect key="frame" x="53" y="248" width="116" height="20"/>
+                                        <rect key="frame" x="53" y="240" width="116" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-ym-5ME">
-                                        <rect key="frame" x="125" y="277" width="125" height="125"/>
+                                        <rect key="frame" x="125" y="266" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="environmentalTree" translatesAutoresizingMaskIntoConstraints="NO" id="hnq-hx-t9G">
@@ -1506,14 +1522,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Environmental tree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMU-Lu-vVU">
-                                        <rect key="frame" x="116" y="410" width="143" height="20"/>
+                                        <rect key="frame" x="116" y="397" width="143" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RSp-7b-BZd">
-                                        <rect key="frame" x="239" y="470" width="20" height="20"/>
+                                        <rect key="frame" x="239" y="455" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
@@ -1545,12 +1561,12 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <outlet property="decorativeSelectorCard" destination="Qqx-XM-tq0" id="jYG-nd-gYS"/>
                         <outlet property="environmentalSelectorCard" destination="H4x-ym-5ME" id="bfi-Mx-q3v"/>
                         <outlet property="fruitSelectorCard" destination="vOm-aQ-AR2" id="cqF-LZ-bk4"/>
-                        <segue destination="Dhj-tE-WO6" kind="show" identifier="toSuccessPage" id="X3h-Hh-hDu"/>
+                        <segue destination="Dhj-tE-WO6" kind="show" id="3v8-8o-Nwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjv-oW-vOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5046" y="-10"/>
+            <point key="canvasLocation" x="5198" y="0.0"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -1706,8 +1722,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="X3C-w3-X3h"/>
         <segue reference="zXD-H8-L5y"/>
-        <segue reference="nCc-CA-bpm"/>
+        <segue reference="3v8-8o-Nwx"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

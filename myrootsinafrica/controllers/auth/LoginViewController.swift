@@ -112,14 +112,16 @@ class LoginViewController: ViewController{
         progressSpinner.isHidden = false
          submitButton.isHidden = true
         authViewModel.userLogin(email:email, password:password).subscribe(onNext: { (AuthResponse) in
-             print("messaage \(String(describing: AuthResponse.message))")
-             self.progressSpinner.isHidden = true
-             self.submitButton.isHidden = false
-             self.tokens = AuthResponse.token ?? "default value"
+            print("messaage \(String(describing: AuthResponse.message))")
+            self.progressSpinner.isHidden = true
+            self.submitButton.isHidden = false
+            self.tokens = AuthResponse.token ?? "default value"
+            let thisName = AuthResponse.payload
+            print("name \(String(describing: AuthResponse.payload)))")
             
              if AuthResponse.status == 200 {
-                let user = User(name: AuthResponse.payload?.fullName, email: AuthResponse.payload?.email, password: AuthResponse.payload?.password, country: AuthResponse.payload?.country, phone: AuthResponse.payload?.phone, token: AuthResponse.token)
-                 
+                let user = User(name: AuthResponse.payload?.name, email: AuthResponse.payload?.email, password: AuthResponse.payload?.password, country: AuthResponse.payload?.country, phone: AuthResponse.payload?.phone, token: AuthResponse.token)
+              
                  print("selftok \( self.tokens )")
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
              }

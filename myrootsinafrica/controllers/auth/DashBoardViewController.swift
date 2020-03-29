@@ -15,6 +15,7 @@ class DashBoardViewController : UIViewController{
     @IBOutlet weak var parentScrollView: UIScrollView!
     @IBOutlet weak var circleView: UIView!
     
+    @IBOutlet weak var reserveTreeTap: UIView!
     @IBOutlet weak var topBoardView: UIView!
     @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
@@ -34,8 +35,10 @@ class DashBoardViewController : UIViewController{
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
+        
+        reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
     }
-    
+//    toWhereToPlantScene
 
     func initiateTapGestures(view:UIView, action:Selector?){
         let singleTap = UITapGestureRecognizer(target: view, action: action)
@@ -50,5 +53,16 @@ class DashBoardViewController : UIViewController{
         
     }
     
+    @objc func tapToMoveToNext(_ sender : UITapGestureRecognizer){
+        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: user)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? WhereToPlantViewController, let user = sender as? User{
+            //
+            vc.user = user
+            print("userinprepare \(user)")
+        }
+        
+    }
 
 }

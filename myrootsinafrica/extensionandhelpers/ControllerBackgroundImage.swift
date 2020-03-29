@@ -9,15 +9,6 @@
 import UIKit
 
 extension ViewController {
-
-    /// This function sets an image as the background of the view controller
-    ///
-    /// - Parameters:
-    ///   - imageName: name of image
-    ///   - contentMode:
-    ///          .scaleAspectFill
-    ///          .scaleAspectFit
-    ///          .scaleToFill
     func setBackgroundImage(_ imageName: String, contentMode: UIView.ContentMode) {
         let backgroundImage = UIImageView(frame: self.view.bounds)
         backgroundImage.image = UIImage(named: imageName)

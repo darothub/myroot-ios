@@ -9,6 +9,7 @@
 import UIKit
 import M13Checkbox
 import SimpleCheckbox
+import UICheckbox_Swift
 
 class ReasonViewController : ViewController{
 
@@ -18,9 +19,16 @@ class ReasonViewController : ViewController{
     @IBOutlet weak var jobCardView: UIView!
    
     var imageView: UIImageView!
+    var tree:Tree?
+    
+    @IBOutlet weak var climateCheckBox: UICheckbox!
+    @IBOutlet weak var jobCheckBox: UICheckbox!
+    @IBOutlet weak var giftCheckBox: UICheckbox!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Reason now")
+        print("tree \(String(describing: tree))")
         let color = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1) as CGColor
         climateCardView.setBottomBorderUIView(using: color)
         jobCardView.setBottomBorderUIView(using: color)
@@ -28,40 +36,37 @@ class ReasonViewController : ViewController{
         
         self.setupProgressBar(progress: 0.4)
         
-//        
-//        let checkbox = M13Checkbox(frame: CGRect(x: 1.4, y: 1.4, width: 0.0, height: 0.0))
-        let checkbox = Checkbox(frame: CGRect(x: 50, y: 50, width: 25, height: 25))
-//        checkbox.setCheckState(.checked, animated: false)
-//        // The background color of the veiw.
-//        checkbox.backgroundColor = .white
-//        // The tint color when in the selected state.
-//        checkbox.tintColor = .yellow
-//        // The line width of the box.
-//        checkbox.boxLineWidth = 2.0
-//        // The corner radius of the box if it is a square.
-//        checkbox.cornerRadius = 4.0
-//        // Whether the box is a square, or circle.
-//        checkbox.boxType = .square
-//        // Whether or not to hide the box.
-//        checkbox.hideBox = false
-//        checkbox.borderStyle = .circle
-//        checkbox.borderStyle = .square
-//        checkbox.checkmarkStyle = .tick
-//        checkbox.checkmarkColor = .blue
-//        
-////        view.addSubview(checkbox)
-//        
-//        checkbox.translatesAutoresizingMaskIntoConstraints = false
-//        cardView.addSubview(checkbox)
-//        checkbox.heightAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
-//        checkbox.widthAnchor.constraint(equalToConstant: CGFloat(20)).isActive = true
-//        checkbox.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 16).isActive = true
-//        checkbox.rightAnchor.constraint(equalToSystemSpacingAfter: cardView.rightAnchor, multiplier: 0).isActive = true
-//        checkbox.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).isActive = true
-//        checkbox.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).isActive = true
-        
 
+
+    }
+    @IBAction func tapToMoveToNext(_ sender: Any) {
+        let reason = getSelectedReasonSelection()
+          print("reason\(reason)")
+        tree?.reason = reason
+        self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+    }
+    
+    func getSelectedReasonSelection() -> Reason{
+        var isGift = false
+        let isOccasion = false
+        let gift = giftCheckBox.isSelected
+        let climate = climateCheckBox.isSelected
+        let job = jobCheckBox.isSelected
+        if !(gift || climate || job){
+            self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+        }
+        else if giftCheckBox.isSelected {
+            isGift = true
+        }
         
+        return Reason(isOccasion: isOccasion, isGift: isGift)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? TypeOfOccasionViewController, let tree = sender as? Tree{
+            //
+            vc.tree = tree
+            print("treeinprepare \(tree)")
+        }
         
     }
 }

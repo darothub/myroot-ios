@@ -11,7 +11,7 @@ struct AuthResponse:Decodable{
     let status:Int?
     let error:String?
     let message: String?
-    let payload: Payload?=nil
+    let payload: Payload?
     var token:String?
     
 }
@@ -19,16 +19,12 @@ struct AuthResponse:Decodable{
 struct Payload:Decodable{
     let isVerified:Bool?
     let _id:String?
-    let fullName:String?
+    let name:String?
     let email:String?
     let password:String?
     let country:String?
     let phone:String?
 }
 
-struct Respo:Decodable {
-    let status:Int?
-    let message: String?
-}
 
 

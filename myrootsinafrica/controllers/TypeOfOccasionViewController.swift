@@ -15,8 +15,10 @@ class TypeOfOccasionViewController : ViewController{
     @IBOutlet weak var holidayCard: UIView!
     @IBOutlet weak var otherCard: UIView!
     
+    var tree:Tree?
     override func viewDidLoad() {
         print("Type of occasion")
+        print("tree\(tree)")
         
         self.setupProgressBar(progress: 0.6)
         
