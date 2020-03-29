@@ -15,15 +15,18 @@ class DashBoardViewController : UIViewController{
     @IBOutlet weak var parentScrollView: UIScrollView!
     @IBOutlet weak var circleView: UIView!
     
+    @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var reserveTreeTap: UIView!
     @IBOutlet weak var topBoardView: UIView!
     @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
     var user:User?
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
     override func viewDidLoad() {
         
         print("We are here dashy")
         print("userLoggedIn \(user)")
+       
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
         
@@ -37,6 +40,13 @@ class DashBoardViewController : UIViewController{
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
         
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
+        
+        guard let name = user?.name else{
+            fatalError("Unknown name")
+        }
+        
+        timeMonitor(name:name)
+     
     }
 //    toWhereToPlantScene
 
@@ -65,4 +75,33 @@ class DashBoardViewController : UIViewController{
         
     }
 
+    @IBAction func logoutAction(_ sender: Any) {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
+        //        let profile = ProfileViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func timeMonitor(name:String){
+
+        let date = Date()
+        let units: Set<Calendar.Component> = [.hour]
+        let comps = Calendar.current.dateComponents(units, from: date)
+        guard let hour = comps.hour else {
+            fatalError("Invalid time format")
+        }
+     
+        switch hour {
+            case 0...11:
+                 greetingLabel.text = "Good morning, \(name)"
+            case 12...15:
+                 greetingLabel.text = "Good Afternoon, \(name)"
+            case 16..<24:
+                greetingLabel.text = "Good Evening, \(name)"
+            default:
+                greetingLabel.text = "Howdy, \(name)!"
+        }
+        
+
+        print(comps.hour)
+    }
 }
