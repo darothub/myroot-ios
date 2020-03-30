@@ -79,8 +79,7 @@ class DashBoardViewController : UIViewController{
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
         //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
-//        self.navigationItem.setRightBarButtonItems(nil, animated: false)
-//        navigationController?.removeViewController(DashBoardViewController.self)
+
         
     }
     
@@ -106,9 +105,13 @@ class DashBoardViewController : UIViewController{
 
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        if let navVCsCount = navigationController?.viewControllers.count {
-            navigationController?.viewControllers.removeSubrange(1..<navVCsCount - 1)
-        }
-    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//                
+////        navigationController?.removeViewController(DashBoardViewController.self)
+//        
+//        if let navVCsCount = navigationController?.viewControllers.count {
+//            navigationController?.viewControllers.removeSubrange(navVCsCount-3..<navVCsCount-1)
+//        }
+//    }
 }

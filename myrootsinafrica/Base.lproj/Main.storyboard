@@ -633,7 +633,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     <navigationItem key="navigationItem" title=" " id="hEx-E1-f6f">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="uKd-hQ-YyH">
                             <connections>
-                                <action selector="logoutAction:" destination="SDD-Wl-8Sp" id="DeZ-mW-cem"/>
+                                <segue destination="I9B-QZ-ZkL" kind="unwind" unwindAction="unwindToLoginWithSegue:" id="p3s-NQ-SMa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -641,7 +641,6 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <outlet property="bottomBoardView" destination="wmb-At-o3f" id="5Ip-7E-bUQ"/>
                         <outlet property="circleView" destination="Avd-JJ-Raq" id="VEO-AF-tVu"/>
                         <outlet property="greetingLabel" destination="eRJ-AP-zjb" id="d3c-9F-cFd"/>
-                        <outlet property="logOutButton" destination="uKd-hQ-YyH" id="RA0-ht-w8M"/>
                         <outlet property="parentScrollView" destination="yam-ll-FI6" id="3Es-Nm-RHY"/>
                         <outlet property="reserveTreeTap" destination="ERI-bh-vTu" id="oQe-AZ-Kwi"/>
                         <outlet property="topBoardView" destination="k9j-jo-QT4" id="nXt-dt-vwG"/>
@@ -649,6 +648,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgA-E5-Voc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="I9B-QZ-ZkL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1117.5999999999999" y="608.54572713643188"/>
         </scene>
