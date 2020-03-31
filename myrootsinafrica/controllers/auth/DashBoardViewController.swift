@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import CoreData
 
 
 class DashBoardViewController : UIViewController{
@@ -22,6 +23,9 @@ class DashBoardViewController : UIViewController{
     var tokens = ""
     var user:User?
     @IBOutlet weak var logOutButton: UIBarButtonItem!
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var userList:[UserData] = []
+     let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     override func viewDidLoad() {
         
         print("We are here dashy")
@@ -46,6 +50,17 @@ class DashBoardViewController : UIViewController{
         }
         
         timeMonitor(name:name)
+        
+       
+        do{
+            let result = try self.context.fetch(fetchRequest)
+            for data in result{
+                print("userLogIns \(String(describing: data.loggedIn))")
+                return
+            }
+        }catch{
+            print(error)
+        }
      
     }
 //    toWhereToPlantScene
@@ -106,12 +121,26 @@ class DashBoardViewController : UIViewController{
     }
     
 //    
-//    override func viewWillDisappear(_ animated: Bool) {
-//                
-////        navigationController?.removeViewController(DashBoardViewController.self)
-//        
+    override func viewWillDisappear(_ animated: Bool) {
+                
+//        navigationController?.removeViewController(DashBoardViewController.self)
+        
 //        if let navVCsCount = navigationController?.viewControllers.count {
 //            navigationController?.viewControllers.removeSubrange(navVCsCount-3..<navVCsCount-1)
 //        }
-//    }
+        do{
+            let result = try self.context.fetch(fetchRequest)
+            let data = result[0]
+            data.setValue(false, forKey: "loggedIn")
+
+            do{
+                try context.save()
+            }catch{
+                print("Error updating entity")
+            }
+        }catch{
+            print(error)
+        }
+        print("going")
+    }
 }

@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 import Alamofire
+import CoreData
 
 
 class LoginViewController: ViewController{
@@ -27,8 +28,13 @@ class LoginViewController: ViewController{
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var tokens = ""
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var disposeBag = DisposeBag()
+    
+    let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+    
+    
     override func viewDidLoad() {
         print("yay! login")
         
@@ -44,11 +50,23 @@ class LoginViewController: ViewController{
         forgotPasswordLabel.underlineText()
         dontHaveAnAccountLabel.underlineText()
         
+        emailTF.becomeFirstResponder()
+        
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForForgotPassword(_ :))))
         
         dontHaveAnAccountLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForSignup(_ :))))
         
-       
+        do{
+            let result = try self.context.fetch(fetchRequest)
+            if result.count > 0{
+                let data = result[0]
+                emailTF.text = data.email
+                passwordTF.text = data.password
+                print("userLogIn1 \(String(describing: data.loggedIn))")
+            }
+         }catch{
+             print(error)
+         }
 
     }
     
@@ -115,7 +133,7 @@ class LoginViewController: ViewController{
               showSimpleAlert(title: "Validation", message: "Invalid password", action: false)
               return
           }
-        
+        let loggedInUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context) as! UserData
         progressSpinner.isHidden = false
          submitButton.isHidden = true
         authViewModel.userLogin(email:email, password:password).subscribe(onNext: { (AuthResponse) in
@@ -131,6 +149,47 @@ class LoginViewController: ViewController{
               
                  print("selftok \( self.tokens )")
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
+                do{
+                    let result = try self.context.fetch(self.fetchRequest)
+                    if result.count > 0{
+                         print("returnee")
+                        let data = result[0]
+                        if data.loggedIn == false{
+                            data.setValue(true, forKey: "loggedIn")
+                            data.setValue(AuthResponse.payload?.name, forKey: "name")
+                            data.setValue(AuthResponse.payload?.email, forKey: "email")
+                            data.setValue(password, forKey: "password")
+                            data.setValue(AuthResponse.payload?.country, forKey: "country")
+                            data.setValue(AuthResponse.payload?.phone, forKey: "phone")
+                            data.setValue(AuthResponse.token, forKey: "token")
+                            data.setValue(false, forKey: "newTree")
+                        }
+                        
+                        print("userLogIn \(String(describing: data.loggedIn))")
+                    }
+                    else{
+                        //Set values for Core Data
+                        print("first timer")
+                        loggedInUser.setValue(AuthResponse.payload?.name, forKey: "name")
+                        loggedInUser.setValue(AuthResponse.payload?.email, forKey: "email")
+                        loggedInUser.setValue(password, forKey: "password")
+                        loggedInUser.setValue(AuthResponse.payload?.country, forKey: "country")
+                        loggedInUser.setValue(AuthResponse.payload?.phone, forKey: "phone")
+                        loggedInUser.setValue(AuthResponse.token, forKey: "token")
+                        loggedInUser.setValue(true, forKey: "loggedIn")
+                        loggedInUser.setValue(false, forKey: "newTree")
+                    }
+                    
+                    do{
+                        try self.context.save()
+                    }catch{
+                        print(error)
+                    }
+                    
+                }catch{
+                    print(error)
+                }
+                
              }
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)

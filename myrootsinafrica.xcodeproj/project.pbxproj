@@ -10,6 +10,9 @@
 		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
 		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041576592430AFB3003D0311 /* TreeModel.swift */; };
+		0415766924320A75003D0311 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0415766724320A75003D0311 /* UserData.xcdatamodeld */; };
+		0415766B24320B3E003D0311 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */; };
+		0415766D24320B42003D0311 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */; };
 		041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */; };
 		041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */; };
 		041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2759242B6B20009FCC82 /* responsemodel.swift */; };
@@ -78,6 +81,9 @@
 		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
 		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041576592430AFB3003D0311 /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
+		0415766824320A75003D0311 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataProperties.swift"; path = "/Users/mac/Desktop/myrootios/myrootsinafrica/myrootsinafrica/data/UserData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2759242B6B20009FCC82 /* responsemodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responsemodel.swift; sourceTree = "<group>"; };
@@ -164,6 +170,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415765B24320666003D0311 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */,
+				0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */,
+				0415766724320A75003D0311 /* UserData.xcdatamodeld */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		041D2758242B6AF9009FCC82 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +241,7 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				0415765B24320666003D0311 /* data */,
 				041D275D242B6E78009FCC82 /* network */,
 				041D2758242B6AF9009FCC82 /* model */,
 				049CF5882422ACB200C81412 /* controllers */,
@@ -604,6 +621,7 @@
 				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
 				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
+				0415766B24320B3E003D0311 /* UserData+CoreDataClass.swift in Sources */,
 				049CF58C242373C200C81412 /* LoginViewController.swift in Sources */,
 				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
 				041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */,
@@ -622,6 +640,7 @@
 				049CF58724229E2E00C81412 /* HelperClass.swift in Sources */,
 				047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */,
 				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
+				0415766924320A75003D0311 /* UserData.xcdatamodeld in Sources */,
 				049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
 				047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */,
@@ -632,6 +651,7 @@
 				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
 				045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */,
 				041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */,
+				0415766D24320B42003D0311 /* UserData+CoreDataProperties.swift in Sources */,
 				0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */,
 				0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */,
 			);
@@ -984,6 +1004,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		0415766724320A75003D0311 /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0415766824320A75003D0311 /* UserData.xcdatamodel */,
+			);
+			currentVersion = 0415766824320A75003D0311 /* UserData.xcdatamodel */;
+			path = UserData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
