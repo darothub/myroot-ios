@@ -9,6 +9,9 @@
 import UIKit
 import SpriteKit
 import CoreData
+import Alamofire
+import RxSwift
+import SwiftyJSON
 
 
 class DashBoardViewController : ViewController{
@@ -19,17 +22,27 @@ class DashBoardViewController : ViewController{
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var reserveTreeTap: UIView!
     @IBOutlet weak var topBoardView: UIView!
+    @IBOutlet weak var countryBigCount: UILabel!
+    @IBOutlet weak var ggwBigCount: UILabel!
+    @IBOutlet weak var countriesTreesDetailLabel: UILabel!
+    @IBOutlet weak var ggwTreesDetailsLabel: UILabel!
     @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
     var user:User?
+    var tree:Tree?
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var userList:[UserData] = []
     let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+    
+    let authViewModel = AuthViewModel(authProtocol: AuthService())
+     var disposeBag = DisposeBag()
+    var loggedInUser:[String] = []
     override func viewDidLoad() {
         
         print("We are here dashy")
         print("userLoggedIn \(user)")
+         print("userTree \(tree)")
        
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
@@ -45,16 +58,62 @@ class DashBoardViewController : ViewController{
         
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
-        guard let loggedInUser = user else{
-            fatalError("Unknown user")
+        
+        if user == nil {
+            loggedInUser = [tree!.name!, tree!.token!]
         }
+        else{
+            loggedInUser = [user!.name!, user!.token!]
+        }
+     
+            
+        timeMonitor(name:loggedInUser[0])
         
-        timeMonitor(name:loggedInUser.name ?? "Sir/Ma")
-        
-        setLoggedInUser(loggedInUser: loggedInUser)
+        setLoggedInUser()
         
         getLoginStatus()
         
+        
+        authViewModel.getUserTrees(token: loggedInUser[1] ?? "token").subscribe(onNext: { (TreeResponse) in
+            guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
+                fatalError("Invalid tree counts for countries")
+            }
+            guard let ggwTreesCount = TreeResponse.payload?.greenWall.count else{
+                fatalError("Invalid tree counts for ggw")
+            }
+            print("error \(String(describing: TreeResponse.error))")
+            print("message \(String(describing: TreeResponse.message))")
+            
+            print("countries \(String(describing: countriesTreesCount))")
+            print("ggw \(String(describing: ggwTreesCount))")
+            self.countryBigCount.text = "\(countriesTreesCount)"
+            self.ggwBigCount.text = "\(ggwTreesCount)"
+            
+            
+            switch countriesTreesCount {
+            case 0..<2:self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) tree planted on the \(countriesTreesCount) country in Africa"
+            default:
+                self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) trees planted on the \(countriesTreesCount) countries in Africa"
+            }
+            
+            switch ggwTreesCount {
+            case 0..<2: self.ggwTreesDetailsLabel.text = "You have \(ggwTreesCount) tree planted on the Green Great Wall"
+            default:
+                self.ggwTreesDetailsLabel.text = "You have \(ggwTreesCount) trees planted on the Green Great Wall"
+            }
+            
+            
+        }, onError: { (Error) in
+            print("Error: \(String(describing: Error.asAFError))")
+            print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
+        }, onCompleted: {
+            print("completed")
+        }) {
+            print("Disposed")
+        }.disposed(by: disposeBag)
+        
+        
+     
      
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -138,28 +197,7 @@ class DashBoardViewController : ViewController{
   
     }
     
-    func setLoggedInUser(loggedInUser:User){
-//        do{
-//            let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
-//
-//            newUser.setValue(true, forKey: "loggedIn")
-//            newUser.setValue(loggedInUser.name, forKey: "name")
-//            newUser.setValue(loggedInUser.email, forKey: "email")
-//            newUser.setValue(loggedInUser.password, forKey: "password")
-//            newUser.setValue(loggedInUser.country, forKey: "country")
-//            newUser.setValue(loggedInUser.phone, forKey: "phone")
-//            newUser.setValue(loggedInUser.token, forKey: "token")
-//            newUser.setValue(false, forKey: "newTree")
-//            //                print("userLoggedInonDash \(String(describing: newUser.))")
-//            //                print("userEmailOnDashBoard \(String(describing: newUser.email))")
-//            do{
-//                try context.save()
-//                print("dashBoardSaved")
-//            }catch{
-//                print("Error updating entity")
-//            }
-////            print("dashboardUserLoggedIn \(String(describing: data.loggedIn))")
-//        }
+    func setLoggedInUser(){
         
         do{
             let result = try self.context.fetch(fetchRequest)

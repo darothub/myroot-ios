@@ -40,7 +40,16 @@ class VerificationResultViewController: ViewController {
         }
         else if tree != nil {
 //
-            self.performSegue(withIdentifier: "toDashboardScene", sender: self)
+            self.performSegue(withIdentifier: "toDashboardScene", sender: tree)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DashBoardViewController, let tree = sender as? Tree{
+            //
+            vc.tree = tree
+            print("tokeninprepare \(tree)")
         }
         
     }

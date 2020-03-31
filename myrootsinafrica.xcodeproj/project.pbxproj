@@ -13,6 +13,7 @@
 		0415766924320A75003D0311 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0415766724320A75003D0311 /* UserData.xcdatamodeld */; };
 		0415766B24320B3E003D0311 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */; };
 		0415766D24320B42003D0311 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */; };
+		0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766E24337AFD003D0311 /* TreeResponseModel.swift */; };
 		041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */; };
 		041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */; };
 		041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2759242B6B20009FCC82 /* responsemodel.swift */; };
@@ -84,6 +85,7 @@
 		0415766824320A75003D0311 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataProperties.swift"; path = "/Users/mac/Desktop/myrootios/myrootsinafrica/myrootsinafrica/data/UserData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		0415766E24337AFD003D0311 /* TreeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeResponseModel.swift; sourceTree = "<group>"; };
 		041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2759242B6B20009FCC82 /* responsemodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responsemodel.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				041D2759242B6B20009FCC82 /* responsemodel.swift */,
 				041D275B242B6C6F009FCC82 /* UserModel.swift */,
 				041576592430AFB3003D0311 /* TreeModel.swift */,
+				0415766E24337AFD003D0311 /* TreeResponseModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */,
 				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
 				0415766924320A75003D0311 /* UserData.xcdatamodeld in Sources */,
+				0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */,
 				049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
 				047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */,

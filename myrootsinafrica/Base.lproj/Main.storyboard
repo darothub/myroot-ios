@@ -640,6 +640,10 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                     <connections>
                         <outlet property="bottomBoardView" destination="wmb-At-o3f" id="5Ip-7E-bUQ"/>
                         <outlet property="circleView" destination="Avd-JJ-Raq" id="VEO-AF-tVu"/>
+                        <outlet property="countriesTreesDetailLabel" destination="rDA-1t-53T" id="eRG-lr-50U"/>
+                        <outlet property="countryBigCount" destination="7Ae-wF-Sif" id="XMK-FM-ZqY"/>
+                        <outlet property="ggwBigCount" destination="d98-tR-d3k" id="IC3-d3-Ydk"/>
+                        <outlet property="ggwTreesDetailsLabel" destination="8QP-OD-FG2" id="M0a-Yg-xEv"/>
                         <outlet property="greetingLabel" destination="eRJ-AP-zjb" id="d3c-9F-cFd"/>
                         <outlet property="parentScrollView" destination="yam-ll-FI6" id="3Es-Nm-RHY"/>
                         <outlet property="reserveTreeTap" destination="ERI-bh-vTu" id="oQe-AZ-Kwi"/>

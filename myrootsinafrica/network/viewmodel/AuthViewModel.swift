@@ -29,4 +29,8 @@ class AuthViewModel{
         return authProtocol.reserveTree(tree: tree, token: token)
     }
     
+    func getUserTrees(token:String)->Observable<TreeResponse>{
+        return authProtocol.getUserTrees(token: token)
+    }
+    
 }

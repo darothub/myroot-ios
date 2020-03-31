@@ -9,7 +9,7 @@
 import UIKit
 
 
-struct Tree:Encodable {
+struct Tree:Codable {
     var name:String?
     var email:String?
     var picture: String?
@@ -22,11 +22,18 @@ struct Tree:Encodable {
     var location: String?
     var longitude: String?=""
     var latitude: String?=""
+    var userid:String?
     var token:String?
     var new:Bool? = false
 }
 
-struct Reason:Encodable {
+struct Reason:Codable {
     var isOccasion:Bool = false
     var isGift: Bool = false
+    
+//    private enum CodingKeys: String, CodingKey {
+//        case isOccasion = "is0cassion"
+//
+//    }
+
 }

@@ -14,6 +14,7 @@ class URLString{
     static let verificationURL =  "https://fathomless-badlands-69782.herokuapp.com/api/auth/verify"
     static let loginURL =  "https://fathomless-badlands-69782.herokuapp.com/api/user/login"
     static let treeReservationURL = "https://fathomless-badlands-69782.herokuapp.com/api/tree"
+    static let userTreeURL = "https://fathomless-badlands-69782.herokuapp.com/api/tree/user/tree"
 }
 
 protocol NetworkProtocol {
@@ -21,6 +22,7 @@ protocol NetworkProtocol {
     func verifyUser(code:String, token:String) -> Observable<AuthResponse>
     func userLogin(email:String, password:String) -> Observable<AuthResponse>
     func reserveTree(tree:Tree, token:String) -> Observable<AuthResponse>
+    func getUserTrees(token:String) -> Observable<TreeResponse> 
 
 //    func resendVerificationCode(user:User) -> Observable<AuthResponse>
 }

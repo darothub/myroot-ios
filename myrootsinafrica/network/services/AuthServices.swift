@@ -13,6 +13,34 @@ import Alamofire
 import SwiftyJSON
 
 class AuthService : NetworkProtocol{
+    func getUserTrees(token: String) -> Observable<TreeResponse> {
+        let headers:HTTPHeaders = [
+            "Authorization" : "Bearer \(token)"
+        ]
+        return Observable.create{observer -> Disposable in
+            let task = AF.request(URLString.userTreeURL, method: .get, headers: headers)
+            
+            task.validate(statusCode: 0..<600)
+            .responseDecodable(of: TreeResponse.self){ res in
+                
+                switch res.result {
+                    case let .failure(error): observer.onError(error)
+                        
+                    case let .success(treeResponse):
+                        observer.onNext(treeResponse)
+                }
+                
+            }
+            
+            return Disposables.create {
+                
+            }
+        }
+
+    }
+    
+  
+    
     func reserveTree(tree: Tree, token:String) -> Observable<AuthResponse> {
         let headers:HTTPHeaders = [
                    "Authorization" : "Bearer \(token)"
