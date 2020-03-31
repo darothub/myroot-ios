@@ -30,11 +30,10 @@ class DashBoardViewController : ViewController{
     var tokens = ""
     var user:User?
     var userData:UserData?
-    var newUser:UserData?
+   
     var tree:Tree?
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var userList:[UserData] = []
     let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
@@ -61,19 +60,14 @@ class DashBoardViewController : ViewController{
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
         
-//        if user == nil {
-//            loggedInUser = [tree!.name!, tree!.token!]
-//        }
-//        else{
-//            loggedInUser = [user!.name!, user!.token!]
-//        }
-        loggedInUser = setLoggedInUser()
+        loggedInUser = HelperClass.getUserData()
+        let result = HelperClass.updateValue(key: "loggedIn", value: true)
             
         timeMonitor(name:loggedInUser!.name!)
         
         
         print("Userdata \(loggedInUser)")
-        
+        print("resultData \(result)")
         
         authViewModel.getUserTrees(token: (loggedInUser?.token!)!).subscribe(onNext: { (TreeResponse) in
             guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
@@ -133,7 +127,6 @@ class DashBoardViewController : ViewController{
     @objc func tapDetectedForProfile(_ sender : UITapGestureRecognizer){
         print("profile setting")
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "profilestory") as! ViewController
-//        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
         
     }
@@ -153,14 +146,6 @@ class DashBoardViewController : ViewController{
         }
         
     }
-
-//    @IBAction func logoutAction(_ sender: Any) {
-//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
-//        //        let profile = ProfileViewController()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
-//
-//
-//    }
     
     func timeMonitor(name:String){
 
@@ -184,47 +169,31 @@ class DashBoardViewController : ViewController{
 
     }
     
-//    
-    override func viewWillDisappear(_ animated: Bool) {
-                
-//        navigationController?.removeViewController(DashBoardViewController.self)
-        
-//        if let navVCsCount = navigationController?.viewControllers.count {
-//            navigationController?.viewControllers.removeSubrange(navVCsCount-3..<navVCsCount-1)
-//        }
-  
-    }
  
+//    
+//    func setLoggedInUser()->UserData{
+//        
+//        do{
+//            let result = try self.context.fetch(fetchRequest)
+//            if result.count > 0{
+//                userData = result[0]
+//                let data = result[0]
+//                data.setValue(true, forKey: "loggedIn")
+//                print("userLogIn1Dash \(String(describing: data.loggedIn))")
+//            }
+//            do{
+//                try self.context.save()
+//                print("dashBoardSaved")
+//            }catch{
+//                print("Error updating entity")
+//            }
+//            
+//        }catch{
+//            print(error)
+//        }
+//
+//        return userData!
+//    }
     
-    func setLoggedInUser()->UserData{
-        
-        do{
-            let result = try self.context.fetch(fetchRequest)
-            if result.count > 0{
-                userData = result[0]
-                let data = result[0]
-                data.setValue(true, forKey: "loggedIn")
-                print("userLogIn1Dash \(String(describing: data.loggedIn))")
-            }
-            do{
-                try self.context.save()
-                print("dashBoardSaved")
-            }catch{
-                print("Error updating entity")
-            }
-            
-        }catch{
-            print(error)
-        }
-
-        return userData!
-    }
     
-    
-  
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-    }
 }
