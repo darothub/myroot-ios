@@ -44,7 +44,7 @@ class DashBoardViewController : ViewController{
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
         
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
-
+        
         guard let loggedInUser = user else{
             fatalError("Unknown user")
         }
@@ -53,9 +53,15 @@ class DashBoardViewController : ViewController{
         
         setLoggedInUser(loggedInUser: loggedInUser)
         
+        getLoginStatus()
+        
      
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+      
+    }
+
     
 
 
@@ -128,28 +134,46 @@ class DashBoardViewController : ViewController{
 //        }
   
     }
+    func getLoginStatus(){
+  
+    }
     
     func setLoggedInUser(loggedInUser:User){
+//        do{
+//            let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
+//
+//            newUser.setValue(true, forKey: "loggedIn")
+//            newUser.setValue(loggedInUser.name, forKey: "name")
+//            newUser.setValue(loggedInUser.email, forKey: "email")
+//            newUser.setValue(loggedInUser.password, forKey: "password")
+//            newUser.setValue(loggedInUser.country, forKey: "country")
+//            newUser.setValue(loggedInUser.phone, forKey: "phone")
+//            newUser.setValue(loggedInUser.token, forKey: "token")
+//            newUser.setValue(false, forKey: "newTree")
+//            //                print("userLoggedInonDash \(String(describing: newUser.))")
+//            //                print("userEmailOnDashBoard \(String(describing: newUser.email))")
+//            do{
+//                try context.save()
+//                print("dashBoardSaved")
+//            }catch{
+//                print("Error updating entity")
+//            }
+////            print("dashboardUserLoggedIn \(String(describing: data.loggedIn))")
+//        }
+        
         do{
             let result = try self.context.fetch(fetchRequest)
-            let data = result[0]
-            data.setValue(true, forKey: "loggedIn")
-            data.setValue(loggedInUser.name, forKey: "name")
-            data.setValue(loggedInUser.email, forKey: "email")
-            data.setValue(loggedInUser.password, forKey: "password")
-            data.setValue(loggedInUser.country, forKey: "country")
-            data.setValue(loggedInUser.phone, forKey: "phone")
-            data.setValue(loggedInUser.token, forKey: "token")
-            data.setValue(false, forKey: "newTree")
-            print("userLoggedInonDash \(String(describing: data.loggedIn))")
-            print("userEmailOnDashBoard \(String(describing: data.email))")
+            if result.count > 0{
+                let data = result[0]
+                data.setValue(true, forKey: "loggedIn")
+                print("userLogIn1Dash \(String(describing: data.loggedIn))")
+            }
             do{
-                try context.save()
+                try self.context.save()
                 print("dashBoardSaved")
             }catch{
                 print("Error updating entity")
             }
-            print("dashboardUserLoggedIn \(String(describing: data.loggedIn))")
             
         }catch{
             print(error)
@@ -157,11 +181,7 @@ class DashBoardViewController : ViewController{
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-
-    }
+  
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

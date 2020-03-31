@@ -32,7 +32,7 @@ class LoginViewController: ViewController{
     
     var disposeBag = DisposeBag()
     
-    let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+    let fetchRequest = NSFetchRequest<UserData>.init(entityName: "UserData")
     
     
     override func viewDidLoad() {
@@ -40,6 +40,7 @@ class LoginViewController: ViewController{
         
 //        progressRing.isHidden = false
         
+        // set bottom border for text field
         setTextFieldsBottomBorder()
         guard let passwordImage = UIImage(named: "eyeiconclose") else{
                        fatalError("Password image not found")
@@ -52,21 +53,14 @@ class LoginViewController: ViewController{
         
         emailTF.becomeFirstResponder()
         
+        //Tap gesture for forgot password link
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForForgotPassword(_ :))))
-        
+        //Tap gesture for sign up
         dontHaveAnAccountLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForSignup(_ :))))
         
-        do{
-            let result = try self.context.fetch(fetchRequest)
-            if result.count > 0{
-                let data = result[0]
-                emailTF.text = data.email
-                passwordTF.text = data.password
-                print("userLogIn1 \(String(describing: data.loggedIn))")
-            }
-         }catch{
-             print(error)
-         }
+        //set returnee data in textfields
+        setReturneeData()
+
 
     }
     
@@ -104,7 +98,7 @@ class LoginViewController: ViewController{
     
     func userLogin(){
         
-        var title = "Sign-in"
+        let title = "Sign-in"
         let fieldValidation = HelperClass.validateField(textFields:emailTF, passwordTF)
         
         if fieldValidation.count > 0{
@@ -133,7 +127,7 @@ class LoginViewController: ViewController{
               showSimpleAlert(title: "Validation", message: "Invalid password", action: false)
               return
           }
-        let loggedInUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context) as! UserData
+//        _ = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
         progressSpinner.isHidden = false
          submitButton.isHidden = true
         authViewModel.userLogin(email:email, password:password).subscribe(onNext: { (AuthResponse) in
@@ -141,17 +135,36 @@ class LoginViewController: ViewController{
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
             self.tokens = AuthResponse.token ?? "default value"
-            let thisName = AuthResponse.payload
+            guard let payload = AuthResponse.payload else {
+                fatalError("User payload not found")
+            }
             print("name \(String(describing: AuthResponse.payload)))")
             
              if AuthResponse.status == 200 {
-                let user = User(name: AuthResponse.payload?.name, email: AuthResponse.payload?.email, password: password, country: AuthResponse.payload?.country, phone: AuthResponse.payload?.phone, token: AuthResponse.token)
+                let user = User(name: payload.name, email: payload.email, password: password, country: payload.country, phone: payload.phone, token: AuthResponse.token)
               
                  print("selftok \( self.tokens )")
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
                 
-//                self.saveData(authResponse:AuthResponse, password: password, loggedInUser:loggedInUser)
-                
+                do{
+                    let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: self.context)
+                    
+                    newUser.setValue(payload.name, forKey: "name")
+                    newUser.setValue(payload.email, forKey: "email")
+                    newUser.setValue(password, forKey: "password")
+                    newUser.setValue(payload.country, forKey: "country")
+                    newUser.setValue(payload.phone, forKey: "phone")
+                    newUser.setValue(AuthResponse.token, forKey: "token")
+                    newUser.setValue(false, forKey: "newTree")
+                    //                print("userLoggedInonDash \(String(describing: newUser.))")
+                    //                print("userEmailOnDashBoard \(String(describing: newUser.email))")
+                    do{
+                        try self.context.save()
+                        print("dashBoardSaved")
+                    }catch{
+                        print("Error updating entity")
+                    }
+                }
              }
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
@@ -182,7 +195,10 @@ class LoginViewController: ViewController{
     }
     
     @IBAction func unwindToLogin(segue:UIStoryboardSegue){
-        if let sourceVC = segue.source as? DashBoardViewController{
+//        print("email \(emailTF.text!)")
+        fetchRequest.predicate = NSPredicate(format: "email = %@", emailTF.text!)
+
+        if segue.source is DashBoardViewController{
             do{
                 let result = try self.context.fetch(fetchRequest)
                 let data = result[0]
@@ -199,5 +215,18 @@ class LoginViewController: ViewController{
         }
     }
     
+    func setReturneeData(){
+        do{
+            let result = try self.context.fetch(fetchRequest)
+            if result.count > 0{
+                let data = result[0]
+                emailTF.text = data.email
+                passwordTF.text = data.password
+                print("userLogIn1 \(String(describing: data.loggedIn))")
+            }
+         }catch{
+             print(error)
+         }
+    }
 
 }
