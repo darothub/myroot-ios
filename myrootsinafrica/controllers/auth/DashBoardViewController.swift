@@ -29,6 +29,8 @@ class DashBoardViewController : ViewController{
     @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
     var user:User?
+    var userData:UserData?
+    var newUser:UserData?
     var tree:Tree?
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -36,13 +38,13 @@ class DashBoardViewController : ViewController{
     let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
-     var disposeBag = DisposeBag()
-    var loggedInUser:[String] = []
+    var disposeBag = DisposeBag()
+    var loggedInUser:UserData?
     override func viewDidLoad() {
         
         print("We are here dashy")
         print("userLoggedIn \(user)")
-         print("userTree \(tree)")
+        print("userTree \(tree)")
        
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
@@ -59,22 +61,21 @@ class DashBoardViewController : ViewController{
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
         
-        if user == nil {
-            loggedInUser = [tree!.name!, tree!.token!]
-        }
-        else{
-            loggedInUser = [user!.name!, user!.token!]
-        }
-     
+//        if user == nil {
+//            loggedInUser = [tree!.name!, tree!.token!]
+//        }
+//        else{
+//            loggedInUser = [user!.name!, user!.token!]
+//        }
+        loggedInUser = setLoggedInUser()
             
-        timeMonitor(name:loggedInUser[0])
-        
-        setLoggedInUser()
-        
-        getLoginStatus()
+        timeMonitor(name:loggedInUser!.name!)
         
         
-        authViewModel.getUserTrees(token: loggedInUser[1] ?? "token").subscribe(onNext: { (TreeResponse) in
+        print("Userdata \(loggedInUser)")
+        
+        
+        authViewModel.getUserTrees(token: (loggedInUser?.token!)!).subscribe(onNext: { (TreeResponse) in
             guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
                 fatalError("Invalid tree counts for countries")
             }
@@ -138,10 +139,10 @@ class DashBoardViewController : ViewController{
     }
     
     @objc func tapToMoveToNext(_ sender : UITapGestureRecognizer){
-        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: user)
+        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: loggedInUser)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? WhereToPlantViewController, let user = sender as? User{
+        if let vc = segue.destination as? WhereToPlantViewController, let user = sender as? UserData{
             //
             vc.user = user
             print("userinprepare \(user)")
@@ -193,15 +194,14 @@ class DashBoardViewController : ViewController{
 //        }
   
     }
-    func getLoginStatus(){
-  
-    }
+ 
     
-    func setLoggedInUser(){
+    func setLoggedInUser()->UserData{
         
         do{
             let result = try self.context.fetch(fetchRequest)
             if result.count > 0{
+                userData = result[0]
                 let data = result[0]
                 data.setValue(true, forKey: "loggedIn")
                 print("userLogIn1Dash \(String(describing: data.loggedIn))")
@@ -216,6 +216,8 @@ class DashBoardViewController : ViewController{
         }catch{
             print(error)
         }
+
+        return userData!
     }
     
     

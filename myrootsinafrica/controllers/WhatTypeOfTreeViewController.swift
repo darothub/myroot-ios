@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import Alamofire
 import SwiftyJSON
+import CoreData
 
 class WhatTypeOfTreeViewController : ViewController{
     
@@ -21,6 +22,9 @@ class WhatTypeOfTreeViewController : ViewController{
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     let disposeBag = DisposeBag()
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let fetchRequest = NSFetchRequest<UserData>.init(entityName: "UserData")
     
     var tree:Tree?
     var treeType = ""

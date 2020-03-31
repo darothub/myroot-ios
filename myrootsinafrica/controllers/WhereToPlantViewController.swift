@@ -19,7 +19,8 @@ class WhereToPlantViewController:ViewController{
     @IBOutlet weak var fiftyFourCountriesDropDown: DropDown!
     var fiftyFourCountries:[String] = []
     var selectedLocation = ""
-    var user:User?
+    var users:User?
+    var user:UserData?
     override func viewDidLoad() {
         print("choose location")
         print("user \(user)")

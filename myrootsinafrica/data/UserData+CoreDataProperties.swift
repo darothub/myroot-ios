@@ -23,5 +23,6 @@ extension UserData {
     @NSManaged public var phone: String?
     @NSManaged public var loggedIn: Bool
     @NSManaged public var newTree: Bool
+    @NSManaged public var token: String?
 
 }
