@@ -145,50 +145,12 @@ class LoginViewController: ViewController{
             print("name \(String(describing: AuthResponse.payload)))")
             
              if AuthResponse.status == 200 {
-                let user = User(name: AuthResponse.payload?.name, email: AuthResponse.payload?.email, password: AuthResponse.payload?.password, country: AuthResponse.payload?.country, phone: AuthResponse.payload?.phone, token: AuthResponse.token)
+                let user = User(name: AuthResponse.payload?.name, email: AuthResponse.payload?.email, password: password, country: AuthResponse.payload?.country, phone: AuthResponse.payload?.phone, token: AuthResponse.token)
               
                  print("selftok \( self.tokens )")
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
-                do{
-                    let result = try self.context.fetch(self.fetchRequest)
-                    if result.count > 0{
-                         print("returnee")
-                        let data = result[0]
-                        if data.loggedIn == false{
-                            data.setValue(true, forKey: "loggedIn")
-                            data.setValue(AuthResponse.payload?.name, forKey: "name")
-                            data.setValue(AuthResponse.payload?.email, forKey: "email")
-                            data.setValue(password, forKey: "password")
-                            data.setValue(AuthResponse.payload?.country, forKey: "country")
-                            data.setValue(AuthResponse.payload?.phone, forKey: "phone")
-                            data.setValue(AuthResponse.token, forKey: "token")
-                            data.setValue(false, forKey: "newTree")
-                        }
-                        
-                        print("userLogIn \(String(describing: data.loggedIn))")
-                    }
-                    else{
-                        //Set values for Core Data
-                        print("first timer")
-                        loggedInUser.setValue(AuthResponse.payload?.name, forKey: "name")
-                        loggedInUser.setValue(AuthResponse.payload?.email, forKey: "email")
-                        loggedInUser.setValue(password, forKey: "password")
-                        loggedInUser.setValue(AuthResponse.payload?.country, forKey: "country")
-                        loggedInUser.setValue(AuthResponse.payload?.phone, forKey: "phone")
-                        loggedInUser.setValue(AuthResponse.token, forKey: "token")
-                        loggedInUser.setValue(true, forKey: "loggedIn")
-                        loggedInUser.setValue(false, forKey: "newTree")
-                    }
-                    
-                    do{
-                        try self.context.save()
-                    }catch{
-                        print(error)
-                    }
-                    
-                }catch{
-                    print(error)
-                }
+                
+//                self.saveData(authResponse:AuthResponse, password: password, loggedInUser:loggedInUser)
                 
              }
              else{
@@ -219,7 +181,23 @@ class LoginViewController: ViewController{
         
     }
     
-    @IBAction func unwindToLogin(segue:UIStoryboardSegue){}
+    @IBAction func unwindToLogin(segue:UIStoryboardSegue){
+        if let sourceVC = segue.source as? DashBoardViewController{
+            do{
+                let result = try self.context.fetch(fetchRequest)
+                let data = result[0]
+                data.setValue(false, forKey: "loggedIn")
+                print("userLogInOnLogin \(String(describing: data.loggedIn))")
+                do{
+                    try context.save()
+                }catch{
+                    print("Error updating entity")
+                }
+            }catch{
+                print(error)
+            }
+        }
+    }
     
 
 }

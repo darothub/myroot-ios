@@ -11,8 +11,8 @@ import SpriteKit
 import CoreData
 
 
-class DashBoardViewController : UIViewController{
-    let backgroundImageView = UIImageView()
+class DashBoardViewController : ViewController{
+    
     @IBOutlet weak var parentScrollView: UIScrollView!
     @IBOutlet weak var circleView: UIView!
     
@@ -25,7 +25,7 @@ class DashBoardViewController : UIViewController{
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var userList:[UserData] = []
-     let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+    let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     override func viewDidLoad() {
         
         print("We are here dashy")
@@ -44,26 +44,20 @@ class DashBoardViewController : UIViewController{
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
         
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
-        
-        guard let name = user?.name else{
-            fatalError("Unknown name")
+
+        guard let loggedInUser = user else{
+            fatalError("Unknown user")
         }
         
-        timeMonitor(name:name)
+        timeMonitor(name:loggedInUser.name ?? "Sir/Ma")
         
-       
-        do{
-            let result = try self.context.fetch(fetchRequest)
-            for data in result{
-                print("userLogIns \(String(describing: data.loggedIn))")
-                return
-            }
-        }catch{
-            print(error)
-        }
+        setLoggedInUser(loggedInUser: loggedInUser)
+        
      
     }
-//    toWhereToPlantScene
+    
+    
+
 
     func initiateTapGestures(view:UIView, action:Selector?){
         let singleTap = UITapGestureRecognizer(target: view, action: action)
@@ -87,16 +81,20 @@ class DashBoardViewController : UIViewController{
             vc.user = user
             print("userinprepare \(user)")
         }
+        else if let vc = segue.destination as? LoginViewController, let logoutButton = sender as? UIBarButtonItem{
+     
+              print("going")
+        }
         
     }
 
-    @IBAction func logoutAction(_ sender: Any) {
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
-        //        let profile = ProfileViewController()
-        self.navigationController?.pushViewController(nextVC, animated: true)
-
-        
-    }
+//    @IBAction func logoutAction(_ sender: Any) {
+//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
+//        //        let profile = ProfileViewController()
+//        self.navigationController?.pushViewController(nextVC, animated: true)
+//
+//
+//    }
     
     func timeMonitor(name:String){
 
@@ -128,19 +126,45 @@ class DashBoardViewController : UIViewController{
 //        if let navVCsCount = navigationController?.viewControllers.count {
 //            navigationController?.viewControllers.removeSubrange(navVCsCount-3..<navVCsCount-1)
 //        }
+  
+    }
+    
+    func setLoggedInUser(loggedInUser:User){
         do{
             let result = try self.context.fetch(fetchRequest)
             let data = result[0]
-            data.setValue(false, forKey: "loggedIn")
-
+            data.setValue(true, forKey: "loggedIn")
+            data.setValue(loggedInUser.name, forKey: "name")
+            data.setValue(loggedInUser.email, forKey: "email")
+            data.setValue(loggedInUser.password, forKey: "password")
+            data.setValue(loggedInUser.country, forKey: "country")
+            data.setValue(loggedInUser.phone, forKey: "phone")
+            data.setValue(loggedInUser.token, forKey: "token")
+            data.setValue(false, forKey: "newTree")
+            print("userLoggedInonDash \(String(describing: data.loggedIn))")
+            print("userEmailOnDashBoard \(String(describing: data.email))")
             do{
                 try context.save()
+                print("dashBoardSaved")
             }catch{
                 print("Error updating entity")
             }
+            print("dashboardUserLoggedIn \(String(describing: data.loggedIn))")
+            
         }catch{
             print(error)
         }
-        print("going")
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
     }
 }
