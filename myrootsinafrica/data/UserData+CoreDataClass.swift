@@ -2,11 +2,11 @@
 //  UserData+CoreDataClass.swift
 //  
 //
-//  Created by Darot on 30/03/2020.
+//  Created by Darot on 01/04/2020.
 //
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 

@@ -143,14 +143,27 @@ class LoginViewController: ViewController{
                 let user = User(name: payload.name, email: payload.email, password: password, country: payload.country, phone: payload.phone, token: AuthResponse.token)
               
                  print("selftok \( self.tokens )")
-                self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
+                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
                 
-                HelperClass.intializeFirstData(key: "name", value: payload.name as Any)
-                HelperClass.intializeFirstData(key: "email", value: payload.email as Any)
-                HelperClass.intializeFirstData(key: "password", value: password as Any)
-                HelperClass.intializeFirstData(key: "phone", value: payload.phone as Any)
-                HelperClass.intializeFirstData(key: "token", value: AuthResponse.token as Any)
-
+                do{
+                    let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: self.context)
+                    
+                    newUser.setValue(payload.name, forKey: "name")
+                    newUser.setValue(payload.email, forKey: "email")
+                    newUser.setValue(password, forKey: "password")
+                    newUser.setValue(payload.country, forKey: "country")
+                    newUser.setValue(payload.phone, forKey: "phone")
+                    newUser.setValue(AuthResponse.token, forKey: "token")
+                    newUser.setValue(false, forKey: "newTree")
+                    //                print("userLoggedInonDash \(String(describing: newUser.))")
+                    //                print("userEmailOnDashBoard \(String(describing: newUser.email))")
+                    do{
+                        try self.context.save()
+                        print("dashBoardSaved")
+                    }catch{
+                        print("Error updating entity")
+                    }
+                }
              }
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)

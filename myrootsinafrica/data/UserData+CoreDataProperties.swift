@@ -2,11 +2,11 @@
 //  UserData+CoreDataProperties.swift
 //  
 //
-//  Created by Darot on 30/03/2020.
+//  Created by Darot on 01/04/2020.
 //
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 
@@ -21,8 +21,8 @@ extension UserData {
     @NSManaged public var password: String?
     @NSManaged public var country: String?
     @NSManaged public var phone: String?
-    @NSManaged public var loggedIn: Bool
-    @NSManaged public var newTree: Bool
     @NSManaged public var token: String?
+    @NSManaged public var newTree: Bool
+    @NSManaged public var loggedIn: Bool
 
 }

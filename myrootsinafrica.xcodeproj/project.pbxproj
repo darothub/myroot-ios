@@ -10,14 +10,13 @@
 		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
 		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041576592430AFB3003D0311 /* TreeModel.swift */; };
-		0415766924320A75003D0311 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0415766724320A75003D0311 /* UserData.xcdatamodeld */; };
-		0415766B24320B3E003D0311 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */; };
-		0415766D24320B42003D0311 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */; };
 		0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766E24337AFD003D0311 /* TreeResponseModel.swift */; };
+		0415767D2434714E003D0311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415767C2434714E003D0311 /* UserModel.swift */; };
+		041576802434743B003D0311 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415767E2434743B003D0311 /* UserData+CoreDataClass.swift */; };
+		041576812434743B003D0311 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415767F2434743B003D0311 /* UserData+CoreDataProperties.swift */; };
 		041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */; };
 		041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */; };
 		041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2759242B6B20009FCC82 /* responsemodel.swift */; };
-		041D275C242B6C6F009FCC82 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D275B242B6C6F009FCC82 /* UserModel.swift */; };
 		041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */; };
 		041D2764242B7007009FCC82 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2763242B7007009FCC82 /* AuthViewModel.swift */; };
 		041D2767242BA40A009FCC82 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2766242BA40A009FCC82 /* AuthServices.swift */; };
@@ -25,7 +24,7 @@
 		045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F11241AD7D3004217D9 /* SceneDelegate.swift */; };
 		045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F13241AD7D3004217D9 /* ViewController.swift */; };
 		045C1F17241AD7D3004217D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F15241AD7D3004217D9 /* Main.storyboard */; };
-		045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */; };
+		045C1F1A241AD7D3004217D9 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */; };
 		045C1F1C241AD7D4004217D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F1B241AD7D4004217D9 /* Assets.xcassets */; };
 		045C1F1F241AD7D4004217D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F1D241AD7D4004217D9 /* LaunchScreen.storyboard */; };
 		045C1F2A241AD7D4004217D9 /* myrootsinafricaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F29241AD7D4004217D9 /* myrootsinafricaTests.swift */; };
@@ -82,14 +81,13 @@
 		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
 		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041576592430AFB3003D0311 /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
-		0415766824320A75003D0311 /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
-		0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserData+CoreDataProperties.swift"; path = "/Users/mac/Desktop/myrootios/myrootsinafrica/myrootsinafrica/data/UserData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		0415766E24337AFD003D0311 /* TreeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeResponseModel.swift; sourceTree = "<group>"; };
+		0415767C2434714E003D0311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0415767E2434743B003D0311 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0415767F2434743B003D0311 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		041D2759242B6B20009FCC82 /* responsemodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responsemodel.swift; sourceTree = "<group>"; };
-		041D275B242B6C6F009FCC82 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		041D2763242B7007009FCC82 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		041D2766242BA40A009FCC82 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
@@ -175,9 +173,8 @@
 		0415765B24320666003D0311 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				0415766C24320B42003D0311 /* UserData+CoreDataProperties.swift */,
-				0415766A24320B3D003D0311 /* UserData+CoreDataClass.swift */,
-				0415766724320A75003D0311 /* UserData.xcdatamodeld */,
+				0415767E2434743B003D0311 /* UserData+CoreDataClass.swift */,
+				0415767F2434743B003D0311 /* UserData+CoreDataProperties.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -186,9 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				041D2759242B6B20009FCC82 /* responsemodel.swift */,
-				041D275B242B6C6F009FCC82 /* UserModel.swift */,
 				041576592430AFB3003D0311 /* TreeModel.swift */,
 				0415766E24337AFD003D0311 /* TreeResponseModel.swift */,
+				0415767C2434714E003D0311 /* UserModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -259,7 +256,7 @@
 				045C1F1B241AD7D4004217D9 /* Assets.xcassets */,
 				045C1F1D241AD7D4004217D9 /* LaunchScreen.storyboard */,
 				045C1F20241AD7D4004217D9 /* Info.plist */,
-				045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */,
+				045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */,
 				045C1F5C241BA205004217D9 /* ExtToast.swift */,
 			);
 			path = myrootsinafrica;
@@ -624,7 +621,7 @@
 				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
 				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
-				0415766B24320B3E003D0311 /* UserData+CoreDataClass.swift in Sources */,
+				041576802434743B003D0311 /* UserData+CoreDataClass.swift in Sources */,
 				049CF58C242373C200C81412 /* LoginViewController.swift in Sources */,
 				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
 				041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */,
@@ -636,6 +633,7 @@
 				047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
 				045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */,
+				0415767D2434714E003D0311 /* UserModel.swift in Sources */,
 				045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */,
 				047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */,
 				041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */,
@@ -643,19 +641,17 @@
 				049CF58724229E2E00C81412 /* HelperClass.swift in Sources */,
 				047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */,
 				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
-				0415766924320A75003D0311 /* UserData.xcdatamodeld in Sources */,
 				0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */,
 				049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */,
 				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
 				047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */,
 				047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */,
-				041D275C242B6C6F009FCC82 /* UserModel.swift in Sources */,
 				047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */,
 				041D2767242BA40A009FCC82 /* AuthServices.swift in Sources */,
-				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
+				045C1F1A241AD7D3004217D9 /* UserData.xcdatamodeld in Sources */,
 				045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */,
 				041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */,
-				0415766D24320B42003D0311 /* UserData+CoreDataProperties.swift in Sources */,
+				041576812434743B003D0311 /* UserData+CoreDataProperties.swift in Sources */,
 				0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */,
 				0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */,
 			);
@@ -1008,23 +1004,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0415766724320A75003D0311 /* UserData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0415766824320A75003D0311 /* UserData.xcdatamodel */,
-			);
-			currentVersion = 0415766824320A75003D0311 /* UserData.xcdatamodel */;
-			path = UserData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */ = {
+		045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				045C1F19241AD7D3004217D9 /* myrootsinafrica.xcdatamodel */,
 			);
 			currentVersion = 045C1F19241AD7D3004217D9 /* myrootsinafrica.xcdatamodel */;
-			path = myrootsinafrica.xcdatamodeld;
+			path = UserData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -15,7 +15,7 @@ class HelperClass{
     static var userData:UserData?
     static var newDataMap:[String:Bool]?
     
-    
+    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     static func validateField(textFields:UITextField...) -> [UITextField:Bool]{
         var result = [UITextField:Bool]()
         for field in textFields{
@@ -35,18 +35,21 @@ class HelperClass{
       
         do{
             let result = try context.fetch(fetchRequest)
-            userData = result[0]
-            print("UserdataHelper \(String(describing: userData))")
-             
+            print("resul\(result)")
+            if result.count > 0{
+                userData = result[0]
+                print("UserdataHelper \(String(describing: result[0]))")
+            }
+            
          }catch{
              print(error)
          }
 
-        return userData!
+       
+        return userData ?? UserData(context: context)
     }
     
     static func updateValue(key:String, value:Bool)->[String:Bool]{
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
       
         do{
@@ -70,13 +73,12 @@ class HelperClass{
         return newDataMap!
     }
     
-    static func intializeFirstData(key:String, value:Any){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    static func intializeFirstData(key:String, valueString:String){
         do{
             let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
-            if value is String || value is Bool{
-               newUser.setValue(value, forKey: key)
-            }
+         
+            newUser.setValue(valueString, forKey: key)
+            print("new \(String(describing: valueString))")
             
             do{
                 try context.save()
