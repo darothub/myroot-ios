@@ -17,29 +17,36 @@ class VerificationResultViewController: ViewController {
     var user:User?
     var tree:Tree?
     override func viewDidLoad() {
-        print("yeske \(user)")
-        print("Tree success \(tree)")
+        print("yeske \(String(describing: user))")
+        print("Tree success \(String(describing: tree))")
         
         self.setBackgroundImage("verificationResultBackground", contentMode: .scaleToFill)
         
         viewSubContainer.setViewShadow(using: 4, color: UIColor.black.cgColor)
         viewSubContainer.layer.cornerRadius = 10
         
-        guard let newTree = tree?.new else {
-            fatalError("new tree not found")
-        }
-        if newTree {
-//            let vowel = ["E"]
-            let firstLetter = tree?.treeType?.prefix(1)
-            
-            switch firstLetter {
-            case "E": requestSuccessfulAdvice.text = "You have successfully reserved an \(String(describing: tree!.treeType))"
-                    
-            default: requestSuccessfulAdvice.text = "You have successfully reserved a \(tree!.treeType ?? "tree")"
+        if tree != nil{
+            guard let newTree = tree?.new else {
+                fatalError("new tree not found")
             }
-          
-            
+            if newTree {
+                //            let vowel = ["E"]
+                let firstLetter = tree?.treeType?.prefix(1)
+                
+                switch firstLetter {
+                case "E": requestSuccessfulAdvice.text = "You have successfully reserved an \(String(describing: tree!.treeType))"
+                    
+                default: requestSuccessfulAdvice.text = "You have successfully reserved a \(tree!.treeType ?? "tree")"
+                }
+            }
         }
+        else if user != nil{
+            if user!.changedPassword{
+                requestSuccessfulAdvice.text = "You have successfully changed your password. Proceed to login"
+            }
+        }
+       
+        
         
         
     }

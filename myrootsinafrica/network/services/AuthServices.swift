@@ -13,6 +13,61 @@ import Alamofire
 import SwiftyJSON
 
 class AuthService : NetworkProtocol{
+    func resetPassword(email: String, code: String, password: String) -> Observable<AuthResponse> {
+        let parameters: [String: String] = [
+              "email": email,
+              "code": code,
+              "password":password
+          ]
+          return Observable.create{observer -> Disposable in
+              let task = AF.request(URLString.resetPasswordURL, method: .post, parameters: parameters,
+                                    encoder: JSONParameterEncoder.default)
+              task.validate(statusCode: 200..<500)
+               .responseDecodable(of: AuthResponse.self){ res in
+                   
+                   switch res.result {
+                     
+                       case let .failure(error): observer.onError(error); print(error)
+                           
+                       case let .success(authResponse):
+                           observer.onNext(authResponse)
+                   }
+                   
+               }
+               
+               return Disposables.create {
+                   
+               }
+           }
+    }
+    
+    func forgotPassword(email: String) -> Observable<AuthResponse> {
+        let parameters: [String: String] = [
+              "email": email
+
+          ]
+          return Observable.create{observer -> Disposable in
+              let task = AF.request(URLString.forgotPasswordURL, method: .post, parameters: parameters,
+                                    encoder: JSONParameterEncoder.default)
+              task.validate(statusCode: 200..<500)
+               .responseDecodable(of: AuthResponse.self){ res in
+                   
+                   switch res.result {
+                     
+                       case let .failure(error): observer.onError(error); print(error)
+                           
+                       case let .success(authResponse):
+                           observer.onNext(authResponse)
+                   }
+                   
+               }
+               
+               return Disposables.create {
+                   
+               }
+           }
+    }
+    
     func getUserTrees(token: String) -> Observable<TreeResponse> {
         let headers:HTTPHeaders = [
             "Authorization" : "Bearer \(token)"

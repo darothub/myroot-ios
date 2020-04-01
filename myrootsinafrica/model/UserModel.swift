@@ -15,4 +15,5 @@ struct User:Encodable {
     var country:String?
     let phone:String?
     var token:String?
+    var changedPassword:Bool=false
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-struct AuthResponse:Decodable{
+struct AuthResponse:Codable{
     let status:Int?
     let error:String?
     let message: String?
@@ -16,7 +16,7 @@ struct AuthResponse:Decodable{
     
 }
 
-struct Payload:Decodable{
+struct Payload:Codable{
     let isVerified:Bool?
     let _id:String?
     let name:String?
@@ -32,5 +32,10 @@ struct Payload:Decodable{
     let picture:String?
 }
 
+
+struct AltResponse:Codable{
+    let status:Int?
+    let message: String?
+}
 
 

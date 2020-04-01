@@ -33,4 +33,12 @@ class AuthViewModel{
         return authProtocol.getUserTrees(token: token)
     }
     
+    func forgotPassword(email:String)->Observable<AuthResponse>{
+        return authProtocol.forgotPassword(email: email)
+    }
+    
+    func resetPassword(email:String, code:String, password:String)->Observable<AuthResponse>{
+        return authProtocol.resetPassword(email: email, code: code, password: password)
+    }
+    
 }

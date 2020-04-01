@@ -320,15 +320,15 @@ I   h a v e   r o o t   i n   A f r i c a</string>
             <objects>
                 <viewController id="Dhj-tE-WO6" customClass="VerificationResultViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yec-Wk-eKh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-ee-7YL">
-                                <rect key="frame" x="50" y="110" width="275" height="344"/>
+                                <rect key="frame" x="50" y="110" width="275" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verification  successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-vk-R9l">
-                                        <rect key="frame" x="48" y="96" width="194" height="75"/>
+                                        <rect key="frame" x="48" y="93" width="194" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -339,14 +339,14 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your account has been  verified  please login with your  details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKn-Q0-x0c">
-                                        <rect key="frame" x="48" y="179" width="194" height="92"/>
+                                        <rect key="frame" x="48" y="173" width="194" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGV-na-o2A" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="26" y="281" width="222" height="55"/>
+                                        <rect key="frame" x="26" y="269" width="222" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Got it!"/>
                                         <connections>
@@ -678,7 +678,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="oJq-hU-pX2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="oJq-hU-pX2">
                                 <rect key="frame" x="36" y="379" width="303" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -689,18 +689,28 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <rect key="frame" x="86" y="466" width="206" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitRequest:" destination="mAf-YB-f9F" eventType="touchUpInside" id="fCG-Ic-RlM"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forgotPasswordImage" translatesAutoresizingMaskIntoConstraints="NO" id="VMc-hY-owA">
                                 <rect key="frame" x="67" y="169" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1of-XI-iQ2">
+                                <rect key="frame" x="179" y="483" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="OWT-33-tQQ"/>
                     </view>
                     <connections>
                         <outlet property="emailTF" destination="oJq-hU-pX2" id="eUn-ML-H6Z"/>
-                        <segue destination="aHQ-36-UfZ" kind="show" id="er1-Kh-TbJ"/>
+                        <outlet property="progressSpinner" destination="1of-XI-iQ2" id="grF-3G-aFx"/>
+                        <outlet property="submitButton" destination="eHb-uf-OQh" id="MkM-bj-h6v"/>
+                        <segue destination="aHQ-36-UfZ" kind="show" identifier="toNewPasswordScene" id="er1-Kh-TbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CtV-yv-1kp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -726,7 +736,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="Oj3-r5-Xxu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Code" minimumFontSize="17" id="Oj3-r5-Xxu">
                                 <rect key="frame" x="46" y="317" width="303" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -740,7 +750,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iL-L4-seX">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="New password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iL-L4-seX">
                                 <rect key="frame" x="46" y="396" width="303" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -754,7 +764,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9a-bw-Ibk">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Confirm password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F9a-bw-Ibk">
                                 <rect key="frame" x="46" y="477" width="303" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -768,16 +778,19 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-iB-i8B">
-                                <rect key="frame" x="214" y="544" width="20" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6n-OV-yw1" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                <rect key="frame" x="84" y="541" width="206" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="sendResetRequest:" destination="aHQ-36-UfZ" eventType="touchUpInside" id="FxJ-b4-T81"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-iB-i8B">
+                                <rect key="frame" x="174" y="527" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6n-OV-yw1" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="84" y="527" width="206" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RCE-Xg-6bC"/>
@@ -787,6 +800,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <outlet property="codeTF" destination="Oj3-r5-Xxu" id="Grp-Tt-NwS"/>
                         <outlet property="confirmPasswordTF" destination="F9a-bw-Ibk" id="DeZ-kX-FPj"/>
                         <outlet property="passwordTF" destination="0iL-L4-seX" id="9zf-BT-FLi"/>
+                        <outlet property="progressSpinner" destination="Hfq-iB-i8B" id="EzX-Bo-zjn"/>
+                        <outlet property="submitButton" destination="U6n-OV-yw1" id="dfF-oL-YWv"/>
+                        <segue destination="Dhj-tE-WO6" kind="show" identifier="toSuccessScene" id="xLc-gf-7M2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IT5-9o-8Xo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1587,7 +1603,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjv-oW-vOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5198" y="0.0"/>
+            <point key="canvasLocation" x="4070" y="1305"/>
         </scene>
         <!--User Verification-->
         <scene sceneID="rOE-9w-PEf">
@@ -1745,7 +1761,7 @@ I   h a v e   r o o t   i n   A f r i c a</string>
     <inferredMetricsTieBreakers>
         <segue reference="tvp-Zb-aHs"/>
         <segue reference="4qM-uo-mca"/>
-        <segue reference="3v8-8o-Nwx"/>
+        <segue reference="xLc-gf-7M2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

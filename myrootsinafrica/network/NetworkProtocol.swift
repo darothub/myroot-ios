@@ -10,11 +10,14 @@ import UIKit
 import RxSwift
 
 class URLString{
-    static let registerURL = "https://fathomless-badlands-69782.herokuapp.com/api/user"
-    static let verificationURL =  "https://fathomless-badlands-69782.herokuapp.com/api/auth/verify"
-    static let loginURL =  "https://fathomless-badlands-69782.herokuapp.com/api/user/login"
-    static let treeReservationURL = "https://fathomless-badlands-69782.herokuapp.com/api/tree"
-    static let userTreeURL = "https://fathomless-badlands-69782.herokuapp.com/api/tree/user/tree"
+    static let BaseURL = "https://fathomless-badlands-69782.herokuapp.com/api/"
+    static let registerURL = "\(BaseURL)user"
+    static let verificationURL =  "\(BaseURL)auth/verify"
+    static let loginURL =  "\(BaseURL)user/login"
+    static let treeReservationURL = "\(BaseURL)tree"
+    static let userTreeURL = "\(BaseURL)tree/user/tree"
+    static let forgotPasswordURL = "\(BaseURL)auth/forgot-password"
+    static let resetPasswordURL = "\(BaseURL)auth/reset-password"
 }
 
 protocol NetworkProtocol {
@@ -22,7 +25,9 @@ protocol NetworkProtocol {
     func verifyUser(code:String, token:String) -> Observable<AuthResponse>
     func userLogin(email:String, password:String) -> Observable<AuthResponse>
     func reserveTree(tree:Tree, token:String) -> Observable<AuthResponse>
-    func getUserTrees(token:String) -> Observable<TreeResponse> 
+    func getUserTrees(token:String) -> Observable<TreeResponse>
+    func forgotPassword(email:String)-> Observable<AuthResponse>
+    func resetPassword(email:String, code:String, password:String) -> Observable<AuthResponse>
 
 //    func resendVerificationCode(user:User) -> Observable<AuthResponse>
 }
