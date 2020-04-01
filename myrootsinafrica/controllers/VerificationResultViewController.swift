@@ -29,7 +29,16 @@ class VerificationResultViewController: ViewController {
             fatalError("new tree not found")
         }
         if newTree {
-            requestSuccessfulAdvice.text = "You have successfully reserved a \(String(describing: tree?.treeType))"
+//            let vowel = ["E"]
+            let firstLetter = tree?.treeType?.prefix(1)
+            
+            switch firstLetter {
+            case "E": requestSuccessfulAdvice.text = "You have successfully reserved an \(String(describing: tree!.treeType))"
+                    
+            default: requestSuccessfulAdvice.text = "You have successfully reserved a \(tree!.treeType ?? "tree")"
+            }
+          
+            
         }
         
         

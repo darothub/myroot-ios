@@ -134,12 +134,13 @@ class LoginViewController: ViewController{
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
             self.tokens = AuthResponse.token ?? "default value"
-            guard let payload = AuthResponse.payload else {
-                fatalError("User payload not found")
-            }
+          
             print("name \(String(describing: AuthResponse.payload)))")
             
              if AuthResponse.status == 200 {
+                guard let payload = AuthResponse.payload else {
+                    fatalError("User payload not found")
+                }
                 let user = User(name: payload.name, email: payload.email, password: password, country: payload.country, phone: payload.phone, token: AuthResponse.token)
               
                  print("selftok \( self.tokens )")
@@ -155,8 +156,8 @@ class LoginViewController: ViewController{
                     newUser.setValue(payload.phone, forKey: "phone")
                     newUser.setValue(AuthResponse.token, forKey: "token")
                     newUser.setValue(false, forKey: "newTree")
-                    //                print("userLoggedInonDash \(String(describing: newUser.))")
-                    //                print("userEmailOnDashBoard \(String(describing: newUser.email))")
+                    print("userLoggedInonDash \(String(describing: newUser))")
+//                    print("userEmailOnDashBoard \(String(describing: newUser))")
                     do{
                         try self.context.save()
                         print("dashBoardSaved")

@@ -45,22 +45,42 @@ class ReasonViewController : ViewController{
         
        
     }
+//    func checkBoxesState()->Bool{
+//        let gift = giftCheckBox.isSelected
+//        let climate = climateCheckBox.isSelected
+//        let job = jobCheckBox.isSelected
+//        if !(gift || climate || job){
+//
+//            return false
+//
+//        }
+//        else{
+//
+//        }
+//
+//    }
+    
+    
     
     func getSelectedReasonSelection() -> Reason{
-        var isGift = false
-        let isOccasion = false
         let gift = giftCheckBox.isSelected
         let climate = climateCheckBox.isSelected
         let job = jobCheckBox.isSelected
         var reason = Reason(isOccasion: false, isGift: false)
+
+        print("selected \(giftCheckBox.isSelected)")
+
         if !(gift || climate || job){
-            
+
             self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
-        
+
         }
         else if giftCheckBox.isSelected {
-            isGift = true
-            reason.isGift = isGift
+            reason.isGift = true
+            tree?.reason = reason
+            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+        }
+        else{
             tree?.reason = reason
             self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
         }

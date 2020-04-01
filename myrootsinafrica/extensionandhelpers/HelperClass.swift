@@ -16,6 +16,7 @@ class HelperClass{
     static var newDataMap:[String:Bool]?
     
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     static func validateField(textFields:UITextField...) -> [UITextField:Bool]{
         var result = [UITextField:Bool]()
         for field in textFields{
