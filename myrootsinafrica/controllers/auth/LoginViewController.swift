@@ -216,17 +216,21 @@ class LoginViewController: ViewController{
     }
     
     func setReturneeData(){
-        do{
-            let result = try self.context.fetch(fetchRequest)
-            if result.count > 0{
-                let data = result[0]
-                emailTF.text = data.email
-                passwordTF.text = data.password
-                print("userLogIn1 \(String(describing: data.loggedIn))")
-            }
-         }catch{
-             print(error)
-         }
+        
+        let returnee = HelperClass.getUserData()
+        emailTF.text = returnee.email
+        passwordTF.text = returnee.password
+//        do{
+//            let result = try self.context.fetch(fetchRequest)
+//            if result.count > 0{
+//                let data = result[0]
+//                emailTF.text = data.email
+//                passwordTF.text = data.password
+//                print("userLogIn1 \(String(describing: data.loggedIn))")
+//            }
+//         }catch{
+//             print(error)
+//         }
     }
 
 }

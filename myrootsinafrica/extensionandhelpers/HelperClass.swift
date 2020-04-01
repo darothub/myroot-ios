@@ -15,7 +15,9 @@ class HelperClass{
     static var userData:UserData?
     static var newDataMap:[String:Bool]?
     
+    
     static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    static let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     
     static func validateField(textFields:UITextField...) -> [UITextField:Bool]{
         var result = [UITextField:Bool]()
@@ -31,12 +33,12 @@ class HelperClass{
     }
     
     static func getUserData()->UserData{
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
       
         do{
             let result = try context.fetch(fetchRequest)
-            print("resul\(result)")
+            print("result\(result)")
             if result.count > 0{
                 userData = result[0]
                 print("UserdataHelper \(String(describing: result[0]))")
@@ -51,7 +53,8 @@ class HelperClass{
     }
     
     static func updateValue(key:String, value:Bool)->[String:Bool]{
-        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+        
+//        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
       
         do{
             let result = try context.fetch(fetchRequest)
@@ -72,6 +75,32 @@ class HelperClass{
              print(error)
          }
         return newDataMap!
+    }
+    
+    static func updateValue(key:String, value:String, where info:String)->[String:String]{
+        
+        
+        fetchRequest.predicate = NSPredicate(format: "name = %@", info)
+        var newDataMapString:[String:String]=[String:String]()
+        do{
+            let result = try context.fetch(fetchRequest)
+            if result.count > 0{
+                let data = result[0]
+                data.setValue(value, forKey: key)
+                newDataMapString = [key: value]
+                print("newData \(String(describing: data.name))")
+            }
+            do{
+                try context.save()
+                print("new data saved")
+            }catch{
+                print(error)
+            }
+              
+         }catch{
+             print(error)
+         }
+        return newDataMapString
     }
     
     static func intializeFirstData(key:String, valueString:String){

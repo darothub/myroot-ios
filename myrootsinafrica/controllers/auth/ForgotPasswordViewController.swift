@@ -32,6 +32,9 @@ class ForgotPasswordViewController:ViewController{
         
     }
     
+    @IBAction func pressEnterToSubmit(_ sender: Any) {
+        forgotPasswordRequest()
+    }
     @IBAction func submitRequest(_ sender: Any) {
         forgotPasswordRequest()
     }
@@ -58,7 +61,8 @@ class ForgotPasswordViewController:ViewController{
             showSimpleAlert(title: "Validation", message: "Invalid email address", action: false)
             return
         }
-        let currentUser = setLoggedInUser()
+        let currentUser = HelperClass.getUserData()
+        print("currentuser \(String(describing: currentUser))")
         progressSpinner.isHidden = false
         submitButton.isHidden = true
         authViewModel.forgotPassword(email: email).subscribe(onNext: { (AuthResponse) in
@@ -85,11 +89,13 @@ class ForgotPasswordViewController:ViewController{
             print("Error: \(String(describing: Error.asAFError))")
             print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
         }, onCompleted: {
+            
             print("completed")
         }, onDisposed: {
             print("disposed")
         }).disposed(by: disposeBag)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? NewPasswordViewController, let user = sender as? User{
             //

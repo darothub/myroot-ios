@@ -60,7 +60,8 @@ class DashBoardViewController : ViewController{
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
         
-        loggedInUser = setLoggedInUser()
+        loggedInUser = HelperClass.getUserData()
+        HelperClass.updateValue(key: "loggedIn", value: true)
             
         timeMonitor(name:loggedInUser!.name!)
         

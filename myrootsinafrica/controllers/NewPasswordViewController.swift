@@ -43,6 +43,9 @@ class NewPasswordViewController:ViewController{
         
         
     }
+    @IBAction func pressEnterToSubmit(_ sender: Any) {
+        resetPasswordRequest()
+    }
     
     @IBAction func sendResetRequest(_ sender: Any) {
         resetPasswordRequest()
@@ -103,6 +106,7 @@ class NewPasswordViewController:ViewController{
                 self.user?.changedPassword = true
                 
                 self.showSimpleAlert(title: title, message: message, identifier: "toSuccessScene", action: true, user: self.user)
+                HelperClass.updateValue(key: "password", value: password, where: email)
 
             }
             else{

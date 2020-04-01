@@ -684,6 +684,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pressEnterToSubmit:" destination="mAf-YB-f9F" eventType="primaryActionTriggered" id="wpe-oq-PsT"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-uf-OQh" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
                                 <rect key="frame" x="86" y="466" width="206" height="55"/>
@@ -770,6 +773,9 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="pressEnterToSubmit:" destination="aHQ-36-UfZ" eventType="primaryActionTriggered" id="DFo-Xd-Vrl"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a new password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hQ-6Y-PG1">
                                 <rect key="frame" x="46" y="69" width="283" height="32"/>
