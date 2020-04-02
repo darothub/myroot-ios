@@ -123,6 +123,7 @@ class SignupController: ViewController {
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
         //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
+       
                   
     }
     
@@ -238,7 +239,15 @@ class SignupController: ViewController {
 
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
+            //        let profile = ProfileViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            //            self.performSegue(withIdentifier: "toHomeScene", sender: self)
+        }
+    }
     
 }
 

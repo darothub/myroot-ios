@@ -20,10 +20,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var SubParentView: UIView!
     let backgroundImageView = UIImageView()
-    let scrollview = DScrollView()
-    let scrollViewContainer = DScrollViewContainer(axis: .vertical, spacing: 10)
-    let scrollViewElement = DScrollViewElement(height: 900, backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))
-        .withBackground(image: UIImage(named: "home_background")!, contentMode: .scaleAspectFill)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +41,6 @@ class ViewController: UIViewController {
     
 
     
-    func setupScrollView(){
-        view.addScrollView(scrollview,
-                           withSafeArea: .none,
-                           hasStatusBarCover: false,
-                           statusBarBackgroundColor: .green,
-                           container: scrollViewContainer,
-                           elements: [scrollViewElement])
-        scrollViewElement.addSubview(SubParentView)
-        view.sendSubviewToBack(scrollview)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SignupController{
            
@@ -63,7 +48,7 @@ class ViewController: UIViewController {
         }
     }
 //    
-//    @IBAction func unWindtoHome(unwindSegue: UIStoryboardSegue){}
+    @IBAction func unWindtoHome(unwindSegue: UIStoryboardSegue){}
 }
 
 

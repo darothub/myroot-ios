@@ -60,6 +60,7 @@ class LoginViewController: ViewController{
         
         //set returnee data in textfields
         setReturneeData()
+        
 
     }
     
@@ -214,6 +215,29 @@ class LoginViewController: ViewController{
             }
         }
     }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        if self.isMovingFromParent {
+//            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
+//            //        let profile = ProfileViewController()
+//            self.navigationController?.pushViewController(nextVC, animated: true)
+////            self.performSegue(withIdentifier: "toHomeScene", sender: self)
+//        }
+//    }
+
+   
+
+    override func willMove(toParent parent: UIViewController?) {
+//        super.willMove(toParent: parent)
+        if parent == nil {
+            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
+            //            //        let profile = ProfileViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
+           
+        }
+    }
+    
+  
     
     func setReturneeData(){
         
