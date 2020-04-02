@@ -68,22 +68,47 @@ class ReasonViewController : ViewController{
         let job = jobCheckBox.isSelected
         var reason = Reason(isOccasion: false, isGift: false)
 
-        print("selected \(giftCheckBox.isSelected)")
-
-        if !(gift || climate || job){
-
-            self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
-
-        }
-        else if giftCheckBox.isSelected {
+        print("selected \(gift)")
+        let that = (gift, climate, job)
+        
+        switch (gift, climate, job) {
+        case (!gift, !climate, !job): do {
             reason.isGift = true
             tree?.reason = reason
-            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+            
+            print("Hey there1 \(that)")
+//            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
         }
-        else{
+            break
+        case (!gift, climate, job) : do {
+            reason.isGift = true
             tree?.reason = reason
-            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+            print("Hey there2 \(that)")
+            
+            //            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+            }
+        case (gift, climate, job):self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+       
+        default:self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+
         }
+//        tree?.reason = reason
+//        self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+
+//        if !(gift || climate || job){
+//
+//            self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+//
+//        }
+//        else if giftCheckBox.isSelected {
+//            reason.isGift = true
+//            tree?.reason = reason
+//            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+//        }
+//        else{
+//            tree?.reason = reason
+//            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+//        }
         
         return reason
     }

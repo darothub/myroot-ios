@@ -19,25 +19,22 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AF8-lb-WaP">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_background" translatesAutoresizingMaskIntoConstraints="NO" id="z2f-bq-ySb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
-                                        <rect key="frame" x="62" y="91" width="250" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktQ-ei-9cd">
+                                        <rect key="frame" x="62" y="91" width="251" height="41"/>
                                         <string key="text">World's #1
 Climate Action App</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
-                                        <rect key="frame" x="48" y="140" width="250" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_roots_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5E6-wj-y0o">
+                                        <rect key="frame" x="48" y="157" width="279" height="103"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="322" width="275" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr9-di-OTv" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="328" width="275" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="SDG-Zn-oAF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Signup"/>
                                         <connections>
@@ -45,18 +42,19 @@ Climate Action App</string>
                                             <segue destination="tif-0R-JF1" kind="show" id="PhM-5F-Ofn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="385" width="275" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5r-rw-Meh" customClass="PrimaryButton" customModule="myrootsinafrica" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="391" width="275" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="7CZ-t1-2RL"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <segue destination="pew-sv-mcU" kind="show" id="4qM-uo-mca"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
-                                        <rect key="frame" x="69" y="237" width="236" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-fs-n59">
+                                        <rect key="frame" x="69" y="251" width="237" height="41"/>
                                         <string key="text">I   c a n   l i t e r a l l y   s a y
 I   h a v e   r o o t   i n   A f r i c a</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -65,12 +63,26 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="bottom" secondItem="Vjo-n6-q80" secondAttribute="bottom" id="0aX-QZ-PFU"/>
-                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="height" secondItem="AF8-lb-WaP" secondAttribute="height" multiplier="0.987159" constant="8" id="1kR-ha-k73"/>
-                                    <constraint firstAttribute="trailing" secondItem="z2f-bq-ySb" secondAttribute="trailing" id="AZU-56-D2t"/>
-                                    <constraint firstAttribute="bottom" secondItem="z2f-bq-ySb" secondAttribute="bottom" id="gCu-Ku-ZLX"/>
-                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="centerX" secondItem="AF8-lb-WaP" secondAttribute="centerX" id="lD2-hk-TcR"/>
-                                    <constraint firstItem="z2f-bq-ySb" firstAttribute="width" secondItem="AF8-lb-WaP" secondAttribute="width" id="zS4-wz-oRq"/>
+                                    <constraint firstItem="5E6-wj-y0o" firstAttribute="leading" secondItem="Vjo-n6-q80" secondAttribute="leading" constant="48" id="1hp-jx-Zy6"/>
+                                    <constraint firstItem="ktQ-ei-9cd" firstAttribute="centerX" secondItem="tLc-fs-n59" secondAttribute="centerX" id="3Gw-AQ-Phd"/>
+                                    <constraint firstItem="zr9-di-OTv" firstAttribute="centerX" secondItem="AF8-lb-WaP" secondAttribute="centerX" id="45P-hg-iIc"/>
+                                    <constraint firstItem="ktQ-ei-9cd" firstAttribute="centerX" secondItem="AF8-lb-WaP" secondAttribute="centerX" id="7z0-pr-9eF"/>
+                                    <constraint firstItem="ktQ-ei-9cd" firstAttribute="leading" secondItem="AF8-lb-WaP" secondAttribute="leading" constant="62" id="8wO-K1-Fvx"/>
+                                    <constraint firstItem="zr9-di-OTv" firstAttribute="top" secondItem="tLc-fs-n59" secondAttribute="bottom" constant="36" id="CPz-J6-zoz"/>
+                                    <constraint firstItem="tLc-fs-n59" firstAttribute="leading" secondItem="Vjo-n6-q80" secondAttribute="leading" constant="69" id="CbJ-ba-lKe"/>
+                                    <constraint firstItem="zr9-di-OTv" firstAttribute="leading" secondItem="G5r-rw-Meh" secondAttribute="leading" id="Fp7-jl-fxU"/>
+                                    <constraint firstItem="5E6-wj-y0o" firstAttribute="top" secondItem="ktQ-ei-9cd" secondAttribute="bottom" constant="25" id="J7b-5C-3qi"/>
+                                    <constraint firstItem="ktQ-ei-9cd" firstAttribute="top" secondItem="AF8-lb-WaP" secondAttribute="top" constant="91" id="NsN-IO-LLI"/>
+                                    <constraint firstItem="5E6-wj-y0o" firstAttribute="centerX" secondItem="ktQ-ei-9cd" secondAttribute="centerX" id="QvZ-NN-GSe"/>
+                                    <constraint firstAttribute="trailing" secondItem="5E6-wj-y0o" secondAttribute="trailing" constant="48" id="TN0-lQ-gUs"/>
+                                    <constraint firstItem="G5r-rw-Meh" firstAttribute="top" secondItem="zr9-di-OTv" secondAttribute="bottom" constant="8" id="VBP-TK-sQD"/>
+                                    <constraint firstItem="G5r-rw-Meh" firstAttribute="centerX" secondItem="zr9-di-OTv" secondAttribute="centerX" id="WjP-yw-U6h"/>
+                                    <constraint firstItem="tLc-fs-n59" firstAttribute="centerX" secondItem="zr9-di-OTv" secondAttribute="centerX" id="ZxW-8c-kGw"/>
+                                    <constraint firstItem="zr9-di-OTv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G5r-rw-Meh" secondAttribute="trailing" id="lcm-YG-jpj"/>
+                                    <constraint firstItem="zr9-di-OTv" firstAttribute="leading" secondItem="Vjo-n6-q80" secondAttribute="leading" constant="50" id="m8C-CH-8PX"/>
+                                    <constraint firstAttribute="bottom" secondItem="G5r-rw-Meh" secondAttribute="bottom" constant="183" id="n0K-jg-mA5"/>
+                                    <constraint firstItem="tLc-fs-n59" firstAttribute="top" secondItem="5E6-wj-y0o" secondAttribute="bottom" constant="-9" id="pEV-A7-hL3"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zr9-di-OTv" secondAttribute="trailing" id="xIY-T6-wIY"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="RIR-81-xQo"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Vjo-n6-q80"/>
@@ -1746,7 +1758,6 @@ I   h a v e   r o o t   i n   A f r i c a</string>
         <image name="giftnew" width="44.5" height="38"/>
         <image name="greetgreennewest" width="58.5" height="56"/>
         <image name="handpointingRight-1" width="50" height="50"/>
-        <image name="home_background" width="375" height="815"/>
         <image name="imageclimate" width="25.5" height="25.5"/>
         <image name="inperson" width="61.5" height="53"/>
         <image name="loginBackground" width="187.5" height="406"/>

@@ -60,16 +60,23 @@ class DashBoardViewController : ViewController{
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
         
+        
+     
+     
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loggedInUser = HelperClass.getUserData()
         HelperClass.updateValue(key: "loggedIn", value: true)
             
-        timeMonitor(name:loggedInUser!.name!)
-        
-        
         print("Userdata \(loggedInUser)")
+        ((loggedInUser?.name) != nil) ? timeMonitor(name:loggedInUser!.name!):timeMonitor(name:"Sir/Ma")
         
         
-        authViewModel.getUserTrees(token: (loggedInUser?.token!)!).subscribe(onNext: { (TreeResponse) in
+        let token = ((loggedInUser) != nil) ? loggedInUser?.token : "token"
+        
+        
+        authViewModel.getUserTrees(token: token!).subscribe(onNext: { (TreeResponse) in
             guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
                 fatalError("Invalid tree counts for countries")
             }
@@ -98,21 +105,15 @@ class DashBoardViewController : ViewController{
             }
             
             
-        }, onError: { (Error) in
-            print("Error: \(String(describing: Error.asAFError))")
-            print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
+        }, onError: { (error) in
+//            print("Error: \(String(describing: error.asAFError(orFailWith: error.localizedDescription)))")
+//            print("Errorcode: \(String(describing: error.asAFError?.responseCode))")
+            self.showSimpleAlert(title: self.title!, message: error.localizedDescription.description, action: false)
         }, onCompleted: {
             print("completed")
         }) {
             print("Disposed")
         }.disposed(by: disposeBag)
-        
-        
-     
-     
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
       
     }
 

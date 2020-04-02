@@ -31,7 +31,8 @@ class ViewController: UIViewController {
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            print("Family: \(family) Font names: \(names)")
 //        }
-        
+        //set view background image
+        view.layer.contents = #imageLiteral(resourceName: "home_background").cgImage
         
     }
     @IBAction func showToast(_ sender: Any) {
