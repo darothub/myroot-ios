@@ -16,6 +16,7 @@ target 'myrootsinafrica' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'TinyConstraints'
 
 
   target 'myrootsinafricaTests' do

@@ -206,6 +206,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SimpleCheckbox/SimpleCheckbox.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework"
 fi
@@ -219,6 +220,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SimpleCheckbox/SimpleCheckbox.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework"
 fi

@@ -12,6 +12,7 @@ PODS:
   - RxSwift (5.1.0)
   - SimpleCheckbox (2.1.0)
   - SwiftyJSON (5.0.0)
+  - TinyConstraints (4.0.1)
   - UICheckbox.Swift (1.0.0)
 
 DEPENDENCIES:
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - RxSwift
   - SimpleCheckbox
   - SwiftyJSON
+  - TinyConstraints
   - UICheckbox.Swift
 
 SPEC REPOS:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - RxSwift
     - SimpleCheckbox
     - SwiftyJSON
+    - TinyConstraints
     - UICheckbox.Swift
 
 SPEC CHECKSUMS:
@@ -51,8 +54,9 @@ SPEC CHECKSUMS:
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
   UICheckbox.Swift: 85715689206fac5bae38b308f19c2a3e00442c3b
 
-PODFILE CHECKSUM: abaee6f0561b4641ebc43cd243bf949c3afbaf2c
+PODFILE CHECKSUM: 9a088d77a57b37f38c921f3b232e9ded6933e9a1
 
 COCOAPODS: 1.9.1

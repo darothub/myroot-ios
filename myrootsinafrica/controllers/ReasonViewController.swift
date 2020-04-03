@@ -18,7 +18,7 @@ class ReasonViewController : ViewController{
     @IBOutlet weak var giftCardView: UIView!
     @IBOutlet weak var jobCardView: UIView!
    
-    var imageView: UIImageView!
+    
     var tree:Tree?
     
     @IBOutlet weak var climateCheckBox: UICheckbox!

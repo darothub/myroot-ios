@@ -48,7 +48,7 @@ class DashBoardViewController : ViewController{
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
         
-        backgroundImageView.image = UIImage(named: "dashboardBackground")
+//        backgroundImageView.image = UIImage(named: "dashboardBackground")
         
         circleView.layer.cornerRadius = circleView.frame.width/2
         topBoardView.layer.cornerRadius = 25
