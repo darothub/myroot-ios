@@ -114,6 +114,13 @@ I   h a v e   r o o t   i n   A f r i c a</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="1wC-aD-EtA"/>
+                    <connections>
+                        <outlet property="SubParentView" destination="0Qe-Xz-8BM" id="po8-pf-vnc"/>
+                        <outlet property="loginButton" destination="K1g-G9-yrw" id="R1q-Sa-3Ft"/>
+                        <outlet property="myRootHeaderLabel" destination="yfw-xs-aHC" id="Xfb-QF-u3f"/>
+                        <outlet property="signUpbtn" destination="JhM-L0-WL3" id="1Qq-Gt-ZHg"/>
+                        <outlet property="worldText" destination="Tdt-YZ-Ibn" id="xbf-Av-eAg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

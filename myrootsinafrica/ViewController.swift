@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myRootHeaderLabel: UIImageView!
     @IBOutlet weak var signUpbtn: SecondaryButton!
     
+    
     @IBOutlet weak var loginButton: PrimaryButton!
     
     @IBOutlet weak var SubParentView: UIView!
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
 //            print("Family: \(family) Font names: \(names)")
 //        }
         //set view background image
-        view.layer.contents = #imageLiteral(resourceName: "home_background").cgImage
+        SubParentView.layer.contents = #imageLiteral(resourceName: "home_background").cgImage
         
     }
     @IBAction func showToast(_ sender: Any) {
