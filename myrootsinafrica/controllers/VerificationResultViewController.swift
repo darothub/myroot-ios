@@ -41,7 +41,9 @@ class VerificationResultViewController: UIViewController {
             }
         }
         else if user != nil{
-            let value = user!.changedPassword
+            var value:Bool{
+                self.user!.changedPassword.value!
+                }
             if value {
                 requestSuccessfulAdvice.text = "You have successfully changed your password. Proceed to login"
             }

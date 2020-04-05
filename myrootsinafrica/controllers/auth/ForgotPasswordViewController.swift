@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 import CoreData
+import RealmSwift
 
 class ForgotPasswordViewController:UIViewController{
     
@@ -61,7 +62,7 @@ class ForgotPasswordViewController:UIViewController{
             showSimpleAlert(title: "Validation", message: "Invalid email address", action: false)
             return
         }
-        let currentUser = HelperClass.getUserData()
+        let currentUser = HelperClass.getUserData(predicate:"email = '\(email)'")
         print("currentuser \(String(describing: currentUser))")
         progressSpinner.isHidden = false
         submitButton.isHidden = true
@@ -74,12 +75,12 @@ class ForgotPasswordViewController:UIViewController{
                 guard let message = AuthResponse.message else {
                     fatalError("message not found")
                 }
-                  var user = User()
-                user.name = currentUser.name!
-                user.email = currentUser.email!
-                user.password = currentUser.password!
-                user.country = currentUser.country!
-                user.phone = currentUser.phone!
+                let user = User()
+//                user.name = currentUser.name
+                user.email = email
+//                user.password = currentUser.password
+//                user.country = currentUser.country
+//                user.phone = currentUser.phone
                 
                 self.showSimpleAlert(title: title, message: message, identifier: "toNewPasswordScene", action: true, user: user)
 

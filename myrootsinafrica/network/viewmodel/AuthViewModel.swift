@@ -14,7 +14,7 @@ class AuthViewModel{
     init(authProtocol:NetworkProtocol){
         self.authProtocol = authProtocol
     }
-    func registerUser(user:User) -> Observable<AuthResponse> {
+    func registerUser(user:UserDetails) -> Observable<AuthResponse> {
         return authProtocol.registerUser(user:user)
     }
     

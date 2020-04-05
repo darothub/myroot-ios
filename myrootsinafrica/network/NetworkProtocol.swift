@@ -21,7 +21,7 @@ class URLString{
 }
 
 protocol NetworkProtocol {
-    func registerUser(user:User) -> Observable<AuthResponse>
+    func registerUser(user:UserDetails) -> Observable<AuthResponse>
     func verifyUser(code:String, token:String) -> Observable<AuthResponse>
     func userLogin(email:String, password:String) -> Observable<AuthResponse>
     func reserveTree(tree:Tree, token:String) -> Observable<AuthResponse>

@@ -10,15 +10,16 @@ import UIKit
 import CoreData
 import RealmSwift
 
+
 class HelperClass{
     
     
-    static var userData:UserData?
+  
     static var newDataMap:[String:Bool]?
     
-    
-    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    static let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
+//
+//    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    static let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     
     static func validateField(textFields:UITextField...) -> [UITextField:Bool]{
         var result = [UITextField:Bool]()
@@ -33,91 +34,57 @@ class HelperClass{
         return result
     }
     
-    static func getUserData()->UserData{
-//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
-      
-        do{
-            let result = try context.fetch(fetchRequest)
-            print("result\(result)")
-            if result.count > 0{
-                userData = result[0]
-                print("UserdataHelper \(String(describing: result[0]))")
-            }
+    static func getUserData(predicate:String)->User{
+        let thisRealm = try! Realm()
+        let user = thisRealm.objects(User.self).filter(predicate)
+        print("found: \(user)")
+        if user.count != 0 {
             
-         }catch{
-             print(error)
-         }
-
-       
-        return userData ?? UserData(context: context)
-    }
-    
-    static func updateValue(key:String, value:Bool)->[String:Bool]{
-        
-//        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
-      
-        do{
-            let result = try context.fetch(fetchRequest)
-            if result.count > 0{
-                let data = result[0]
-                data.setValue(value, forKey: key)
-                newDataMap = [key: value]
-                print("newData \(String(describing: newDataMap))")
-            }
-            do{
-                try context.save()
-                print("new data saved")
-            }catch{
-                print("Error updating entity")
-            }
-              
-         }catch{
-             print(error)
-         }
-        return newDataMap!
-    }
-    
-    static func updateValue(key:String, value:String, where info:String)->[String:String]{
-        
-        
-        fetchRequest.predicate = NSPredicate(format: "name = %@", info)
-        var newDataMapString:[String:String]=[String:String]()
-        do{
-            let result = try context.fetch(fetchRequest)
-            if result.count > 0{
-                let data = result[0]
-                data.setValue(value, forKey: key)
-                newDataMapString = [key: value]
-                print("newData \(String(describing: data.name))")
-            }
-            do{
-                try context.save()
-                print("new data saved")
-            }catch{
-                print(error)
-            }
-              
-         }catch{
-             print(error)
-         }
-        return newDataMapString
-    }
-    
-    static func intializeFirstData(key:String, valueString:String){
-        do{
-            let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
-         
-            newUser.setValue(valueString, forKey: key)
-            print("new \(String(describing: valueString))")
-            
-            do{
-                try context.save()
-                print("Data saved successfully")
-            }catch{
-                print("Error updating entity")
-            }
+            return user.first!
         }
-       
+        else{
+            return User()
+        }
+        
     }
+    
+//    static func updateValue(filterValue:String, key:Bool)->[String:Bool]{
+//        var resultMap:[String:Bool] = [String:Bool]()
+//        DispatchQueue(label: "background").async {
+//                autoreleasepool {
+//                    let thisRealm = try! Realm()
+//                    let user = thisRealm.objects(User.self).filter(filterValue)
+//                    if user != nil{
+//                        try! thisRealm.write {
+//                            user.first?.loggedIn = false
+//                        }
+//                    }
+//                }
+//            }
+//        return resultMap
+//    }
+    
+    
+     static func changeToObjectUser(from userDetails:UserDetails) -> User{
+         let theUser = User()
+         theUser.name = userDetails.name
+         theUser.email = userDetails.email
+         theUser.password = userDetails.password
+         theUser.country = userDetails.country
+         theUser.phone = userDetails.phone
+         return theUser
+     }
+    
+    static func changeToUserDetails(from user:User)-> UserDetails{
+        var theUser = UserDetails()
+        theUser.name = user.name
+        theUser.email = user.email
+        theUser.password = user.password
+        theUser.country = user.country
+        theUser.phone = user.phone
+        return theUser
+    }
+
+    
+
 }

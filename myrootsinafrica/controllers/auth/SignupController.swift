@@ -20,7 +20,7 @@ class SignupController: UIViewController {
     @IBOutlet weak var haveaccounttext: UILabel!
     @IBOutlet weak var myViewHeightConstraint: NSLayoutConstraint!
     
-    var token:String = String()
+  
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     
@@ -126,7 +126,6 @@ class SignupController: UIViewController {
     }
     
     
-    
     override func viewWillAppear(_ animated: Bool) {
         
         
@@ -192,23 +191,27 @@ class SignupController: UIViewController {
             return
         }
         
-          var user = User()
-                      user.name = fullName
-                      user.email = email
-                      user.password = password
-                      user.country = country
-                      user.phone = phone
+        var userDetails = UserDetails()
+        userDetails.name = fullName
+        userDetails.email = email
+        userDetails.password = password
+        userDetails.country = country!
+        userDetails.phone = phone!
+        
                      
         
         progressSpinner.isHidden = false
         submitButton.isHidden = true
-        authViewModel.registerUser(user: user).subscribe(onNext: { (AuthResponse) in
+        authViewModel.registerUser(user: userDetails).subscribe(onNext: { (AuthResponse) in
             print("messaages \(String(describing: AuthResponse.message))")
              print("status \(String(describing: AuthResponse.status))")
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
-            user.token = AuthResponse.token ?? "default value"
+//            user.token = AuthResponse.token ?? "default value"
             if AuthResponse.status == 200 {
+                let user = HelperClass.changeToObjectUser(from: userDetails)
+                user.token = AuthResponse.token
+                
                 
                 print("selftok \( self.tokens )")
                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "gotoVerification", action: true, user: user)
@@ -231,7 +234,7 @@ class SignupController: UIViewController {
         }).disposed(by: disposeBag)
         
         
-        print("tokendown \(token)")
+        print("tokendown \(tokens)")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -252,7 +255,7 @@ class SignupController: UIViewController {
             //            self.performSegue(withIdentifier: "toHomeScene", sender: self)
         }
     }
-    
+ 
 }
 
 

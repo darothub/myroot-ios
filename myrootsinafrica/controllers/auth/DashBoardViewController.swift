@@ -30,7 +30,7 @@ class DashBoardViewController : UIViewController{
     @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
     var user:User?
-    var userData:UserData?
+
    
     var tree:Tree?
     @IBOutlet weak var logOutButton: UIBarButtonItem!
@@ -39,7 +39,7 @@ class DashBoardViewController : UIViewController{
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     var disposeBag = DisposeBag()
-    var loggedInUser:UserData?
+//    var loggedInUser:UserData?
     var loggedInPerson:Results<User>?
     let realm = try! Realm()
     override func viewDidLoad() {
@@ -62,9 +62,6 @@ class DashBoardViewController : UIViewController{
         
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
-        loggedInPerson = {
-            realm.objects(User.self).filter("loggedIn = true")
-        }()
 
    
         
@@ -73,13 +70,15 @@ class DashBoardViewController : UIViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loggedInUser = HelperClass.getUserData()
-        HelperClass.updateValue(key: "loggedIn", value: true)
+        
+        loggedInPerson = {
+            realm.objects(User.self).filter("loggedIn = true")
+        }()
             
         let name = {
             self.loggedInPerson!.first!.name
         }()
-        print("Userdata \(name!)")
+        print("Userdata \(name)")
         ((name) != nil) ? timeMonitor(name:name!):timeMonitor(name:"Sir/Ma")
         
         
@@ -149,13 +148,13 @@ class DashBoardViewController : UIViewController{
     }
     
     @objc func tapToMoveToNext(_ sender : UITapGestureRecognizer){
-        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: loggedInUser)
+        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: loggedInPerson?.first)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? WhereToPlantViewController, let user = sender as? UserData{
+        if let vc = segue.destination as? WhereToPlantViewController, let theUser = sender as? User{
             //
-            vc.user = user
-            print("userinprepare \(user)")
+            vc.user = theUser
+            print("userinprepare \(theUser)")
         }
         else if let vc = segue.destination as? LoginViewController, let logoutButton = sender as? UIBarButtonItem{
      
@@ -201,29 +200,6 @@ class DashBoardViewController : UIViewController{
     }
  
     
-    func setLoggedInUser()->UserData{
-        
-        do{
-            let result = try self.context.fetch(fetchRequest)
-            if result.count > 0{
-                userData = result[0]
-                let data = result[0]
-                data.setValue(true, forKey: "loggedIn")
-                print("userLogIn1Dash \(String(describing: data.loggedIn))")
-            }
-            do{
-                try self.context.save()
-                print("dashBoardSaved")
-            }catch{
-                print("Error updating entity")
-            }
-            
-        }catch{
-            print(error)
-        }
-
-        return userData!
-    }
     
     
 }

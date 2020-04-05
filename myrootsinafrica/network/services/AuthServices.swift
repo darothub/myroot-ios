@@ -154,7 +154,7 @@ class AuthService : NetworkProtocol{
     }
     
     
-    func registerUser(user: User) -> Observable<AuthResponse> {
+    func registerUser(user: UserDetails) -> Observable<AuthResponse> {
         return Observable.create{observer -> Disposable in
             let task = AF.request(URLString.registerURL, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
             

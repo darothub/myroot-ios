@@ -103,10 +103,10 @@ class NewPasswordViewController:UIViewController{
                 guard let message = AuthResponse.message else {
                     fatalError("message not found")
                 }
-                self.user?.changedPassword = true
+                self.user?.changedPassword.value = true
                 
                 self.showSimpleAlert(title: title, message: message, identifier: "toSuccessScene", action: true, user: self.user)
-                HelperClass.updateValue(key: "password", value: password, where: email)
+//                HelperClass.updateValue(key: "password", value: password, where: email)
 
             }
             else{

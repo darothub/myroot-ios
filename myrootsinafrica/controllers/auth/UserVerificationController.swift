@@ -129,6 +129,7 @@ class UserVerification : UIViewController {
             fatalError("Error getting tokenString")
         }
         print("code \(code)")
+        print("token \(token)")
         progressSpinner.isHidden = false
         submitButton.isHidden = true
         authViewModel.verifyUser(code: code, token: token).subscribe(onNext: { (AuthResponse) in
@@ -141,6 +142,9 @@ class UserVerification : UIViewController {
             if AuthResponse.status == 200{
                 print("Its verified confirmed")
                 //                  self.performSegue(withIdentifier: "toSuccessPage", sender: self)
+                
+                self.user?.changedPassword.value = false
+                self.user?.loggedIn.value = false
                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toSuccessPage", action: true, user: self.user)
             }
                 
@@ -179,12 +183,14 @@ class UserVerification : UIViewController {
     
     func resendCode(){
         
-        var currentUser = User()
+        var currentUser = UserDetails()
         currentUser.name = user!.name
         currentUser.email = user!.email
         currentUser.password = user!.password
         currentUser.country = user!.country
         currentUser.phone = user!.phone
+        currentUser.changedPassword = false
+        currentUser.loggedIn = false
      
         let title = "Verification"
         progressSpinner.isHidden = false
@@ -193,7 +199,7 @@ class UserVerification : UIViewController {
             print("messaage \(String(describing: AuthResponse.message))")
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
-            currentUser.token = AuthResponse.token ?? "default value"
+//            currentUser.token = AuthResponse.token ?? "default value"
             if AuthResponse.status == 200 {
                 
                 print("selftok \( self.tokens )")

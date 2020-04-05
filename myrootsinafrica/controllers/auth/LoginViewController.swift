@@ -161,7 +161,7 @@ class LoginViewController: UIViewController{
                 var user = self.realm.object(ofType: User.self, forPrimaryKey: email)
                 if user != nil{
                     try! self.realm.write {
-                        user?.loggedIn = true
+                        user?.loggedIn.value = true
                     }
                 }
                 else{
@@ -172,7 +172,7 @@ class LoginViewController: UIViewController{
                     user?.country = payload.country!
                     user?.phone = payload.phone!
                     user?.token = AuthResponse.token!
-                    user?.loggedIn = true
+                    user?.loggedIn.value = true
                     
                     do{
                         try! self.realm.write{
@@ -229,7 +229,7 @@ class LoginViewController: UIViewController{
                 var user = thisRealm.objects(User.self).filter("loggedIn = true")
                 if user != nil{
                     try! thisRealm.write {
-                        user.first?.loggedIn = false
+                        user.first?.loggedIn.value = false
                     }
                 }
             }
