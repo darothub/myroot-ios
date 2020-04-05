@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HowToPlantViewController : ViewController{
+class HowToPlantViewController : UIViewController{
     
     @IBOutlet weak var inpersonSelectorCard: UIView!
     @IBOutlet weak var remoteSelectorCard: UIView!

@@ -11,9 +11,12 @@ import RxSwift
 import SwiftyJSON
 import Alamofire
 import CoreData
+import RealmSwift
+import Realm
+import Unrealm
 
 
-class LoginViewController: ViewController{
+class LoginViewController: UIViewController{
     
     @IBOutlet weak var emailTF: UITextField!
 
@@ -33,8 +36,8 @@ class LoginViewController: ViewController{
     var disposeBag = DisposeBag()
     
     let fetchRequest = NSFetchRequest<UserData>.init(entityName: "UserData")
-    
-    
+   
+    let realm = try! Realm()
     override func viewDidLoad() {
         print("yay! login")
         
@@ -45,6 +48,9 @@ class LoginViewController: ViewController{
         guard let passwordImage = UIImage(named: "eyeiconclose") else{
                        fatalError("Password image not found")
                    }
+        
+       
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         
         //password textfield rightImage
         passwordTF.addRightImageToTextField(using: passwordImage)
@@ -61,11 +67,17 @@ class LoginViewController: ViewController{
         //set returnee data in textfields
         setReturneeData()
         
+  
+ 
+        
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         print("hooray")
+        self.transparentNavigationBar()
+
          
     }
     
@@ -76,7 +88,7 @@ class LoginViewController: ViewController{
     }
     
     @objc func tapToDetectedForSignup(_ sender : UITapGestureRecognizer){
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "registerstory") as! ViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "registerstory") as! UIViewController
                self.navigationController?.pushViewController(nextVC, animated: true)
                
     }
@@ -84,7 +96,7 @@ class LoginViewController: ViewController{
 
     @objc func tapDetectedForForgotPassword(_ sender : UITapGestureRecognizer){
         print("login to forgot")
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "forgotstory") as! ViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "forgotstory") as! UIViewController
         //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
         
@@ -142,30 +154,44 @@ class LoginViewController: ViewController{
                 guard let payload = AuthResponse.payload else {
                     fatalError("User payload not found")
                 }
-                let user = User(name: payload.name, email: payload.email, password: password, country: payload.country, phone: payload.phone, token: AuthResponse.token)
-              
-                 print("selftok \( self.tokens )")
-                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
+//                let user = User(name: payload.name, email: payload.email, password: password, country: payload.country, phone: payload.phone, token: AuthResponse.token)
+                // Query and update from any thread
+
                 
-                do{
-                    let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: self.context)
-                    
-                    newUser.setValue(payload.name, forKey: "name")
-                    newUser.setValue(payload.email, forKey: "email")
-                    newUser.setValue(password, forKey: "password")
-                    newUser.setValue(payload.country, forKey: "country")
-                    newUser.setValue(payload.phone, forKey: "phone")
-                    newUser.setValue(AuthResponse.token, forKey: "token")
-                    newUser.setValue(false, forKey: "newTree")
-                    print("userLoggedInonDash \(String(describing: newUser))")
-//                    print("userEmailOnDashBoard \(String(describing: newUser))")
-                    do{
-                        try self.context.save()
-                        print("dashBoardSaved")
-                    }catch{
-                        print("Error updating entity")
+                var user = self.realm.object(ofType: User.self, forPrimaryKey: email)
+                if user != nil{
+                    try! self.realm.write {
+                        user?.loggedIn = true
                     }
                 }
+                else{
+                    user = User()
+                    user?.name = payload.name!
+                    user?.email = payload.email!
+                    user?.password = password
+                    user?.country = payload.country!
+                    user?.phone = payload.phone!
+                    user?.token = AuthResponse.token!
+                    user?.loggedIn = true
+                    
+                    do{
+                        try! self.realm.write{
+                            self.realm.add(user!)
+                        }
+                    }catch{
+                        print(error)
+                    }
+                }
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
+             
+                
+         
+              
+                 print("selftok \( self.tokens )")
+               
+                
+                
+            
              }
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
@@ -197,64 +223,51 @@ class LoginViewController: ViewController{
     
     @IBAction func unwindToLogin(segue:UIStoryboardSegue){
 //        print("email \(emailTF.text!)")
-        fetchRequest.predicate = NSPredicate(format: "email = %@", emailTF.text!)
-
-        if segue.source is DashBoardViewController{
-            do{
-                let result = try self.context.fetch(fetchRequest)
-                let data = result[0]
-                data.setValue(false, forKey: "loggedIn")
-                print("userLogInOnLogin \(String(describing: data.loggedIn))")
-                do{
-                    try context.save()
-                }catch{
-                    print("Error updating entity")
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                let thisRealm = try! Realm()
+                var user = thisRealm.objects(User.self).filter("loggedIn = true")
+                if user != nil{
+                    try! thisRealm.write {
+                        user.first?.loggedIn = false
+                    }
                 }
-            }catch{
-                print(error)
             }
         }
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.isMovingFromParent {
-            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
+            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! UIViewController
             //        let profile = ProfileViewController()
             self.navigationController?.pushViewController(nextVC, animated: true)
 //            self.performSegue(withIdentifier: "toHomeScene", sender: self)
         }
     }
 
+    
+    
    
 
-//    override func willMove(toParent parent: UIViewController?) {
-////        super.willMove(toParent: parent)
-//        if parent == nil {
-//            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
-//            //            //        let profile = ProfileViewController()
-//            self.navigationController?.pushViewController(nextVC, animated: true)
-//
-//        }
-//    }
+
 //
   
     
     func setReturneeData(){
         
-        let returnee = HelperClass.getUserData()
-        emailTF.text = returnee.email
-        passwordTF.text = returnee.password
-//        do{
-//            let result = try self.context.fetch(fetchRequest)
-//            if result.count > 0{
-//                let data = result[0]
-//                emailTF.text = data.email
-//                passwordTF.text = data.password
-//                print("userLogIn1 \(String(describing: data.loggedIn))")
-//            }
-//         }catch{
-//             print(error)
-//         }
+        let returningUsers = realm.objects(User.self)
+        
+        if returningUsers.count > 0{
+            let lastUser = returningUsers.last
+            emailTF.text = lastUser?.email
+            passwordTF.text = lastUser?.password
+        }
+        else{
+            print("Nothing here")
+        }
+
     }
+    
 
 }

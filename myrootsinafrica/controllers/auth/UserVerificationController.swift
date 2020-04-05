@@ -12,7 +12,7 @@ import RxCocoa
 import SwiftyJSON
 import Alamofire
 
-class UserVerification : ViewController {
+class UserVerification : UIViewController {
     
     
     @IBOutlet weak var tfOne: UITextField!
@@ -179,8 +179,12 @@ class UserVerification : ViewController {
     
     func resendCode(){
         
-        var currentUser = User(name: user?.name, email: user?.email, password: user?.password,
-                           country: user?.country, phone: user?.phone)
+        var currentUser = User()
+        currentUser.name = user!.name
+        currentUser.email = user!.email
+        currentUser.password = user!.password
+        currentUser.country = user!.country
+        currentUser.phone = user!.phone
      
         let title = "Verification"
         progressSpinner.isHidden = false

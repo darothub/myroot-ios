@@ -9,13 +9,14 @@
 import UIKit
 import iOSDropDown
 
-class WhereToPlantViewController:ViewController{
+class WhereToPlantViewController:UIViewController{
     
     @IBOutlet weak var countryIcon: UIImageView!
     
     @IBOutlet weak var selectorCardForGGW: UIView!
     @IBOutlet weak var selectorCardForCountry: UIView!
     
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var fiftyFourCountriesDropDown: DropDown!
     var fiftyFourCountries:[String] = []
     var selectedLocation = ""
@@ -44,7 +45,11 @@ class WhereToPlantViewController:ViewController{
         selectorCardForGGW.addGestureRecognizer(singleTapForGGW)
         
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //set view background image
+        container.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
+    }
     @objc func tapDetected(){
         
         if selectorCardForCountry.showSelectorCard() {

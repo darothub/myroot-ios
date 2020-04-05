@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     
 
@@ -17,23 +17,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var signUpbtn: SecondaryButton!
     
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var loginButton: PrimaryButton!
     
-    @IBOutlet weak var SubParentView: UIView!
     let backgroundImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-//        setupScrollView()
-        
-//        for family in UIFont.familyNames.sorted() {
-//            let names = UIFont.fontNames(forFamilyName: family)
-//            print("Family: \(family) Font names: \(names)")
-//        }
-        //set view background image
-        SubParentView.layer.contents = #imageLiteral(resourceName: "home_background").cgImage
+
+
+       
         
     }
     @IBAction func showToast(_ sender: Any) {
@@ -41,7 +34,17 @@ class ViewController: UIViewController {
         self.showToastMessage(message: "Hello", font: font!)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.transparentNavigationBar()
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //set view background image
+        containerView.layer.contents = #imageLiteral(resourceName: "home_background").cgImage
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? SignupController{

@@ -15,14 +15,11 @@ import RxSwift
 
 
 
-class SignupController: ViewController {
+class SignupController: UIViewController {
     
     @IBOutlet weak var haveaccounttext: UILabel!
+    @IBOutlet weak var myViewHeightConstraint: NSLayoutConstraint!
     
-    let transparentView = UIView()
-    let tableView = UITableView()
-    var selectedButton = UIButton()
-    var dataSource = [String]()
     var token:String = String()
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
@@ -30,7 +27,7 @@ class SignupController: ViewController {
     var testText = ""
     @IBOutlet weak var countryCodeTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
+   
     
     @IBOutlet weak var dialCodeTF: UITextField!
     @IBOutlet weak var phoneNumberTF: UITextField!
@@ -104,8 +101,6 @@ class SignupController: ViewController {
         view.layer.contents = #imageLiteral(resourceName: "signupBackground").cgImage
         passwordTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
-        
-        
     }
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let text = passwordTF.text else{
@@ -113,14 +108,17 @@ class SignupController: ViewController {
         }
         if !text.isValidPassword {
             passwordStandardLabel.isHidden = false
+            
         }else{
+           
             passwordStandardLabel.isHidden = true
+            
         }
     }
 
     
     @objc func tapToDetectedForLogin(_ sender : UITapGestureRecognizer){
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! UIViewController
         //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
        
@@ -128,9 +126,6 @@ class SignupController: ViewController {
     }
     
     
-
-
-
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -154,13 +149,14 @@ class SignupController: ViewController {
     }
     
     
-    //MARK: Register user
-    @IBAction func registerUser(_ sender: Any) {
-        registerUser()
-   
+    @IBAction func register(_ sender: Any) {
+         registerUser()
     }
+   
     
     func registerUser(){
+        
+        var title = "Registration"
         let fieldValidation = HelperClass.validateField(textFields: firstNameTF, lastNameTF, emailTF,
                                                         passwordTF, phoneNumberTF, countryDropDown)
         
@@ -170,7 +166,7 @@ class SignupController: ViewController {
                 guard let placeHolder = field.key.placeholder else{
                     fatalError("Invalid fields")
                 }
-                showSimpleAlert(title: "Validation", message: "\(placeHolder) is empty", action: false)
+                showSimpleAlert(title: title, message: "\(placeHolder) is empty", action: false)
             }
             return
         }
@@ -188,31 +184,39 @@ class SignupController: ViewController {
         
         
         if !email.isValidEmail {
-            showSimpleAlert(title: "Validation", message: "Invalid email address", action: false)
+            showSimpleAlert(title:title, message: "Invalid email address", action: false)
             return
         }
         else if !password.isValidPassword {
-            showSimpleAlert(title: "Validation", message: "Invalid password", action: false)
+            showSimpleAlert(title: title, message: "Invalid password", action: false)
             return
         }
         
-        var user = User(name: fullName, email: email, password: password, country: country, phone: phone, token: nil)
+          var user = User()
+                      user.name = fullName
+                      user.email = email
+                      user.password = password
+                      user.country = country
+                      user.phone = phone
+                     
         
         progressSpinner.isHidden = false
         submitButton.isHidden = true
         authViewModel.registerUser(user: user).subscribe(onNext: { (AuthResponse) in
-            print("messaage \(String(describing: AuthResponse.message))")
+            print("messaages \(String(describing: AuthResponse.message))")
+             print("status \(String(describing: AuthResponse.status))")
             self.progressSpinner.isHidden = true
             self.submitButton.isHidden = false
             user.token = AuthResponse.token ?? "default value"
             if AuthResponse.status == 200 {
                 
                 print("selftok \( self.tokens )")
-                self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, identifier: "gotoVerification", action: true, user: user)
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "gotoVerification", action: true, user: user)
                 //                self.performSegue(withIdentifier: "gotoVerification", sender: self.tokens)
             }
             else{
-                self.showSimpleAlert(title: "Registration", message: AuthResponse.message!, action: false)
+                print("It is here")
+                self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
             }
             
         }, onError: { (Error) in
@@ -242,7 +246,7 @@ class SignupController: ViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.isMovingFromParent {
-            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
+            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! UIViewController
             //        let profile = ProfileViewController()
             self.navigationController?.pushViewController(nextVC, animated: true)
             //            self.performSegue(withIdentifier: "toHomeScene", sender: self)

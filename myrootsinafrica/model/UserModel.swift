@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import Unrealm
+import RealmSwift
 
-struct User:Encodable {
-    let name:String?
-    let email:String?
-    let password:String?
-    var country:String?
-    let phone:String?
-    var token:String?
-    var changedPassword:Bool=false
+class User:Object, Codable {
+    @objc dynamic var name:String?
+    @objc dynamic var email:String?
+    @objc dynamic var password:String?
+    @objc dynamic var country:String?
+    @objc dynamic var phone:String?
+    @objc dynamic var token:String?
+    @objc dynamic var changedPassword = false
+    @objc dynamic var loggedIn = false
+    
+
+  
+    override static func primaryKey() -> String? {
+        return "email"
+    }
 }

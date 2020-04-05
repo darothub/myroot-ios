@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController {
+extension UIViewController {
     func setBackgroundImage(_ imageName: String, contentMode: UIView.ContentMode) {
         let backgroundImage = UIImageView(frame: self.view.bounds)
         backgroundImage.image = UIImage(named: imageName)
@@ -40,7 +40,31 @@ extension ViewController {
 //        C2DC00
 //        7AC840
     }
-    
+    func setupProgressBarXclusive(progress:Float, progressTintcolor:UIColor, trackTintColor:UIColor){
+            let progressBarView = UIProgressView()
+            
+        
+            progressBarView.translatesAutoresizingMaskIntoConstraints = false
+            progressBarView.progressViewStyle = UIProgressView.Style.bar
+//            #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
+
+            progressBarView.progressTintColor = progressTintcolor
+            progressBarView.trackTintColor = trackTintColor
+            
+            progressBarView.setProgress(progress, animated: true)
+            
+            progressBarView.heightAnchor.constraint(equalToConstant: CGFloat(4
+            )).isActive = true
+            progressBarView.widthAnchor.constraint(equalToConstant: CGFloat(290
+            )).isActive = true
+        
+            
+            navigationItem.titleView = progressBarView
+            
+            
+    //        C2DC00
+    //        7AC840
+        }
     
     func showSimpleAlert(title:String, message:String, identifier:String?=nil, action:Bool?=false, user:User?=nil, tree:Tree?=nil) {
         let alert = UIAlertController(title: title, message:message,preferredStyle: UIAlertController.Style.alert)
@@ -77,4 +101,10 @@ extension ViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
+    func transparentNavigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
+    }
 }

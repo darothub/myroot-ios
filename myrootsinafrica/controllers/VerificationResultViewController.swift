@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerificationResultViewController: ViewController {
+class VerificationResultViewController: UIViewController {
     
     @IBOutlet weak var viewSubContainer: UIView!
     
@@ -41,7 +41,8 @@ class VerificationResultViewController: ViewController {
             }
         }
         else if user != nil{
-            if user!.changedPassword{
+            let value = user!.changedPassword
+            if value {
                 requestSuccessfulAdvice.text = "You have successfully changed your password. Proceed to login"
             }
         }

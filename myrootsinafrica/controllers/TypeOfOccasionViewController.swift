@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TypeOfOccasionViewController : ViewController{
+class TypeOfOccasionViewController : UIViewController{
     @IBOutlet weak var birthdayCard: UIView!
     @IBOutlet weak var anniversaryCard: UIView!
     @IBOutlet weak var holidayCard: UIView!
@@ -25,7 +25,7 @@ class TypeOfOccasionViewController : ViewController{
         print("Type of occasion")
         print("tree\(tree)")
         
-        self.setupProgressBar(progress: 0.6)
+        self.setupProgressBarXclusive(progress: 0.6, progressTintcolor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), trackTintColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))
         
             tapInitiation(view: birthdayCard, action: #selector(self.tapDetectedForBirthday))
             tapInitiation(view: anniversaryCard, action: #selector(self.tapDetectedForAnniversary))
@@ -98,4 +98,8 @@ class TypeOfOccasionViewController : ViewController{
          }
          
      }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.transparentNavigationBar()
+    }
 }

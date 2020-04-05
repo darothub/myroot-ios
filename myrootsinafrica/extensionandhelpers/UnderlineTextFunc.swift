@@ -49,12 +49,12 @@ extension UIView{
         self.addGestureRecognizer(singleTap)
      }
     
-    @objc func tapDetectedForProfile(){
-        print("profile setting")
-        let dashboard = DashBoardViewController(nibName: "DashBoardViewController", bundle: nil)
-        dashboard.present(dashboard, animated: false, completion: nil)
-        
-    }
+//    @objc func tapDetectedForProfile(){
+//        print("profile setting")
+//        let dashboard = DashBoardViewController(nibName: "DashBoardViewController", bundle: nil)
+//        dashboard.present(dashboard, animated: false, completion: nil)
+//
+//    }
     
     func setViewShadow(using shadowRadius:Float, color:CGColor){
         self.layer.shadowColor = color

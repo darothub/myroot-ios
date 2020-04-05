@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 import CoreData
 
-class WhatTypeOfTreeViewController : ViewController{
+class WhatTypeOfTreeViewController : UIViewController{
     
     @IBOutlet weak var submitButton: SecondaryButton!
     @IBOutlet weak var progressSpinner: UIActivityIndicatorView!

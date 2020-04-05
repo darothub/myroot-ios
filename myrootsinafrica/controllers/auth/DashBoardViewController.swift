@@ -12,9 +12,10 @@ import CoreData
 import Alamofire
 import RxSwift
 import SwiftyJSON
+import RealmSwift
 
 
-class DashBoardViewController : ViewController{
+class DashBoardViewController : UIViewController{
     
     @IBOutlet weak var parentScrollView: UIScrollView!
     @IBOutlet weak var circleView: UIView!
@@ -39,6 +40,8 @@ class DashBoardViewController : ViewController{
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     var disposeBag = DisposeBag()
     var loggedInUser:UserData?
+    var loggedInPerson:Results<User>?
+    let realm = try! Realm()
     override func viewDidLoad() {
         
         print("We are here dashy")
@@ -48,7 +51,7 @@ class DashBoardViewController : ViewController{
 //
 //        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
         
-        backgroundImageView.image = UIImage(named: "dashboardBackground")
+//        backgroundImageView.image = UIImage(named: "dashboardBackground")
         
         circleView.layer.cornerRadius = circleView.frame.width/2
         topBoardView.layer.cornerRadius = 25
@@ -59,7 +62,11 @@ class DashBoardViewController : ViewController{
         
         reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
-        
+        loggedInPerson = {
+            realm.objects(User.self).filter("loggedIn = true")
+        }()
+
+   
         
      
      
@@ -69,14 +76,19 @@ class DashBoardViewController : ViewController{
         loggedInUser = HelperClass.getUserData()
         HelperClass.updateValue(key: "loggedIn", value: true)
             
-        print("Userdata \(loggedInUser)")
-        ((loggedInUser?.name) != nil) ? timeMonitor(name:loggedInUser!.name!):timeMonitor(name:"Sir/Ma")
+        let name = {
+            self.loggedInPerson!.first!.name
+        }()
+        print("Userdata \(name!)")
+        ((name) != nil) ? timeMonitor(name:name!):timeMonitor(name:"Sir/Ma")
         
         
-        let token = ((loggedInUser) != nil) ? loggedInUser?.token : "token"
+        var token: String {
+            self.loggedInPerson!.first!.token!
+        }
         
         
-        authViewModel.getUserTrees(token: token!).subscribe(onNext: { (TreeResponse) in
+        authViewModel.getUserTrees(token: token).subscribe(onNext: { (TreeResponse) in
             guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
                 fatalError("Invalid tree counts for countries")
             }
@@ -85,26 +97,26 @@ class DashBoardViewController : ViewController{
             }
             print("error \(String(describing: TreeResponse.error))")
             print("message \(String(describing: TreeResponse.message))")
-            
+
             print("countries \(String(describing: countriesTreesCount))")
             print("ggw \(String(describing: ggwTreesCount))")
             self.countryBigCount.text = "\(countriesTreesCount)"
             self.ggwBigCount.text = "\(ggwTreesCount)"
-            
-            
+
+
             switch countriesTreesCount {
             case 0..<2:self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) tree planted on the \(countriesTreesCount) country in Africa"
             default:
                 self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) trees planted on the \(countriesTreesCount) countries in Africa"
             }
-            
+
             switch ggwTreesCount {
             case 0..<2: self.ggwTreesDetailsLabel.text = "You have \(ggwTreesCount) tree planted on the Green Great Wall"
             default:
                 self.ggwTreesDetailsLabel.text = "You have \(ggwTreesCount) trees planted on the Green Great Wall"
             }
-            
-            
+
+
         }, onError: { (error) in
 //            print("Error: \(String(describing: error.asAFError(orFailWith: error.localizedDescription)))")
 //            print("Errorcode: \(String(describing: error.asAFError?.responseCode))")
@@ -117,7 +129,10 @@ class DashBoardViewController : ViewController{
       
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.transparentNavigationBar()
+    }
 
 
     func initiateTapGestures(view:UIView, action:Selector?){
@@ -127,7 +142,7 @@ class DashBoardViewController : ViewController{
      }
     @objc func tapDetectedForProfile(_ sender : UITapGestureRecognizer){
         print("profile setting")
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "profilestory") as! ViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "profilestory") as! UIViewController
 //        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
         
@@ -182,11 +197,6 @@ class DashBoardViewController : ViewController{
 //    
     override func viewWillDisappear(_ animated: Bool) {
                 
-//        navigationController?.removeViewController(DashBoardViewController.self)
-        
-//        if let navVCsCount = navigationController?.viewControllers.count {
-//            navigationController?.viewControllers.removeSubrange(navVCsCount-3..<navVCsCount-1)
-//        }
   
     }
  

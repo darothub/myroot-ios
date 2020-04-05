@@ -16,6 +16,8 @@ target 'myrootsinafrica' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Unrealm', '1.2.0'
+  pod 'RealmSwift', '4.4.0'
 
 
   target 'myrootsinafricaTests' do

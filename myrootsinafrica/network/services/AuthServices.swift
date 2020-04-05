@@ -158,7 +158,7 @@ class AuthService : NetworkProtocol{
         return Observable.create{observer -> Disposable in
             let task = AF.request(URLString.registerURL, method: .post, parameters: user, encoder: JSONParameterEncoder.default)
             
-            task.validate(statusCode: 200..<500)
+            task.validate(statusCode: 200..<600)
             .responseDecodable(of: AuthResponse.self){ res in
                 
                 switch res.result {

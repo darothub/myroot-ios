@@ -11,7 +11,7 @@ import RxSwift
 import SwiftyJSON
 import CoreData
 
-class ForgotPasswordViewController:ViewController{
+class ForgotPasswordViewController:UIViewController{
     
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var submitButton: SecondaryButton!
@@ -74,7 +74,12 @@ class ForgotPasswordViewController:ViewController{
                 guard let message = AuthResponse.message else {
                     fatalError("message not found")
                 }
-                let user = User(name: currentUser.name, email: email, password: "", country: currentUser.country, phone: currentUser.phone)
+                  var user = User()
+                user.name = currentUser.name!
+                user.email = currentUser.email!
+                user.password = currentUser.password!
+                user.country = currentUser.country!
+                user.phone = currentUser.phone!
                 
                 self.showSimpleAlert(title: title, message: message, identifier: "toNewPasswordScene", action: true, user: user)
 

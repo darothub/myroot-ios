@@ -11,7 +11,7 @@ import M13Checkbox
 import SimpleCheckbox
 import UICheckbox_Swift
 
-class ReasonViewController : ViewController{
+class ReasonViewController : UIViewController{
 
     
     @IBOutlet weak var climateCardView: UIView!
@@ -45,20 +45,7 @@ class ReasonViewController : ViewController{
         
        
     }
-//    func checkBoxesState()->Bool{
-//        let gift = giftCheckBox.isSelected
-//        let climate = climateCheckBox.isSelected
-//        let job = jobCheckBox.isSelected
-//        if !(gift || climate || job){
-//
-//            return false
-//
-//        }
-//        else{
-//
-//        }
-//
-//    }
+
     
     
     
@@ -68,47 +55,28 @@ class ReasonViewController : ViewController{
         let job = jobCheckBox.isSelected
         var reason = Reason(isOccasion: false, isGift: false)
 
-        print("selected \(gift)")
-        let that = (gift, climate, job)
+        print("selectedGift \(gift)")
+        print("selectedJob \(job)")
+        print("selectedClimate \(climate)")
+        let hi = (gift || climate || job)
+            print("hi \(hi)")
+
+        if !(gift || climate || job){
+
+            self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
+
+        }
+        else if giftCheckBox.isSelected {
+            reason.isGift = true
+            tree?.reason = reason
+            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+        }
+        else{
+            tree?.reason = reason
+            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
+        }
         
-        switch (gift, climate, job) {
-        case (!gift, !climate, !job): do {
-            reason.isGift = true
-            tree?.reason = reason
-            
-            print("Hey there1 \(that)")
-//            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
-        }
-            break
-        case (!gift, climate, job) : do {
-            reason.isGift = true
-            tree?.reason = reason
-            print("Hey there2 \(that)")
-            
-            //            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
-            }
-        case (gift, climate, job):self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
-       
-        default:self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
-
-        }
-//        tree?.reason = reason
-//        self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
-
-//        if !(gift || climate || job){
-//
-//            self.showToastMessage(message: "Kindly pick a reason", font: UIFont(name: "BalooChetan2-Regular", size: 12.0))
-//
-//        }
-//        else if giftCheckBox.isSelected {
-//            reason.isGift = true
-//            tree?.reason = reason
-//            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
-//        }
-//        else{
-//            tree?.reason = reason
-//            self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
-//        }
+//         self.performSegue(withIdentifier: "toTypeOfOccasion", sender: tree)
         
         return reason
     }

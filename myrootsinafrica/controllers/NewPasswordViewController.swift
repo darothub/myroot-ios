@@ -11,7 +11,7 @@ import RxSwift
 import SwiftyJSON
 import CoreData
 
-class NewPasswordViewController:ViewController{
+class NewPasswordViewController:UIViewController{
     
     @IBOutlet weak var codeTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
