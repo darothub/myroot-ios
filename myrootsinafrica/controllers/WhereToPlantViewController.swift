@@ -48,7 +48,7 @@ class WhereToPlantViewController:UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //set view background image
-        container.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
+        view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
     }
     @objc func tapDetected(){
         

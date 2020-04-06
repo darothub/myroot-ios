@@ -56,6 +56,7 @@ class DashBoardViewController : UIViewController{
         circleView.layer.cornerRadius = circleView.frame.width/2
         topBoardView.layer.cornerRadius = 25
         bottomBoardView.layer.cornerRadius = 25
+        reserveTreeTap.layer.cornerRadius = 30
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
@@ -64,7 +65,7 @@ class DashBoardViewController : UIViewController{
         
 
    
-        
+            view.layer.contents = #imageLiteral(resourceName: "dashboardBackground").cgImage
      
      
     }
