@@ -3,21 +3,60 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
+		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
+		0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041576592430AFB3003D0311 /* TreeModel.swift */; };
+		0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766E24337AFD003D0311 /* TreeResponseModel.swift */; };
+		0415767D2434714E003D0311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415767C2434714E003D0311 /* UserModel.swift */; };
+		041576802434743B003D0311 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415767E2434743B003D0311 /* UserData+CoreDataClass.swift */; };
+		041576812434743B003D0311 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415767F2434743B003D0311 /* UserData+CoreDataProperties.swift */; };
+		041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */; };
+		041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */; };
+		041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2759242B6B20009FCC82 /* responsemodel.swift */; };
+		041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */; };
+		041D2764242B7007009FCC82 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2763242B7007009FCC82 /* AuthViewModel.swift */; };
+		041D2767242BA40A009FCC82 /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D2766242BA40A009FCC82 /* AuthServices.swift */; };
 		045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F0F241AD7D3004217D9 /* AppDelegate.swift */; };
 		045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F11241AD7D3004217D9 /* SceneDelegate.swift */; };
 		045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F13241AD7D3004217D9 /* ViewController.swift */; };
 		045C1F17241AD7D3004217D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F15241AD7D3004217D9 /* Main.storyboard */; };
-		045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */; };
+		045C1F1A241AD7D3004217D9 /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */; };
 		045C1F1C241AD7D4004217D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F1B241AD7D4004217D9 /* Assets.xcassets */; };
 		045C1F1F241AD7D4004217D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F1D241AD7D4004217D9 /* LaunchScreen.storyboard */; };
 		045C1F2A241AD7D4004217D9 /* myrootsinafricaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F29241AD7D4004217D9 /* myrootsinafricaTests.swift */; };
 		045C1F35241AD7D4004217D9 /* myrootsinafricaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F34241AD7D4004217D9 /* myrootsinafricaUITests.swift */; };
 		045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F44241AE06A004217D9 /* primarybutton.swift */; };
 		045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F46241AE3CC004217D9 /* secondarybutton.swift */; };
+		045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F49241B70F9004217D9 /* DScrollView+.swift */; };
+		045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F4A241B70F9004217D9 /* DScrollView.swift */; };
+		045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F4B241B70FA004217D9 /* DScrollViewContainer.swift */; };
+		045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F4C241B70FA004217D9 /* DScrollViewElement.swift */; };
+		045C1F5A241B9EB7004217D9 /* BalooChettan2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F58241B9EB7004217D9 /* BalooChettan2-Medium.ttf */; };
+		045C1F5B241B9EB7004217D9 /* BalooChettan2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */; };
+		045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F5C241BA205004217D9 /* ExtToast.swift */; };
+		045C1F96241F53F1004217D9 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F95241F53F1004217D9 /* SignupController.swift */; };
+		045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */; };
+		047AC7932425624700968A29 /* WhereToPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC7922425624700968A29 /* WhereToPlantViewController.swift */; };
+		047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79424274B1700968A29 /* HowToPlantViewController.swift */; };
+		047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */; };
+		047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */; };
+		047AC79B242775F800968A29 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79A242775F800968A29 /* WhiteButton.swift */; };
+		047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79E2427C36700968A29 /* CardSelectionHelper.swift */; };
+		047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC7A02428A54000968A29 /* ProfileViewController.swift */; };
+		047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB0B22421976B001C5344 /* UserVerificationController.swift */; };
+		0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484D44D241F875C00FDFD7C /* CountryAndCode.swift */; };
+		049CF58724229E2E00C81412 /* HelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58624229E2E00C81412 /* HelperClass.swift */; };
+		049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF5892422AD3600C81412 /* VerificationResultViewController.swift */; };
+		049CF58C242373C200C81412 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58B242373C200C81412 /* LoginViewController.swift */; };
+		049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58D2423F4F500C81412 /* DashBoardViewController.swift */; };
+		049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58F2424F43800C81412 /* ReasonViewController.swift */; };
+		B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */; };
+		C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */; };
+		C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +77,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
+		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		041576592430AFB3003D0311 /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
+		0415766E24337AFD003D0311 /* TreeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeResponseModel.swift; sourceTree = "<group>"; };
+		0415767C2434714E003D0311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0415767E2434743B003D0311 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0415767F2434743B003D0311 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		041D2759242B6B20009FCC82 /* responsemodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responsemodel.swift; sourceTree = "<group>"; };
+		041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		041D2763242B7007009FCC82 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		041D2766242BA40A009FCC82 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		045C1F0C241AD7D3004217D9 /* myrootsinafrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myrootsinafrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C1F0F241AD7D3004217D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045C1F11241AD7D3004217D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +108,37 @@
 		045C1F36241AD7D4004217D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045C1F44241AE06A004217D9 /* primarybutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primarybutton.swift; sourceTree = "<group>"; };
 		045C1F46241AE3CC004217D9 /* secondarybutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondarybutton.swift; sourceTree = "<group>"; };
+		045C1F49241B70F9004217D9 /* DScrollView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DScrollView+.swift"; sourceTree = "<group>"; };
+		045C1F4A241B70F9004217D9 /* DScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DScrollView.swift; sourceTree = "<group>"; };
+		045C1F4B241B70FA004217D9 /* DScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DScrollViewContainer.swift; sourceTree = "<group>"; };
+		045C1F4C241B70FA004217D9 /* DScrollViewElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DScrollViewElement.swift; sourceTree = "<group>"; };
+		045C1F58241B9EB7004217D9 /* BalooChettan2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooChettan2-Medium.ttf"; sourceTree = "<group>"; };
+		045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooChettan2-Regular.ttf"; sourceTree = "<group>"; };
+		045C1F5C241BA205004217D9 /* ExtToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtToast.swift; sourceTree = "<group>"; };
+		045C1F95241F53F1004217D9 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFunc.swift; sourceTree = "<group>"; };
+		047AC7922425624700968A29 /* WhereToPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToPlantViewController.swift; sourceTree = "<group>"; };
+		047AC79424274B1700968A29 /* HowToPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlantViewController.swift; sourceTree = "<group>"; };
+		047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatTypeOfTreeViewController.swift; sourceTree = "<group>"; };
+		047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfOccasionViewController.swift; sourceTree = "<group>"; };
+		047AC79A242775F800968A29 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		047AC79E2427C36700968A29 /* CardSelectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionHelper.swift; sourceTree = "<group>"; };
+		047AC7A02428A54000968A29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		047BB0B22421976B001C5344 /* UserVerificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVerificationController.swift; sourceTree = "<group>"; };
+		0484D44D241F875C00FDFD7C /* CountryAndCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAndCode.swift; sourceTree = "<group>"; };
+		049CF58624229E2E00C81412 /* HelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClass.swift; sourceTree = "<group>"; };
+		049CF5892422AD3600C81412 /* VerificationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResultViewController.swift; sourceTree = "<group>"; };
+		049CF58B242373C200C81412 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		049CF58D2423F4F500C81412 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		049CF58F2424F43800C81412 /* ReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonViewController.swift; sourceTree = "<group>"; };
+		07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
+		3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica_myrootsinafricaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C092B885A4CA373925E400 /* Pods-myrootsinafricaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafricaTests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafricaTests/Pods-myrootsinafricaTests.release.xcconfig"; sourceTree = "<group>"; };
+		66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafricaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.release.xcconfig"; sourceTree = "<group>"; };
+		F28B2A1B1CF99A521DD7867D /* Pods-myrootsinafricaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafricaTests.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafricaTests/Pods-myrootsinafricaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */,
+				C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +163,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415765B24320666003D0311 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				0415767E2434743B003D0311 /* UserData+CoreDataClass.swift */,
+				0415767F2434743B003D0311 /* UserData+CoreDataProperties.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		041D2758242B6AF9009FCC82 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				041D2759242B6B20009FCC82 /* responsemodel.swift */,
+				041576592430AFB3003D0311 /* TreeModel.swift */,
+				0415766E24337AFD003D0311 /* TreeResponseModel.swift */,
+				0415767C2434714E003D0311 /* UserModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		041D275D242B6E78009FCC82 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				041D2765242BA3EA009FCC82 /* services */,
+				041D2762242B6FEF009FCC82 /* viewmodel */,
+				041D2760242B6FBE009FCC82 /* NetworkProtocol.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		041D2762242B6FEF009FCC82 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				041D2763242B7007009FCC82 /* AuthViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		041D2765242BA3EA009FCC82 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				041D2766242BA40A009FCC82 /* AuthServices.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		045C1F03241AD7D3004217D9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +223,8 @@
 				045C1F28241AD7D4004217D9 /* myrootsinafricaTests */,
 				045C1F33241AD7D4004217D9 /* myrootsinafricaUITests */,
 				045C1F0D241AD7D3004217D9 /* Products */,
+				AAFD31ADEDD661D1CA7BCBCF /* Pods */,
+				3255732CB1FA99953E804958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +241,13 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				0415765B24320666003D0311 /* data */,
+				041D275D242B6E78009FCC82 /* network */,
+				041D2758242B6AF9009FCC82 /* model */,
+				049CF5882422ACB200C81412 /* controllers */,
+				045C1F97241F5999004217D9 /* extensionandhelpers */,
+				045C1F57241B9E39004217D9 /* csmfonts */,
+				045C1F48241B704D004217D9 /* cmscrollview */,
 				045C1F43241ADFF3004217D9 /* custombutton */,
 				045C1F0F241AD7D3004217D9 /* AppDelegate.swift */,
 				045C1F11241AD7D3004217D9 /* SceneDelegate.swift */,
@@ -113,7 +256,8 @@
 				045C1F1B241AD7D4004217D9 /* Assets.xcassets */,
 				045C1F1D241AD7D4004217D9 /* LaunchScreen.storyboard */,
 				045C1F20241AD7D4004217D9 /* Info.plist */,
-				045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */,
+				045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */,
+				045C1F5C241BA205004217D9 /* ExtToast.swift */,
 			);
 			path = myrootsinafrica;
 			sourceTree = "<group>";
@@ -141,8 +285,93 @@
 			children = (
 				045C1F44241AE06A004217D9 /* primarybutton.swift */,
 				045C1F46241AE3CC004217D9 /* secondarybutton.swift */,
+				047AC79A242775F800968A29 /* WhiteButton.swift */,
 			);
 			path = custombutton;
+			sourceTree = "<group>";
+		};
+		045C1F48241B704D004217D9 /* cmscrollview */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F4A241B70F9004217D9 /* DScrollView.swift */,
+				045C1F49241B70F9004217D9 /* DScrollView+.swift */,
+				045C1F4B241B70FA004217D9 /* DScrollViewContainer.swift */,
+				045C1F4C241B70FA004217D9 /* DScrollViewElement.swift */,
+			);
+			path = cmscrollview;
+			sourceTree = "<group>";
+		};
+		045C1F57241B9E39004217D9 /* csmfonts */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F58241B9EB7004217D9 /* BalooChettan2-Medium.ttf */,
+				045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */,
+			);
+			path = csmfonts;
+			sourceTree = "<group>";
+		};
+		045C1F94241F53CB004217D9 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F95241F53F1004217D9 /* SignupController.swift */,
+				047BB0B22421976B001C5344 /* UserVerificationController.swift */,
+				049CF58B242373C200C81412 /* LoginViewController.swift */,
+				049CF58D2423F4F500C81412 /* DashBoardViewController.swift */,
+				041D2754242A1FF0009FCC82 /* ForgotPasswordViewController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		045C1F97241F5999004217D9 /* extensionandhelpers */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */,
+				0484D44D241F875C00FDFD7C /* CountryAndCode.swift */,
+				040B75332422511E00A4147A /* ControllerBackgroundImage.swift */,
+				049CF58624229E2E00C81412 /* HelperClass.swift */,
+				047AC79E2427C36700968A29 /* CardSelectionHelper.swift */,
+			);
+			path = extensionandhelpers;
+			sourceTree = "<group>";
+		};
+		049CF5882422ACB200C81412 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				045C1F94241F53CB004217D9 /* auth */,
+				049CF5892422AD3600C81412 /* VerificationResultViewController.swift */,
+				047AC7922425624700968A29 /* WhereToPlantViewController.swift */,
+				049CF58F2424F43800C81412 /* ReasonViewController.swift */,
+				047AC79424274B1700968A29 /* HowToPlantViewController.swift */,
+				047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */,
+				047AC79824276FF500968A29 /* TypeOfOccasionViewController.swift */,
+				047AC7A02428A54000968A29 /* ProfileViewController.swift */,
+				041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		3255732CB1FA99953E804958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				040B75352422606200A4147A /* iOSDropDown.framework */,
+				02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */,
+				3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */,
+				66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAFD31ADEDD661D1CA7BCBCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */,
+				89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */,
+				689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */,
+				07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */,
+				F28B2A1B1CF99A521DD7867D /* Pods-myrootsinafricaTests.debug.xcconfig */,
+				37C092B885A4CA373925E400 /* Pods-myrootsinafricaTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C1F39241AD7D4004217D9 /* Build configuration list for PBXNativeTarget "myrootsinafrica" */;
 			buildPhases = (
+				1974426D30F120C6985AB6F0 /* [CP] Check Pods Manifest.lock */,
 				045C1F08241AD7D3004217D9 /* Sources */,
 				045C1F09241AD7D3004217D9 /* Frameworks */,
 				045C1F0A241AD7D3004217D9 /* Resources */,
+				FFD71C12A7F822A3397F8806 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +400,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C1F3C241AD7D4004217D9 /* Build configuration list for PBXNativeTarget "myrootsinafricaTests" */;
 			buildPhases = (
+				9F63A487D99A133D649F7EF1 /* [CP] Check Pods Manifest.lock */,
 				045C1F21241AD7D4004217D9 /* Sources */,
 				045C1F22241AD7D4004217D9 /* Frameworks */,
 				045C1F23241AD7D4004217D9 /* Resources */,
@@ -187,9 +419,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045C1F3F241AD7D4004217D9 /* Build configuration list for PBXNativeTarget "myrootsinafricaUITests" */;
 			buildPhases = (
+				63B938417A25BE74D7A7B49F /* [CP] Check Pods Manifest.lock */,
 				045C1F2C241AD7D4004217D9 /* Sources */,
 				045C1F2D241AD7D4004217D9 /* Frameworks */,
 				045C1F2E241AD7D4004217D9 /* Resources */,
+				8AFDD3C2C0D74B8309197B23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,8 +483,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045C1F5A241B9EB7004217D9 /* BalooChettan2-Medium.ttf in Resources */,
 				045C1F1F241AD7D4004217D9 /* LaunchScreen.storyboard in Resources */,
 				045C1F1C241AD7D4004217D9 /* Assets.xcassets in Resources */,
+				045C1F5B241B9EB7004217D9 /* BalooChettan2-Regular.ttf in Resources */,
 				045C1F17241AD7D3004217D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,17 +507,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1974426D30F120C6985AB6F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myrootsinafrica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63B938417A25BE74D7A7B49F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myrootsinafrica-myrootsinafricaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AFDD3C2C0D74B8309197B23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F63A487D99A133D649F7EF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-myrootsinafricaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD71C12A7F822A3397F8806 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		045C1F08241AD7D3004217D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047AC7932425624700968A29 /* WhereToPlantViewController.swift in Sources */,
 				045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */,
+				040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */,
+				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
+				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
+				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
+				041576802434743B003D0311 /* UserData+CoreDataClass.swift in Sources */,
+				049CF58C242373C200C81412 /* LoginViewController.swift in Sources */,
+				049CF58A2422AD3600C81412 /* VerificationResultViewController.swift in Sources */,
+				041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */,
+				041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */,
+				049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */,
+				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
+				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
+				041D2764242B7007009FCC82 /* AuthViewModel.swift in Sources */,
+				047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
 				045C1F14241AD7D3004217D9 /* ViewController.swift in Sources */,
+				0415767D2434714E003D0311 /* UserModel.swift in Sources */,
+				045C1F50241B70FA004217D9 /* DScrollViewElement.swift in Sources */,
+				047BB0B32421976B001C5344 /* UserVerificationController.swift in Sources */,
+				041D275A242B6B20009FCC82 /* responsemodel.swift in Sources */,
 				045C1F10241AD7D3004217D9 /* AppDelegate.swift in Sources */,
-				045C1F1A241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld in Sources */,
+				049CF58724229E2E00C81412 /* HelperClass.swift in Sources */,
+				047AC7A12428A54000968A29 /* ProfileViewController.swift in Sources */,
+				045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */,
+				0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */,
+				049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */,
+				045C1F4F241B70FA004217D9 /* DScrollViewContainer.swift in Sources */,
+				047AC79F2427C36700968A29 /* CardSelectionHelper.swift in Sources */,
+				047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */,
+				047AC79924276FF500968A29 /* TypeOfOccasionViewController.swift in Sources */,
+				041D2767242BA40A009FCC82 /* AuthServices.swift in Sources */,
+				045C1F1A241AD7D3004217D9 /* UserData.xcdatamodeld in Sources */,
 				045C1F12241AD7D3004217D9 /* SceneDelegate.swift in Sources */,
+				041D2755242A1FF0009FCC82 /* ForgotPasswordViewController.swift in Sources */,
+				041576812434743B003D0311 /* UserData+CoreDataProperties.swift in Sources */,
+				0484D44E241F875C00FDFD7C /* CountryAndCode.swift in Sources */,
+				0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,10 +824,16 @@
 		};
 		045C1F3A241AD7D4004217D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = myrootsinafrica/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,10 +847,16 @@
 		};
 		045C1F3B241AD7D4004217D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89A8800F70DA81DE2CEA9079 /* Pods-myrootsinafrica.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = myrootsinafrica/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,10 +870,13 @@
 		};
 		045C1F3D241AD7D4004217D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F28B2A1B1CF99A521DD7867D /* Pods-myrootsinafricaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,10 +894,13 @@
 		};
 		045C1F3E241AD7D4004217D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C092B885A4CA373925E400 /* Pods-myrootsinafricaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -528,9 +918,13 @@
 		};
 		045C1F40241AD7D4004217D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689A99AE0B8BE5814A42C6CC /* Pods-myrootsinafrica-myrootsinafricaUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,9 +941,13 @@
 		};
 		045C1F41241AD7D4004217D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q5ZQNKVUT;
 				INFOPLIST_FILE = myrootsinafricaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,13 +1004,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		045C1F18241AD7D3004217D9 /* myrootsinafrica.xcdatamodeld */ = {
+		045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				045C1F19241AD7D3004217D9 /* myrootsinafrica.xcdatamodel */,
 			);
 			currentVersion = 045C1F19241AD7D3004217D9 /* myrootsinafrica.xcdatamodel */;
-			path = myrootsinafrica.xcdatamodeld;
+			path = UserData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

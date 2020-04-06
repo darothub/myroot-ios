@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:myrootsinafrica/data/UserData+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:myrootsinafrica/data/UserData+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:myrootsinafrica.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

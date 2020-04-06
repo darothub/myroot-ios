@@ -8,26 +8,52 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
+    
+    
 
+    @IBOutlet weak var worldText: UILabel!
+    @IBOutlet weak var myRootHeaderLabel: UIImageView!
+    @IBOutlet weak var signUpbtn: SecondaryButton!
+    
+    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var loginButton: PrimaryButton!
+    
     let backgroundImageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+
+       
         
-        setBackground()
+    }
+    @IBAction func showToast(_ sender: Any) {
+        let font = UIFont(name: "BalooChettan2-Regular", size: 14.0) ?? UIFont(name: "Helvetica", size: 14.0)
+        self.showToastMessage(message: "Hello", font: font!)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.transparentNavigationBar()
     }
 
-    
-    func setBackground(){
-                view.addSubview(backgroundImageView)
-                backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-                backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-                backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-                backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-                backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-                backgroundImageView.image = UIImage(named: "home_background")
-                view.sendSubviewToBack(backgroundImageView)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //set view background image
+        containerView.layer.contents = #imageLiteral(resourceName: "home_background").cgImage
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SignupController{
+           
+            vc.testText = "Arthur Dent"
+        }
+    }
+//    
+    @IBAction func unWindtoHome(unwindSegue: UIStoryboardSegue){}
 }
+
 
