@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     lazy var containerView = self.createView(with: .clear)
     lazy var subHeading = self.createUIlabel(with: NSLocalizedString("homeSceneSubText1", comment: "I can literarily..."), and: 20.0)
     lazy var headerText = self.createUIlabel(with: NSLocalizedString("homeSceneHeaderText", comment: "World..."), and: 18.0)
-    lazy var loginButton = self.createButton(with: "Login", and: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1), action: #selector(toLoginScreen))
-    lazy var signupButton = self.createButton(with: "Signup", and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(toSignupScene))
+    lazy var loginButton = self.createButton(with: NSLocalizedString("login", comment: "login"), and: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1), action: #selector(toLoginScreen))
+    lazy var signupButton = self.createButton(with: NSLocalizedString("signup", comment: "signup"), and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(toSignupScene))
     lazy var scrollView = self.createScrollView()
     lazy var logo = self.createImageView(with: self.contentViewSize)
     

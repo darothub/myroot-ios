@@ -316,7 +316,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="h5L-SP-jSO"/>
                     <connections>
-                        <segue destination="SDD-Wl-8Sp" kind="presentation" identifier="toDashboard" id="tvp-Zb-aHs"/>
+                        <segue destination="SDD-Wl-8Sp" kind="show" identifier="toDashboard" id="tvp-Zb-aHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYw-Xh-xry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -328,14 +328,14 @@
             <objects>
                 <viewController storyboardIdentifier="dashboardstory" id="SDD-Wl-8Sp" customClass="DashBoardViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7z-JX-PDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yam-ll-FI6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboardBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aCv-XO-g6n">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good morning, Peacedude Darot  " lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="eRJ-AP-zjb">
                                         <rect key="frame" x="41" y="330" width="270" height="35"/>
@@ -1611,7 +1611,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="tvp-Zb-aHs"/>
         <segue reference="u0i-fK-3VZ"/>
-        <segue reference="nCc-CA-bpm"/>
+        <segue reference="3v8-8o-Nwx"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

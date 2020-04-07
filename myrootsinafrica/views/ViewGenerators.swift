@@ -26,13 +26,13 @@ extension UIViewController{
         return button
     }
     
-    func createUIlabel(with text:String, and size:CGFloat)-> UILabel{
+    func createUIlabel(with text:String, and size:CGFloat, color:UIColor=#colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1))-> UILabel{
         
         let headerTexts:UILabel = {
             let label = UILabel()
             label.text = text
             label.font = UIFont(name: "BalooChettan2-Regular", size: size) ?? UIFont(name: "Helvetica", size: size)
-            label.textColor = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
+            label.textColor = color
             label.numberOfLines = 0
             label.textAlignment = .center
             label.isUserInteractionEnabled = true
@@ -41,14 +41,14 @@ extension UIViewController{
         return headerTexts
     }
     
-    func createUIlabelBold(with text:String, and size:CGFloat)-> UILabel{
+    func createUIlabelBold(with text:String, and size:CGFloat, color:UIColor=#colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1))-> UILabel{
         
         let headerTexts:UILabel = {
             let label = UILabel()
             label.text = text
             label.font = UIFont(name: "BalooChettan2-Regular", size: size) ?? UIFont(name: "Helvetica", size: size)
             label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
-            label.textColor = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
+            label.textColor = color
             label.numberOfLines = 0
             label.textAlignment = .center
             return label
@@ -110,6 +110,7 @@ extension UIViewController{
             view.keyboardType = type
             view.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             view.borderStyle = UITextField.BorderStyle.none
+            view.autocapitalizationType = .none
             return view
         }()
         return view
@@ -126,5 +127,24 @@ extension UIViewController{
             parent.addSubview(view)
         }
     }
+    
+    func setToEqualLeadingAndTrailing(parent:UIView, leading:CGFloat, trailing:CGFloat, views:UIView...){
+        for view in views {
+            view.right(to: parent, offset: trailing, isActive: true)
+            view.left(to: parent, offset: leading, isActive: true)
+        }
+    }
   
+    func createUIActivityIndicatorView() -> UIActivityIndicatorView  {
+        let view:UIActivityIndicatorView = {
+            let view = UIActivityIndicatorView()
+            view.isUserInteractionEnabled = true
+            view.style = .large
+            view.color = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
+            view.isAnimating
+            view.isHidden = true
+            return view
+        }()
+        return view
+    }
 }

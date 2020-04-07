@@ -7,3 +7,9 @@
 */
 "homeSceneHeaderText" = "World's #1 \nClimate Action App";
 "homeSceneSubText1" = "I  c a n  l i t e r a l l y  s a y \nI  h a v e  r o o t s  i n  A f r i c a";
+"login" = "Login";
+"signup" = "Signup";
+"email" = "Email";
+"password" = "Password";
+"forgotPassword" = "Forgot Password?";
+"registerLink" = "Don't have an account signup?";
