@@ -141,10 +141,15 @@ extension UIViewController{
             view.isUserInteractionEnabled = true
             view.style = .large
             view.color = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
-            view.isAnimating
+            view.startAnimating()
             view.isHidden = true
             return view
         }()
         return view
+    }
+    
+    func moveToDestination(with identifier:String){
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: identifier) as! ViewController
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

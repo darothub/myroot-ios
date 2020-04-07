@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         self.transparentNavBar()
 
-      
+       self.navigationItem.leftBarButtonItem = UIBarButtonItem()
         
     }
     

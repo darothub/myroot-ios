@@ -15,15 +15,6 @@ import CoreData
 
 class LoginViewController: ViewController{
     
-//    @IBOutlet weak var emailTF: UITextField!
-
-    
-//    @IBOutlet weak var progressRing: UIActivityIndicatorView!
-//    @IBOutlet weak var passwordTF: UITextField!
-//    @IBOutlet weak var dontHaveAnAccountLabel: UILabel!
-    
-//    @IBOutlet weak var submitButton: SecondaryButton!
-//    @IBOutlet weak var progressSpinner: UIActivityIndicatorView!
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var tokens = ""
@@ -80,17 +71,15 @@ class LoginViewController: ViewController{
 //        //set returnee data in textfields
 //        setReturneeData()
 //
+        
+        let backButton = UIButton(type: .system)
+        backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
 
-        
-        
-      
+        backButton.addTarget(self, action: #selector(gotoHomeScene), for: .touchUpInside)
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("hooray")
-         
-    }
     
     func setTextFieldsBottomBorder(){
         emailTF.setBottomBorder()
@@ -99,21 +88,22 @@ class LoginViewController: ViewController{
     }
     
     @objc func tapToDetectedForSignup(_ sender : UITapGestureRecognizer){
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "registerstory") as! ViewController
-               self.navigationController?.pushViewController(nextVC, animated: true)
-               
+        self.moveToDestination(with: "registerstory")
     }
            
 
     @objc func tapDetectedForForgotPassword(_ sender : UITapGestureRecognizer){
         print("login to forgot")
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "forgotstory") as! ViewController
-        //        let profile = ProfileViewController()
-        self.navigationController?.pushViewController(nextVC, animated: true)
-        
+        self.moveToDestination(with: "forgotstory")
     }
 
 
+    @objc func gotoHomeScene(){
+        self.moveToDestination(with: "homeScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+       
+    }
+    
     @objc func pressEnterToSubmit(){
         userLogin()
     }
@@ -211,7 +201,6 @@ class LoginViewController: ViewController{
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DashBoardViewController, let user = sender as? User{
-            //
             vc.user = user
             print("tokeninprepare \(user)")
         }
@@ -219,7 +208,6 @@ class LoginViewController: ViewController{
     }
     
     @IBAction func unwindToLogin(segue:UIStoryboardSegue){
-//        print("email \(emailTF.text!)")
         fetchRequest.predicate = NSPredicate(format: "email = %@", emailTF.text!)
 
         if segue.source is DashBoardViewController{
@@ -240,12 +228,7 @@ class LoginViewController: ViewController{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if self.isMovingFromParent {
-            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! ViewController
-            //        let profile = ProfileViewController()
-            self.navigationController?.pushViewController(nextVC, animated: true)
-//            self.performSegue(withIdentifier: "toHomeScene", sender: self)
-        }
+        
     }
 
    
@@ -257,6 +240,8 @@ class LoginViewController: ViewController{
         passwordTF.text = returnee.password
 
     }
+    
+    //MARK: add views
     override func addViews(){
         
         view.addSubview(self.scrollView)
@@ -265,6 +250,7 @@ class LoginViewController: ViewController{
         customAddToSubView(parent:containerView, views: header, emailText, emailTF, passwordText, passwordTF, forgotPasswordLabel, loginUIButton, registerLink, progressSpinner)
        
     }
+     //MARK: set constraints
     override func setViewConstraints() {
         header.centerX(to: containerView)
         header.top(to: self.containerView, offset: viewHeight/12, isActive: true)
