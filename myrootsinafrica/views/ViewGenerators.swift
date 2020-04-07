@@ -70,11 +70,11 @@ extension UIViewController{
         return scrollView
     }
 
-    func createImageView(with size:CGSize=CGSize(width: 0, height: 0)) -> UIImageView{
+    func createImageView(with image:UIImage) -> UIImageView{
         let view:UIImageView = {
             let view = UIImageView()
-            view.image = #imageLiteral(resourceName: "my_roots_logo")
-            view.frame.size = size
+            view.image = image
+            view.frame.size = self.contentViewSize
             return view
         }()
         return view

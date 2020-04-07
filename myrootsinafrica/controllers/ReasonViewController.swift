@@ -35,6 +35,7 @@ class ReasonViewController : ViewController{
         giftCardView.setBottomBorderUIView(using: color)
         
         self.setupProgressBar(progress: 0.4)
+
         
 
 

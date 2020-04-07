@@ -71,12 +71,8 @@ class LoginViewController: ViewController{
 //        //set returnee data in textfields
 //        setReturneeData()
 //
+        addCustomBackButton()
         
-        let backButton = UIButton(type: .system)
-        backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-
-        backButton.addTarget(self, action: #selector(gotoHomeScene), for: .touchUpInside)
 
     }
     
@@ -86,7 +82,13 @@ class LoginViewController: ViewController{
         passwordTF.setBottomBorder()
         
     }
-    
+    func addCustomBackButton(){
+        let backButton = UIButton(type: .system)
+        backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+
+        backButton.addTarget(self, action: #selector(gotoHomeScene), for: .touchUpInside)
+    }
     @objc func tapToDetectedForSignup(_ sender : UITapGestureRecognizer){
         self.moveToDestination(with: "registerstory")
     }
@@ -101,7 +103,6 @@ class LoginViewController: ViewController{
     @objc func gotoHomeScene(){
         self.moveToDestination(with: "homeScene")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-       
     }
     
     @objc func pressEnterToSubmit(){
@@ -242,7 +243,7 @@ class LoginViewController: ViewController{
     }
     
     //MARK: add views
-    override func addViews(){
+    private func addViews(){
         
         view.addSubview(self.scrollView)
         scrollView.edgesToSuperview()
@@ -251,7 +252,7 @@ class LoginViewController: ViewController{
        
     }
      //MARK: set constraints
-    override func setViewConstraints() {
+    private func setViewConstraints() {
         header.centerX(to: containerView)
         header.top(to: self.containerView, offset: viewHeight/12, isActive: true)
         emailText.top(to: header, offset: viewHeight/6, isActive: true)

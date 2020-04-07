@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     lazy var loginButton = self.createButton(with: NSLocalizedString("login", comment: "login"), and: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1), action: #selector(toLoginScreen))
     lazy var signupButton = self.createButton(with: NSLocalizedString("signup", comment: "signup"), and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(toSignupScene))
     lazy var scrollView = self.createScrollView()
-    lazy var logo = self.createImageView(with: self.contentViewSize)
+    lazy var logo = self.createImageView(with: #imageLiteral(resourceName: "my_roots_logo"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     
-    func addViews(){
+    private func addViews(){
        
         view.addSubview(scrollView)
         scrollView.edgesToSuperview()
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
     }
     
-    func setViewConstraints(){
+    private func setViewConstraints(){
         headerText.top(to: containerView, offset: 50, isActive: true)
         headerText.centerX(to: containerView)
         logo.top(to: headerText, offset: 70,  isActive: true)
