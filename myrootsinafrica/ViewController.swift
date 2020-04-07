@@ -9,100 +9,72 @@
 import TinyConstraints
 
 class ViewController: UIViewController {
+
+
+    lazy var containerView = self.createView(with: .clear)
+    lazy var subHeading = self.createUIlabel(with: NSLocalizedString("homeSceneSubText1", comment: "I can literarily..."), and: 20.0)
+    lazy var headerText = self.createUIlabel(with: NSLocalizedString("homeSceneHeaderText", comment: "World..."), and: 18.0)
+    lazy var loginButton = self.createButton(with: "Login", and: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1), action: #selector(toLoginScreen))
+    lazy var signupButton = self.createButton(with: "Signup", and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(toSignupScene))
+    lazy var scrollView = self.createScrollView()
+    lazy var logo = self.createImageView(with: self.contentViewSize)
     
-    
-   
-    //    @IBOutlet weak var worldText: UILabel!
-//    @IBOutlet weak var myRootHeaderLabel: UIImageView!
-//    @IBOutlet weak var signUpbtn: SecondaryButton!
-//
-//    @IBOutlet weak var loginButton: PrimaryButton!
-//
-//    @IBOutlet weak var parentViewWrapper: UIView!
-    
-    //    @IBOutlet weak var SubParentView: UIView!
-    
-    lazy var contentViewSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-    lazy var imageView:UIImageView = {
-        let view = UIImageView()
-        view.image = UIImage(named: "homeBackground")
-        view.frame.size = contentViewSize
-        return view
-    }()
-    lazy var image = UIImage(named: "homeBackground")
-    lazy var scrollView:UIView = {
-        let view = UIScrollView(frame: .zero)
-        view.backgroundColor = .clear
-        view.contentSize = contentViewSize
-        view.autoresizingMask = .flexibleHeight
-        view.bounces = true
-        view.showsVerticalScrollIndicator = false
-        view.frame = self.view.bounds
-        return view
-      }()
-    lazy var containerView:UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.frame.size = contentViewSize
-        view.withBackground(image: #imageLiteral(resourceName: "homeBackground"), contentMode: .scaleToFill)
-        return view
-    }()
-    lazy var label:UILabel = {
-        let label = UILabel()
-        label.text = "Hello World"
-        return label
-    }()
-   
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.addSubview(scrollView)
-        scrollView.edgesToSuperview()
-        scrollView.addSubview(containerView)
         
-//        containerView.horizontalToSuperview()
-       
-//        imageView.bottom(to: containerView)
-//        imageView.leadingToSuperview()
-//        imageView.trailingToSuperview()
+        addViews()
+        setViewConstraints()
         
-//        setupScrollView()
+        view.layer.contents = #imageLiteral(resourceName: "homeBackground").cgImage
         
-//        for family in UIFont.familyNames.sorted() {
-//            let names = UIFont.fontNames(forFamilyName: family)
-//            print("Family: \(family) Font names: \(names)")
-//        }
-        //set view background image
-//        view.layer.contents = #imageLiteral(resourceName: "homeBackground").cgImage
-//         parentViewWrapper .layer.contents = #imageLiteral(resourceName: "homeBackground").cgImage
+        let size = containerView.frame.height
+        
+        print("size \(size)")
+        
+        self.transparentNavBar()
 
       
         
     }
-//    @IBAction func showToast(_ sender: Any) {
-//        let font = UIFont(name: "BalooChettan2-Regular", size: 14.0) ?? UIFont(name: "Helvetica", size: 14.0)
-//        self.showToastMessage(message: "Hello", font: font!)
-//    }
-//
-//
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let vc = segue.destination as? SignupController{
-//
-//            vc.testText = "Arthur Dent"
-//        }
-//    }
-////
-//    @IBAction func unWindtoHome(unwindSegue: UIStoryboardSegue){}
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+    
+    
+    func addViews(){
+       
+        view.addSubview(scrollView)
+        scrollView.edgesToSuperview()
+        scrollView.addSubview(containerView)
+        scrollView.addSubview(subHeading)
+        containerView.addSubview(headerText)
+        containerView.addSubview(logo)
+        containerView.addSubview(signupButton)
+        containerView.addSubview(loginButton)
+ 
+        
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+    
+    func setViewConstraints(){
+        headerText.top(to: containerView, offset: 50, isActive: true)
+        headerText.centerX(to: containerView)
+        logo.top(to: headerText, offset: 70,  isActive: true)
+        logo.centerX(to: containerView)
+        subHeading.centerX(to: containerView)
+        subHeading.top(to: logo, offset: 95, isActive: true)
+        signupButton.center(in: containerView)
+        signupButton.left(to: containerView, offset: 50, isActive: true)
+        signupButton.right(to: containerView, offset: -50, isActive: true)
+        loginButton.centerX(to: containerView)
+        loginButton.top(to: signupButton, offset: 65, isActive: true)
+        loginButton.left(to: containerView, offset: 50, isActive: true)
+        loginButton.right(to: containerView, offset: -50, isActive: true)
+    }
+    @objc func toLoginScreen(){
+        
+        self.performSegue(withIdentifier: "toLoginScene", sender: self)
+    }
+  
+    @objc func toSignupScene(){
+        self.performSegue(withIdentifier: "toSignupScene", sender: self)
     }
 }
 

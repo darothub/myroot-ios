@@ -54,6 +54,8 @@
 		049CF58C242373C200C81412 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58B242373C200C81412 /* LoginViewController.swift */; };
 		049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58D2423F4F500C81412 /* DashBoardViewController.swift */; };
 		049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58F2424F43800C81412 /* ReasonViewController.swift */; };
+		04C2FFAF243BF455001D0492 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C2FFAE243BF455001D0492 /* Localizable.strings */; };
+		04C2FFB2243C88A5001D0492 /* ViewGenerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */; };
 		B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */; };
 		C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */; };
 		C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */; };
@@ -131,6 +133,8 @@
 		049CF58B242373C200C81412 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		049CF58D2423F4F500C81412 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		049CF58F2424F43800C81412 /* ReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonViewController.swift; sourceTree = "<group>"; };
+		04C2FFAE243BF455001D0492 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGenerators.swift; sourceTree = "<group>"; };
 		07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
 		3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica_myrootsinafricaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +245,8 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				04C2FFB0243C8886001D0492 /* views */,
+				04C2FFAD243BF40C001D0492 /* Localization */,
 				0415765B24320666003D0311 /* data */,
 				041D275D242B6E78009FCC82 /* network */,
 				041D2758242B6AF9009FCC82 /* model */,
@@ -348,6 +354,22 @@
 				041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		04C2FFAD243BF40C001D0492 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				04C2FFAE243BF455001D0492 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		04C2FFB0243C8886001D0492 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		3255732CB1FA99953E804958 /* Frameworks */ = {
@@ -484,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045C1F5A241B9EB7004217D9 /* BalooChettan2-Medium.ttf in Resources */,
+				04C2FFAF243BF455001D0492 /* Localizable.strings in Resources */,
 				045C1F1F241AD7D4004217D9 /* LaunchScreen.storyboard in Resources */,
 				045C1F1C241AD7D4004217D9 /* Assets.xcassets in Resources */,
 				045C1F5B241B9EB7004217D9 /* BalooChettan2-Regular.ttf in Resources */,
@@ -627,6 +650,7 @@
 				041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */,
 				041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */,
 				049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */,
+				04C2FFB2243C88A5001D0492 /* ViewGenerators.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
 				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
 				041D2764242B7007009FCC82 /* AuthViewModel.swift in Sources */,

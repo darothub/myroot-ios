@@ -76,5 +76,11 @@ extension ViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func transparentNavBar(){
+      
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+     }
 
 }
