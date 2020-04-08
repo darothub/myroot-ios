@@ -19,7 +19,7 @@ class DashBoardViewController : ViewController{
     @IBOutlet weak var parentScrollView: UIScrollView!
 //    @IBOutlet weak var circleView: UIView!
     
-    @IBOutlet weak var greetingLabel: UILabel!
+//    @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var reserveTreeTap: UIView!
 //    @IBOutlet weak var topBoardView: UIView!
     @IBOutlet weak var countryBigCount: UILabel!
@@ -46,7 +46,14 @@ class DashBoardViewController : ViewController{
     lazy var ggwLabel = self.createUIlabelBold(with: NSLocalizedString("ggwLabel", comment: "Great green wall"), and: 16.0, color: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1))
     lazy var ggwCountLabel = self.createUIlabelBold(with: NSLocalizedString("number", comment: "tree count"), and: viewHeight/18, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     lazy var bottomBoardViewAdvice = self.createUIlabel(with: NSLocalizedString("bottomBoardAdvice", comment: "transaction update"), and: 14, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
-   
+    lazy var greetingLabel = self.createUIlabelBold(with: NSLocalizedString("greeting", comment: "greetings according to the time of the day"), and: 23.0, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+    lazy var statementLabel = self.createUIlabel(with: NSLocalizedString("plantingStatement", comment: "Plant a new tree ..."), and: 13.0, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+    lazy var reserveATreeLabel = self.createUIlabelBold(with: NSLocalizedString("reserveText", comment: "Reserve a new tree ...").uppercased(), and: viewHeight/55, color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+    
+    lazy var buttonView = self.createCustomView(with: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), height: viewHeight/15, width: 0)
+    lazy var pointingHandImage = self.createImageView(with: #imageLiteral(resourceName: "handpointingRight-1"))
+    
+    
     var tree:Tree?
     @IBOutlet weak var logOutButton: UIBarButtonItem!
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -67,10 +74,7 @@ class DashBoardViewController : ViewController{
         
 //        backgroundImageView.image = UIImage(named: "dashboardBackground")
         
-        circleView.layer.cornerRadius = 25
-        
-        topBoardView.layer.cornerRadius = 25
-        bottomBoardView.layer.cornerRadius = 25
+      
 //
 //        self.navigationItem.setHidesBackButton(true, animated: true)
 //        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
@@ -81,7 +85,7 @@ class DashBoardViewController : ViewController{
         view.layer.contents = #imageLiteral(resourceName: "dashboardBackground").cgImage
         addViews()
         setViewConstraints()
-     
+        setCornerRadius()
      
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -111,6 +115,7 @@ class DashBoardViewController : ViewController{
 //            self.countryBigCount.text = "\(countriesTreesCount)"
 //            self.ggwBigCount.text = "\(ggwTreesCount)"
 //
+        
 //
 //            switch countriesTreesCount {
 //            case 0..<2:self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) tree planted on the \(countriesTreesCount) country in Africa"
@@ -239,10 +244,12 @@ class DashBoardViewController : ViewController{
         view.addSubview(self.scrollView)
         scrollView.edgesToSuperview()
         scrollView.addSubview(self.containerView)
-        customAddToSubView(parent:self.containerView, views: circleView, topBoardView, bottomBoardView)
+        customAddToSubView(parent:self.containerView, views: circleView, topBoardView, bottomBoardView, greetingLabel, statementLabel, buttonView)
         circleView.addSubview(profileIcon)
         customAddToSubView(parent: topBoardView, views: topBoardViewImage, countryLabel, countryCountLabel, topBoardViewAdvice)
         customAddToSubView(parent: bottomBoardView, views: bottomBoardViewImage, ggwLabel, ggwCountLabel, bottomBoardViewAdvice)
+        
+        customAddToSubView(parent: buttonView, views: pointingHandImage, reserveATreeLabel)
 
     }
     
@@ -259,12 +266,43 @@ class DashBoardViewController : ViewController{
         setBoardsConstraint(parent: topBoardView, image: topBoardViewImage, header: countryLabel, number: countryCountLabel, advice: topBoardViewAdvice)
         setBoardsConstraint(parent: bottomBoardView, image: bottomBoardViewImage, header: ggwLabel, number: ggwCountLabel, advice: bottomBoardViewAdvice)
         
-        topBoardViewAdvice.right(to: self.containerView, offset:-5, isActive: true)
-        bottomBoardViewAdvice.right(to: self.containerView, offset:-5, isActive: true)
+        topBoardViewAdvice.right(to: topBoardView, offset:-5, isActive: true)
+        bottomBoardViewAdvice.right(to: topBoardView, offset:-5, isActive: true)
+        
+        greetingLabel.top(to: self.containerView, offset: viewHeight/2 + 10, isActive: true)
+        greetingLabel.left(to: self.containerView, offset: 20, isActive: true)
+        
+        statementLabel.top(to: greetingLabel, offset: 30, isActive: true)
+        statementLabel.left(to: self.containerView, offset: 20, isActive: true)
+        statementLabel.right(to: self.containerView, offset: -20, isActive: true)
+        statementLabel.numberOfLines = 0
+        statementLabel.textAlignment = .left
+        
+        buttonView.bottom(to: containerView, offset: -viewHeight/6, isActive: true)
+        buttonView.left(to: containerView, offset: 75, isActive: true)
+        buttonView.right(to: containerView, offset: -75, isActive: true)
+        
+        pointingHandImage.height(viewHeight/17)
+        pointingHandImage.left(to: buttonView, offset: 10, isActive: true)
+        pointingHandImage.centerY(to: buttonView)
+        
+        reserveATreeLabel.left(to: pointingHandImage, offset: pointingHandImage.frame.width/7, isActive: true)
+        reserveATreeLabel.centerY(to: buttonView)
+        
+       
         
         
     }
     
+    
+    private func setCornerRadius(){
+        
+        circleView.layer.cornerRadius = 25
+        
+        topBoardView.layer.cornerRadius = 25
+        bottomBoardView.layer.cornerRadius = 25
+        buttonView.layer.cornerRadius = viewHeight/30
+    }
     
     private func boardContainerViews(view:UIView, centerAnchorView:UIView, topAnchorView:UIView, offset:CGFloat){
         view.centerX(to: centerAnchorView)

@@ -120,3 +120,8 @@ class HelperClass{
        
     }
 }
+
+//let them = 0...3
+//
+//enum TimeInt{
+//    case Morning}
