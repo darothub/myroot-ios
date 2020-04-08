@@ -31,6 +31,7 @@ class DashBoardViewController : ViewController{
     var user:User?
     var userData:UserData?
     lazy var viewHeight = containerView.frame.height
+    lazy var viewWidth = containerView.frame.width
     lazy var circleView = self.createCustomView(with: .white, height: 50, width: 50)
     lazy var profileIcon = self.createImageView(with: #imageLiteral(resourceName: "profileicon"))
     
@@ -258,6 +259,9 @@ class DashBoardViewController : ViewController{
         setBoardsConstraint(parent: topBoardView, image: topBoardViewImage, header: countryLabel, number: countryCountLabel, advice: topBoardViewAdvice)
         setBoardsConstraint(parent: bottomBoardView, image: bottomBoardViewImage, header: ggwLabel, number: ggwCountLabel, advice: bottomBoardViewAdvice)
         
+        topBoardViewAdvice.right(to: self.containerView, offset:-5, isActive: true)
+        bottomBoardViewAdvice.right(to: self.containerView, offset:-5, isActive: true)
+        
         
     }
     
@@ -265,12 +269,13 @@ class DashBoardViewController : ViewController{
     private func boardContainerViews(view:UIView, centerAnchorView:UIView, topAnchorView:UIView, offset:CGFloat){
         view.centerX(to: centerAnchorView)
         view.top(to: topAnchorView, offset: offset, isActive: true)
+        view.right(to: self.containerView, offset: -20, isActive: true)
+        view.left(to: self.containerView, offset: 20, isActive: true)
     }
     
     private func setBoardsConstraint(parent:UIView, image:UIImageView, header:UILabel, number:UILabel, advice:UILabel){
         
-        parent.right(to: self.containerView, offset: -20, isActive: true)
-        parent.left(to: self.containerView, offset: 20, isActive: true)
+        
         
         image.size(CGSize(width: viewHeight/14, height: viewHeight/14))
         image.left(to: parent, offset: 10, isActive: true)
