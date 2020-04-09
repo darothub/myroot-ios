@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
+		040B75342422511E00A4147A /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* UIViewControllerExt.swift */; };
 		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041576592430AFB3003D0311 /* TreeModel.swift */; };
 		0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766E24337AFD003D0311 /* TreeResponseModel.swift */; };
@@ -80,7 +80,7 @@
 
 /* Begin PBXFileReference section */
 		02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
+		040B75332422511E00A4147A /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041576592430AFB3003D0311 /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
 		0415766E24337AFD003D0311 /* TreeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeResponseModel.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			children = (
 				045C1F98241F59C9004217D9 /* Extensions.swift */,
 				0484D44D241F875C00FDFD7C /* CountryAndCode.swift */,
-				040B75332422511E00A4147A /* ControllerBackgroundImage.swift */,
+				040B75332422511E00A4147A /* UIViewControllerExt.swift */,
 				049CF58624229E2E00C81412 /* HelperClass.swift */,
 				047AC79E2427C36700968A29 /* CardSelectionHelper.swift */,
 			);
@@ -640,7 +640,7 @@
 			files = (
 				047AC7932425624700968A29 /* WhereToPlantViewController.swift in Sources */,
 				045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */,
-				040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */,
+				040B75342422511E00A4147A /* UIViewControllerExt.swift in Sources */,
 				045C1F99241F59C9004217D9 /* Extensions.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
 				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,

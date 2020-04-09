@@ -148,8 +148,5 @@ extension UIViewController{
         return view
     }
     
-    func moveToDestination(with identifier:String){
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: identifier) as! ViewController
-        self.navigationController?.pushViewController(nextVC, animated: true)
-    }
+  
 }

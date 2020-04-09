@@ -30,4 +30,6 @@
 "afternoon" = "Good afternoon";
 "evening" = "Good evening";
 "howdy" = "Howdy!";
-
+"whereToPlantHeader" = "Where to plant";
+"whereToPlantSubHeader" = "Choose the location to plant your roots";
+"next" = "Next";

@@ -11,7 +11,7 @@ import M13Checkbox
 import SimpleCheckbox
 import UICheckbox_Swift
 
-class ReasonViewController : ViewController{
+class ReasonViewController : UIViewController{
 
     
     @IBOutlet weak var climateCardView: UIView!
@@ -37,7 +37,7 @@ class ReasonViewController : ViewController{
         self.setupProgressBar(progress: 0.4)
 
         
-
+        self.addCustomBackButton(action: #selector(self.gotoScene))
 
     }
     @IBAction func tapToMoveToNext(_ sender: Any) {
@@ -46,21 +46,11 @@ class ReasonViewController : ViewController{
         
        
     }
-//    func checkBoxesState()->Bool{
-//        let gift = giftCheckBox.isSelected
-//        let climate = climateCheckBox.isSelected
-//        let job = jobCheckBox.isSelected
-//        if !(gift || climate || job){
-//
-//            return false
-//
-//        }
-//        else{
-//
-//        }
-//
-//    }
     
+    @objc override func gotoScene() {
+        self.moveToDestination(with: "whereToPlantScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
     
     
     func getSelectedReasonSelection() -> Reason{

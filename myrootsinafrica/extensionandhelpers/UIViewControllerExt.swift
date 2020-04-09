@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ViewController {
+extension UIViewController {
     func setBackgroundImage(_ imageName: String, contentMode: UIView.ContentMode) {
         let backgroundImage = UIImageView(frame: self.view.bounds)
         backgroundImage.image = UIImage(named: imageName)
@@ -82,5 +82,21 @@ extension ViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
      }
+    
+    func moveToDestination(with identifier:String){
+          let nextVC = self.storyboard?.instantiateViewController(withIdentifier: identifier) as! ViewController
+          self.navigationController?.pushViewController(nextVC, animated: true)
+      }
 
+    func addCustomBackButton(action:Selector){
+          let backButton = UIButton(type: .system)
+          backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
+          navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+
+          backButton.addTarget(self, action: action, for: .touchUpInside)
+      }
+    @objc func gotoScene(){
+        self.moveToDestination(with: "homeScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 }

@@ -61,7 +61,7 @@ class DashBoardViewController : ViewController{
         return Calendar.current.dateComponents(units, from: date)
     }()
     lazy var hour = {
-        return self.comps.hour
+        return self.comps.hour!
     }()
     
     
@@ -86,7 +86,7 @@ class DashBoardViewController : ViewController{
         HelperClass.updateValue(key: "loggedIn", value: true)
 
       
-        ((loggedInUser?.name) != nil) ? timeMonitor(name:loggedInUser!.name!, hour:hour!):timeMonitor(name:"Sir/Ma", hour: 0)
+        ((loggedInUser?.name) != nil) ? timeMonitor(name:loggedInUser!.name!, hour:hour):timeMonitor(name:"Sir/Ma", hour: 0)
 
 
         let token = ((loggedInUser) != nil) ? loggedInUser?.token : "token"
@@ -115,7 +115,7 @@ class DashBoardViewController : ViewController{
                  .more(countriesTreesCount) where countriesTreesCount > 1:self.topBoardViewAdvice.text = "\("youHave".localized) \(countriesTreesCount) \("treesPlanted".localized) \(countriesTreesCount) \("countries".localized)"
             @unknown default:
                 print("unknown")
-                print("hellwo whats up ")
+                
             }
             
             let ggwCounter = Counter.one(ggwTreesCount)
@@ -125,7 +125,6 @@ class DashBoardViewController : ViewController{
                  .more(ggwTreesCount) where ggwTreesCount > 1:self.bottomBoardViewAdvice.text = "\("youHave".localized) \(ggwTreesCount) \("treesPlanted".localized) \(ggwTreesCount) \("ggwLabel".localized)"
             @unknown default:
                 print("unknown")
-                print("hellwo whats up ")
             }
 
         }, onError: { (error) in
@@ -186,13 +185,13 @@ class DashBoardViewController : ViewController{
     
     func timer(time:TimeOfTheDay, name:String) -> String?{
         switch time {
-        case .morning(hour) where hour! < 12:
+        case .morning(hour) where hour < 12:
             return "\("morning".localized), \(name)"
             
-        case .afternoon(hour) where hour! < 15:
+        case .afternoon(hour) where hour < 15:
             return "\("afternoon".localized), \(name)"
            
-        case .evening(hour) where hour! > 15:
+        case .evening(hour) where hour > 15:
             return "\("evening".localized), \(name)"
            
         default:

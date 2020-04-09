@@ -71,7 +71,7 @@ class LoginViewController: ViewController{
 //        //set returnee data in textfields
 //        setReturneeData()
 //
-        addCustomBackButton()
+        self.addCustomBackButton(action: #selector(self.gotoScene))
         
 
     }
@@ -82,13 +82,13 @@ class LoginViewController: ViewController{
         passwordTF.setBottomBorder()
         
     }
-    func addCustomBackButton(){
-        let backButton = UIButton(type: .system)
-        backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-
-        backButton.addTarget(self, action: #selector(gotoHomeScene), for: .touchUpInside)
-    }
+//    func addCustomBackButton(){
+//        let backButton = UIButton(type: .system)
+//        backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+//
+//        backButton.addTarget(self, action: #selector(gotoHomeScene), for: .touchUpInside)
+//    }
     @objc func tapToDetectedForSignup(_ sender : UITapGestureRecognizer){
         self.moveToDestination(with: "registerstory")
     }
@@ -99,11 +99,6 @@ class LoginViewController: ViewController{
         self.moveToDestination(with: "forgotstory")
     }
 
-
-    @objc func gotoHomeScene(){
-        self.moveToDestination(with: "homeScene")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
     
     @objc func pressEnterToSubmit(){
         userLogin()
