@@ -135,6 +135,9 @@ extension String {
     var isValidPassword:Bool{
         NSPredicate(format: "SELF MATCHES %@", "^[a-zA-Z0-9@$!%*#?&]{6,}$").evaluate(with: self)
     }
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
 }
 
 extension UINavigationController {

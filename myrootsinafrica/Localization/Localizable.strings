@@ -14,10 +14,20 @@
 "forgotPassword" = "Forgot Password?";
 "registerLink" = "Don't have an account signup?";
 "countryLabel" = "54 Countries";
-"number" = " ";
+"number" = "_";
 "topBoardAdvice" = "You have 0 tree planted on the 0 country in Africa";
 "ggwLabel" = "Great green wall";
 "bottomBoardAdvice"   = "You have 0 tree planted on the Green Great Wall";
 "greeting" = "Goodday Sir/Ma";
 "plantingStatement" = "Plant a new tree to replenish the earth and make the earth a greener planet";
 "reserveText" = "Reserve a new tree";
+"youHave" ="You have";
+"treePlanted" = "tree planted on the";
+"treesPlanted" = "trees planted on the";
+"country" = "country in Africa";
+"countries" = "countries in Africa";
+"morning" = "Good morning";
+"afternoon" = "Good afternoon";
+"evening" = "Good evening";
+"howdy" = "Howdy!";
+

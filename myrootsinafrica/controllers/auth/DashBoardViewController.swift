@@ -16,17 +16,6 @@ import SwiftyJSON
 
 class DashBoardViewController : ViewController{
     
-    @IBOutlet weak var parentScrollView: UIScrollView!
-//    @IBOutlet weak var circleView: UIView!
-    
-//    @IBOutlet weak var greetingLabel: UILabel!
-    @IBOutlet weak var reserveTreeTap: UIView!
-//    @IBOutlet weak var topBoardView: UIView!
-    @IBOutlet weak var countryBigCount: UILabel!
-    @IBOutlet weak var ggwBigCount: UILabel!
-    @IBOutlet weak var countriesTreesDetailLabel: UILabel!
-    @IBOutlet weak var ggwTreesDetailsLabel: UILabel!
-//    @IBOutlet weak var bottomBoardView: UIView!
     var tokens = ""
     var user:User?
     var userData:UserData?
@@ -38,13 +27,13 @@ class DashBoardViewController : ViewController{
     lazy var topBoardView = self.createCustomView(with: .white, height: viewHeight/8, width: 0)
     lazy var topBoardViewImage = self.createImageView(with: #imageLiteral(resourceName: "topboardLeaf"))
     lazy var countryLabel = self.createUIlabelBold(with: NSLocalizedString("countryLabel", comment: "54 countries"), and: 16.0, color: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1))
-    lazy var countryCountLabel = self.createUIlabelBold(with: NSLocalizedString("number", comment: "tree count"), and: viewHeight/18, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+    lazy var countryCountLabel = self.createUIlabelBold(with: NSLocalizedString("number", comment: "tree count"), and: viewHeight/23, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     lazy var topBoardViewAdvice = self.createUIlabel(with: NSLocalizedString("topBoardAdvice", comment: "transaction update"), and: 14, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     
     lazy var bottomBoardView = self.createCustomView(with: .white, height: viewHeight/8, width: 0)
     lazy var bottomBoardViewImage = self.createImageView(with: #imageLiteral(resourceName: "bottomboardLeaf"))
     lazy var ggwLabel = self.createUIlabelBold(with: NSLocalizedString("ggwLabel", comment: "Great green wall"), and: 16.0, color: #colorLiteral(red: 0.7607843137, green: 0.862745098, blue: 0, alpha: 1))
-    lazy var ggwCountLabel = self.createUIlabelBold(with: NSLocalizedString("number", comment: "tree count"), and: viewHeight/18, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+    lazy var ggwCountLabel = self.createUIlabelBold(with: NSLocalizedString("number", comment: "tree count"), and: viewHeight/23, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     lazy var bottomBoardViewAdvice = self.createUIlabel(with: NSLocalizedString("bottomBoardAdvice", comment: "transaction update"), and: 14, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     lazy var greetingLabel = self.createUIlabelBold(with: NSLocalizedString("greeting", comment: "greetings according to the time of the day"), and: 23.0, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     lazy var statementLabel = self.createUIlabel(with: NSLocalizedString("plantingStatement", comment: "Plant a new tree ..."), and: 13.0, color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
@@ -62,24 +51,27 @@ class DashBoardViewController : ViewController{
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     var disposeBag = DisposeBag()
     var loggedInUser:UserData?
+    
+    lazy var date :Date = {
+        return Date()
+        
+    }()
+    let units: Set<Calendar.Component> = [.hour]
+    lazy var comps:DateComponents={
+        return Calendar.current.dateComponents(units, from: date)
+    }()
+    lazy var hour = {
+        return self.comps.hour
+    }()
+    
+    
     override func viewDidLoad() {
         
-        print("We are here dashy")
-        print("userLoggedIn \(user)")
-        print("userTree \(tree)")
-        
        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
 //
-//        self.setBackgroundImage("dashboardBackground", contentMode: .scaleAspectFill)
-        
-//        backgroundImageView.image = UIImage(named: "dashboardBackground")
-        
-      
-//
-//        self.navigationItem.setHidesBackButton(true, animated: true)
-//        circleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForProfile(_ :))))
-//
-//        reserveTreeTap.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
+        buttonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToMoveToNext(_ :))))
         
         
         view.layer.contents = #imageLiteral(resourceName: "dashboardBackground").cgImage
@@ -90,59 +82,63 @@ class DashBoardViewController : ViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        loggedInUser = HelperClass.getUserData()
-//        HelperClass.updateValue(key: "loggedIn", value: true)
-//
-//        print("Userdata \(loggedInUser)")
-//        ((loggedInUser?.name) != nil) ? timeMonitor(name:loggedInUser!.name!):timeMonitor(name:"Sir/Ma")
-//
-//
-//        let token = ((loggedInUser) != nil) ? loggedInUser?.token : "token"
-//
-//
-//        authViewModel.getUserTrees(token: token!).subscribe(onNext: { (TreeResponse) in
-//            guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
-//                fatalError("Invalid tree counts for countries")
-//            }
-//            guard let ggwTreesCount = TreeResponse.payload?.greenWall.count else{
-//                fatalError("Invalid tree counts for ggw")
-//            }
-//            print("error \(String(describing: TreeResponse.error))")
-//            print("message \(String(describing: TreeResponse.message))")
-//
-//            print("countries \(String(describing: countriesTreesCount))")
-//            print("ggw \(String(describing: ggwTreesCount))")
-//            self.countryBigCount.text = "\(countriesTreesCount)"
-//            self.ggwBigCount.text = "\(ggwTreesCount)"
-//
-        
-//
-//            switch countriesTreesCount {
-//            case 0..<2:self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) tree planted on the \(countriesTreesCount) country in Africa"
-//            default:
-//                self.countriesTreesDetailLabel.text = "You have \(countriesTreesCount) trees planted on the \(countriesTreesCount) countries in Africa"
-//            }
-//
-//            switch ggwTreesCount {
-//            case 0..<2: self.ggwTreesDetailsLabel.text = "You have \(ggwTreesCount) tree planted on the Green Great Wall"
-//            default:
-//                self.ggwTreesDetailsLabel.text = "You have \(ggwTreesCount) trees planted on the Green Great Wall"
-//            }
-//
-//
-//        }, onError: { (error) in
-////            print("Error: \(String(describing: error.asAFError(orFailWith: error.localizedDescription)))")
-////            print("Errorcode: \(String(describing: error.asAFError?.responseCode))")
-//            self.showSimpleAlert(title: self.title!, message: error.localizedDescription.description, action: false)
-//        }, onCompleted: {
-//            print("completed")
-//        }) {
-//            print("Disposed")
-//        }.disposed(by: disposeBag)
-      
-    }
+        loggedInUser = HelperClass.getUserData()
+        HelperClass.updateValue(key: "loggedIn", value: true)
 
-    
+      
+        ((loggedInUser?.name) != nil) ? timeMonitor(name:loggedInUser!.name!, hour:hour!):timeMonitor(name:"Sir/Ma", hour: 0)
+
+
+        let token = ((loggedInUser) != nil) ? loggedInUser?.token : "token"
+       
+
+
+        authViewModel.getUserTrees(token: token!).subscribe(onNext: { (TreeResponse) in
+            guard let countriesTreesCount = TreeResponse.payload?.countries.count else{
+                fatalError("Invalid tree counts for countries")
+            }
+            guard let ggwTreesCount = TreeResponse.payload?.greenWall.count else{
+                fatalError("Invalid tree counts for ggw")
+            }
+            print("error \(String(describing: TreeResponse.error))")
+            print("message \(String(describing: TreeResponse.message))")
+
+            print("countries \(String(describing: countriesTreesCount))")
+            print("ggw \(String(describing: ggwTreesCount))")
+            self.countryCountLabel.text = "\(countriesTreesCount)"
+            self.ggwCountLabel.text = "\(ggwTreesCount)"
+
+            let countryCounter = Counter.one(countriesTreesCount)
+            switch countryCounter {
+            case .one(countriesTreesCount)where countriesTreesCount == 1:self.topBoardViewAdvice.text = "\("youHave".localized) \(countriesTreesCount) \("treePlanted".localized) \(countriesTreesCount) \("country".localized)"
+            case .one(countriesTreesCount),
+                 .more(countriesTreesCount) where countriesTreesCount > 1:self.topBoardViewAdvice.text = "\("youHave".localized) \(countriesTreesCount) \("treesPlanted".localized) \(countriesTreesCount) \("countries".localized)"
+            @unknown default:
+                print("unknown")
+                print("hellwo whats up ")
+            }
+            
+            let ggwCounter = Counter.one(ggwTreesCount)
+            switch ggwCounter {
+            case .one(ggwTreesCount)where ggwTreesCount == 1:self.bottomBoardViewAdvice.text = "\("youHave".localized) \(ggwTreesCount) \("treePlanted".localized) \(ggwTreesCount) \("ggwLabel".localized)"
+            case .one(ggwTreesCount),
+                 .more(ggwTreesCount) where ggwTreesCount > 1:self.bottomBoardViewAdvice.text = "\("youHave".localized) \(ggwTreesCount) \("treesPlanted".localized) \(ggwTreesCount) \("ggwLabel".localized)"
+            @unknown default:
+                print("unknown")
+                print("hellwo whats up ")
+            }
+
+        }, onError: { (error) in
+//            print("Error: \(String(describing: error.asAFError(orFailWith: error.localizedDescription)))")
+//            print("Errorcode: \(String(describing: error.asAFError?.responseCode))")
+            self.showSimpleAlert(title: self.title!, message: error.localizedDescription.description, action: false)
+        }, onCompleted: {
+            print("completed")
+        }) {
+            print("Disposed")
+        }.disposed(by: disposeBag)
+//
+    }
 
 
     func initiateTapGestures(view:UIView, action:Selector?){
@@ -153,7 +149,6 @@ class DashBoardViewController : ViewController{
     @objc func tapDetectedForProfile(_ sender : UITapGestureRecognizer){
         print("profile setting")
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "profilestory") as! ViewController
-//        let profile = ProfileViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
         
     }
@@ -174,36 +169,37 @@ class DashBoardViewController : ViewController{
         
     }
 
-//    @IBAction func logoutAction(_ sender: Any) {
-//        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "loginstory") as! ViewController
-//        //        let profile = ProfileViewController()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
-//
-//
-//    }
     
-    func timeMonitor(name:String){
-
-//        let date = Date()
-//        let units: Set<Calendar.Component> = [.hour]
-//        let comps = Calendar.current.dateComponents(units, from: date)
-//        guard let hour = comps.hour else {
-//            fatalError("Invalid time format")
-//        }
+    
+    func timeMonitor(name:String, hour:Int){
+          print("hour \(hour)")
 //
-//        switch hour {
-//            case 0...11:
-//                 greetingLabel.text = "Good morning, \(name)"
-//            case 12...15:
-//                 greetingLabel.text = "Good Afternoon, \(name)"
-//            case 16..<24:
-//                greetingLabel.text = "Good Evening, \(name)"
-//            default:
-//                greetingLabel.text = "Howdy, \(name)!"
-//        }
+//        timer(time: .morning(hour), name:name)
+//        timer(time: .afternoon(hour), name: name)
+//        timer(time: .evening(hour), name: name)
+        
+        let timeOfTheDay = timer(time: .morning(hour), name:name) ?? timer(time: .afternoon(hour), name:name) ?? timer(time: .evening(hour), name:name)
+        
+        greetingLabel.text = timeOfTheDay ?? "howdy".localized
 
     }
     
+    func timer(time:TimeOfTheDay, name:String) -> String?{
+        switch time {
+        case .morning(hour) where hour! < 12:
+            return "\("morning".localized), \(name)"
+            
+        case .afternoon(hour) where hour! < 15:
+            return "\("afternoon".localized), \(name)"
+           
+        case .evening(hour) where hour! > 15:
+            return "\("evening".localized), \(name)"
+           
+        default:
+            return nil
+            
+        }
+    }
 //    
     override func viewWillDisappear(_ animated: Bool) {
                 
@@ -255,7 +251,7 @@ class DashBoardViewController : ViewController{
     
     private func setViewConstraints() {
 
-        circleView.top(to: self.containerView, offset: viewHeight/12, isActive: true)
+        circleView.top(to: self.containerView, offset: viewHeight/90, isActive: true)
         circleView.right(to: self.containerView, offset: -20, isActive: true)
         profileIcon.size(CGSize(width: 30, height: 30))
         profileIcon.contentMode = .scaleAspectFit
@@ -266,10 +262,12 @@ class DashBoardViewController : ViewController{
         setBoardsConstraint(parent: topBoardView, image: topBoardViewImage, header: countryLabel, number: countryCountLabel, advice: topBoardViewAdvice)
         setBoardsConstraint(parent: bottomBoardView, image: bottomBoardViewImage, header: ggwLabel, number: ggwCountLabel, advice: bottomBoardViewAdvice)
         
-        topBoardViewAdvice.right(to: topBoardView, offset:-5, isActive: true)
-        bottomBoardViewAdvice.right(to: topBoardView, offset:-5, isActive: true)
+        topBoardViewAdvice.right(to: topBoardView, offset:-10, isActive: true)
         
-        greetingLabel.top(to: self.containerView, offset: viewHeight/2 + 10, isActive: true)
+        bottomBoardViewAdvice.right(to: topBoardView, offset:-10, isActive: true)
+        
+        
+        greetingLabel.top(to: self.containerView, offset: viewHeight/2.5 + 10, isActive: true)
         greetingLabel.left(to: self.containerView, offset: 20, isActive: true)
         
         statementLabel.top(to: greetingLabel, offset: 30, isActive: true)
@@ -278,9 +276,9 @@ class DashBoardViewController : ViewController{
         statementLabel.numberOfLines = 0
         statementLabel.textAlignment = .left
         
-        buttonView.bottom(to: containerView, offset: -viewHeight/6, isActive: true)
-        buttonView.left(to: containerView, offset: 75, isActive: true)
-        buttonView.right(to: containerView, offset: -75, isActive: true)
+        buttonView.bottom(to: containerView, offset: -viewHeight/3.5, isActive: true)
+        buttonView.left(to: containerView, offset: 78, isActive: true)
+        buttonView.right(to: containerView, offset: -78, isActive: true)
         
         pointingHandImage.height(viewHeight/17)
         pointingHandImage.left(to: buttonView, offset: 10, isActive: true)
@@ -314,7 +312,6 @@ class DashBoardViewController : ViewController{
     private func setBoardsConstraint(parent:UIView, image:UIImageView, header:UILabel, number:UILabel, advice:UILabel){
         
         
-        
         image.size(CGSize(width: viewHeight/14, height: viewHeight/14))
         image.left(to: parent, offset: 10, isActive: true)
         image.centerY(to: parent)
@@ -324,7 +321,7 @@ class DashBoardViewController : ViewController{
         number.top(to: header, offset: 15, isActive: true)
         advice.numberOfLines = 0
         advice.textAlignment = .left
-        advice.left(to: number, offset: 35, isActive: true)
+        advice.left(to: number, offset: 45, isActive: true)
         advice.top(to: header, offset: 20, isActive: true)
         
     }

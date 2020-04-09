@@ -121,7 +121,14 @@ class HelperClass{
     }
 }
 
-//let them = 0...3
-//
-//enum TimeInt{
-//    case Morning}
+
+enum Counter{
+    case one(Int)
+    case more(Int)
+}
+
+enum TimeOfTheDay{
+    case morning(Int)
+    case afternoon(Int)
+    case evening(Int)
+}
