@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         containerView.addSubview(signupButton)
         containerView.addSubview(loginButton)
  
+        print("hello")
         
     }
     

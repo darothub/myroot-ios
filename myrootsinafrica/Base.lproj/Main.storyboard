@@ -308,7 +308,7 @@
             <objects>
                 <viewController storyboardIdentifier="loginstory" title=" " id="pew-sv-mcU" customClass="LoginViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cII-kT-W5N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pQ7-qW-AlZ"/>
@@ -327,7 +327,7 @@
             <objects>
                 <viewController storyboardIdentifier="dashboardstory" id="SDD-Wl-8Sp" customClass="DashBoardViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7z-JX-PDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GJ3-Kw-xTK"/>
@@ -624,14 +624,14 @@
             <objects>
                 <viewController storyboardIdentifier="whereToPlantScene" id="wWG-ZR-gPb" customClass="WhereToPlantViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JgL-Td-S7b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCG-jz-8Km">
-                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NN-bQ-bTJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where to plant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-E0-ti2">
                                                 <rect key="frame" x="94" y="41" width="165" height="32"/>
@@ -648,7 +648,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-az-uXO" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                                <rect key="frame" x="84" y="435" width="206" height="55"/>
+                                                <rect key="frame" x="84" y="421" width="206" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
@@ -656,7 +656,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMO-zt-Vzj">
-                                                <rect key="frame" x="19" y="182" width="336" height="198"/>
+                                                <rect key="frame" x="19" y="174" width="336" height="198"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gwm-Fc-REv">
@@ -774,7 +774,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-zx-T7D">
-                                        <rect key="frame" x="19" y="112" width="336" height="329"/>
+                                        <rect key="frame" x="19" y="112" width="336" height="328"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-Jq-mSW">
@@ -946,14 +946,14 @@
             <objects>
                 <viewController id="4LG-bd-npd" customClass="TypeOfOccasionViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PyJ-8X-czP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJ0-Qa-XEU">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="s34-A2-dKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of occasion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="DPx-dm-n1a">
                                         <rect key="frame" x="90" y="22" width="195" height="32"/>
@@ -970,7 +970,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fF-vv-E85">
-                                        <rect key="frame" x="39" y="142" width="125" height="125"/>
+                                        <rect key="frame" x="39" y="136" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftnew" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-MS-rh0">
@@ -982,14 +982,14 @@
                                         <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-Et-yX7">
-                                        <rect key="frame" x="74" y="268" width="63" height="20"/>
+                                        <rect key="frame" x="74" y="259" width="63" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irX-dp-rO7">
-                                        <rect key="frame" x="210" y="142" width="125" height="125"/>
+                                        <rect key="frame" x="210" y="136" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="champagnenew" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-W3-8Di">
@@ -1000,14 +1000,14 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anniversary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gss-se-5yI">
-                                        <rect key="frame" x="227" y="268" width="90" height="20"/>
+                                        <rect key="frame" x="227" y="259" width="90" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6wX-Tn-k1g">
-                                        <rect key="frame" x="39" y="332" width="125" height="125"/>
+                                        <rect key="frame" x="39" y="319" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="umbrellanew" translatesAutoresizingMaskIntoConstraints="NO" id="OLO-1G-tDO">
@@ -1018,7 +1018,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuW-xY-Unz">
-                                        <rect key="frame" x="210" y="332" width="125" height="125"/>
+                                        <rect key="frame" x="210" y="319" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-Gv-mLs">
@@ -1029,14 +1029,14 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-Xz-eQD">
-                                        <rect key="frame" x="251" y="458" width="43" height="20"/>
+                                        <rect key="frame" x="251" y="443" width="43" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-It-bqw" customClass="WhiteButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="498" width="206" height="55"/>
+                                        <rect key="frame" x="84" y="481" width="206" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Next"/>
@@ -1045,7 +1045,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holiday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-8m-5Sl">
-                                        <rect key="frame" x="73" y="458" width="57" height="20"/>
+                                        <rect key="frame" x="73" y="443" width="57" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1094,7 +1094,7 @@
             <objects>
                 <viewController id="lm7-5c-Vp8" customClass="HowToPlantViewController" customModule="myrootsinafrica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1Z-go-IDg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to plant tree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-FL-fDt">
@@ -1112,7 +1112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-Hb-WFG" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                <rect key="frame" x="84" y="364" width="206" height="55"/>
+                                <rect key="frame" x="84" y="352" width="206" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -1120,7 +1120,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-tR-osw">
-                                <rect key="frame" x="58" y="200" width="125" height="125"/>
+                                <rect key="frame" x="58" y="193" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="remote" translatesAutoresizingMaskIntoConstraints="NO" id="HkO-2d-ujW">
@@ -1131,7 +1131,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-va-dO8">
-                                <rect key="frame" x="191" y="200" width="125" height="125"/>
+                                <rect key="frame" x="191" y="193" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inperson" translatesAutoresizingMaskIntoConstraints="NO" id="ZZt-6B-F3D">
@@ -1142,14 +1142,14 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-mE-nv3">
-                                <rect key="frame" x="90" y="333" width="60" height="20"/>
+                                <rect key="frame" x="90" y="323" width="60" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkm-lO-CBO">
-                                <rect key="frame" x="218" y="333" width="71" height="20"/>
+                                <rect key="frame" x="218" y="323" width="71" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1187,7 +1187,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-XM-tq0">
-                                        <rect key="frame" x="51" y="110" width="125" height="125"/>
+                                        <rect key="frame" x="51" y="109" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorationTree" translatesAutoresizingMaskIntoConstraints="NO" id="pzo-gF-I5d">
@@ -1198,7 +1198,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8f-ma-mSz" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="436" width="206" height="55"/>
+                                        <rect key="frame" x="84" y="435" width="206" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Submit">
@@ -1223,7 +1223,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-aQ-AR2">
-                                        <rect key="frame" x="227" y="110" width="125" height="125"/>
+                                        <rect key="frame" x="227" y="109" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fruitTree" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-uL-UrZ">
@@ -1453,7 +1453,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tvp-Zb-aHs"/>
-        <segue reference="u0i-fK-3VZ"/>
+        <segue reference="zXD-H8-L5y"/>
         <segue reference="nCc-CA-bpm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
