@@ -18,16 +18,6 @@ import Unrealm
 
 class LoginViewController: UIViewController{
     
-    @IBOutlet weak var emailTF: UITextField!
-
-    
-    @IBOutlet weak var progressRing: UIActivityIndicatorView!
-    @IBOutlet weak var forgotPasswordLabel: UILabel!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var dontHaveAnAccountLabel: UILabel!
-    
-    @IBOutlet weak var submitButton: SecondaryButton!
-    @IBOutlet weak var progressSpinner: UIActivityIndicatorView!
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var tokens = ""
@@ -36,36 +26,67 @@ class LoginViewController: UIViewController{
     var disposeBag = DisposeBag()
     
     let fetchRequest = NSFetchRequest<UserData>.init(entityName: "UserData")
+
    
     let realm = try! Realm()
+
+    private lazy var container = self.createView(with: .clear)
+    private lazy var scroller = self.createScrollView()
+
+    lazy var header = self.createUIlabelBold(with: NSLocalizedString("login", comment: "login"), and: 34.0)
+    lazy var emailText = self.createUIlabel(with: NSLocalizedString("email", comment: "email"), and: 22.0)
+    lazy var emailTF = self.createUITextField(with: NSLocalizedString("email", comment: "email"), height: 33.0, type: .emailAddress)
+    lazy var passwordText = self.createUIlabel(with: NSLocalizedString("password", comment: "password header"), and: 22.0)
+    lazy var passwordTF = self.createUITextField(with: NSLocalizedString("password", comment: "password text field"), height: 33.0, type: .asciiCapable)
+    lazy var forgotPasswordLabel = self.createUIlabel(with: NSLocalizedString("forgotPassword", comment: "to reset password"), and: 16.0, color: #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1))
+    lazy var registerLink = self.createUIlabel(with: NSLocalizedString("registerLink", comment: "to register"), and: 16.0, color: #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1))
+    lazy var loginUIButton = self.createButton(with: NSLocalizedString("login", comment: "login"), and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(loginAction))
+    lazy var progressSpinner = self.createUIActivityIndicatorView()
+
+    lazy var viewHeight = container.frame.height
+    
+
     override func viewDidLoad() {
         print("yay! login")
+        print("height \(viewHeight)")
         
-//        progressRing.isHidden = false
+        addViews()
+        setViewConstraints()
+        view.layer.contents = #imageLiteral(resourceName: "loginBackground").cgImage
         
         // set bottom border for text field
         setTextFieldsBottomBorder()
-        guard let passwordImage = UIImage(named: "eyeiconclose") else{
-                       fatalError("Password image not found")
-                   }
+
+   
         
-       
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
+
+        guard let passwordImage = UIImage(named: "eyeiconopen") else{
+            fatalError("Password image not found")
+        }
+
+
         //password textfield rightImage
         passwordTF.addRightImageToTextField(using: passwordImage)
+        
         forgotPasswordLabel.underlineText()
-        dontHaveAnAccountLabel.underlineText()
-        
+        registerLink.underlineText()
+//
         emailTF.becomeFirstResponder()
-        
+//
         //Tap gesture for forgot password link
         forgotPasswordLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDetectedForForgotPassword(_ :))))
-        //Tap gesture for sign up
-        dontHaveAnAccountLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForSignup(_ :))))
         
-        //set returnee data in textfields
-        setReturneeData()
+//        //Tap gesture for sign up
+        registerLink.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapToDetectedForSignup(_ :))))
+        
+        passwordTF.addTarget(self, action: #selector(pressEnterToSubmit), for: .primaryActionTriggered)
+//
+//        //set returnee data in textfields
+//        setReturneeData()
+//
+        self.addCustomBackButton(action: #selector(self.gotoScene))
         
   
  
@@ -73,46 +94,49 @@ class LoginViewController: UIViewController{
 
     }
     
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("hooray")
-        self.transparentNavigationBar()
+        self.transparentNavBar()
 
          
     }
+
     
     func setTextFieldsBottomBorder(){
         emailTF.setBottomBorder()
         passwordTF.setBottomBorder()
         
     }
-    
+
     @objc func tapToDetectedForSignup(_ sender : UITapGestureRecognizer){
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "registerstory") as! UIViewController
-               self.navigationController?.pushViewController(nextVC, animated: true)
-               
+
+        self.moveToDestination(with: "registerstory")
+
     }
            
 
     @objc func tapDetectedForForgotPassword(_ sender : UITapGestureRecognizer){
         print("login to forgot")
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "forgotstory") as! UIViewController
-        //        let profile = ProfileViewController()
-        self.navigationController?.pushViewController(nextVC, animated: true)
-        
+
+        self.moveToDestination(with: "forgotstory")
+
     }
-    @IBAction func loginButtonAction(_ sender: Any) {
+
+    
+    @objc func pressEnterToSubmit(){
         userLogin()
     }
-    @IBAction func pressEnterToSubmit(_ sender: Any) {
+    @objc func loginAction(){
         userLogin()
     }
     
     func userLogin(){
-        
+
         let title = "Sign-in"
         let fieldValidation = HelperClass.validateField(textFields:emailTF, passwordTF)
-        
+
         if fieldValidation.count > 0{
             for field in fieldValidation{
                 guard let placeHolder = field.key.placeholder else{
@@ -122,15 +146,15 @@ class LoginViewController: UIViewController{
             }
             return
         }
-        
+
         guard let email = emailTF.text else{
               fatalError("Invalid email field")
           }
           guard let password = passwordTF.text else{
               fatalError("Invalid password field")
           }
-    
-          
+
+
           if !email.isValidEmail {
               showSimpleAlert(title: "Validation", message: "Invalid email address", action: false)
               return
@@ -141,19 +165,20 @@ class LoginViewController: UIViewController{
           }
 //        _ = NSEntityDescription.insertNewObject(forEntityName: "UserData", into: context)
         progressSpinner.isHidden = false
-         submitButton.isHidden = true
+        loginUIButton.isHidden = true
         authViewModel.userLogin(email:email, password:password).subscribe(onNext: { (AuthResponse) in
             print("messaage \(String(describing: AuthResponse.message))")
             self.progressSpinner.isHidden = true
-            self.submitButton.isHidden = false
+            self.loginUIButton.isHidden = false
             self.tokens = AuthResponse.token ?? "default value"
-          
+
             print("name \(String(describing: AuthResponse.payload)))")
-            
+
              if AuthResponse.status == 200 {
                 guard let payload = AuthResponse.payload else {
                     fatalError("User payload not found")
                 }
+
 //                let user = User(name: payload.name, email: payload.email, password: password, country: payload.country, phone: payload.phone, token: AuthResponse.token)
                 // Query and update from any thread
 
@@ -173,7 +198,8 @@ class LoginViewController: UIViewController{
                     user?.phone = payload.phone!
                     user?.token = AuthResponse.token!
                     user?.loggedIn.value = true
-                    
+
+
                     do{
                         try! self.realm.write{
                             self.realm.add(user!)
@@ -196,10 +222,10 @@ class LoginViewController: UIViewController{
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)
              }
-             
+
          }, onError: { (Error) in
              self.progressSpinner.isHidden = true
-             self.submitButton.isHidden = false
+             self.loginUIButton.isHidden = false
              print("Error: \(String(describing: Error.asAFError))")
              print("Errorcode: \(String(describing: Error.asAFError?.responseCode))")
          }, onCompleted: {
@@ -207,14 +233,11 @@ class LoginViewController: UIViewController{
          }, onDisposed: {
              print("disposed")
          }).disposed(by: disposeBag)
-         
-//
-//         print("tokendown \(token)")
+
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DashBoardViewController, let user = sender as? User{
-            //
             vc.user = user
             print("tokeninprepare \(user)")
         }
@@ -222,6 +245,7 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func unwindToLogin(segue:UIStoryboardSegue){
+
 //        print("email \(emailTF.text!)")
         DispatchQueue(label: "background").async {
             autoreleasepool {
@@ -231,6 +255,7 @@ class LoginViewController: UIViewController{
                     try! thisRealm.write {
                         user.first?.loggedIn.value = false
                     }
+
                 }
             }
         }
@@ -238,21 +263,11 @@ class LoginViewController: UIViewController{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if self.isMovingFromParent {
-            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "homeScene") as! UIViewController
-            //        let profile = ProfileViewController()
-            self.navigationController?.pushViewController(nextVC, animated: true)
-//            self.performSegue(withIdentifier: "toHomeScene", sender: self)
-        }
+
+ 
     }
 
-    
-    
-   
 
-
-//
-  
     
     func setReturneeData(){
         
@@ -268,6 +283,44 @@ class LoginViewController: UIViewController{
         }
 
     }
+
     
 
+    
+    //MARK: add views
+    private func addViews(){
+        
+        view.addSubview(self.scroller)
+        scroller.edgesToSuperview()
+        scroller.addSubview(self.container)
+        customAddToSubView(parent:container, views: header, emailText, emailTF, passwordText, passwordTF, forgotPasswordLabel, loginUIButton, registerLink, progressSpinner)
+       
+    }
+     //MARK: set constraints
+    private func setViewConstraints() {
+        header.centerX(to: container)
+        header.top(to: self.container, offset: viewHeight/12, isActive: true)
+        emailText.top(to: header, offset: viewHeight/6, isActive: true)
+        emailTF.top(to: emailText, offset: 40, isActive: true)
+        emailTF.right(to: self.container, offset: -20, isActive: true)
+        passwordText.top(to: emailTF, offset: 50, isActive: true)
+        passwordTF.top(to: passwordText, offset: 40, isActive: true)
+        passwordTF.right(to: self.container, offset: -20, isActive: true)
+        forgotPasswordLabel.top(to: passwordTF, offset: 40, isActive: true)
+        forgotPasswordLabel.right(to: self.container, offset: -20, isActive: true)
+        loginUIButton.top(to: forgotPasswordLabel, offset: 50, isActive: true)
+        loginUIButton.centerX(to: container)
+        progressSpinner.top(to: forgotPasswordLabel, offset: 50, isActive: true)
+        progressSpinner.centerX(to: container)
+        registerLink.centerX(to: container)
+        registerLink.top(to: loginUIButton, offset: 55, isActive: true)
+        setToEqualLeadingAndTrailing(parent: container, leading: 50, trailing: -50, views: loginUIButton)
+        setleftAnchorToContainerView(parent: container, views: emailText, emailTF, passwordText, passwordTF)
+        
+        
+    }
+
+    
+
+  
 }

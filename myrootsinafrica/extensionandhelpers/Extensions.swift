@@ -135,6 +135,9 @@ extension String {
     var isValidPassword:Bool{
         NSPredicate(format: "SELF MATCHES %@", "^[a-zA-Z0-9@$!%*#?&]{6,}$").evaluate(with: self)
     }
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
 }
 
 extension UINavigationController {
@@ -146,5 +149,14 @@ extension UINavigationController {
     }
 }
 
+//extension ViewController{
+//    var containerView :UIView {
+//        return self.createView(with: .clear)
+//    }
+//    var scrollView:UIView {
+//        return self.createScrollView()
+//        
+//    }
+//}
 
 

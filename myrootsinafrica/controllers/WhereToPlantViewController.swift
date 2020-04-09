@@ -12,9 +12,13 @@ import iOSDropDown
 class WhereToPlantViewController:UIViewController{
     
     @IBOutlet weak var countryIcon: UIImageView!
+    @IBOutlet weak var headerLabel: UILabel!
     
     @IBOutlet weak var selectorCardForGGW: UIView!
     @IBOutlet weak var selectorCardForCountry: UIView!
+    @IBOutlet weak var subHeaderLabel: UILabel!
+    
+    @IBOutlet weak var nextButton: SecondaryButton!
     
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var fiftyFourCountriesDropDown: DropDown!
@@ -25,6 +29,9 @@ class WhereToPlantViewController:UIViewController{
     override func viewDidLoad() {
         print("choose location")
         print("user \(user)")
+        
+      
+        setLocalizedLabel()
         
         self.setupProgressBar(progress: 0.2)
         
@@ -44,12 +51,15 @@ class WhereToPlantViewController:UIViewController{
         selectorCardForGGW.isUserInteractionEnabled = true
         selectorCardForGGW.addGestureRecognizer(singleTapForGGW)
         
+        self.addCustomBackButton(action: #selector(gotoScene))
+        
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //set view background image
-        view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
-    }
+
+    @objc override func gotoScene(){
+          self.moveToDestination(with: "dashboardstory")
+          self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+      }
+
     @objc func tapDetected(){
         
         if selectorCardForCountry.showSelectorCard() {
@@ -92,5 +102,11 @@ class WhereToPlantViewController:UIViewController{
             print("treeinprepare \(tree)")
         }
         
+    }
+    
+    func setLocalizedLabel(){
+        headerLabel.text = "whereToPlantHeader".localized
+        subHeaderLabel.text = "whereToPlantSubHeader".localized
+        nextButton.setTitle("next".localized, for: .normal)
     }
 }

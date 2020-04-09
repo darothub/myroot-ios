@@ -18,7 +18,7 @@ class ReasonViewController : UIViewController{
     @IBOutlet weak var giftCardView: UIView!
     @IBOutlet weak var jobCardView: UIView!
    
-    var imageView: UIImageView!
+    
     var tree:Tree?
     
     @IBOutlet weak var climateCheckBox: UICheckbox!
@@ -35,8 +35,9 @@ class ReasonViewController : UIViewController{
         giftCardView.setBottomBorderUIView(using: color)
         
         self.setupProgressBar(progress: 0.4)
-        
 
+        
+        self.addCustomBackButton(action: #selector(self.gotoScene))
 
     }
     @IBAction func tapToMoveToNext(_ sender: Any) {
@@ -47,6 +48,10 @@ class ReasonViewController : UIViewController{
     }
 
     
+    @objc override func gotoScene() {
+        self.moveToDestination(with: "whereToPlantScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
     
     
     func getSelectedReasonSelection() -> Reason{

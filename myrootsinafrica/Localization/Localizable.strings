@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  myrootsinafrica
+
+  Created by Darot on 07/04/2020.
+  Copyright © 2020 mac. All rights reserved.
+*/
+"homeSceneHeaderText" = "World's #1 \nClimate Action App";
+"homeSceneSubText1" = "I  c a n  l i t e r a l l y  s a y \nI  h a v e  r o o t s  i n  A f r i c a";
+"login" = "Login";
+"signup" = "Signup";
+"email" = "Email";
+"password" = "Password";
+"forgotPassword" = "Forgot Password?";
+"registerLink" = "Don't have an account signup?";
+"countryLabel" = "54 Countries";
+"number" = "_";
+"topBoardAdvice" = "You have 0 tree planted on the 0 country in Africa";
+"ggwLabel" = "Great green wall";
+"bottomBoardAdvice"   = "You have 0 tree planted on the Green Great Wall";
+"greeting" = "Goodday Sir/Ma";
+"plantingStatement" = "Plant a new tree to replenish the earth and make the earth a greener planet";
+"reserveText" = "Reserve a new tree";
+"youHave" ="You have";
+"treePlanted" = "tree planted on the";
+"treesPlanted" = "trees planted on the";
+"country" = "country in Africa";
+"countries" = "countries in Africa";
+"morning" = "Good morning";
+"afternoon" = "Good afternoon";
+"evening" = "Good evening";
+"howdy" = "Howdy!";
+"whereToPlantHeader" = "Where to plant";
+"whereToPlantSubHeader" = "Choose the location to plant your roots";
+"next" = "Next";

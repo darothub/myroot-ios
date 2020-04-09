@@ -100,11 +100,29 @@ extension UIViewController {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-
-    func transparentNavigationBar(){
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    
+    func transparentNavBar(){
+      
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+     }
+    
+    func moveToDestination(with identifier:String){
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: identifier) as! UIViewController
+          self.navigationController?.pushViewController(nextVC, animated: true)
+      }
+
+
+    func addCustomBackButton(action:Selector){
+          let backButton = UIButton(type: .system)
+          backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
+          navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+
+          backButton.addTarget(self, action: action, for: .touchUpInside)
+      }
+    @objc func gotoScene(){
+        self.moveToDestination(with: "homeScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     }
 }

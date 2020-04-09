@@ -88,3 +88,16 @@ class HelperClass{
     
 
 }
+
+
+
+enum Counter{
+    case one(Int)
+    case more(Int)
+}
+
+enum TimeOfTheDay{
+    case morning(Int)
+    case afternoon(Int)
+    case evening(Int)
+}
