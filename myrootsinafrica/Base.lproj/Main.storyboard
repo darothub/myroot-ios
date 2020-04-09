@@ -1187,7 +1187,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="604.5"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-XM-tq0">
-                                        <rect key="frame" x="51" y="109" width="125" height="125"/>
+                                        <rect key="frame" x="51" y="108" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="decorationTree" translatesAutoresizingMaskIntoConstraints="NO" id="pzo-gF-I5d">
@@ -1223,7 +1223,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOm-aQ-AR2">
-                                        <rect key="frame" x="227" y="109" width="125" height="125"/>
+                                        <rect key="frame" x="227" y="108" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fruitTree" translatesAutoresizingMaskIntoConstraints="NO" id="6NF-uL-UrZ">
