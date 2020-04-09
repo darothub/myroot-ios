@@ -84,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TinyConstraints.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UICheckbox.Swift-UICheckbox.xcscheme</key>
 		<dict>
 			<key>isShown</key>
