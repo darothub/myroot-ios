@@ -55,12 +55,8 @@ class DashBoardViewController : UIViewController{
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     var disposeBag = DisposeBag()
 
-    lazy var loggedInPerson:User = {
-        realm.objects(User.self).filter("loggedIn == true").first!
-    }()
+ 
     let realm = try! Realm()
-
-    var loggedInUser:UserData?
     
     lazy var date :Date = {
         return Date()
@@ -73,6 +69,10 @@ class DashBoardViewController : UIViewController{
     lazy var hour = {
         return self.comps.hour!
     }()
+    
+    lazy var loggedInPerson:User = {
+         realm.objects(User.self).filter("loggedIn == true").first!
+     }()
     
     override func viewDidLoad() {
         
@@ -89,7 +89,23 @@ class DashBoardViewController : UIViewController{
         setViewConstraints()
         setCornerRadius()
 
-     
+        self.addCustomRightBackButton(image: nil, title: "logout".localized, action: #selector(logout))
+    }
+    
+    @objc func logout(){
+        
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                let thisRealm = try! Realm()
+                let user = thisRealm.objects(User.self).filter("loggedIn = true")
+                try! thisRealm.write {
+                    user.first?.loggedIn.value = false
+                }
+            }
+        }
+        
+        self.moveToDestination(with: "loginstory")
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -209,7 +225,7 @@ class DashBoardViewController : UIViewController{
         case .morning(hour) where hour < 12:
             return "\("morning".localized), \(name)"
             
-        case .afternoon(hour) where hour < 15:
+        case .afternoon(hour) where hour <= 15:
             return "\("afternoon".localized), \(name)"
            
         case .evening(hour) where hour > 15:
@@ -243,8 +259,8 @@ class DashBoardViewController : UIViewController{
         profileIcon.contentMode = .scaleAspectFit
         profileIcon.center(in: circleView)
         
-        boardContainerViews(view: topBoardView, centerAnchorView: container, topAnchorView: circleView, offset: 60)
-        boardContainerViews(view: bottomBoardView, centerAnchorView: container, topAnchorView: topBoardView, offset: viewHeight/7)
+        boardContainerViews(view: topBoardView, centerAnchorView: container, topAnchorView: circleView, topOffset: 60)
+        boardContainerViews(view: bottomBoardView, centerAnchorView: container, topAnchorView: topBoardView, topOffset: viewHeight/7)
         setBoardsConstraint(parent: topBoardView, image: topBoardViewImage, header: countryLabel, number: countryCountLabel, advice: topBoardViewAdvice)
         setBoardsConstraint(parent: bottomBoardView, image: bottomBoardViewImage, header: ggwLabel, number: ggwCountLabel, advice: bottomBoardViewAdvice)
         
@@ -288,9 +304,9 @@ class DashBoardViewController : UIViewController{
         buttonView.layer.cornerRadius = viewHeight/30
     }
     
-    private func boardContainerViews(view:UIView, centerAnchorView:UIView, topAnchorView:UIView, offset:CGFloat){
+    private func boardContainerViews(view:UIView, centerAnchorView:UIView, topAnchorView:UIView, topOffset:CGFloat){
         view.centerX(to: centerAnchorView)
-        view.top(to: topAnchorView, offset: offset, isActive: true)
+        view.top(to: topAnchorView, offset: topOffset, isActive: true)
         view.right(to: self.container, offset: -20, isActive: true)
         view.left(to: self.container, offset: 20, isActive: true)
     }

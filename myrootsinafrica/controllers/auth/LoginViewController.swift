@@ -33,14 +33,14 @@ class LoginViewController: UIViewController{
     private lazy var container = self.createView(with: .clear)
     private lazy var scroller = self.createScrollView()
 
-    lazy var header = self.createUIlabelBold(with: NSLocalizedString("login", comment: "login"), and: 34.0)
-    lazy var emailText = self.createUIlabel(with: NSLocalizedString("email", comment: "email"), and: 22.0)
-    lazy var emailTF = self.createUITextField(with: NSLocalizedString("email", comment: "email"), height: 33.0, type: .emailAddress)
-    lazy var passwordText = self.createUIlabel(with: NSLocalizedString("password", comment: "password header"), and: 22.0)
-    lazy var passwordTF = self.createUITextField(with: NSLocalizedString("password", comment: "password text field"), height: 33.0, type: .asciiCapable)
-    lazy var forgotPasswordLabel = self.createUIlabel(with: NSLocalizedString("forgotPassword", comment: "to reset password"), and: 16.0, color: #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1))
-    lazy var registerLink = self.createUIlabel(with: NSLocalizedString("registerLink", comment: "to register"), and: 16.0, color: #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1))
-    lazy var loginUIButton = self.createButton(with: NSLocalizedString("login", comment: "login"), and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(loginAction))
+    lazy var header = self.createUIlabelBold(with: "login".localized, and: 22.0)
+    lazy var emailText = self.createUIlabel(with: "email".localized, and: 22.0)
+    lazy var emailTF = self.createUITextField(with:"email".localized, height: 33.0, type: .emailAddress)
+    lazy var passwordText = self.createUIlabel(with: "password".localized, and: 22.0)
+    lazy var passwordTF = self.createUITextField(with: "password".localized, height: 33.0, type: .asciiCapable)
+    lazy var forgotPasswordLabel = self.createUIlabel(with: "forgotPassword".localized, and: 16.0, color: #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1))
+    lazy var registerLink = self.createUIlabel(with: "registerLink".localized, and: 16.0, color: #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1))
+    lazy var loginUIButton = self.createButton(with: "login".localized, and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(loginAction))
     lazy var progressSpinner = self.createUIActivityIndicatorView()
 
     lazy var viewHeight = container.frame.height
@@ -62,14 +62,14 @@ class LoginViewController: UIViewController{
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
 
-        guard let passwordImage = UIImage(named: "eyeiconopen") else{
+        guard let passwordImage = UIImage(named: "eyeiconclose") else{
             fatalError("Password image not found")
         }
 
 
         //password textfield rightImage
         passwordTF.addRightImageToTextField(using: passwordImage)
-        
+        passwordTF.isSecureTextEntry = true
         forgotPasswordLabel.underlineText()
         registerLink.underlineText()
 //
@@ -88,6 +88,7 @@ class LoginViewController: UIViewController{
 //
         self.addCustomBackButton(action: #selector(self.gotoScene))
         
+        setReturneeData()
   
  
         
@@ -244,23 +245,6 @@ class LoginViewController: UIViewController{
         
     }
     
-    @IBAction func unwindToLogin(segue:UIStoryboardSegue){
-
-//        print("email \(emailTF.text!)")
-        DispatchQueue(label: "background").async {
-            autoreleasepool {
-                let thisRealm = try! Realm()
-                var user = thisRealm.objects(User.self).filter("loggedIn = true")
-                if user != nil{
-                    try! thisRealm.write {
-                        user.first?.loggedIn.value = false
-                    }
-
-                }
-            }
-        }
-        
-    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
@@ -275,6 +259,7 @@ class LoginViewController: UIViewController{
         
         if returningUsers.count > 0{
             let lastUser = returningUsers.last
+            print("user here \(lastUser)")
             emailTF.text = lastUser?.email
             passwordTF.text = lastUser?.password
         }

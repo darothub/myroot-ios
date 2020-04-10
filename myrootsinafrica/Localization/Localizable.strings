@@ -33,3 +33,10 @@
 "whereToPlantHeader" = "Where to plant";
 "whereToPlantSubHeader" = "Choose the location to plant your roots";
 "next" = "Next";
+"occasionHeader" = "Type of occasion";
+"occasionSubHeader" = "Choose the type of occasion \nfor planting your roots";
+"birthday" = "Birthday";
+"holiday" = "Holiday";
+"anniversary" = "Anniversary";
+"other" = "Other";
+"logout" = "Logout";

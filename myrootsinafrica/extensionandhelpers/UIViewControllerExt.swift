@@ -113,12 +113,25 @@ extension UIViewController {
       }
 
 
-    func addCustomBackButton(action:Selector){
-          let backButton = UIButton(type: .system)
-          backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
-          navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-
-          backButton.addTarget(self, action: action, for: .touchUpInside)
+    func addCustomBackButton(action:Selector, color:UIColor=#colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1)){
+        let backButton = UIButton(type: .system)
+        backButton.setImage(#imageLiteral(resourceName: "backicon"), for: .normal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        navigationController?.navigationBar.tintColor = color
+        
+        backButton.addTarget(self, action: action, for: .touchUpInside)
+      }
+    func addCustomRightBackButton(image:UIImage?, title:String?, action:Selector){
+        let backButton = UIButton(type: .system)
+        if image != nil{
+             backButton.setImage(image, for: .normal)
+        }else{
+           backButton.setTitle("logout".localized, for: .normal)
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: backButton)
+        navigationController?.navigationBar.tintColor = .white
+        backButton.addTarget(self, action: action, for: .touchUpInside)
       }
     @objc func gotoScene(){
         self.moveToDestination(with: "homeScene")
