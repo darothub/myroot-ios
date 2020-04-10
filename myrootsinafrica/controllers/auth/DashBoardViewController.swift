@@ -22,7 +22,7 @@ class DashBoardViewController : UIViewController{
 
     private lazy var container = self.createView(with: .clear)
     private lazy var scroller = self.createScrollView()
-    var userData:UserData?
+    
     lazy var viewHeight = container.frame.height
     lazy var viewWidth = container.frame.width
     lazy var circleView = self.createCustomView(with: .white, height: 50, width: 50)
@@ -48,14 +48,16 @@ class DashBoardViewController : UIViewController{
     
     
     var tree:Tree?
-    @IBOutlet weak var logOutButton: UIBarButtonItem!
+  
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
     
     let authViewModel = AuthViewModel(authProtocol: AuthService())
     var disposeBag = DisposeBag()
 
-    var loggedInPerson:Results<User>?
+    lazy var loggedInPerson:User = {
+        realm.objects(User.self).filter("loggedIn == true").first!
+    }()
     let realm = try! Realm()
 
     var loggedInUser:UserData?
@@ -93,19 +95,19 @@ class DashBoardViewController : UIViewController{
         super.viewWillAppear(animated)
 
         
-        loggedInPerson = {
-            realm.objects(User.self).filter("loggedIn = true")
-        }()
-            
+//        loggedInPerson = {
+//            realm.objects(User.self).filter("name == '\(user!.email!)'")
+//        }()
+    
         let name = {
-            self.loggedInPerson!.first!.name
+            self.loggedInPerson.name
         }()
-        print("Userdata \(String(describing: name))")
+        
         timeMonitor(name:name!, hour:hour)
         
         
         var token: String {
-            self.loggedInPerson!.first!.token!
+            self.loggedInPerson.token!
         }
         
         
@@ -149,7 +151,7 @@ class DashBoardViewController : UIViewController{
         }, onError: { (error) in
 //            print("Error: \(String(describing: error.asAFError(orFailWith: error.localizedDescription)))")
 //            print("Errorcode: \(String(describing: error.asAFError?.responseCode))")
-            self.showSimpleAlert(title: self.title!, message: error.localizedDescription.description, action: false)
+            self.showSimpleAlert(title: "Dashboard", message: error.localizedDescription.description, action: false)
         }, onCompleted: {
             print("completed")
         }) {
@@ -175,7 +177,7 @@ class DashBoardViewController : UIViewController{
     }
     
     @objc func tapToMoveToNext(_ sender : UITapGestureRecognizer){
-        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: loggedInPerson?.first)
+        self.performSegue(withIdentifier: "toWhereToPlantScene", sender: loggedInPerson)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? WhereToPlantViewController, let theUser = sender as? User{
@@ -218,40 +220,9 @@ class DashBoardViewController : UIViewController{
             
         }
     }
-//    
-    override func viewWillDisappear(_ animated: Bool) {
-                
-  
-    }
  
     
-
-//    func setLoggedInUser()->UserData{
-//
-//        do{
-//            let result = try self.context.fetch(fetchRequest)
-//            if result.count > 0{
-//                userData = result[0]
-//                let data = result[0]
-//                data.setValue(true, forKey: "loggedIn")
-//                print("userLogIn1Dash \(String(describing: data.loggedIn))")
-//            }
-//            do{
-//                try self.context.save()
-//                print("dashBoardSaved")
-//            }catch{
-//                print("Error updating entity")
-//            }
-//
-//        }catch{
-//            print(error)
-//        }
-//
-//        return userData!
-//    }
-
-    
-    internal func addViews(){
+    private func addViews(){
         view.addSubview(self.scroller)
         scroller.edgesToSuperview()
         scroller.addSubview(self.container)

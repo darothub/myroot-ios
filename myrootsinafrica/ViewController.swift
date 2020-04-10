@@ -7,6 +7,7 @@
 //
 
 import TinyConstraints
+import RealmSwift
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,12 @@ class ViewController: UIViewController {
     lazy var signupButton = self.createButton(with: NSLocalizedString("signup", comment: "signup"), and: #colorLiteral(red: 0.4784313725, green: 0.7843137255, blue: 0.2509803922, alpha: 1), action: #selector(toSignupScene))
     lazy var scroller = self.createScrollView()
     lazy var logo = self.createImageView(with: #imageLiteral(resourceName: "my_roots_logo"))
+    
+    let realm = try! Realm()
+    
+    lazy var loggedInPerson = {
+        realm.objects(User.self).filter("loggedIn == true")
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +43,12 @@ class ViewController: UIViewController {
 
        self.navigationItem.leftBarButtonItem = UIBarButtonItem()
 
+        print("LoggedInPerson \(String(describing: loggedInPerson.first))")
+        
+        if loggedInPerson.first != nil {
+            goToDashBoard()
+        }
+        
         
     }
     
@@ -76,6 +89,12 @@ class ViewController: UIViewController {
   
     @objc func toSignupScene(){
         self.performSegue(withIdentifier: "toSignupScene", sender: self)
+    }
+    
+    func goToDashBoard(){
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "dashboardstory") as! DashBoardViewController
+        nextVC.user = loggedInPerson.first
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 

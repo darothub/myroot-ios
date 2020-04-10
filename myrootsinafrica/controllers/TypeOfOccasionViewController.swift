@@ -32,8 +32,16 @@ class TypeOfOccasionViewController : UIViewController{
             tapInitiation(view: holidayCard, action: #selector(self.tapDetectedForHoliday))
             tapInitiation(view: otherCard, action: #selector(self.tapDetectedForOther))
    
+         self.addCustomBackButton(action: #selector(self.gotoScene))
+        self.transparentNavBar()
+        
+        view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
     }
     
+    @objc override func gotoScene() {
+        self.moveToDestination(with: "reasonScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
     @objc func tapDetectedForBirthday(){
          
         if birthdayCard.showSelectorCard() {

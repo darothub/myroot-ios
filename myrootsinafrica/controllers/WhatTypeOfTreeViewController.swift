@@ -40,9 +40,15 @@ class WhatTypeOfTreeViewController : UIViewController{
         tapInitiation(view: fruitSelectorCard, action: #selector(self.tapDetectedForFruitCard))
         tapInitiation(view: environmentalSelectorCard, action: #selector(self.tapDetectedForEnvironmentalCard))
      
+        self.addCustomBackButton(action: #selector(self.gotoScene))
+        self.transparentNavBar()
         
     }
     
+    @objc override func gotoScene() {
+        self.moveToDestination(with: "howToPlantScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
     @objc func tapDetectedForDecorativeCard(){
         
         if decorativeSelectorCard.showSelectorCard() {

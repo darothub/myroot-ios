@@ -24,7 +24,15 @@ class HowToPlantViewController : UIViewController{
         self.setupProgressBar(progress: 0.8)
         tapInitiation(view: inpersonSelectorCard, action: #selector(self.tapDetectedForinpersonCard))
         tapInitiation(view: remoteSelectorCard, action: #selector(self.tapDetectedForRemoteCard))
+        
+        self.addCustomBackButton(action: #selector(self.gotoScene))
+        self.transparentNavBar()
 
+    }
+    
+    @objc override func gotoScene() {
+        self.moveToDestination(with: "occasionScene")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     @objc func tapDetectedForinpersonCard(){
