@@ -199,7 +199,7 @@ class TypeOfOccasionViewController : UIViewController{
     private func boardContainerViews(view:UIView, centerAnchorView:UIView, topAnchorView:UIView, topOffset:CGFloat){
          view.centerX(to: centerAnchorView)
          view.top(to: topAnchorView, offset: topOffset, isActive: true)
-         view.right(to: self.container, offset: -30, isActive: true)
-         view.left(to: self.container, offset: 30, isActive: true)
+         view.right(to: self.container, offset: -viewWidth/7, isActive: true)
+         view.left(to: self.container, offset: viewWidth/7, isActive: true)
      }
 }
