@@ -252,11 +252,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-ee-7YL">
-                                <rect key="frame" x="70" y="110" width="275" height="308"/>
+                                <rect key="frame" x="70" y="110" width="275" height="434"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verification  successful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-vk-R9l">
-                                        <rect key="frame" x="48" y="85" width="194" height="66"/>
+                                        <rect key="frame" x="48" y="120" width="194" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -267,14 +267,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your account has been  verified  please login with your  details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKn-Q0-x0c">
-                                        <rect key="frame" x="47" y="160" width="194" height="82"/>
+                                        <rect key="frame" x="47" y="227" width="194" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGV-na-o2A" customClass="SecondaryButton" customModule="myrootsinafrica" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="245" width="223" height="55"/>
+                                        <rect key="frame" x="25" y="371" width="223" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Got it!"/>
                                         <connections>
@@ -294,12 +294,12 @@
                         <outlet property="successAdviceLabel" destination="fKn-Q0-x0c" id="UIg-93-o90"/>
                         <outlet property="viewSubContainer" destination="Fij-ee-7YL" id="cPv-15-rBv"/>
                         <segue destination="pew-sv-mcU" kind="presentation" identifier="toLoginStory" id="zXD-H8-L5y"/>
-                        <segue destination="SDD-Wl-8Sp" kind="presentation" identifier="toDashboardScene" id="s3z-4D-2Du"/>
+                        <segue destination="SDD-Wl-8Sp" kind="show" identifier="toDashboardScene" id="s3z-4D-2Du"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3o-Vj-ohO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903.0000000000002" y="-168"/>
+            <point key="canvasLocation" x="1902.8985507246377" y="-168.08035714285714"/>
         </scene>
         <!-- -->
         <scene sceneID="BXX-6Z-i3d">
@@ -786,7 +786,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gift to self or loved ones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Em7-5n-XuN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gift to self or loved ones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Em7-5n-XuN">
                                                 <rect key="frame" x="71" y="35" width="169" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -824,7 +824,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decent work and economic growth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-iX-Hfh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decent work and economic growth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-iX-Hfh">
                                                 <rect key="frame" x="71" y="35" width="213" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -875,7 +875,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Supporting vulnerable regions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-R6-fEX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Supporting vulnerable regions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-R6-fEX">
                                                 <rect key="frame" x="71" y="36" width="213" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -1291,7 +1291,7 @@
                         <outlet property="fruitSelectorCard" destination="vOm-aQ-AR2" id="cqF-LZ-bk4"/>
                         <outlet property="progressSpinner" destination="9sK-jy-ePS" id="T8E-uX-TeF"/>
                         <outlet property="submitButton" destination="Q8f-ma-mSz" id="qkv-dJ-qM3"/>
-                        <segue destination="Dhj-tE-WO6" kind="presentation" identifier="toSuccessScene" id="3v8-8o-Nwx"/>
+                        <segue destination="Dhj-tE-WO6" kind="show" identifier="toSuccessScene" id="3v8-8o-Nwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjv-oW-vOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1443,6 +1443,7 @@
         <image name="verifitiondecor" width="47" height="46.5"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hps-xw-q57"/>
         <segue reference="s3z-4D-2Du"/>
         <segue reference="zXD-H8-L5y"/>
         <segue reference="3v8-8o-Nwx"/>
