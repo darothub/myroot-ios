@@ -149,14 +149,6 @@ extension UINavigationController {
     }
 }
 
-//extension ViewController{
-//    var containerView :UIView {
-//        return self.createView(with: .clear)
-//    }
-//    var scrollView:UIView {
-//        return self.createScrollView()
-//        
-//    }
-//}
+
 
 

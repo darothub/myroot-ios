@@ -78,7 +78,7 @@ extension UIViewController {
                                         //Sign out action
                                         let identifiedString = identifier ?? ""
                                         if action == true && !(user == nil){
-                                           
+                                            
                                             print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: user)
                                         }
@@ -86,10 +86,10 @@ extension UIViewController {
                                             
                                             print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: tree)
-                                                                                
+                                            
                                         }
                                         else if action == true && (user == nil){
-                                        
+                                            
                                             print("okIdentify \(identifiedString)")
                                             self.performSegue(withIdentifier: identifiedString, sender: self)
                                         }
