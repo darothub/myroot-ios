@@ -54,7 +54,10 @@
 		049CF58C242373C200C81412 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58B242373C200C81412 /* LoginViewController.swift */; };
 		049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58D2423F4F500C81412 /* DashBoardViewController.swift */; };
 		049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58F2424F43800C81412 /* ReasonViewController.swift */; };
-		04AA31DB2441C9F40054E761 /* NetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DA2441C9F40054E761 /* NetworkServicesTests.swift */; };
+		04AA31DB2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DA2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift */; };
+		04AA31DD2444A12D0054E761 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DC2444A12D0054E761 /* LoginViewControllerTest.swift */; };
+		04AA31E02444C1C00054E761 /* MockNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DF2444C1C00054E761 /* MockNetworkProtocol.swift */; };
+		04AA31E22444C1E60054E761 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31E12444C1E60054E761 /* MockViewModel.swift */; };
 		04C2FFAF243BF455001D0492 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C2FFAE243BF455001D0492 /* Localizable.strings */; };
 		04C2FFB2243C88A5001D0492 /* ViewGenerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */; };
 		04C2FFB62440EC11001D0492 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFB52440EC10001D0492 /* Calculator.swift */; };
@@ -136,7 +139,10 @@
 		049CF58B242373C200C81412 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		049CF58D2423F4F500C81412 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		049CF58F2424F43800C81412 /* ReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonViewController.swift; sourceTree = "<group>"; };
-		04AA31DA2441C9F40054E761 /* NetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesTests.swift; sourceTree = "<group>"; };
+		04AA31DA2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewControllerTest.swift; sourceTree = "<group>"; };
+		04AA31DC2444A12D0054E761 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		04AA31DF2444C1C00054E761 /* MockNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkProtocol.swift; sourceTree = "<group>"; };
+		04AA31E12444C1E60054E761 /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
 		04C2FFAE243BF455001D0492 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGenerators.swift; sourceTree = "<group>"; };
 		04C2FFB52440EC10001D0492 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -278,10 +284,12 @@
 		045C1F28241AD7D4004217D9 /* myrootsinafricaTests */ = {
 			isa = PBXGroup;
 			children = (
+				04AA31DE2444C19D0054E761 /* mock */,
 				045C1F29241AD7D4004217D9 /* myrootsinafricaTests.swift */,
 				045C1F2B241AD7D4004217D9 /* Info.plist */,
 				04C2FFB72440F329001D0492 /* CalculatorTest.swift */,
-				04AA31DA2441C9F40054E761 /* NetworkServicesTests.swift */,
+				04AA31DA2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift */,
+				04AA31DC2444A12D0054E761 /* LoginViewControllerTest.swift */,
 			);
 			path = myrootsinafricaTests;
 			sourceTree = "<group>";
@@ -363,6 +371,15 @@
 				041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		04AA31DE2444C19D0054E761 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				04AA31DF2444C1C00054E761 /* MockNetworkProtocol.swift */,
+				04AA31E12444C1E60054E761 /* MockViewModel.swift */,
+			);
+			path = mock;
 			sourceTree = "<group>";
 		};
 		04C2FFAD243BF40C001D0492 /* Localization */ = {
@@ -695,8 +712,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AA31DB2441C9F40054E761 /* NetworkServicesTests.swift in Sources */,
+				04AA31DD2444A12D0054E761 /* LoginViewControllerTest.swift in Sources */,
+				04AA31DB2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift in Sources */,
+				04AA31E22444C1E60054E761 /* MockViewModel.swift in Sources */,
 				045C1F2A241AD7D4004217D9 /* myrootsinafricaTests.swift in Sources */,
+				04AA31E02444C1C00054E761 /* MockNetworkProtocol.swift in Sources */,
 				04C2FFB82440F329001D0492 /* CalculatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
