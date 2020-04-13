@@ -39,9 +39,10 @@ class RegisterViewController: XCTestCase {
         _ = vc.view
     }
     
-    func testLoginViewControllerViewModel(){
+    func testSignupViewControllerViewModel(){
        
         _ = vc.view
+        vc.authViewModel.registerUser(user: userDetails)
         XCTAssertEqual(mockViewModel.checkCount, 1)
     }
     
