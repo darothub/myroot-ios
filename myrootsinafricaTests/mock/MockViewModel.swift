@@ -24,7 +24,14 @@ class MockViewModel:AuthViewModel{
     override func userLogin(email: String, password: String) -> Observable<AuthResponse> {
         checkCount += 1
         authProtocols.userLogin(email: email, password: password)
-        return Observable.of(AuthResponse(status: nil, error: nil, message: nil, payload: nil, token: nil))
+        return Observable.of(AuthResponse(status: 200, error: nil, message: nil, payload: nil, token: nil))
+    }
+    
+    override func registerUser(user: UserDetails) -> Observable<AuthResponse> {
+        checkCount += 1
+        authProtocols.registerUser(user: user)
+        let payload = Payload(isVerified: false, _id: nil, name: user.name, email: user.email, password: user.password, country: user.country, phone: user.phone)
+        return Observable.of(AuthResponse(status: 201, error: nil, message: "Registration is successful", payload: payload, token: nil))
     }
     
 }

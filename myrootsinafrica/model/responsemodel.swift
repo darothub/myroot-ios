@@ -24,12 +24,12 @@ struct Payload:Codable{
     let password:String?
     let country:String?
     let phone:String?
-    let userId:String?
-    let type:String?
-    let description:String?
-    let longitude:String?
-    let latitude:String?
-    let picture:String?
+    let userId:String?=nil
+    let type:String?=nil
+    let description:String?=nil
+    let longitude:String?=nil
+    let latitude:String?=nil
+    let picture:String?=nil
 }
 
 
