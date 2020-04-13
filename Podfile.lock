@@ -2,7 +2,6 @@ PODS:
   - Alamofire (5.0.5)
   - iOSDropDown (0.3.4)
   - IQKeyboardManagerSwift (6.5.5)
-  - M13Checkbox (3.4.0)
   - ParticlesLoadingView (0.5)
   - Realm (4.4.0):
     - Realm/Headers (= 4.4.0)
@@ -10,12 +9,16 @@ PODS:
   - RealmSwift (4.4.0):
     - Realm (= 4.4.0)
   - RuntimeNew (2.1.5)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxCocoa (5.1.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.0):
     - RxSwift (~> 5)
   - RxSwift (5.1.0)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
   - SimpleCheckbox (2.1.0)
   - SwiftyJSON (5.0.0)
   - TinyConstraints (4.0.1)
@@ -28,11 +31,12 @@ DEPENDENCIES:
   - Alamofire
   - iOSDropDown
   - IQKeyboardManagerSwift
-  - M13Checkbox
   - ParticlesLoadingView
   - RealmSwift (= 4.4.0)
+  - RxBlocking
   - RxCocoa
   - RxSwift
+  - RxTest
   - SimpleCheckbox
   - SwiftyJSON
   - TinyConstraints
@@ -44,14 +48,15 @@ SPEC REPOS:
     - Alamofire
     - iOSDropDown
     - IQKeyboardManagerSwift
-    - M13Checkbox
     - ParticlesLoadingView
     - Realm
     - RealmSwift
     - RuntimeNew
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxTest
     - SimpleCheckbox
     - SwiftyJSON
     - TinyConstraints
@@ -62,20 +67,21 @@ SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
-  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   ParticlesLoadingView: 48704281aa7381d7c8c55cbe632f30bbc8d12604
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   RuntimeNew: ef34cf1783be4c1cbe798970bc590924dab5df87
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
   RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
   SimpleCheckbox: ddcd433ab8c3a8f57300bebda13151a8f302c7f9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
   UICheckbox.Swift: 85715689206fac5bae38b308f19c2a3e00442c3b
   Unrealm: 18b950839bf88b0d8464bda9a5f3b31673526a8c
 
-PODFILE CHECKSUM: eb95008a31ae42caa37aad01b025b73848886c37
+PODFILE CHECKSUM: a1341b9e0d403b2f11335fd06ae5f29ec54f7c8a
 
 COCOAPODS: 1.9.1

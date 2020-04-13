@@ -10,6 +10,7 @@ import XCTest
 
 class myrootsinafricaUITests: XCTestCase {
 
+    let app = XCUIApplication()
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -17,6 +18,7 @@ class myrootsinafricaUITests: XCTestCase {
         continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch()
     }
 
     override func tearDown() {
@@ -40,4 +42,30 @@ class myrootsinafricaUITests: XCTestCase {
             }
         }
     }
+    
+    func testHomeWelcomeText(){
+        XCTAssertTrue(app.staticTexts["World's #1 \nClimate Action App"].exists)
+    }
+    
+    func testHomeSceneSignupButton(){
+        app.buttons["Signup"].tap()
+
+    }
+    
+    func testHomeSceneLoginButton(){
+
+        app.buttons.staticTexts["Login"].tap()
+        
+    }
+    
+    func testNavigationToLoginScene(){
+        app.buttons.staticTexts["Login"].tap()
+        let textLabelQuery = app.staticTexts["Email"]
+        XCTAssertTrue(textLabelQuery.exists)
+    }
+    func testNavigationToRegisterScene(){
+          app.buttons.staticTexts["Signup"].tap()
+          let textLabelQuery = app.staticTexts["Welcome"]
+          XCTAssertTrue(textLabelQuery.exists)
+      }
 }

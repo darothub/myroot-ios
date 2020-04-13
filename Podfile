@@ -9,16 +9,18 @@ target 'myrootsinafrica' do
   pod 'IQKeyboardManagerSwift'
   pod 'iOSDropDown'
   pod 'UICheckbox.Swift'
-  pod 'M13Checkbox'
   pod 'SimpleCheckbox'
   pod "ParticlesLoadingView"
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxBlocking'
+  pod 'RxTest'
   pod 'TinyConstraints'
   pod 'Unrealm', '1.2.0'
   pod 'RealmSwift', '4.4.0'
+  
 
 
   target 'myrootsinafricaTests' do

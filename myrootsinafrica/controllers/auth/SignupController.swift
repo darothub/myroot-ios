@@ -22,7 +22,7 @@ class SignupController: UIViewController {
     
   
     
-    let authViewModel = AuthViewModel(authProtocol: AuthService())
+    var authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var testText = ""
     @IBOutlet weak var countryCodeTextField: UITextField!

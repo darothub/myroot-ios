@@ -18,7 +18,7 @@ import Unrealm
 
 class LoginViewController: UIViewController{
     
-    let authViewModel = AuthViewModel(authProtocol: AuthService())
+    var authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var tokens = ""
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -47,8 +47,6 @@ class LoginViewController: UIViewController{
     
 
     override func viewDidLoad() {
-        print("yay! login")
-        print("height \(viewHeight)")
         
         addViews()
         setViewConstraints()
@@ -210,15 +208,7 @@ class LoginViewController: UIViewController{
                     }
                 }
                 self.showSimpleAlert(title: title, message: AuthResponse.message!, identifier: "toDashboard", action: true, user: user)
-             
-                
-         
-              
-                 print("selftok \( self.tokens )")
-               
-                
-                
-            
+        
              }
              else{
                  self.showSimpleAlert(title: title, message: AuthResponse.message!, action: false)

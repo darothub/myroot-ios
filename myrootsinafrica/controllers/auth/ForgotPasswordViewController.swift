@@ -17,7 +17,7 @@ class ForgotPasswordViewController:UIViewController{
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var submitButton: SecondaryButton!
     @IBOutlet weak var progressSpinner: UIActivityIndicatorView!
-    let authViewModel = AuthViewModel(authProtocol: AuthService())
+    var authViewModel = AuthViewModel(authProtocol: AuthService())
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var disposeBag = DisposeBag()

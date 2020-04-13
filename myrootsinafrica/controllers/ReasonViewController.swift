@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import M13Checkbox
 import SimpleCheckbox
 import UICheckbox_Swift
 
