@@ -19,7 +19,7 @@ jobs:
           command: fastlane scan
           environment:
             SCAN_DEVICE: iPhone 8
-            SCAN_SCHEME: MyrootsInAfrica
+            SCAN_SCHEME: myrootsinAfrica
 
       - store_test_results:
           path: output/scan
