@@ -14,4 +14,12 @@ jobs:
           environment:
             SCAN_DEVICE: iPhone 8
             SCAN_SCHEME: myrootsinafrica
+workflows:
+  version: 2.1
+  build-and-test:
+    jobs:
+       - build-and-test
+       
+  
+  
 
