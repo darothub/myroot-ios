@@ -20,6 +20,34 @@
                ReferencedContainer = "container:myrootsinafrica.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "045C1F24241AD7D4004217D9"
+               BuildableName = "myrootsinafricaTests.xctest"
+               BlueprintName = "myrootsinafricaTests"
+               ReferencedContainer = "container:myrootsinafrica.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "045C1F2F241AD7D4004217D9"
+               BuildableName = "myrootsinafricaUITests.xctest"
+               BlueprintName = "myrootsinafricaUITests"
+               ReferencedContainer = "container:myrootsinafrica.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
