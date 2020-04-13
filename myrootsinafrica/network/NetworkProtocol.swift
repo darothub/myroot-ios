@@ -26,8 +26,15 @@ protocol NetworkProtocol {
     func userLogin(email:String, password:String) -> Observable<AuthResponse>
     func reserveTree(tree:Tree, token:String) -> Observable<AuthResponse>
     func getUserTrees(token:String) -> Observable<TreeResponse>
+    func getUserTrees(token:String, completionHandler: @escaping (Result<TreeResponse, NetworkError>) -> Void)
+//    func getUserTrees(token:String, completionHandler: @escaping (Result<Observable<TreeResponse>, NetworkError>) -> Void)
     func forgotPassword(email:String)-> Observable<AuthResponse>
     func resetPassword(email:String, code:String, password:String) -> Observable<AuthResponse>
 
 //    func resendVerificationCode(user:User) -> Observable<AuthResponse>
+}
+
+
+enum NetworkError:Error{
+    case networkError
 }

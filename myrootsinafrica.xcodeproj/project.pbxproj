@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* ControllerBackgroundImage.swift */; };
+		040B75342422511E00A4147A /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B75332422511E00A4147A /* UIViewControllerExt.swift */; };
 		040B75362422606200A4147A /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B75352422606200A4147A /* iOSDropDown.framework */; };
 		0415765A2430AFB3003D0311 /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041576592430AFB3003D0311 /* TreeModel.swift */; };
 		0415766F24337AFD003D0311 /* TreeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415766E24337AFD003D0311 /* TreeResponseModel.swift */; };
@@ -39,7 +39,7 @@
 		045C1F5B241B9EB7004217D9 /* BalooChettan2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */; };
 		045C1F5D241BA205004217D9 /* ExtToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F5C241BA205004217D9 /* ExtToast.swift */; };
 		045C1F96241F53F1004217D9 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F95241F53F1004217D9 /* SignupController.swift */; };
-		045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */; };
+		045C1F99241F59C9004217D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C1F98241F59C9004217D9 /* Extensions.swift */; };
 		047AC7932425624700968A29 /* WhereToPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC7922425624700968A29 /* WhereToPlantViewController.swift */; };
 		047AC79524274B1700968A29 /* HowToPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79424274B1700968A29 /* HowToPlantViewController.swift */; };
 		047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */; };
@@ -54,6 +54,15 @@
 		049CF58C242373C200C81412 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58B242373C200C81412 /* LoginViewController.swift */; };
 		049CF58E2423F4F500C81412 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58D2423F4F500C81412 /* DashBoardViewController.swift */; };
 		049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CF58F2424F43800C81412 /* ReasonViewController.swift */; };
+		04AA31DB2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DA2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift */; };
+		04AA31DD2444A12D0054E761 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DC2444A12D0054E761 /* LoginViewControllerTest.swift */; };
+		04AA31E02444C1C00054E761 /* MockNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31DF2444C1C00054E761 /* MockNetworkProtocol.swift */; };
+		04AA31E22444C1E60054E761 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31E12444C1E60054E761 /* MockViewModel.swift */; };
+		04AA31E42444C6530054E761 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA31E32444C6530054E761 /* RegisterViewController.swift */; };
+		04C2FFAF243BF455001D0492 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C2FFAE243BF455001D0492 /* Localizable.strings */; };
+		04C2FFB2243C88A5001D0492 /* ViewGenerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */; };
+		04C2FFB62440EC11001D0492 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFB52440EC10001D0492 /* Calculator.swift */; };
+		04C2FFB82440F329001D0492 /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2FFB72440F329001D0492 /* CalculatorTest.swift */; };
 		B51E010EB1681DDE0EE820F8 /* Pods_myrootsinafrica_myrootsinafricaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */; };
 		C13665BA5DD7CB00F10B0061 /* Pods_myrootsinafricaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EAFB91B73632455E84AD72 /* Pods_myrootsinafricaTests.framework */; };
 		C33786098244521D082A5C75 /* Pods_myrootsinafrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */; };
@@ -78,7 +87,7 @@
 
 /* Begin PBXFileReference section */
 		02F985F0252120D04C28B5F6 /* Pods_myrootsinafrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		040B75332422511E00A4147A /* ControllerBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerBackgroundImage.swift; sourceTree = "<group>"; };
+		040B75332422511E00A4147A /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		040B75352422606200A4147A /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041576592430AFB3003D0311 /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
 		0415766E24337AFD003D0311 /* TreeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeResponseModel.swift; sourceTree = "<group>"; };
@@ -116,7 +125,7 @@
 		045C1F59241B9EB7004217D9 /* BalooChettan2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooChettan2-Regular.ttf"; sourceTree = "<group>"; };
 		045C1F5C241BA205004217D9 /* ExtToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtToast.swift; sourceTree = "<group>"; };
 		045C1F95241F53F1004217D9 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
-		045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFunc.swift; sourceTree = "<group>"; };
+		045C1F98241F59C9004217D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		047AC7922425624700968A29 /* WhereToPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToPlantViewController.swift; sourceTree = "<group>"; };
 		047AC79424274B1700968A29 /* HowToPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlantViewController.swift; sourceTree = "<group>"; };
 		047AC79624276E1700968A29 /* WhatTypeOfTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatTypeOfTreeViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +140,15 @@
 		049CF58B242373C200C81412 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		049CF58D2423F4F500C81412 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		049CF58F2424F43800C81412 /* ReasonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonViewController.swift; sourceTree = "<group>"; };
+		04AA31DA2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewControllerTest.swift; sourceTree = "<group>"; };
+		04AA31DC2444A12D0054E761 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		04AA31DF2444C1C00054E761 /* MockNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkProtocol.swift; sourceTree = "<group>"; };
+		04AA31E12444C1E60054E761 /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
+		04AA31E32444C6530054E761 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		04C2FFAE243BF455001D0492 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGenerators.swift; sourceTree = "<group>"; };
+		04C2FFB52440EC10001D0492 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		04C2FFB72440F329001D0492 /* CalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTest.swift; sourceTree = "<group>"; };
 		07215DC9DAA57FA82E792FF5 /* Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica-myrootsinafricaUITests/Pods-myrootsinafrica-myrootsinafricaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		15DCB06BA38711ADBA161339 /* Pods-myrootsinafrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myrootsinafrica.debug.xcconfig"; path = "Target Support Files/Pods-myrootsinafrica/Pods-myrootsinafrica.debug.xcconfig"; sourceTree = "<group>"; };
 		3386D9AF1B7B6AD760D1471B /* Pods_myrootsinafrica_myrootsinafricaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myrootsinafrica_myrootsinafricaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +259,8 @@
 		045C1F0E241AD7D3004217D9 /* myrootsinafrica */ = {
 			isa = PBXGroup;
 			children = (
+				04C2FFB0243C8886001D0492 /* views */,
+				04C2FFAD243BF40C001D0492 /* Localization */,
 				0415765B24320666003D0311 /* data */,
 				041D275D242B6E78009FCC82 /* network */,
 				041D2758242B6AF9009FCC82 /* model */,
@@ -258,6 +278,7 @@
 				045C1F20241AD7D4004217D9 /* Info.plist */,
 				045C1F18241AD7D3004217D9 /* UserData.xcdatamodeld */,
 				045C1F5C241BA205004217D9 /* ExtToast.swift */,
+				04C2FFB52440EC10001D0492 /* Calculator.swift */,
 			);
 			path = myrootsinafrica;
 			sourceTree = "<group>";
@@ -265,8 +286,13 @@
 		045C1F28241AD7D4004217D9 /* myrootsinafricaTests */ = {
 			isa = PBXGroup;
 			children = (
+				04AA31DE2444C19D0054E761 /* mock */,
 				045C1F29241AD7D4004217D9 /* myrootsinafricaTests.swift */,
 				045C1F2B241AD7D4004217D9 /* Info.plist */,
+				04C2FFB72440F329001D0492 /* CalculatorTest.swift */,
+				04AA31DA2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift */,
+				04AA31DC2444A12D0054E761 /* LoginViewControllerTest.swift */,
+				04AA31E32444C6530054E761 /* RegisterViewController.swift */,
 			);
 			path = myrootsinafricaTests;
 			sourceTree = "<group>";
@@ -325,9 +351,9 @@
 		045C1F97241F5999004217D9 /* extensionandhelpers */ = {
 			isa = PBXGroup;
 			children = (
-				045C1F98241F59C9004217D9 /* UnderlineTextFunc.swift */,
+				045C1F98241F59C9004217D9 /* Extensions.swift */,
 				0484D44D241F875C00FDFD7C /* CountryAndCode.swift */,
-				040B75332422511E00A4147A /* ControllerBackgroundImage.swift */,
+				040B75332422511E00A4147A /* UIViewControllerExt.swift */,
 				049CF58624229E2E00C81412 /* HelperClass.swift */,
 				047AC79E2427C36700968A29 /* CardSelectionHelper.swift */,
 			);
@@ -348,6 +374,31 @@
 				041D2756242A28F2009FCC82 /* NewPasswordViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		04AA31DE2444C19D0054E761 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				04AA31DF2444C1C00054E761 /* MockNetworkProtocol.swift */,
+				04AA31E12444C1E60054E761 /* MockViewModel.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		04C2FFAD243BF40C001D0492 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				04C2FFAE243BF455001D0492 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		04C2FFB0243C8886001D0492 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				04C2FFB1243C88A5001D0492 /* ViewGenerators.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		3255732CB1FA99953E804958 /* Frameworks */ = {
@@ -484,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045C1F5A241B9EB7004217D9 /* BalooChettan2-Medium.ttf in Resources */,
+				04C2FFAF243BF455001D0492 /* Localizable.strings in Resources */,
 				045C1F1F241AD7D4004217D9 /* LaunchScreen.storyboard in Resources */,
 				045C1F1C241AD7D4004217D9 /* Assets.xcassets in Resources */,
 				045C1F5B241B9EB7004217D9 /* BalooChettan2-Regular.ttf in Resources */,
@@ -617,8 +669,8 @@
 			files = (
 				047AC7932425624700968A29 /* WhereToPlantViewController.swift in Sources */,
 				045C1F47241AE3CC004217D9 /* secondarybutton.swift in Sources */,
-				040B75342422511E00A4147A /* ControllerBackgroundImage.swift in Sources */,
-				045C1F99241F59C9004217D9 /* UnderlineTextFunc.swift in Sources */,
+				040B75342422511E00A4147A /* UIViewControllerExt.swift in Sources */,
+				045C1F99241F59C9004217D9 /* Extensions.swift in Sources */,
 				045C1F4D241B70FA004217D9 /* DScrollView+.swift in Sources */,
 				047AC79B242775F800968A29 /* WhiteButton.swift in Sources */,
 				041576802434743B003D0311 /* UserData+CoreDataClass.swift in Sources */,
@@ -627,8 +679,10 @@
 				041D2761242B6FBE009FCC82 /* NetworkProtocol.swift in Sources */,
 				041D2757242A28F2009FCC82 /* NewPasswordViewController.swift in Sources */,
 				049CF5902424F43800C81412 /* ReasonViewController.swift in Sources */,
+				04C2FFB2243C88A5001D0492 /* ViewGenerators.swift in Sources */,
 				045C1F4E241B70FA004217D9 /* DScrollView.swift in Sources */,
 				045C1F96241F53F1004217D9 /* SignupController.swift in Sources */,
+				04C2FFB62440EC11001D0492 /* Calculator.swift in Sources */,
 				041D2764242B7007009FCC82 /* AuthViewModel.swift in Sources */,
 				047AC79724276E1700968A29 /* WhatTypeOfTreeViewController.swift in Sources */,
 				045C1F45241AE06A004217D9 /* primarybutton.swift in Sources */,
@@ -661,7 +715,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AA31DD2444A12D0054E761 /* LoginViewControllerTest.swift in Sources */,
+				04AA31DB2441C9F40054E761 /* ForgotPasswordViewControllerTest.swift in Sources */,
+				04AA31E42444C6530054E761 /* RegisterViewController.swift in Sources */,
+				04AA31E22444C1E60054E761 /* MockViewModel.swift in Sources */,
 				045C1F2A241AD7D4004217D9 /* myrootsinafricaTests.swift in Sources */,
+				04AA31E02444C1C00054E761 /* MockNetworkProtocol.swift in Sources */,
+				04C2FFB82440F329001D0492 /* CalculatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

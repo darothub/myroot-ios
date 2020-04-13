@@ -22,7 +22,7 @@ class SignupController: UIViewController {
     
   
     
-    let authViewModel = AuthViewModel(authProtocol: AuthService())
+    var authViewModel = AuthViewModel(authProtocol: AuthService())
     
     var testText = ""
     @IBOutlet weak var countryCodeTextField: UITextField!
@@ -101,6 +101,11 @@ class SignupController: UIViewController {
         view.layer.contents = #imageLiteral(resourceName: "signupBackground").cgImage
         passwordTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
+
+//        self.transparentNavBar()
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+
     }
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let text = passwordTF.text else{

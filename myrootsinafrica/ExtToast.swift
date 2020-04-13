@@ -31,3 +31,50 @@ func showToastMessage(message : String, font: UIFont?) {
         toastLabel.removeFromSuperview()
     })
 } }
+
+
+
+
+
+//    @IBAction func showToast(_ sender: Any) {
+//        let font = UIFont(name: "BalooChettan2-Regular", size: 14.0) ?? UIFont(name: "Helvetica", size: 14.0)
+//        self.showToastMessage(message: "Hello", font: font!)
+//    }
+//
+//
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? SignupController{
+//
+//            vc.testText = "Arthur Dent"
+//        }
+//    }
+////
+//    @IBAction func unWindtoHome(unwindSegue: UIStoryboardSegue){}
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+////        navigationController?.setNavigationBarHidden(true, animated: animated)
+//
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//    }
+
+
+        //        containerView.horizontalToSuperview()
+       
+//        imageView.bottom(to: containerView)
+//        imageView.leadingToSuperview()
+//        imageView.trailingToSuperview()
+        
+//        setupScrollView()
+        
+//        for family in UIFont.familyNames.sorted() {
+//            let names = UIFont.fontNames(forFamilyName: family)
+//            print("Family: \(family) Font names: \(names)")
+//        }
+        //set view background image
+//        view.layer.contents = #imageLiteral(resourceName: "homeBackground").cgImage
+//         parentViewWrapper .layer.contents = #imageLiteral(resourceName: "homeBackground").cgImage
