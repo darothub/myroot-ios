@@ -17,7 +17,15 @@ import RxSwift
 
 class SignupController: UIViewController {
     
+    @IBOutlet weak var headerText: UILabel!
+    @IBOutlet weak var subHeaderText: UILabel!
     @IBOutlet weak var haveaccounttext: UILabel!
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var myViewHeightConstraint: NSLayoutConstraint!
     
   
@@ -55,9 +63,7 @@ class SignupController: UIViewController {
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        print("Yaay signup")
-        
-        print("token:\(tokens)")
+       
         
         //set progress bar
         self.setupProgressBar(progress: 0.5)
@@ -104,6 +110,8 @@ class SignupController: UIViewController {
 
 //        self.transparentNavBar()
         self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        setLocalizedLabel()
         
 
     }
@@ -261,6 +269,24 @@ class SignupController: UIViewController {
         }
     }
  
+    func setLocalizedLabel(){
+        headerText.text = "welcome".localized
+        subHeaderText.text = "registerAdviceText".localized
+        firstNameLabel.text = "firstName".localized
+        lastNameLabel.text = "lastName".localized
+        emailLabel.text = "email".localized
+        passwordLabel.text = "password".localized
+        countryLabel.text   = "countryLabel".localized
+        phoneLabel.text = "phone".localized
+        passwordStandardLabel.text = "passwordStandardText".localized
+        
+
+        phoneNumberTF.placeholder = "phone".localized
+        firstNameTF.placeholder = "firstName".localized
+        lastNameTF.placeholder = "lastName".localized
+        emailTF.placeholder = "email".localized
+        passwordTF.placeholder = "password".localized
+    }
 }
 
 

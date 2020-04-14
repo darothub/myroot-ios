@@ -96,7 +96,7 @@ class LoginViewController: UIViewController{
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("hooray")
+        
         self.transparentNavBar()
 
          
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController{
            
 
     @objc func tapDetectedForForgotPassword(_ sender : UITapGestureRecognizer){
-        print("login to forgot")
+   
 
         self.moveToDestination(with: "forgotstory")
 
@@ -171,7 +171,7 @@ class LoginViewController: UIViewController{
             self.loginUIButton.isHidden = false
             self.tokens = AuthResponse.token ?? "default value"
 
-            print("name \(String(describing: AuthResponse.payload)))")
+         
 
              if AuthResponse.status == 200 {
                 guard let payload = AuthResponse.payload else {
@@ -230,7 +230,7 @@ class LoginViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DashBoardViewController, let user = sender as? User{
             vc.user = user
-            print("tokeninprepare \(user)")
+    
         }
         
     }

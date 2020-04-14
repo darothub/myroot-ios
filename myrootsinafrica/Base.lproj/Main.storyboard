@@ -210,25 +210,33 @@
                     <connections>
                         <outlet property="countryCodeTextField" destination="wXa-Nz-YAf" id="q5S-xH-B71"/>
                         <outlet property="countryDropDown" destination="5ZH-Db-8yf" id="2BX-dx-9hW"/>
+                        <outlet property="countryLabel" destination="jii-BH-B6v" id="xK3-ON-kg2"/>
                         <outlet property="dialCodeTF" destination="wXa-Nz-YAf" id="Tay-ZP-SBy"/>
+                        <outlet property="emailLabel" destination="lKa-uG-bNP" id="Fys-9X-ZTq"/>
                         <outlet property="emailTF" destination="EGn-gC-jeV" id="cfy-bg-qIa"/>
+                        <outlet property="firstNameLabel" destination="cKM-vO-SBO" id="mN3-QI-IcA"/>
                         <outlet property="firstNameTF" destination="8X7-mF-Xvw" id="MiQ-CN-ZAU"/>
                         <outlet property="haveaccounttext" destination="DJr-pL-fLt" id="Niv-tt-7ya"/>
+                        <outlet property="headerText" destination="UU1-Y2-0gf" id="X4i-HI-Lxd"/>
+                        <outlet property="lastNameLabel" destination="C3S-Bk-TPn" id="8AY-IJ-W8Q"/>
                         <outlet property="lastNameTF" destination="iOb-dO-LvG" id="1tX-XV-Fyq"/>
                         <outlet property="loginLinkLabel" destination="DJr-pL-fLt" id="Cty-l2-Gyt"/>
                         <outlet property="parentView" destination="lD1-fW-Ddp" id="71U-xm-8ju"/>
+                        <outlet property="passwordLabel" destination="WUb-Tw-y3M" id="4Ez-gQ-fQw"/>
                         <outlet property="passwordStandardLabel" destination="KUo-ff-6QS" id="PaE-md-LjE"/>
                         <outlet property="passwordTF" destination="52Y-c8-ppU" id="Bhv-n4-hoY"/>
+                        <outlet property="phoneLabel" destination="jaH-Ys-XZa" id="czT-JY-ACy"/>
                         <outlet property="phoneNumberTF" destination="ylN-0s-9PB" id="hTZ-Hv-WsS"/>
                         <outlet property="progressSpinner" destination="N10-Wl-eSQ" id="A4Y-Bb-bLI"/>
                         <outlet property="signupScrollView" destination="Hxh-c3-yaA" id="1Pu-Cr-DBO"/>
+                        <outlet property="subHeaderText" destination="g1g-rY-PPY" id="aAf-7p-kxq"/>
                         <outlet property="submitButton" destination="5Bz-zK-exa" id="b6a-hx-qdr"/>
                         <segue destination="AFM-l0-b5U" kind="show" identifier="gotoVerification" id="0BS-hM-0Vb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxV-Z3-jI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336.23188405797106" y="-168.08035714285714"/>
+            <point key="canvasLocation" x="335.19999999999999" y="-168.6656671664168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1b6-In-1Zw">
@@ -769,7 +777,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFl-xa-H0c">
-                                        <rect key="frame" x="38" y="275" width="299" height="86"/>
+                                        <rect key="frame" x="38" y="274" width="299" height="86"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftnew" translatesAutoresizingMaskIntoConstraints="NO" id="6CF-mS-oor">
@@ -845,7 +853,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-Jq-mSW">
-                                        <rect key="frame" x="38" y="99" width="299" height="86"/>
+                                        <rect key="frame" x="38" y="98" width="299" height="86"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageclimate" translatesAutoresizingMaskIntoConstraints="NO" id="IUq-9m-Ddo">
@@ -1095,7 +1103,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fruit tree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U46-Xk-pgd">
-                                        <rect key="frame" x="255" y="237" width="69" height="20"/>
+                                        <rect key="frame" x="255" y="236" width="69" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1125,7 +1133,7 @@
                                         <color key="color" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Decorative tree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrZ-hr-LAL">
-                                        <rect key="frame" x="55" y="236" width="116" height="20"/>
+                                        <rect key="frame" x="55" y="235" width="116" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.47843137250000001" green="0.7843137255" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
